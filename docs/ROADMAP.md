@@ -10,6 +10,8 @@
 | R5 | Family Link authentic bridge | R2,R3 | Real task-scoped identity, transport, recipient readback | Wrong recipient, lease, replay and host loss; two independent same-source receipts | High, cross-account trust |
 | R6 | Public release | R0–R4 for included tiers | Polished README, clean history, license, examples, docs, support and versioned package | Fresh clean install, name/host mutation, native/useful grade per advertised features | Publish only cleared work |
 
+**R5 local calendar progress:** A neutral source-only SQLite transaction slice now implements bounded 1–21-event proposal/approval, revision and owner/site fencing, durable receipt recovery, and negative tests. This is not a Muse Space install or native identity grant; remaining R3 scope includes host-bound adapter/migration/UI/device acceptance.
+
 **First authorized future code slice:** qualify the already-implemented garden owner-scoped seasonal-batch path on the current host, then port only its neutral data/command contract; do not start with 11 simultaneous native installations. Preserve generated artifacts, tests and latest user edits during update/recovery.
 
 The initial alpha tag stops at R1; post-alpha `main` adds role-specific procedures and read-only drift/neutrality checks without claiming host binding. The Family Link preview is not R5. Advanced modules may ship in later versions without delaying honest free starter presets.

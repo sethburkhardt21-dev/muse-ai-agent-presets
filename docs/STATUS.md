@@ -11,8 +11,9 @@
 | Profile renderer | LOCAL_TESTED | Creates new local draft files; never overwrites existing user dirs |
 | Rendered-profile inspector | LOCAL_TESTED_SHAPE | Read-only v2/v3 manifest/source drift and owner-file comparison; changed role method/policy requires review; refuses missing/symlink/policy changes, no native loading or regeneration |
 | Family Link | LOCAL_PROPOSAL_ONLY | Sender/receiver allowlist and request check, zero external effects |
+| Garden Companion transactional SQLite reference | LOCAL_SQLITE_TESTED | Separate owner/specialist scoped callbacks, 1–21-event revision-fenced shifts, atomic approval/decline and durable receipt recovery; **no real native owner authentication or Muse Space binding** |
 | Five priority offline micro-slices | LOCAL_TESTED | Pure source functions for finder, claim-scope, garden, learning and reverse-observation fixtures; no private donor code imported |
-| Local software tests | PASS_AT_SOURCE_SCOPE | Historical alpha: 40 local tests; current source increment adds distinct-role and neutrality checks. Quote fresh exact-head results after host and CI execution |
+| Local software tests | PASS_AT_SOURCE_SCOPE | Historical alpha: 40 local tests; newer source includes role/lifecycle/neutrality checks and the separate Garden SQLite suite. Re-run at the exact commit. Quote fresh exact-head results after host and CI execution |
 | Personal Muse/Hatch adapter | NOT_IMPLEMENTED | Native host, registered tools, callback, Spaces and chat IDs unbound |
 | Muse Code adapter | NOT_IMPLEMENTED | Separate developer preview requires its own host canary |
 | Eleven complete specialist engines | NOT_IMPORTED | Existing private candidates require rights, provenance and portability review |

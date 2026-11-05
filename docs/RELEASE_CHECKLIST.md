@@ -18,6 +18,8 @@
 - [x] Read-only neutrality heuristic with explicit nonclaims and negative tests
 - [ ] Manual and automated independent review of entire public Git history, licenses and release assets before any higher maturity release
 
+- [x] Separate source-tested Garden Companion SQLite transaction demo and failure-injection regressions; native owner and database integration remain unqualified
+
 ## Not claimed in this release
 
 - [ ] Native installation, role skill registration or original Muse invocation

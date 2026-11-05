@@ -12,6 +12,10 @@
 
 A specialist is not complete because its original donor had an impressive test count. Each adapted slice requires **source pin → license audit → isolated test → host canary → useful consumer proof**. Data and Artifacts belong to the receiving user, not the publicly published role.
 
+## R5 — New local Garden Companion transaction engine
+
+`src/muse_presets/garden_calendar.py` now provides a separate, generic SQLite transaction reference alongside the original read-only preview. It implements revision-fenced proposals, explicit owner review, multi-event atomic decisions and durable recovery receipts. See [the runnable Garden contract](GARDEN_LOCAL_CALENDAR.md). **Source tested only**: no recipient Muse session, credential validation, managed Space or external calendar is bound. The original private Garden donor source remains separately governed and has not been copied into this repository.
+
 ## Alpha implementation increment — clean-room local slices
 
 The following newly authored, dependency-free reference functions are implemented in this repository. They **adapt architectural ideas**, not private donor source, weights or personal records. All are bounded, source-only, and require separate native Muse adoption:

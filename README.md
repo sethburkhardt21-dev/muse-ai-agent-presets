@@ -38,6 +38,14 @@ PYTHONPATH=src python -m muse_presets.cli family-preview --from-role garden-comp
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
+### Run the durable local Garden Companion calendar example
+
+```bash
+PYTHONPATH=src python examples/garden_calendar_demo.py
+```
+
+This source-tested, standard-library SQLite workflow supports owner-scoped planting events, specialist proposals, read-only before/after review, atomic 1–21-event approval, revision fencing, durable operation IDs and readback after reopening. **The owner/Space verifier is simulated in the demo, not a native Muse authority.** See [Garden transaction contract](docs/GARDEN_LOCAL_CALENDAR.md).
+
 ### Run five offline specialist examples
 
 ```bash

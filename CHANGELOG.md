@@ -1,3 +1,9 @@
+## Post-alpha source increment — R5 local garden calendar
+
+- Added a new, generic SQLite calendar transaction engine and disposable example for Garden Companion: owner/site-scoped events, verified-resolver injection contract, specialist proposal-only access, owner browser approval, 1–21-event atomic date edits, stale-revision and cancellation refusal, duplicate/replay-safe immutable receipts, and original-operation recovery after restart.
+- Test-first suite includes cross-owner/Space/garden isolation, declined proposals, operation conflicts, expiration, invalid dates and Unicode controls, simultaneous approvals on distinct SQLite connections, and rollback under a deliberately failing SQL trigger.
+- **No private donor code, private data or host SDK was imported.** Native Muse authentication, Space UI, installation and external calendar writes remain NOT_PROVEN.
+
 ## Post-alpha candidate — R4 role differentiation and neutrality (source only)
 
 - Added eleven distinct validated role playbooks (three procedures each) covering task evidence, refusal rules, compatible peer handoffs and first negative-control acceptance exercises.
