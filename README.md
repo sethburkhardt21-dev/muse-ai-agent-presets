@@ -1,5 +1,7 @@
 # Muse AI Agent Presets — Specialist Assistants, Skills, Memory & Workflows
 
+[![Source checks](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml/badge.svg)](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml)  [License: MIT](LICENSE)  [Release checklist](docs/RELEASE_CHECKLIST.md)
+
 **An unofficial, free, open-source starter collection of configurable specialist AI assistants for Muse.** Eleven neutral role presets, a shared Evidence Finder service, safe profile templates, offline validation, and an optional Family Link proposal interface. Designed to help people build more useful Muse assistants without copying someone else's private identity or data.
 
 > **Alpha / source-first.** These are **local drafts**, not installed Muse assistants, native skill registrations, active schedulers, live connectors, or multi-agent communications. This project is **not affiliated with or endorsed by Meta**. The name Muse is used descriptively for compatibility.

@@ -9,11 +9,12 @@
 | Profile renderer | LOCAL_TESTED | Creates new local draft files; never overwrites existing user dirs |
 | Family Link | LOCAL_PROPOSAL_ONLY | Sender/receiver allowlist and request check, zero external effects |
 | Five priority offline micro-slices | LOCAL_TESTED | Pure source functions for finder, claim-scope, garden, learning and reverse-observation fixtures; no private donor code imported |
+| Local software tests | PASS_AT_SOURCE_SCOPE | Linux: 40/40; Windows Python 3.12: 39 pass / 1 symlink-privilege skip; GitHub Actions passed on public source revision |
 | Personal Muse/Hatch adapter | NOT_IMPLEMENTED | Native host, registered tools, callback, Spaces and chat IDs unbound |
 | Muse Code adapter | NOT_IMPLEMENTED | Separate developer preview requires its own host canary |
 | Eleven complete specialist engines | NOT_IMPORTED | Existing private candidates require rights, provenance and portability review |
 | Third-party skills/connectors | RESEARCH_ONLY | Source links; no code/assets copied or connectors installed |
 | Native external effects | NOT_RUN | No owner identity, grants, recipient readback or independent result |
-| Public candidate source | READY_FOR_REVIEW | Public release only after actual connected GitHub readback and content review |
+| Public alpha repository | PUBLISHED_PUBLIC_ALPHA | Public GitHub main verified with clean-root history and source CI; native execution not implied |
 
 Run `PYTHONPATH=src python -m unittest discover -s tests -v` at exact commit and record the current count before quoting a green number. GitHub Actions source status is independent of any native Muse acceptance.
