@@ -10,7 +10,7 @@ PYTHONPATH=src python -m unittest discover -s tests -p test_learning_session.py 
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-The demo deletes its fabricated SQLite database when complete. `LearningSession` requires an absolute path inside an already existing folder and an injected `authority: () -> LearningScope` callback. It will not use account labels or session IDs directly from model/browser input to authenticate a person. The sample callback **simulates** that protected host behavior.
+The demo deletes its fabricated SQLite database when complete. `LearningSession` requires an absolute path inside an already existing folder and an injected `authority: () -> LearningScope` callback. It will not use account labels or session IDs directly from model/browser input to authenticate a person. The shared path checker permits the root-owned standard macOS `/var`/`/tmp`/`/etc` aliases while rejecting user-controlled symlinks; it is not a race-free OS sandbox. The sample callback **simulates** that protected host behavior.
 
 ### Source → draft → review → challenge → score → review
 

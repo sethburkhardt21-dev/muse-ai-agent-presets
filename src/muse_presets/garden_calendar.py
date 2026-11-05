@@ -18,6 +18,8 @@ from datetime import date, timedelta
 from pathlib import Path
 from typing import Callable, Iterator
 
+from .database_paths import validated_database_path
+
 _ID = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$')
 _DIGEST = re.compile(r'^[a-f0-9]{64}$')
 _DATE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
@@ -109,11 +111,7 @@ class GardenCalendar:
             raise ValueError('SERVER_POLICY_INVALID')
         if type(pending_limit) is not int or not 1 <= pending_limit <= 10_000:
             raise ValueError('SERVER_POLICY_INVALID')
-        if not isinstance(database, (str, Path)) or not str(database):
-            raise ValueError('INVALID_DATABASE')
-        file = Path(database)
-        if file.is_symlink() or any(part.is_symlink() for part in (file.parent, *file.parent.parents)) or not file.parent.is_dir():
-            raise ValueError('INVALID_DATABASE')
+        file = validated_database_path(database, error='INVALID_DATABASE')
         self._authority = authority
         self._clock_ms = clock_ms or (lambda: int(time.time() * 1000))
         self._ttl_ms = proposal_ttl_ms

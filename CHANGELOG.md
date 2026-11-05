@@ -1,3 +1,9 @@
+## Post-alpha source portability repair — macOS database paths
+
+- Clean-host macOS testing reproduced a genuine defect in the Garden and Learning local SQLite engines: standard root-owned `/var` points to `/private/var`, so strict ancestor-symlink denial rejected ordinary macOS temporary databases.
+- Introduced one shared bounded database-path validator that admits only the **three verified root-owned macOS system aliases** (`/var`, `/tmp`, `/etc` to `/private/...`) and continues refusing arbitrary user symlinks, including symlinked intermediate parents and impostor aliases.
+- Added explicit path-regression tests and preserved the Garden/Study error codes and authority requirements. This policy is local filesystem validation, **not** an OS sandbox, credential or a native Muse storage grant.
+
 ## Post-alpha source increment — R6 local Learning Coach
 
 - Implemented a new, nonclinical SQLite study ledger for source-identity, held literal cards, owner approval, session-isolated protected challenges, exact-answer scoring, original-ID restart recovery, and explicitly heuristic due review.

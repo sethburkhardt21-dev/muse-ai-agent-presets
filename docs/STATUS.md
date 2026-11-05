@@ -12,6 +12,7 @@
 | Rendered-profile inspector | LOCAL_TESTED_SHAPE | Read-only v2/v3 manifest/source drift and owner-file comparison; changed role method/policy requires review; refuses missing/symlink/policy changes, no native loading or regeneration |
 | Family Link | LOCAL_PROPOSAL_ONLY | Sender/receiver allowlist and request check, zero external effects |
 | Garden Companion transactional SQLite reference | LOCAL_SQLITE_TESTED | Separate owner/specialist scoped callbacks, 1–21-event revision-fenced shifts, atomic approval/decline and durable receipt recovery; **no real native owner authentication or Muse Space binding** |
+| Shared Garden/Learning SQLite path admission | LOCAL_TESTED | Explicit rooted macOS `/var`/`/tmp`/`/etc` aliases recognized; arbitrary symlink traversal still rejected; no native storage authority |
 | Learning Coach transactional SQLite study reference | LOCAL_SQLITE_TESTED | Owner-admitted source → held literal cards → owner review → session-scoped challenge/score → durable due-review; no actual Muse learner principal or clinical approval |
 | Five priority offline micro-slices | LOCAL_TESTED | Pure source functions for finder, claim-scope, garden, learning and reverse-observation fixtures; no private donor code imported |
 | Local software tests | PASS_AT_SOURCE_SCOPE | Historical alpha: 40 local tests; newer source includes role/lifecycle/neutrality checks and the separate Garden SQLite suite. Re-run at the exact commit. Quote fresh exact-head results after host and CI execution |

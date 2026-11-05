@@ -44,3 +44,7 @@ The API-level receipt is durable across local reopen; it is not cryptographicall
 | USEFUL | **Not proven:** independently tested real planting workflow on an authorized receiving account/device |
 
 See [host compatibility](HOST_COMPATIBILITY.md), [lifecycle](INSTALL_AND_PERSISTENCE.md) and [five-layer definitions](FIVE_LAYERS_AND_DOORS.md). Family Link remains proposal-only and disabled in every preset.
+
+## macOS portability regression
+
+A clean iMac run of the R6 source found that the original SQLite file guard rejected macOS's standard root-owned `/var` → `/private/var` temporary-directory alias. The shared `database_paths` validator now recognizes only the fixed, root-owned macOS `/var`, `/tmp` and `/etc` system aliases while retaining rejection of user-controlled file, parent and grandparent symlinks. The existing Garden API and error codes are preserved. This check is not an authentication or filesystem-sandbox grant.

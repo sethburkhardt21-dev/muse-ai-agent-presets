@@ -19,6 +19,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Iterator
 
+from .database_paths import validated_database_path
+
 _ID = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$')
 _SOURCE_ID = re.compile(r'^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$')
 _DIGEST = re.compile(r'^[a-f0-9]{64}$')
@@ -65,17 +67,6 @@ def _answer_key(value: str) -> str:
     return ' '.join(value.split()).casefold()
 
 
-def _validate_db_path(raw: str | Path) -> Path:
-    if not isinstance(raw, (Path, str)) or not str(raw).strip():
-        raise ValueError('UNSAFE_DATABASE_PATH')
-    path = Path(raw).expanduser()
-    if not path.is_absolute() or not path.parent.is_dir():
-        raise ValueError('UNSAFE_DATABASE_PATH')
-    if any(x.is_symlink() for x in (path, *path.parents)):
-        raise ValueError('UNSAFE_DATABASE_PATH')
-    if path.exists() and not path.is_file():
-        raise ValueError('UNSAFE_DATABASE_PATH')
-    return path
 
 
 @dataclass(frozen=True)
@@ -120,7 +111,7 @@ class LearningSession:
         self._authority = authority
         self._clock_ms = clock_ms or (lambda: time.time_ns() // 1_000_000)
         self._ttl_ms = challenge_ttl_ms
-        self.path = _validate_db_path(database)
+        self.path = validated_database_path(database, error='UNSAFE_DATABASE_PATH', absolute=True)
         self._db = sqlite3.connect(self.path, timeout=8.0, isolation_level=None,
                                    check_same_thread=False)
         self._db.row_factory = sqlite3.Row
