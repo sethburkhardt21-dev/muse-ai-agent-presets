@@ -8,6 +8,7 @@
 | Evidence Finder | LOCAL_TESTED_SHAPE | Schema validator for findings; neither auth nor search engine |
 | Profile renderer | LOCAL_TESTED | Creates new local draft files; never overwrites existing user dirs |
 | Family Link | LOCAL_PROPOSAL_ONLY | Sender/receiver allowlist and request check, zero external effects |
+| Five priority offline micro-slices | LOCAL_TESTED | Pure source functions for finder, claim-scope, garden, learning and reverse-observation fixtures; no private donor code imported |
 | Personal Muse/Hatch adapter | NOT_IMPLEMENTED | Native host, registered tools, callback, Spaces and chat IDs unbound |
 | Muse Code adapter | NOT_IMPLEMENTED | Separate developer preview requires its own host canary |
 | Eleven complete specialist engines | NOT_IMPORTED | Existing private candidates require rights, provenance and portability review |

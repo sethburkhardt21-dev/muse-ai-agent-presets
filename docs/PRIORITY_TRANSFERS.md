@@ -11,3 +11,17 @@
 | **Evidence Finder service** | Source-identity finder; preserved full findings or truthful null; read-only scoped search | Evidence/index tools, source provenance, research retrieval, independent adjudication | Locate planted record 1:1; pass bytes/hash intact; honest no-match; reject injected verdict and unauthorized effect |
 
 A specialist is not complete because its original donor had an impressive test count. Each adapted slice requires **source pin → license audit → isolated test → host canary → useful consumer proof**. Data and Artifacts belong to the receiving user, not the publicly published role.
+
+## Alpha implementation increment — clean-room local slices
+
+The following newly authored, dependency-free reference functions are implemented in this repository. They **adapt architectural ideas**, not private donor source, weights or personal records. All are bounded, source-only, and require separate native Muse adoption:
+
+| Module | Public callable | Tested scope | Deliberately missing |
+| --- | --- | --- | --- |
+| `src/muse_presets/finder.py` | `find_exact_text` | Exact UTF-8 evidence, read-only bounded file, full source preserved, honest null, traversal/symlink refusals | Indexer, signed evidence, remote access, automatic searching, verdict |
+| `src/muse_presets/claims.py` | `assess_scope` | Overclaim detection and condition preservation | Trusted external evidence, authoritative court/release admission |
+| `src/muse_presets/garden.py` | `preview_date_shift` | Revision/owner-bound proposal-only schedule preview | Host-side SQLite transaction, actual garden account, event publishing |
+| `src/muse_presets/learning.py` | `draft_supported_card` | Verbatim quoted answer, source digest and span, review hold | Real assessment engine, full evidence provenance, subject approval |
+| `src/muse_presets/reverse.py` | `compare_observed_flows` | Deterministic comparison of benign supplied UI traces | Desktop/browser capture, live protocol interception, malware execution |
+
+Run `PYTHONPATH=src python examples/priority_slices.py` and the full `tests/` suite. Each result explicitly lacks native authority, external effects, and downstream adoption. These slices **do not replace** the separately tested engines: Garden's batch calendar, Study's adaptive scorer, the Court's evidence review, the larger reverse-engineering sandbox, or the Finder's eventual recipient-verified transport. Their eventual upstream integration requires file-level rights/provenance and changed-seam regression, followed by the real original Muse gates.

@@ -1,0 +1,5 @@
+# Reproducible source bytes across Windows/Linux clone and packaging.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.zip binary

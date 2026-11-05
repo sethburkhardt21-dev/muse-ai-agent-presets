@@ -34,6 +34,16 @@ PYTHONPATH=src python -m muse_presets.cli family-preview --from-role garden-comp
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
+### Run five offline specialist examples
+
+```bash
+PYTHONPATH=src python examples/priority_slices.py
+```
+
+This runs five newly authored, bounded source-only primitives: exact evidence search, claim-scope checks, a revision-fenced garden date preview, a source-quoted learning-card draft, and deterministic comparison of **supplied** UI-observation fixtures. The examples use disposable fictional data. They do not install Muse components, contact targets, connect Family Link, run training, or claim independent review.
+
+See [priority transfer decisions](docs/PRIORITY_TRANSFERS.md) for their relationship to the more mature separately maintained projects and what remains to integrate.
+
 The `render` command only creates new local files. It **refuses to overwrite** existing directories, including existing user memory. Nothing is installed into Muse, registered in a host, or sent to another assistant by these commands. On Windows PowerShell, use `$env:PYTHONPATH='src'` followed by the commands above without the `PYTHONPATH=src` prefix.
 
 ## What the complete project will provide
