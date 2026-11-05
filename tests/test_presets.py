@@ -32,7 +32,7 @@ class PresetCatalogTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             target = Path(tmp) / 'installed'
             render_preset('garden-companion', target, display_name='My Garden Guide')
-            expected = {'AGENTS.md', 'SOUL.md', 'IDENTITY.md', 'USER.md', 'TOOLS.md', 'MEMORY.md', 'HEARTBEAT.md', 'PROACTIVE_PREFERENCES.md', 'SYSTEM_INSTRUCTIONS.md', 'SUBCHATS.md', 'HOOKS.md', 'FAMILY_LINK.json', 'RECEIPT.json'}
+            expected = {'AGENTS.md', 'SOUL.md', 'IDENTITY.md', 'USER.md', 'TOOLS.md', 'MEMORY.md', 'HEARTBEAT.md', 'PROACTIVE_PREFERENCES.md', 'SYSTEM_INSTRUCTIONS.md', 'SUBCHATS.md', 'HOOKS.md', 'FAMILY_LINK.json', 'ROLE_PLAYBOOK.md', 'RECEIPT.json'}
             self.assertEqual({x.name for x in target.iterdir()}, expected)
             self.assertIn('My Garden Guide', (target/'IDENTITY.md').read_text())
             self.assertEqual(json.loads((target/'FAMILY_LINK.json').read_text())['enabled'], False)
@@ -79,13 +79,13 @@ class FamilyLinkTests(unittest.TestCase):
         with self.assertRaises(FamilyLinkRefusal):
             propose_handoff('coordinator', 'software-engineer', request_id='../oops', capability='review')
 
-    def test_hound_finding_never_contains_a_verdict(self):
+    def test_finder_finding_never_contains_a_verdict(self):
         finding = {'source_uri':'fixture://example', 'source_sha256':'a'*64, 'observation':'sample', 'result':'FOUND'}
         self.assertEqual(verify_finding(finding)['status'], 'VALID_FINDING_ONLY')
         with self.assertRaises(FamilyLinkRefusal):
             verify_finding({**finding, 'verdict':'PASS'})
 
-    def test_hound_source_digest_is_required(self):
+    def test_finder_source_digest_is_required(self):
         with self.assertRaises(FamilyLinkRefusal):
             verify_finding({'source_uri':'fixture://example', 'observation':'no source digest','result':'FOUND'})
 

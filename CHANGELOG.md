@@ -1,3 +1,10 @@
+## Post-alpha candidate — R4 role differentiation and neutrality (source only)
+
+- Added eleven distinct validated role playbooks (three procedures each) covering task evidence, refusal rules, compatible peer handoffs and first negative-control acceptance exercises.
+- `render-v3` now includes `ROLE_PLAYBOOK.md` and pins its source/managed hashes. The read-only inspector treats playbook drift as policy review and remains compatible with existing v2 drafts.
+- Added a bounded `audit-neutrality` command and release-surface negative tests; no private donor code, external capability, Muse tool or connector was installed.
+- Added capability-fit decisions, source-intake matrix and owner-state neutralization/portability guidance.
+
 # Changelog
 
 ## Unreleased source increment — offline lifecycle inspection

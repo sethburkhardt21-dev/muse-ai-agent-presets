@@ -13,7 +13,8 @@ from pathlib import Path
 from .catalog import DOCUMENTS, ROOT, load_preset
 
 _HEX_SHA = re.compile(r'^[0-9a-f]{64}$')
-_MANAGED = tuple(DOCUMENTS) + ('FAMILY_LINK.json',)
+_MANAGED_V2 = tuple(DOCUMENTS) + ('FAMILY_LINK.json',)
+_MANAGED_V3 = _MANAGED_V2 + ('ROLE_PLAYBOOK.md',)
 
 
 def _sha(data: bytes) -> str:
@@ -49,15 +50,21 @@ def inspect_render(destination: Path) -> dict:
     }
     if receipt.get('schema') == 'muse-presets/render-v1':
         return {**base, 'status': 'LEGACY_UNVERIFIABLE'}
-    if receipt.get('schema') != 'muse-presets/render-v2':
+    version = receipt.get('schema')
+    if version not in ('muse-presets/render-v2', 'muse-presets/render-v3'):
         raise ValueError('UNKNOWN_RECEIPT_SCHEMA')
+    managed_names = _MANAGED_V3 if version == 'muse-presets/render-v3' else _MANAGED_V2
+    base['role_playbook_status'] = ('MANAGED_POLICY' if version == 'muse-presets/render-v3'
+                                    else 'NOT_IN_LEGACY_RENDER')
 
     hashes = receipt.get('rendered_sha256')
     templates = receipt.get('template_sha256')
-    if (not isinstance(hashes, dict) or set(hashes) != set(_MANAGED)
+    if (not isinstance(hashes, dict) or set(hashes) != set(managed_names)
             or not all(isinstance(v, str) and _HEX_SHA.fullmatch(v) for v in hashes.values())
             or not isinstance(templates, dict) or set(templates) != set(DOCUMENTS)
             or not all(isinstance(v, str) and _HEX_SHA.fullmatch(v) for v in templates.values())):
+        raise ValueError('INVALID_RECEIPT_MANIFEST')
+    if version == 'muse-presets/render-v3' and not _HEX_SHA.fullmatch(str(receipt.get('playbook_sha256', ''))):
         raise ValueError('INVALID_RECEIPT_MANIFEST')
     preset_id = receipt.get('preset_id')
     if not isinstance(preset_id, str) or not _HEX_SHA.fullmatch(str(receipt.get('preset_sha256', ''))):
@@ -65,19 +72,23 @@ def inspect_render(destination: Path) -> dict:
     # load_preset rejects traversal or unknown names; nothing is executed.
     load_preset(preset_id)
 
-    for filename in _MANAGED:
+    for filename in managed_names:
         managed = path / filename
         if managed.is_symlink():
             raise ValueError('UNSAFE_SYMLINK:' + filename)
         if not managed.is_file():
             base['missing'].append(filename)
         elif _sha(managed.read_bytes()) != hashes[filename]:
-            key = 'policy_modified' if filename == 'FAMILY_LINK.json' else 'owner_modified'
+            key = 'policy_modified' if filename in ('FAMILY_LINK.json', 'ROLE_PLAYBOOK.md') else 'owner_modified'
             base[key].append(filename)
 
     original = ROOT / 'presets' / preset_id / 'preset.json'
     if _sha(original.read_bytes()) != receipt['preset_sha256']:
         base['source_changed'].append('preset.json')
+    if version == 'muse-presets/render-v3':
+        playbook = ROOT / 'presets' / preset_id / 'playbook.json'
+        if not playbook.is_file() or playbook.is_symlink() or _sha(playbook.read_bytes()) != receipt['playbook_sha256']:
+            base['source_changed'].append('playbook.json')
     for filename in DOCUMENTS:
         template = ROOT / 'templates' / 'profile' / filename
         if not template.is_file() or _sha(template.read_bytes()) != templates[filename]:

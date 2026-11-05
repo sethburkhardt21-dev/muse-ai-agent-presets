@@ -6,13 +6,13 @@ Run `PYTHONPATH=src python -m muse_presets.cli render --preset learning-coach --
 
 ## Offline inspection of rendered drafts (source increment after v0.1.0-alpha)
 
-A new `render` includes a `render-v2` local receipt recording the exact preset/template hashes and generated managed-file hashes. Run:
+New drafts use a `render-v3` receipt recording the exact preset, role-playbook, and template hashes plus every generated managed-file hash. A copy of `ROLE_PLAYBOOK.md` is generated from each validated source role contract. Run:
 
 ```bash
 PYTHONPATH=src python -m muse_presets.cli inspect --path ./my-learning-coach
 ```
 
-The command is **read-only**. `LOCAL_MATCH` means its files match the untrusted original local receipt; `OWNER_CUSTOMIZED` names changed personal/instruction files without altering them; `REVIEW_REQUIRED` flags missing files, source drift or changed Family Link policy; `LEGACY_UNVERIFIABLE` preserves older v1 profile drafts without guessing their baseline. Symlinked managed files and malformed manifest entries are refused. An altered receipt could be forged together with the files: hashes are not signatures or host attestation. **None of these statuses prove Muse installed, loaded, refreshed or used the draft.** Source updates and user changes require a later, owner-authorized three-way merge; `inspect` never performs one.
+The command is **read-only**. `LOCAL_MATCH` means its files match the untrusted original local receipt; `OWNER_CUSTOMIZED` names changed personal/instruction files without altering them; `REVIEW_REQUIRED` flags missing files, source drift, changed specialist playbook policy, or changed Family Link policy; `LEGACY_UNVERIFIABLE` preserves older v1 profile drafts without guessing their baseline. Symlinked managed files and malformed manifest entries are refused. An altered receipt could be forged together with the files: hashes are not signatures or host attestation. **None of these statuses prove Muse installed, loaded, refreshed or used the draft.** Source updates and user changes require a later, owner-authorized three-way merge; `inspect` never performs one.
 
 ## Planned host-aware installation
 
@@ -32,7 +32,7 @@ The command is **read-only**. `LOCAL_MATCH` means its files match the untrusted 
 
 For a managed-file refresh or VM replacement: observe current loaded source, compare approved template + prior installed baseline + current user edits (three-way), restore only authorized package-owned portions and revalidate the new host. Preserve conflicts with their original hashes; do not resolve them by guessing. An auto-generated file may overwrite external edits; move durable user configuration to an owner-controlled supported path, then verify how the host loads it.
 
-A saved `HEARTBEAT.md` is advisory. A script is not an active hook. An ID in a manifest is not a native chat. Home disk persistence is not equivalent to full prompt injection or correct memory indexing.
+A generated `ROLE_PLAYBOOK.md` is a source-only procedure and policy surface; it is not a Muse skill, automatic agent task, or proof of deployment. A saved `HEARTBEAT.md` is advisory. A script is not an active hook. An ID in a manifest is not a native chat. Home disk persistence is not equivalent to full prompt injection or correct memory indexing.
 
 ## Recovery and uninstall
 

@@ -6,13 +6,16 @@ from pathlib import Path
 from .catalog import load_registry, load_preset, validate_catalog, render_preset
 from .family import propose_handoff
 from .lifecycle import inspect_render
+from .neutrality import audit_public_tree
+from .catalog import ROOT
 
 
 def main(argv=None) -> int:
     ap=argparse.ArgumentParser(description='Unofficial Muse AI agent presets — offline source tooling')
     sub=ap.add_subparsers(dest='command',required=True)
     sub.add_parser('list',help='List neutral specialist roles')
-    sub.add_parser('doctor',help='Validate local catalog and default-deny policy')
+    sub.add_parser('doctor',help='Validate local catalog, role methods and default-deny policy')
+    sub.add_parser('audit-neutrality',help='Read-only scan of public presets, templates and documentation')
     renderer=sub.add_parser('render',help='Create one draft profile, never install into Muse')
     renderer.add_argument('--preset',required=True)
     renderer.add_argument('--to',type=Path,required=True)
@@ -28,6 +31,12 @@ def main(argv=None) -> int:
     if args.command=='list':
         print('\n'.join(f"{s}: {load_preset(s)['title']}" for s in load_registry()['presets']))
         return 0
+    if args.command=='audit-neutrality':
+        findings = audit_public_tree(ROOT)
+        print(json.dumps({'status':'PASS' if not findings else 'FAIL',
+                          'scope':'SOURCE_HEURISTIC_ONLY', 'findings':findings,
+                          'native_muse_status':'NOT_CHECKED'}, indent=2))
+        return 0 if not findings else 2
     if args.command=='doctor':
         errors=validate_catalog()
         print(json.dumps({'status':'PASS' if not errors else 'FAIL','errors':errors,'native_muse_status':'NOT_CHECKED'},indent=2))

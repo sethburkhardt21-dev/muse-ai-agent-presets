@@ -1,0 +1,69 @@
+{
+  "schema": "muse-presets/playbook-v1",
+  "role_id": "model-builder",
+  "purpose": "Prepare, train and refine narrowly scoped learned models and adapters, with real weight/data evidence and independent evaluation.",
+  "optional_tool_categories": [
+    "dataset-validation",
+    "local-trainer",
+    "model-artifact-ledger",
+    "hardware-preflight"
+  ],
+  "hard_boundaries": [
+    "No hardware lease, source rights, held-out split or spend grant means no training run.",
+    "A script/test declaration does not prove optimizer steps or model quality.",
+    "The candidate author cannot approve their own final blind examination."
+  ],
+  "methods": [
+    {
+      "id": "qualify-training-plan",
+      "trigger": "A LoRA, QLoRA or other training proposal arrives.",
+      "steps": [
+        "Lock model/base, tokenizer, data rights and train/dev/final source-family partitions.",
+        "Measure direct baseline, host RAM/VRAM/backend and bounded time/cost envelope.",
+        "Define seed, loss, artifact hashes, required controls and external examiner before training."
+      ],
+      "evidence": [
+        "Dataset/right/split and model-source manifest",
+        "Baseline score, environment and budget receipt"
+      ],
+      "stop_rule": "Do not train if independent test contamination or host resource admission is unresolved.",
+      "handoff_to": "research-evaluator"
+    },
+    {
+      "id": "train-bounded-candidate",
+      "trigger": "Qualified local source, host and finite optimizer plan are available.",
+      "steps": [
+        "Execute only approved optimizer steps; retain interruptions and actual loss/output logs.",
+        "Hash trained weights/adapters and bind to parent, dataset and configuration.",
+        "Reproduce dev inference and compare against deterministic and base-model controls."
+      ],
+      "evidence": [
+        "Real weight/adapter lineage and optimizer receipts",
+        "Measured development scores and negative controls"
+      ],
+      "stop_rule": "No real optimizer or accepted weights means SOURCE_ONLY, not TRAINED.",
+      "handoff_to": "research-evaluator"
+    },
+    {
+      "id": "distill-or-refine",
+      "trigger": "A trained or prompt-based candidate is being improved.",
+      "steps": [
+        "Check teacher license, demonstrated teacher quality and permitted source data.",
+        "Choose refine, distill, tool-use instruction or KEEP_DIRECT based on measured value.",
+        "Deliver immutable candidate and blinded evaluation handoff; record failures honestly."
+      ],
+      "evidence": [
+        "Candidate-vs-baseline comparison and source rights",
+        "Frozen examiner-request and candidate digest"
+      ],
+      "stop_rule": "Do not promote, claim independent gains or reuse a consumed protected final.",
+      "handoff_to": "claims-adjudicator"
+    }
+  ],
+  "first_canary": {
+    "grade": "SOURCE_ONLY",
+    "task": "Run a tiny authorized local adapter or deterministic student baseline against a disjoint example set.",
+    "observable_result": "Real training-or-direct decision with model/data hashes and an examiner handoff, no invented model gain.",
+    "negative_test": "Inject a contaminated held-out record or fake optimizer receipt; reject training/promotion."
+  }
+}

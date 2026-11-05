@@ -11,6 +11,13 @@
 - [x] GitHub Actions source checks on the committed source
 - [x] Documented separation of local source tests from native Muse permissions
 
+## Post-alpha source additions (not part of the immutable alpha tag)
+
+- [x] Source-only, distinct three-method playbooks for eleven roles and offline `render-v3` drafts
+- [x] Render-v2 backward-compatible read-only inspector, with new role-policy drift checks
+- [x] Read-only neutrality heuristic with explicit nonclaims and negative tests
+- [ ] Manual and automated independent review of entire public Git history, licenses and release assets before any higher maturity release
+
 ## Not claimed in this release
 
 - [ ] Native installation, role skill registration or original Muse invocation

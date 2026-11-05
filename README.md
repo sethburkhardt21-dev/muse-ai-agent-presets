@@ -31,6 +31,7 @@ git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
 cd muse-ai-agent-presets
 PYTHONPATH=src python -m muse_presets.cli list
 PYTHONPATH=src python -m muse_presets.cli doctor
+PYTHONPATH=src python -m muse_presets.cli audit-neutrality
 PYTHONPATH=src python -m muse_presets.cli render --preset garden-companion --name 'My Garden Guide' --to ./my-new-guide
 PYTHONPATH=src python -m muse_presets.cli inspect --path ./my-new-guide
 PYTHONPATH=src python -m muse_presets.cli family-preview --from-role garden-companion --to-role evidence-finder --request-id demo-001 --capability find
@@ -47,7 +48,9 @@ This runs five newly authored, bounded source-only primitives: exact evidence se
 
 See [priority transfer decisions](docs/PRIORITY_TRANSFERS.md) for their relationship to the more mature separately maintained projects and what remains to integrate.
 
-The `inspect` command is read-only: it compares a draft against its self-reported versioned render receipt, distinguishes owner-customized files from source/policy drift, and never repairs or installs anything. Old v1 receipts are explicitly unverified. These local hashes are **not signatures** or proof that Muse loaded the files.
+Every rendered draft now includes a role-specific `ROLE_PLAYBOOK.md` with **three methods**, evidence/stop rules, a suggested handoff, and a bounded test exercise. The instructions are carefully separated from installed skills; no new tools, hooks, subchats, models or authorizations are created. Details: [specialist capability fit audit](docs/CAPABILITY_FIT_AUDIT.md) and [genericity/provenance policy](docs/NEUTRALITY_AND_PROVENANCE.md).
+
+The `inspect` command is read-only: it compares a draft against its self-reported versioned render receipt, distinguishes owner-customized files from source/policy drift (including `ROLE_PLAYBOOK.md`), and never repairs or installs anything. Old v1 receipts are explicitly unverified. These local hashes are **not signatures** or proof that Muse loaded the files.
 
 The `render` command only creates new local files. It **refuses to overwrite** existing directories, including existing user memory. Nothing is installed into Muse, registered in a host, or sent to another assistant by these commands. On Windows PowerShell, use `$env:PYTHONPATH='src'` followed by the commands above without the `PYTHONPATH=src` prefix.
 
@@ -64,7 +67,7 @@ Start with the [architecture](docs/ARCHITECTURE.md), [five-layer proof and execu
 
 ## Security, rights and scope
 
-The public repository contains **only newly authored generic starter code and documentation**. The specialist engines from separate development projects are **mapped for later review, not copied here**. No proprietary SDK snapshot, account credentials, malware sample, private chat, personal memory, private image/ROM, model weights or external connector tokens are included. External repos are linked in a [review queue](docs/COMMUNITY_RESEARCH.md), with licensing and host-compatibility obligations before reuse.
+The public repository contains **only newly authored generic starter code and documentation**. The specialist engines from separate development projects are **mapped for later review, not copied here**. No proprietary SDK snapshot, account credentials, malware sample, private chat, personal memory, private image/ROM, model weights or external connector tokens are included. External repos are linked in a [review queue](docs/COMMUNITY_RESEARCH.md) and [per-role connector intake map](docs/COMMUNITY_ROLE_INTEGRATIONS.md), with licensing and host-compatibility obligations before reuse.
 
 - [Install, personalize and preserve state](docs/INSTALL_AND_PERSISTENCE.md)
 - [Source status](docs/STATUS.md)

@@ -1,0 +1,69 @@
+{
+  "schema": "muse-presets/playbook-v1",
+  "role_id": "adversarial-verifier",
+  "purpose": "Test permitted systems adversarially, independently expose failures and preserve reproducible attack evidence and remediation.",
+  "optional_tool_categories": [
+    "static-analyzer",
+    "mutation-testing",
+    "sandboxed-test-runner",
+    "provenance-ledger"
+  ],
+  "hard_boundaries": [
+    "Only owned or explicitly authorized targets and bounded fixtures.",
+    "Do not mutate a checked artifact while simultaneously claiming independent acceptance.",
+    "Unproven attack stories or synthetic detections are not real vulnerabilities."
+  ],
+  "methods": [
+    {
+      "id": "scope-threat-model",
+      "trigger": "A candidate system or release needs adversarial review.",
+      "steps": [
+        "Lock authorized target, actor permissions, trust boundaries and exclusions.",
+        "Map plausible bypasses across all effectful entrypoints and error states.",
+        "Select observable negative controls and stop conditions before probing."
+      ],
+      "evidence": [
+        "Target/source/authorization record",
+        "Threat model and mutation/negative test plan"
+      ],
+      "stop_rule": "No known authority or uncertain external effects means no intrusive testing.",
+      "handoff_to": "claims-adjudicator"
+    },
+    {
+      "id": "execute-negative-controls",
+      "trigger": "The fixture or isolated test target is authorized.",
+      "steps": [
+        "Run bounded failure injection, malformed input and mutated authorization tests.",
+        "Compare actual error and state to expected fail-closed controls.",
+        "Preserve exact repro steps, failing mutation, logs and scope limits."
+      ],
+      "evidence": [
+        "Raw negative-case output and source identity",
+        "Confirmed failure or clean negative with reproducibility"
+      ],
+      "stop_rule": "Do not label a suspected weakness proven until reproduced.",
+      "handoff_to": "claims-adjudicator"
+    },
+    {
+      "id": "independent-release-review",
+      "trigger": "A developer claims a tested release or bug fix.",
+      "steps": [
+        "Review the exact artifact and change list independently of author assertions.",
+        "Attempt decisive counterexamples and rerun the original critical path.",
+        "Return ACCEPT, REPAIR, REJECT or NOT_RUN with bounded evidence."
+      ],
+      "evidence": [
+        "Reviewer-owned results and rerun hashes",
+        "Outstanding risks and release verdict"
+      ],
+      "stop_rule": "Self-certified fixes, incomplete full suites and absent original interfaces cannot earn PASS.",
+      "handoff_to": "evidence-finder"
+    }
+  ],
+  "first_canary": {
+    "grade": "SOURCE_ONLY",
+    "task": "Attempt a seeded authorization bypass in a disposable local fixture.",
+    "observable_result": "Reproducible mutation result, root cause and tested remediation gate.",
+    "negative_test": "Give reviewer a forged successful test log; require source/receipt mismatch detection."
+  }
+}

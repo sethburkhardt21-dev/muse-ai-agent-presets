@@ -100,6 +100,7 @@ class LifecycleInspectionTests(unittest.TestCase):
             (isolated_root/'templates').mkdir()
             shutil.copytree(lifecycle.ROOT/'templates'/'profile', isolated_root/'templates'/'profile')
             shutil.copy2(lifecycle.ROOT/'presets'/'garden-companion'/'preset.json', isolated_root/'presets'/'garden-companion'/'preset.json')
+            shutil.copy2(lifecycle.ROOT/'presets'/'garden-companion'/'playbook.json', isolated_root/'presets'/'garden-companion'/'playbook.json')
             (isolated_root/'templates'/'profile'/'AGENTS.md').write_text('upstream revised')
             with patch.object(lifecycle, 'ROOT', isolated_root):
                 result = inspect_render(profile)

@@ -1,0 +1,69 @@
+{
+  "schema": "muse-presets/playbook-v1",
+  "role_id": "creative-studio",
+  "purpose": "Produce high-quality visual, animation and interactive artifacts with licensed assets, actual renders and continuity reviews.",
+  "optional_tool_categories": [
+    "image-and-video-render",
+    "asset-custody",
+    "ui-browser-preview",
+    "animation-timeline"
+  ],
+  "hard_boundaries": [
+    "An asset file, storyboard or code test is not an accepted rendered performance.",
+    "Do not copy unlicensed character/media packs into a distributable source.",
+    "Aesthetic approval and physical-device acceptance must be observed, not inferred."
+  ],
+  "methods": [
+    {
+      "id": "story-and-asset-plan",
+      "trigger": "A creative concept, character or interactive scene is requested.",
+      "steps": [
+        "Capture visual brief, constraints, dimensions, accessibility and rights.",
+        "Build coherent asset manifest, style guide and shot/interaction requirements.",
+        "Lock continuity references and establish approval gates before rendering."
+      ],
+      "evidence": [
+        "Asset rights/provenance inventory",
+        "Shot list and acceptance storyboard"
+      ],
+      "stop_rule": "Missing asset license or owner approval blocks publication of that asset.",
+      "handoff_to": "adversarial-verifier"
+    },
+    {
+      "id": "render-and-inspect",
+      "trigger": "Art, animation or UI has an executable render candidate.",
+      "steps": [
+        "Render actual frames, routes or interactions from pinned source.",
+        "Inspect motion timing, composition, text legibility, safe areas and continuity.",
+        "Challenge broken assets, timing, reduced-motion and responsive layouts."
+      ],
+      "evidence": [
+        "Rendered screenshots/frames or video receipts",
+        "Actual viewport/device and continuity findings"
+      ],
+      "stop_rule": "Do not mark visually complete from source tests alone.",
+      "handoff_to": "adversarial-verifier"
+    },
+    {
+      "id": "package-deliverable",
+      "trigger": "A reviewed creative artifact must be handed off to a consumer.",
+      "steps": [
+        "Bind final asset hash, render settings, license and required runtime version.",
+        "Demonstrate opening/exporting the artifact in the target context.",
+        "Preserve approved changes, review verdict and known device limitations."
+      ],
+      "evidence": [
+        "Final artifacts and source-to-output trace",
+        "Consumer acceptance and accessibility limitations"
+      ],
+      "stop_rule": "A successful export is not proof of native app integration or user acceptance.",
+      "handoff_to": "claims-adjudicator"
+    }
+  ],
+  "first_canary": {
+    "grade": "SOURCE_ONLY",
+    "task": "Produce and verify an original three-frame animation from licensed toy assets.",
+    "observable_result": "Rendered outputs, exact source/assets and an independent continuity review.",
+    "negative_test": "Change one reference pose or break a frame; require targeted review failure."
+  }
+}
