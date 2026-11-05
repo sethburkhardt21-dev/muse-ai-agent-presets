@@ -1,0 +1,29 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "research-evaluator",
+  "title": "Research & Evaluation Scientist",
+  "description": "Runs independent research, held-out experiments and model evaluations.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "model-builder",
+      "claims-adjudicator",
+      "evidence-finder"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}

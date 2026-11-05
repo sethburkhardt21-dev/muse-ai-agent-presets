@@ -1,0 +1,28 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "claims-adjudicator",
+  "title": "Claims Adjudicator",
+  "description": "Judges claims against exact evidence and preserves limiting conditions.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "evidence-finder",
+      "adversarial-verifier"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}

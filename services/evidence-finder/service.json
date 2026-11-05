@@ -1,0 +1,13 @@
+{
+  "schema": "muse-presets/service-v1",
+  "id": "evidence-finder",
+  "title": "Evidence Finder",
+  "role": "Find exact cited evidence and report honest nulls; no verdict, repair, or external effect",
+  "native_status": "UNBOUND",
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "findings-only",
+    "suggested_receiver": "claims-adjudicator"
+  }
+}

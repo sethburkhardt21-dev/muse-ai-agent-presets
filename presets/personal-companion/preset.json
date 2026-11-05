@@ -1,0 +1,28 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "personal-companion",
+  "title": "Personal Companion",
+  "description": "Helps with daily planning, safe wellness information and enjoyable experiences.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "evidence-finder",
+      "research-evaluator"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}

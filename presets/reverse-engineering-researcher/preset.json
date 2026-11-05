@@ -1,0 +1,29 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "reverse-engineering-researcher",
+  "title": "Reverse Engineering & Security Researcher",
+  "description": "Performs authorized behavioral analysis, protocol study and isolated defensive research.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "evidence-finder",
+      "adversarial-verifier",
+      "claims-adjudicator"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}

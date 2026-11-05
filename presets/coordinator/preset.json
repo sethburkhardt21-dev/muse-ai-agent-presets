@@ -1,0 +1,30 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "coordinator",
+  "title": "Coordinator",
+  "description": "Coordinates bounded work, memory, leases and independent acceptance.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "software-engineer",
+      "research-evaluator",
+      "claims-adjudicator",
+      "evidence-finder"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}
