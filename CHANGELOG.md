@@ -1,3 +1,9 @@
+## Post-alpha source increment — R6 local Learning Coach
+
+- Implemented a new, nonclinical SQLite study ledger for source-identity, held literal cards, owner approval, session-isolated protected challenges, exact-answer scoring, original-ID restart recovery, and explicitly heuristic due review.
+- Added source/draft digest checks, stale-source refusal, approval separation, wrong owner/learner/session denials, exact-expiry/quota boundary tests and atomic rollback on failed grading.
+- Adapted design lessons without copying private study-engine code or materials; the model-less demo uses fictional source text and deletes its data. Native Muse host identity, learning validity and clinical release are NOT PROVEN.
+
 ## Post-alpha source increment — R5 local garden calendar
 
 - Added a new, generic SQLite calendar transaction engine and disposable example for Garden Companion: owner/site-scoped events, verified-resolver injection contract, specialist proposal-only access, owner browser approval, 1–21-event atomic date edits, stale-revision and cancellation refusal, duplicate/replay-safe immutable receipts, and original-operation recovery after restart.

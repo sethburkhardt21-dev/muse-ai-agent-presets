@@ -15,3 +15,7 @@
 **First authorized future code slice:** qualify the already-implemented garden owner-scoped seasonal-batch path on the current host, then port only its neutral data/command contract; do not start with 11 simultaneous native installations. Preserve generated artifacts, tests and latest user edits during update/recovery.
 
 The initial alpha tag stops at R1; post-alpha `main` adds role-specific procedures and read-only drift/neutrality checks without claiming host binding. The Family Link preview is not R5. Advanced modules may ship in later versions without delaying honest free starter presets.
+
+## Next after R6 learning reference
+
+The local Garden and Learning source slices establish **CORRECT at local-test scope only**. Highest-value remaining work is the original Muse/Hatch host adapter and clean account acceptance for at least one preset, followed by rights-cleared reusable claims/evidence specialist engines. Do not create a second generic scheduler or copy protected educational/clinical materials. Each host-native conversion must demonstrate original identity, effect receipts, restart, device state and independent usefulness.

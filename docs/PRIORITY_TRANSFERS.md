@@ -16,6 +16,10 @@ A specialist is not complete because its original donor had an impressive test c
 
 `src/muse_presets/garden_calendar.py` now provides a separate, generic SQLite transaction reference alongside the original read-only preview. It implements revision-fenced proposals, explicit owner review, multi-event atomic decisions and durable recovery receipts. See [the runnable Garden contract](GARDEN_LOCAL_CALENDAR.md). **Source tested only**: no recipient Muse session, credential validation, managed Space or external calendar is bound. The original private Garden donor source remains separately governed and has not been copied into this repository.
 
+## R6 — New local Learning Coach source-to-review engine
+
+`src/muse_presets/learning_session.py` is the second complete local owner-scoped SQLite reference slice. It creates literal, source-bound held cards from owner-admitted text, requires separate owner review before issuing a question, scores within a learner session, preserves original operation receipts, and projects transparent nonvalidated due intervals. Its protected source, answer and review histories remain in the user-owned local database, never the public repo. See [Learning Coach local study contract](LEARNING_LOCAL_STUDY.md). The independent private study donor is not vendored. **Native Muse learner identity, production cryptographic custody, educational validity and clinical approval are NOT claimed.**
+
 ## Alpha implementation increment — clean-room local slices
 
 The following newly authored, dependency-free reference functions are implemented in this repository. They **adapt architectural ideas**, not private donor source, weights or personal records. All are bounded, source-only, and require separate native Muse adoption:

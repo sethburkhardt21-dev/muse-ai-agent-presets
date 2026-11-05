@@ -46,6 +46,14 @@ PYTHONPATH=src python examples/garden_calendar_demo.py
 
 This source-tested, standard-library SQLite workflow supports owner-scoped planting events, specialist proposals, read-only before/after review, atomic 1–21-event approval, revision fencing, durable operation IDs and readback after reopening. **The owner/Space verifier is simulated in the demo, not a native Muse authority.** See [Garden transaction contract](docs/GARDEN_LOCAL_CALENDAR.md).
 
+### Run the nonclinical Learning Coach study workflow
+
+```bash
+PYTHONPATH=src python examples/learning_session_demo.py
+```
+
+This separately authored local SQLite engine adds owner-admitted sources, literal source-backed held cards, owner review, learner-session-bound questions, one-time scoring and durable due-review projection. The demo uses fictional content and mock host roles; **no native Muse tutor, classroom account, medical approval or scheduled reminder is implied**. See [local Learning Coach contract](docs/LEARNING_LOCAL_STUDY.md).
+
 ### Run five offline specialist examples
 
 ```bash

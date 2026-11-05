@@ -42,3 +42,10 @@
 ## Per-feature evidence contract
 
 Record `SOURCE_PRESENT`, `LOCAL_TESTED`, `HOST_WIRED`, `NATIVE_USED` and `INDEPENDENT_USEFUL` independently. Source tests or signed files alone never grant native permissions. Current source-run status is documented in [STATUS.md](STATUS.md); R0–R6 remain the implementation plan in [ROADMAP.md](ROADMAP.md).
+
+## R6 Learning Coach source qualification
+
+- Run `PYTHONPATH=src python examples/learning_session_demo.py` and confirm `LOCAL_NONCLINICAL_STUDY_DEMO_PASSED` with no external effects.
+- Run `PYTHONPATH=src python -m unittest discover -s tests -p test_learning_session.py -v`, then the full suite and neutrality audit on the resulting exact source.
+- Independently verify wrong-session replay denial, stale source/quote refusal, source-scope separation, no hidden draft writes, one attempt per challenge and rollback after injected SQLite failure.
+- Reproduce on supported Windows/macOS hosts as available; preserve actual skip reasons and any unknown host, and do not promote source tests into a claim of native Muse use or instructional quality.
