@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from .catalog import load_registry, load_preset, validate_catalog, render_preset
 from .family import propose_handoff
+from .lifecycle import inspect_render
 
 
 def main(argv=None) -> int:
@@ -16,6 +17,8 @@ def main(argv=None) -> int:
     renderer.add_argument('--preset',required=True)
     renderer.add_argument('--to',type=Path,required=True)
     renderer.add_argument('--name',default=None)
+    inspect=sub.add_parser('inspect',help='Read-only source/owner-change check for a rendered draft')
+    inspect.add_argument('--path',type=Path,required=True)
     preview=sub.add_parser('family-preview',help='Validate a proposal without sending it')
     preview.add_argument('--from-role',dest='from_role',required=True)
     preview.add_argument('--to-role',dest='to_role',required=True)
@@ -30,6 +33,10 @@ def main(argv=None) -> int:
         print(json.dumps({'status':'PASS' if not errors else 'FAIL','errors':errors,'native_muse_status':'NOT_CHECKED'},indent=2))
         return 0 if not errors else 2
     try:
+        if args.command=='inspect':
+            report=inspect_render(args.path)
+            print(json.dumps(report,indent=2,sort_keys=True))
+            return 0 if report['status'] in ('LOCAL_MATCH','OWNER_CUSTOMIZED') else 2
         if args.command=='render':
             dest=render_preset(args.preset,args.to,display_name=args.name)
             print(json.dumps({'status':'LOCAL_DRAFT_CREATED','destination':str(dest),'native_installed':False},indent=2))

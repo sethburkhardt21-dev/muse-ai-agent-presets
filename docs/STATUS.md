@@ -7,6 +7,7 @@
 | Eleven specialist manifests | SOURCE_IMPLEMENTED | Neutral role descriptors and default denied family metadata |
 | Evidence Finder | LOCAL_TESTED_SHAPE | Schema validator for findings; neither auth nor search engine |
 | Profile renderer | LOCAL_TESTED | Creates new local draft files; never overwrites existing user dirs |
+| Rendered-profile inspector | LOCAL_TESTED_SHAPE | Read-only v2 manifest/source drift and owner-file comparison; refuses missing/symlink/policy changes, no native loading or regeneration |
 | Family Link | LOCAL_PROPOSAL_ONLY | Sender/receiver allowlist and request check, zero external effects |
 | Five priority offline micro-slices | LOCAL_TESTED | Pure source functions for finder, claim-scope, garden, learning and reverse-observation fixtures; no private donor code imported |
 | Local software tests | PASS_AT_SOURCE_SCOPE | Linux: 40/40; Windows Python 3.12: 39 pass / 1 symlink-privilege skip; GitHub Actions passed on public source revision |

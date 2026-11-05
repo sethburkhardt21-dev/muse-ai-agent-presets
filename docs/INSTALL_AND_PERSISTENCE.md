@@ -4,6 +4,16 @@
 
 Run `PYTHONPATH=src python -m muse_presets.cli render --preset learning-coach --to ./my-learning-coach --name "My Learning Coach"`. This creates a **local draft**. It does not deploy into Muse. `doctor` checks local source only.
 
+## Offline inspection of rendered drafts (source increment after v0.1.0-alpha)
+
+A new `render` includes a `render-v2` local receipt recording the exact preset/template hashes and generated managed-file hashes. Run:
+
+```bash
+PYTHONPATH=src python -m muse_presets.cli inspect --path ./my-learning-coach
+```
+
+The command is **read-only**. `LOCAL_MATCH` means its files match the untrusted original local receipt; `OWNER_CUSTOMIZED` names changed personal/instruction files without altering them; `REVIEW_REQUIRED` flags missing files, source drift or changed Family Link policy; `LEGACY_UNVERIFIABLE` preserves older v1 profile drafts without guessing their baseline. Symlinked managed files and malformed manifest entries are refused. An altered receipt could be forged together with the files: hashes are not signatures or host attestation. **None of these statuses prove Muse installed, loaded, refreshed or used the draft.** Source updates and user changes require a later, owner-authorized three-way merge; `inspect` never performs one.
+
 ## Planned host-aware installation
 
 1. Identify the correct receiving account, host type, current SDK/schema and callable tools. Stop on mismatch.

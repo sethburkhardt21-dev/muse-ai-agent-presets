@@ -32,6 +32,7 @@ cd muse-ai-agent-presets
 PYTHONPATH=src python -m muse_presets.cli list
 PYTHONPATH=src python -m muse_presets.cli doctor
 PYTHONPATH=src python -m muse_presets.cli render --preset garden-companion --name 'My Garden Guide' --to ./my-new-guide
+PYTHONPATH=src python -m muse_presets.cli inspect --path ./my-new-guide
 PYTHONPATH=src python -m muse_presets.cli family-preview --from-role garden-companion --to-role evidence-finder --request-id demo-001 --capability find
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
@@ -45,6 +46,8 @@ PYTHONPATH=src python examples/priority_slices.py
 This runs five newly authored, bounded source-only primitives: exact evidence search, claim-scope checks, a revision-fenced garden date preview, a source-quoted learning-card draft, and deterministic comparison of **supplied** UI-observation fixtures. The examples use disposable fictional data. They do not install Muse components, contact targets, connect Family Link, run training, or claim independent review.
 
 See [priority transfer decisions](docs/PRIORITY_TRANSFERS.md) for their relationship to the more mature separately maintained projects and what remains to integrate.
+
+The `inspect` command is read-only: it compares a draft against its self-reported versioned render receipt, distinguishes owner-customized files from source/policy drift, and never repairs or installs anything. Old v1 receipts are explicitly unverified. These local hashes are **not signatures** or proof that Muse loaded the files.
 
 The `render` command only creates new local files. It **refuses to overwrite** existing directories, including existing user memory. Nothing is installed into Muse, registered in a host, or sent to another assistant by these commands. On Windows PowerShell, use `$env:PYTHONPATH='src'` followed by the commands above without the `PYTHONPATH=src` prefix.
 

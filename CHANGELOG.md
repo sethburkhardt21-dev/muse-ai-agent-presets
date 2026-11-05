@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased source increment — offline lifecycle inspection
+
+- New v2 renderer receipts record a preset source digest, per-template source digests, generated-file digests and the chosen display name. The renderer remains create-only and offline.
+- `inspect --path` checks local drafts without touching their contents: it differentiates unmodified, owner-customized, changed Family Link policy, upstream template drift, missing file, unsafe symlink and unverifiable legacy receipts.
+- Nine lifecycle regression cases added; **native Muse loading and automatic regeneration remain NOT IMPLEMENTED**. The existing `v0.1.0-alpha` release remains pinned to its original source.
+
 ## 0.1.0-alpha — November 5, 2026
 
 First public, independent-source edition of Muse AI Agent Presets.

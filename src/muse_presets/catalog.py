@@ -4,6 +4,7 @@ This module never reads private Muse state or changes an installed account.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -84,7 +85,11 @@ def render_preset(slug: str, destination: Path, *, display_name: str | None = No
             (destination/filename).write_text(output,encoding='utf-8')
         (destination/'FAMILY_LINK.json').write_text(
             json.dumps(config['family_link'],indent=2,sort_keys=True)+'\n',encoding='utf-8')
-        receipt = {'schema':'muse-presets/render-v1','preset_id':slug,
+        receipt = {'schema':'muse-presets/render-v2','preset_id':slug,
+                   'display_name':name,
+                   'preset_sha256': hashlib.sha256((ROOT/'presets'/slug/'preset.json').read_bytes()).hexdigest(),
+                   'template_sha256': {filename:hashlib.sha256((ROOT/'templates'/'profile'/filename).read_bytes()).hexdigest() for filename in DOCUMENTS},
+                   'rendered_sha256': {filename:hashlib.sha256((destination/filename).read_bytes()).hexdigest() for filename in (*DOCUMENTS,'FAMILY_LINK.json')},
                    'grade':'LOCAL_DRAFT_ONLY',
                    'warning':'NOT an installed Muse runtime; no host identity, connector, hook, scheduler or native tool is bound',
                    'source':'local source-controlled preset'}
