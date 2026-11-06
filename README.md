@@ -54,6 +54,14 @@ PYTHONPATH=src python examples/learning_session_demo.py
 
 This separately authored local SQLite engine adds owner-admitted sources, literal source-backed held cards, owner review, learner-session-bound questions, one-time scoring and durable due-review projection. The demo uses fictional content and mock host roles; **no native Muse tutor, classroom account, medical approval or scheduled reminder is implied**. See [local Learning Coach contract](docs/LEARNING_LOCAL_STUDY.md).
 
+### Run the shared Evidence Finder custody workflow
+
+The Evidence Finder is a shared source service for all eleven neutral specialists, not a twelfth autonomous assistant. Its new, **local durable evidence ledger** preserves exact findings across restarts and records honest no-hit receipts with replay fencing and tamper-detecting local SHA-256 links.
+
+    PYTHONPATH=src python examples/evidence_ledger_demo.py
+
+This uses only synthetic files and a temporary SQLite database. It has no source-owner authentication, external chain anchor, verdict, native Muse tool registration or cross-account delivery. See [Evidence Finder custody](docs/EVIDENCE_LEDGER.md) and the [general-purpose specialist capability map](docs/GENERIC_SPECIALIST_SHOWCASE.md).
+
 ### Run five offline specialist examples
 
 ```bash
