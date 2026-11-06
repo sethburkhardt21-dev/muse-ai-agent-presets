@@ -18,7 +18,8 @@
 | Local software tests | PASS_AT_SOURCE_SCOPE | Historical alpha: 40 local tests; newer source includes role/lifecycle/neutrality checks and the separate Garden SQLite suite. Re-run at the exact commit. Quote fresh exact-head results after host and CI execution |
 | Personal Muse/Hatch adapter | NOT_IMPLEMENTED | Native host, registered tools, callback, Spaces and chat IDs unbound |
 | Muse Code adapter | NOT_IMPLEMENTED | Separate developer preview requires its own host canary |
-| Eleven complete specialist engines | NOT_IMPORTED | Existing private candidates require rights, provenance and portability review |
+| Software Engineer Claim Gate | LOCAL_POSIX_ENGINE_TESTED | Eight source-derived neutral engine modules plus bounded CLI, local leases/fencing/approval and UNKNOWN recovery; create-only profile/skill staging; **no native Muse registration, owner authentication, or external effects** |
+| Eleven complete specialist engines | PARTIAL | Software Engineer has its first source-tested Claim Gate slice; the remaining specialist engine trees, hooks, schedulers and native bridges are still unqualified |
 | Third-party skills/connectors | RESEARCH_ONLY | Source links; no code/assets copied or connectors installed |
 | Native external effects | NOT_RUN | No owner identity, grants, recipient readback or independent result |
 | Public alpha repository | PUBLISHED_PUBLIC_ALPHA | Public GitHub main verified with clean-root history and source CI; native execution not implied |

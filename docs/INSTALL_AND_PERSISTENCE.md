@@ -14,6 +14,14 @@ PYTHONPATH=src python -m muse_presets.cli inspect --path ./my-learning-coach
 
 The command is **read-only**. `LOCAL_MATCH` means its files match the untrusted original local receipt; `OWNER_CUSTOMIZED` names changed personal/instruction files without altering them; `REVIEW_REQUIRED` flags missing files, source drift, changed specialist playbook policy, or changed Family Link policy; `LEGACY_UNVERIFIABLE` preserves older v1 profile drafts without guessing their baseline. Symlinked managed files and malformed manifest entries are refused. An altered receipt could be forged together with the files: hashes are not signatures or host attestation. **None of these statuses prove Muse installed, loaded, refreshed or used the draft.** Source updates and user changes require a later, owner-authorized three-way merge; `inspect` never performs one.
 
+## Source-only engineering pack staging
+
+The Software Engineer now includes executable local Claim Gate modules and an offline create-only pack stager:
+
+    PYTHONPATH=src python -m muse_presets.engineering_pack --to ./new-engineer-pack
+
+This generates a new generic profile, source-pinned runtime, neutral skill and a file-hash receipt. It refuses existing destinations and does not merge personal memory or install native Muse tooling. The original Claim Gate uses POSIX fcntl; Windows can stage the pack but cannot execute that engine without a separately qualified adapter. See presets/software-engineer/INSTALL.md.
+
 ## Planned host-aware installation
 
 1. Identify the correct receiving account, host type, current SDK/schema and callable tools. Stop on mismatch.

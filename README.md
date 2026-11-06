@@ -4,7 +4,7 @@
 
 **An unofficial, free, open-source starter collection of configurable specialist AI assistants for Muse.** Eleven neutral role presets, a shared Evidence Finder service, safe profile templates, offline validation, and an optional Family Link proposal interface. Designed to help people build more useful Muse assistants without copying someone else's private identity or data.
 
-> **Alpha / source-first.** These are **local drafts**, not installed Muse assistants, native skill registrations, active schedulers, live connectors, or multi-agent communications. This project is **not affiliated with or endorsed by Meta**. The name Muse is used descriptively for compatibility.
+> **Alpha / source-first with tested local engines.** Generic profiles are local drafts; selected roles now include independently tested source-only engines. Nothing is an installed Muse assistant, native skill registration, active scheduler, live connector, or cross-account communication. This project is **not affiliated with or endorsed by Meta**. The name Muse is used descriptively for compatibility.
 
 ## Choose an assistant
 
@@ -62,6 +62,18 @@ The Evidence Finder is a shared source service for all eleven neutral specialist
 
 This uses only synthetic files and a temporary SQLite database. It has no source-owner authentication, external chain anchor, verdict, native Muse tool registration or cross-account delivery. See [Evidence Finder custody](docs/EVIDENCE_LEDGER.md) and the [general-purpose specialist capability map](docs/GENERIC_SPECIALIST_SHOWCASE.md).
 
+### Stage the executable Software Engineer claim and recovery pack
+
+On any machine, this creates a new source-only pack without overwriting owner memory:
+
+    PYTHONPATH=src python -m muse_presets.engineering_pack --to ./my-software-engineer
+
+On POSIX/Python 3.12+, the synthetic demo exercises the original-source-neutralized Claim Gate with atomic claims, fencing, approval primitives and held-UNKNOWN recovery:
+
+    PYTHONPATH=src python examples/software_engineer_claim_gate_demo.py
+
+The engine uses POSIX fcntl locking; **native Windows execution is not supported**. Staging does not call Muse, run external effects, grant permissions or activate schedulers. See [Software Engineer engine pack](presets/software-engineer/INSTALL.md).
+
 ### Run five offline specialist examples
 
 ```bash
@@ -91,7 +103,7 @@ Start with the [architecture](docs/ARCHITECTURE.md), [five-layer proof and execu
 
 ## Security, rights and scope
 
-The public repository contains **only newly authored generic starter code and documentation**. The specialist engines from separate development projects are **mapped for later review, not copied here**. No proprietary SDK snapshot, account credentials, malware sample, private chat, personal memory, private image/ROM, model weights or external connector tokens are included. External repos are linked in a [review queue](docs/COMMUNITY_RESEARCH.md) and [per-role connector intake map](docs/COMMUNITY_ROLE_INTEGRATIONS.md), with licensing and host-compatibility obligations before reuse.
+The public repository contains neutral generic starter code and an explicitly source-derived, neutralized Software Engineer Claim Gate implementation. Its original developer identity, owner paths, private profiles and runtime records are excluded. This is the first tested transferable engine slice; other original specialist engines remain mapped for later qualification. Source authorship and third-party provenance must remain auditable before further redistribution. No proprietary SDK snapshot, account credentials, malware sample, private chat, personal memory, private image/ROM, model weights or external connector tokens are included. External repos are linked in a [review queue](docs/COMMUNITY_RESEARCH.md) and [per-role connector intake map](docs/COMMUNITY_ROLE_INTEGRATIONS.md), with licensing and host-compatibility obligations before reuse.
 
 - [Install, personalize and preserve state](docs/INSTALL_AND_PERSISTENCE.md)
 - [Source status](docs/STATUS.md)

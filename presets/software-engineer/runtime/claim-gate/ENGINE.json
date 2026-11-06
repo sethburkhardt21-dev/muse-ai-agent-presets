@@ -1,0 +1,27 @@
+{
+  "engine": "original-source-neutralized-claim-gate",
+  "external_effects_enabled": false,
+  "files": {
+    "claim_gate.py": "ebe42bc0f1edf80a9793c430f1a1ea6e47627191331068e88f8441aa6e5419ac",
+    "distributed_claim_gate.py": "ff268d860ccbaa5f3123dce8589ae85b1ba2b5b2932a0664ec4f5bc4467e608f",
+    "engineering_claim_gate.py": "33235530d03691c09a51e202571d19ee377a2edbdb7285571ab739833d66bcbd",
+    "gate_admission.py": "1475f602ad4a37e90f871c877f76072f533bbfe52ba69fd53174771a9afc0de6",
+    "gate_approval.py": "1d04804430e9d0afea9e8d8d0227b43dfb5b4c1d09c1778b34e237827c4d3501",
+    "gate_composite.py": "2187a442b31413d8130e688f88b8ecab6c3bd48073836456322298f1f862823c",
+    "gate_restart.py": "2837d17395cdaed8f0a0a1c5144f2e441017deb9c9b9623c878637c326545eb4",
+    "gate_retention.py": "acd349bd6ecf07f7c84910b2da2b566e39d694285ed7831f29b94d656c82679f",
+    "gate_token_guard.py": "7a53c47fa74074dc169886fd78ff3da2c96823fd814189848e729462678aea6f"
+  },
+  "native_muse_status": "UNBOUND",
+  "original_owner_state_included": false,
+  "portable_windows_runtime": false,
+  "registered_native_tools": [],
+  "role_id": "software-engineer",
+  "runtime": "Python 3.12 or newer, POSIX fcntl",
+  "schema": "software-engineer/claim-gate-runtime-v1",
+  "skills": {
+    "SKILL.md": "f297b0c403ff51ab361cc0402d009d67ec0b417a16b6396ceca4a211540a7cea",
+    "skill.yaml": "b34cf390bf985991da11a7fe5521908c1714ddae438d5d9fe2f79f44f9c51151"
+  },
+  "source_only_grade": "SOURCE_IMPLEMENTED_LOCAL_TESTED"
+}
