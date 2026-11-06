@@ -43,7 +43,7 @@ The SQLite chain keeps a separate local head. Truncated history, ordinary row de
 - No installed Muse skill, profile, hook, scheduler, Space, native session or permissions.
 - No implicit file-system crawling or private-source access.
 - No source-owner authentication, independent truth verification or live agent execution.
-- No private family, medical, anesthesia, public-health or animation data.
+- No original personal records, owner-specific projects, clinical training material or proprietary creative assets.
 
 SQLite retains actual matched document text. Integrators must keep it in the owning user's protected workspace, apply retention and deletion rules and avoid committing real databases to public repositories.
 

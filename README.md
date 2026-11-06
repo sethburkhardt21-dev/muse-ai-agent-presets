@@ -108,6 +108,7 @@ The public repository contains neutral generic starter code and an explicitly so
 - [Install, personalize and preserve state](docs/INSTALL_AND_PERSISTENCE.md)
 - [Source status](docs/STATUS.md)
 - [Security policy](SECURITY.md)
+- [Whole-distribution privacy gate and release-review policy](docs/PRIVACY_RELEASE_ASSURANCE.md)
 - [Contributing](CONTRIBUTING.md)
 
 **Keywords:** Muse AI assistant presets · Muse agent skills · specialist AI agents · Muse Code skills · AI agent workflows · agent memory · multi-agent handoffs · optional connectors · Family Link · model training · security research · study coach · garden assistant.

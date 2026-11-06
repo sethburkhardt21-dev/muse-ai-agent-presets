@@ -31,4 +31,4 @@ Shared is not native: all eleven role IDs and the Evidence Finder service can re
 
 Evidence Finder demonstrates a newly authored shared engine; the Software Engineer Claim Gate demonstrates a separately neutralized, source-derived original engine. Further original-agent ports must satisfy the same provenance, portability, privacy, no-effect default and regression gates.
 
-Showcase quality bar: working examples, clean neutral names, testable outcomes, accurate maturity, no fabricated deployments and no dependency on a private creator's account.
+Showcase quality bar: working examples, clean neutral names, testable outcomes, accurate maturity, no fabricated deployments and no dependency on a private creator's account. The full public source, tests, examples and CI are checked by the [privacy release gate](PRIVACY_RELEASE_ASSURANCE.md); private source identities and historical blobs require an additional maintainer review.

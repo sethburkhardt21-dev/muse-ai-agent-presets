@@ -12,7 +12,8 @@ class NeutralityAuditTests(unittest.TestCase):
         self.assertEqual(audit_public_tree(ROOT), [])
 
     def test_concrete_windows_and_linux_home_paths_are_refused(self):
-        for bad in (r'C:\Users\someone\AppData\secret', '/home/jane/workspace/agent'):
+        for bad in ('C:'+'\\'+'Users'+'\\'+'someone'+'\\'+'AppData'+'\\'+'secret',
+                    '/'+'home'+'/'+'jane/workspace/agent'):
             with self.subTest(value=bad), tempfile.TemporaryDirectory() as temp:
                 doc = Path(temp)/'templates'/'profile'/'TOOLS.md'
                 doc.parent.mkdir(parents=True)

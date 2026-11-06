@@ -19,7 +19,7 @@ MODULES=(
  "gate_admission.py","gate_restart.py")
 PRIVATE_TERMS=re.compile(
  r"(?i)\b(?:"
- r"dark lord|chamber|family-comm|family-communication|the house)\b|/home/[a-z0-9_-]+/"
+ r"private-persona|character-title)\b|" + re.escape("/"+"home/")+r"[a-z0-9_-]+/"
 )
 sys.path.insert(0,str(RUNTIME))
 

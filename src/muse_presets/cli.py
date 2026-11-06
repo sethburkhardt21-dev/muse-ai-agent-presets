@@ -15,7 +15,7 @@ def main(argv=None) -> int:
     sub=ap.add_subparsers(dest='command',required=True)
     sub.add_parser('list',help='List neutral specialist roles')
     sub.add_parser('doctor',help='Validate local catalog, role methods and default-deny policy')
-    sub.add_parser('audit-neutrality',help='Read-only scan of public presets, templates and documentation')
+    sub.add_parser('audit-neutrality',help='Read-only scan of the complete public source distribution')
     renderer=sub.add_parser('render',help='Create one draft profile, never install into Muse')
     renderer.add_argument('--preset',required=True)
     renderer.add_argument('--to',type=Path,required=True)
@@ -34,7 +34,7 @@ def main(argv=None) -> int:
     if args.command=='audit-neutrality':
         findings = audit_public_tree(ROOT)
         print(json.dumps({'status':'PASS' if not findings else 'FAIL',
-                          'scope':'SOURCE_HEURISTIC_ONLY', 'findings':findings,
+                          'scope':'PUBLIC_DISTRIBUTION_HEURISTIC', 'findings':findings,
                           'native_muse_status':'NOT_CHECKED'}, indent=2))
         return 0 if not findings else 2
     if args.command=='doctor':
