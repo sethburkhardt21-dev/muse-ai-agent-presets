@@ -3,7 +3,7 @@
 The runtime belongs to the receiving Muse host. This repository supplies portable role configurations and eventually separately admitted modules. No alternate model provider, daemon, vault or native scheduler is bundled.
 
 1. **Neutral role pack** — manifest (`presets/<id>/preset.json`), validated source-only `playbook.json` with three methods, functional boundaries, generic persona and custom instruction templates.
-2. **Shared source-first core** — renderer, catalog doctor, evidence/finding shape and disabled Family Link handoff preview.
+2. **Shared source-first core** — renderer, catalog doctor, bounded exact source finder, opt-in local SQLite evidence custody with recovery receipts, and disabled Family Link handoff preview. The custody ledger is a local reference implementation, not an authenticated/immutable external service.
 3. **Optional capabilities** — connectors, skills, subchat procedures, local model training, owner-managed Space assets and advanced tools. Each requires its own license, source and native-test receipts.
 4. **Host-specific integration** — personal Muse/Hatch vs Muse Code. Missing features are `UNSUPPORTED/UNKNOWN`, never simulated as native.
 5. **Independent acceptance** — source correctness, real host invocation, durable recipient readback and outcome quality are separate.

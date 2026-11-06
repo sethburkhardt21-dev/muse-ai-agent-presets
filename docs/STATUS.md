@@ -7,7 +7,7 @@
 | Eleven specialist manifests | SOURCE_IMPLEMENTED | Neutral role descriptors and default denied family metadata |
 | Eleven distinct role playbooks | LOCAL_TESTED_GUIDANCE | Three bounded methods, evidence obligations, stop rules, per-role canary and allowlisted handoff each; **not installed skills** |
 | Public neutrality heuristic | LOCAL_TESTED | Read-only scan of release surfaces for private home paths, likely secrets, sensitive files and symlinks; not exhaustive history/rights scan |
-| Evidence Finder | LOCAL_TESTED_SHAPE | Schema validator for findings; neither auth nor search engine |
+| Evidence Finder | LOCAL_SQLITE_TESTED | Bounded exact local search plus separately authored durable SQLite full-text finding receipts, no-hit records, replay refusal and local chain verification; no source-owner authentication, native Muse access or external anchoring |
 | Profile renderer | LOCAL_TESTED | Creates new local draft files; never overwrites existing user dirs |
 | Rendered-profile inspector | LOCAL_TESTED_SHAPE | Read-only v2/v3 manifest/source drift and owner-file comparison; changed role method/policy requires review; refuses missing/symlink/policy changes, no native loading or regeneration |
 | Family Link | LOCAL_PROPOSAL_ONLY | Sender/receiver allowlist and request check, zero external effects |

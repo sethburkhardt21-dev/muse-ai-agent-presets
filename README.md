@@ -38,6 +38,19 @@ PYTHONPATH=src python -m muse_presets.cli family-preview --from-role garden-comp
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
+### Run the shared Evidence Finder custody engine
+
+    PYTHONPATH=src python examples/evidence_custody_demo.py
+
+This executable, standard-library SQLite reference preserves an entire exact
+UTF-8 finding with a local SHA-256 receipt chain, survives source-file
+removal, distinguishes a no-hit from a fabricated finding, and refuses
+tampered receipts or conflicting operation-ID reuse. It is available to all
+eleven role labels plus Evidence Finder. **Role labels are not authenticated
+Muse principals**, and local hashes are not signed external provenance.
+See [Evidence Finder](services/evidence-finder/) and the
+[public engine adoption matrix](docs/SHOWCASE_ENGINE_MATRIX.md).
+
 ### Run the durable local Garden Companion calendar example
 
 ```bash
