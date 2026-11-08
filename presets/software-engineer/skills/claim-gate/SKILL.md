@@ -1,7 +1,7 @@
 ---
 name: engineering-claim-gate
 description: Atomic local claim, replay refusal, fenced leases, approval holds and UNKNOWN recovery for authorized engineering tasks.
-version: 1.0.0
+version: 1.1.0
 scope: software-engineer
 authority: source-only-owner-boundary-required
 ---
@@ -29,6 +29,22 @@ Read without re-executing:
     python3 -I -B runtime/claim-gate/engineering_claim_gate.py --state-dir ./state --scope engineering --claim-id sample-001 inspect
 
 For uncertainty, use hold-unknown with a short reason and investigate original receipts; never replay the effect blindly.
+
+## Pruned-history protection (local, not externally signed)
+
+After an operator explicitly prunes terminal Claim Gate records, the
+source-only engine writes a per-scope digest-log anchor before removing each
+terminal claim. A torn, deleted, empty, unreadable or checksum-mismatched
+retention log is held as UNKNOWN and must not authorize a new claim. Do not
+automatically migrate or repair an old unanchored retention log. The local
+anchor is just a self-hash, **not independent evidence** against someone who
+can delete or rewrite both records. Production exact-once effects additionally
+require an owner-controlled durable external receipt/fence or disabling
+destructive pruning.
+
+All staging and CLI source/state roots reject arbitrary symbolic-link and
+Windows-junction ancestry. On macOS only verified /var, /tmp, /etc system
+aliases are recognized; this does not constitute owner approval.
 
 ## Limits
 

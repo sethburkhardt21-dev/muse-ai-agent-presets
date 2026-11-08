@@ -50,7 +50,8 @@ import time
 from contextlib import contextmanager
 
 from gate_retention import (append_digest_entry, digest_log_path,
-                            has_digest_entry, lookup_pruned, pruned_summary)
+                            has_digest_entry, lookup_pruned, pruned_summary,
+                            RetentionIntegrityError)
 
 # ----------------------------------------------------------------------------
 # Constants
@@ -295,7 +296,10 @@ class ClaimGate:
         digest differs (the pruned name is burned), and returns None when
         the name was never pruned (a genuinely fresh claim).
         """
-        entry = lookup_pruned(self.state_dir, scope, claim_id)
+        try:
+            entry = lookup_pruned(self.state_dir, scope, claim_id)
+        except RetentionIntegrityError as exc:
+            raise ClaimGateError("RETENTION_HISTORY_UNKNOWN_HOLD") from exc
         if entry is None:
             return None
         summary = pruned_summary(scope, claim_id, entry)

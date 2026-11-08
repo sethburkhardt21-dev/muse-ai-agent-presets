@@ -6,6 +6,17 @@
 
 > **Alpha / source-first with tested local engines.** Generic profiles are local drafts; selected roles now include independently tested source-only engines. Nothing is an installed Muse assistant, native skill registration, active scheduler, live connector, or cross-account communication. This project is **not affiliated with or endorsed by Meta**. The name Muse is used descriptively for compatibility.
 
+**GitHub delivery target:** [scope and acceptance gates](docs/GITHUB_RELEASE_SCOPE.md).
+Source-only release does not require an authenticated native Muse/Hatch host.
+The [portable connector contract](docs/R44_PORTABLE_CONNECTORS.md) is
+tested locally; desktop/SSH/browser providers are declared but not connected.
+
+For a source-only capability audit that distinguishes actual local engine
+execution from template-only roles and POSIX-only features, run
+PYTHONPATH=src python3 -B examples/verify_role_packages.py --all.
+See [eleven-role clean-clone acceptance](docs/GITHUB_ROLE_ACCEPTANCE.md)
+for the current scope and platform limitations.
+
 ## Choose an assistant
 
 | Preset | Focus |
@@ -24,7 +35,26 @@
 
 **Shared service:** [Evidence Finder](services/evidence-finder/) discovers and preserves exact findings; it never makes verdicts. Each specialist includes a **Family Link adapter declaration, disabled by default**. No real cross-account service is shipped or invoked.
 
-## Start locally in Python 3.10+
+## GitHub zero-to-one quickstart (R45)
+
+The eleven source kits now have a tested, offline GitHub quickstart and
+individual setup guides. No Muse account, native host registration or
+paid connector is required to create and inspect them. An optional
+real-host integration remains **not connected** unless configured later.
+
+From a checkout containing R45 (the public repository is still at an
+older alpha until its verified release), run:
+
+    PYTHONPATH=src python3 -B examples/github_quickstart.py --all
+    PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ../new-garden-companion
+
+Windows PowerShell: set $env:PYTHONPATH='src' and use python instead
+of python3. See [tested GitHub quickstart](docs/GITHUB_QUICKSTART.md),
+[extension and recovery guide](docs/EXTENDING_GENERIC_AGENTS.md), and
+[release gates](docs/GITHUB_RELEASE_SCOPE.md). --all is a disposable
+smoke check; --to creates a new source folder and never overwrites one.
+
+## Other starter commands in Python 3.10+
 
 ```bash
 git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
@@ -37,6 +67,34 @@ PYTHONPATH=src python -m muse_presets.cli inspect --path ./my-new-guide
 PYTHONPATH=src python -m muse_presets.cli family-preview --from-role garden-companion --to-role evidence-finder --request-id demo-001 --capability find
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
+
+### Optional native-host fixture packets (not required for GitHub source release)
+
+The generic project can now create **disposable source-only acceptance packets**
+for each role and for the two separate receiving host profiles. This is a
+working, create-only packaging and validation path; it does **not** install a
+skill or authenticate to any existing personal agent.
+
+```bash
+PYTHONPATH=src python -B -m muse_presets.cli generic-native-canary --preset software-engineer --host personal-hatch --to ./new-generic-host-packet
+PYTHONPATH=src python -B -m muse_presets.cli generic-native-inspect --path ./new-generic-host-packet
+```
+
+The packet contains exact role source SHA-256 pins, a proposed skill identifier,
+a disposable challenge, a host-boundary runbook and a fail-closed receipt.
+Fixture evidence checks can reject replayed or mismatched events, but never
+claim native WIRED/USED/USEFUL.
+
+To assemble the **entire neutral fleet** (11 standalone profile drafts and
+22 disposable host acceptance packets) in one new folder:
+
+```bash
+PYTHONPATH=src python -B -m muse_presets.cli generic-native-fleet --to ./new-generic-fleet
+PYTHONPATH=src python -B -m muse_presets.cli generic-native-fleet-inspect --path ./new-generic-fleet
+```
+
+See [generic native acceptance](docs/GENERIC_NATIVE_ACCEPTANCE.md) for the
+exact source and native-host proof boundaries.
 
 ### Run the durable local Garden Companion calendar example
 
@@ -73,6 +131,51 @@ On POSIX/Python 3.12+, the synthetic demo exercises the original-source-neutrali
     PYTHONPATH=src python examples/software_engineer_claim_gate_demo.py
 
 The engine uses POSIX fcntl locking; **native Windows execution is not supported**. Staging does not call Muse, run external effects, grant permissions or activate schedulers. See [Software Engineer engine pack](presets/software-engineer/INSTALL.md).
+
+### R33: stage the generic Model Builder development verifier
+
+Model Builder now includes two executable, standard-library local skills:
+bounded development accuracy scoring and synthetic checkpoint-byte SHA-256
+verification. The verifier refuses train/dev/final source-family leakage,
+exposed protected-final labels, forged optimizer steps, fake weights and
+unapproved data rights. **No GPU, training or real model inference runs.**
+
+    PYTHONPATH=src python -B -m muse_presets.cli model-builder-dropin --to ./new-model-builder
+    PYTHONPATH=src python -B -m muse_presets.cli model-builder-dropin-inspect --path ./new-model-builder
+    python -I -B ./new-model-builder/custom-skills/model_development_metrics/run.py --operation demo
+
+See [R33 Model Builder source-only package](docs/R33_MODEL_BUILDER_DROPIN.md)
+for metrics, protected holdout, checkpoint and native-host boundaries.
+
+### R33: stage the generic Coordinator with a real offline reviewer
+
+Coordinator now has its own independent create-only native-format source
+bundle, two locally executable skill scripts, three meaningful subchat role
+contracts, disabled native skill registrations and a source-pinned
+workgraph/verification engine. It validates task budgets, cycles, distinct
+reviewers, source hashes and UNKNOWN-effect holds without dispatching a
+mission, impersonating an original agent or claiming provider authority.
+
+    PYTHONPATH=src python -B -m muse_presets.cli coordinator-dropin --to ./new-coordinator
+    PYTHONPATH=src python -B -m muse_presets.cli coordinator-dropin-inspect --path ./new-coordinator
+    python -I -B ./new-coordinator/custom-skills/coordinator_workgraph/run.py --operation demo
+
+Details: [R33 Coordinator source-only drop-in](docs/R33_COORDINATOR_DROPIN.md).
+
+### R33: stage the richer generic Software Engineer drop-in
+
+The first role-specific native-format package can now stage real source-pinned
+Claim Gate/Vault/Iron code, a standalone local canary and offline doctor, neutral
+system-file drafts, three bounded custom skills, three scoped subchat
+role/context/memory contracts, a **disabled** skill registry and hooks OFF.
+This is an independent generic package; it does not modify any original agent.
+
+    PYTHONPATH=src python -B -m muse_presets.cli engineer-dropin --to ./new-engineer-dropin
+    PYTHONPATH=src python -B -m muse_presets.cli engineer-dropin-inspect --path ./new-engineer-dropin
+
+See [R33 Software Engineer source-only drop-in](docs/R33_SOFTWARE_ENGINEER_DROPIN.md)
+for the real POSIX local canary, Windows limitations, installation boundaries,
+source-release privacy gates; optional native-host acceptance is not required for GitHub source.
 
 ### Run five offline specialist examples
 

@@ -102,6 +102,10 @@ def audit_public_tree(root: Path, *,
                 add(path, "SYMLINK_REFUSED")
                 dirs.remove(name)
         for name in files:
+            # A Git linked-worktree .git pointer is VCS metadata, never a
+            # distributable source file; exclude it like a .git directory.
+            if name == ".git":
+                continue
             path = parent / name
             if path.is_symlink():
                 add(path, "SYMLINK_REFUSED")

@@ -106,7 +106,7 @@ def reconcile_on_restart(state_dir: str, report_path: str | None = None) -> dict
             if not os.path.isdir(scope_dir):
                 continue
             for name in sorted(os.listdir(scope_dir)):
-                if not name.endswith(".json"):
+                if not name.endswith(".json") or name.startswith("."):
                     continue
                 path = os.path.join(scope_dir, name)
                 entry: dict = {"scope": scope,

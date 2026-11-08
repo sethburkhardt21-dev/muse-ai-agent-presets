@@ -1,0 +1,10 @@
+name: engineering_evidence_receipt_consumer
+title: Engineering Evidence Receipt Consumer
+description: Read-only, fail-closed lookup of scoped Evidence Finder receipt metadata.
+include_in_prompt: false
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: false
+  needs_review: true

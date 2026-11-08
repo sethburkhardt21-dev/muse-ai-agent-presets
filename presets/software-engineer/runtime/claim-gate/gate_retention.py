@@ -48,12 +48,16 @@ local copy of the safe-component pattern.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
+import tempfile
 import time
 
 DIGEST_LOG_NAME = ".digest-log.jsonl"
+RETENTION_ANCHOR_NAME = ".digest-log.anchor.json"
+MAX_RETENTION_LOG_BYTES = 8_388_608
 DEFAULT_RETENTION_DAYS = 30
 
 _COMPONENT = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
@@ -75,90 +79,140 @@ def digest_log_path(state_dir: str, scope: str) -> str:
     return os.path.join(state_dir, "claims", scope, DIGEST_LOG_NAME)
 
 
-def append_digest_entry(state_dir: str, scope: str, entry: dict) -> None:
-    """Append one JSON line to the digest log and fsync it.
+class RetentionIntegrityError(ValueError):
+    """History unreadable or inconsistent: never treat it as no prior effect."""
 
-    Entry must be a JSON-serializable dict. Raises ValueError on bad input.
+
+def _checked_retention(state_dir: str, scope: str) -> tuple[list[dict], bytes]:
+    """Validate all retained tombstones and the local per-scope log checksum.
+
+    A missing log AND anchor is allowed only as a not-yet-pruned scope.
+    Once pruning has occurred, this anchor makes missing/empty/truncated
+    logs fail closed. It is local integrity, NOT an independently signed
+    witness against an adversary who can rewrite *both* files.
     """
-    if not isinstance(entry, dict):
-        raise ValueError("digest entry must be a dict")
-    for key in ("claim_id", "payload_digest", "state", "pruned_ts"):
-        if key not in entry:
-            raise ValueError("digest entry missing %r" % key)
-    path = digest_log_path(state_dir, scope)
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    line = json.dumps(entry, sort_keys=True) + "\n"
-    with open(path, "a", encoding="utf-8") as fh:
-        fh.write(line)
-        fh.flush()
-        os.fsync(fh.fileno())
+    log=digest_log_path(state_dir,scope)
+    anchor=os.path.join(os.path.dirname(log),RETENTION_ANCHOR_NAME)
+    log_present=os.path.lexists(log)
+    anchor_present=os.path.lexists(anchor)
+    if not log_present and not anchor_present:
+        return [],b""
+    if not log_present or not anchor_present:
+        raise RetentionIntegrityError("RETENTION_HISTORY_OR_ANCHOR_MISSING")
+    if (os.path.islink(log) or os.path.islink(anchor) or
+            not os.path.isfile(log) or not os.path.isfile(anchor)):
+        raise RetentionIntegrityError("RETENTION_HISTORY_UNSAFE_PATH")
+    try:
+        with open(log,"rb") as handle:
+            raw=handle.read(MAX_RETENTION_LOG_BYTES+1)
+        if not raw or len(raw)>MAX_RETENTION_LOG_BYTES or not raw.endswith(b"\n"):
+            raise RetentionIntegrityError("RETENTION_HISTORY_EMPTY_OR_TORN")
+        records=[]
+        for line in raw.splitlines():
+            if not line:
+                raise RetentionIntegrityError("RETENTION_HISTORY_BLANK_LINE")
+            record=json.loads(line.decode("utf-8"))
+            if (type(record) is not dict or
+                    not all(key in record for key in (
+                        "claim_id","payload_digest","state","pruned_ts")) or
+                    type(record["claim_id"]) is not str or
+                    type(record["payload_digest"]) is not str or
+                    not re.fullmatch("[0-9a-f]{64}",record["payload_digest"]) or
+                    record["state"] not in ("EFFECT_DONE","CANCELLED")):
+                raise RetentionIntegrityError("RETENTION_HISTORY_INVALID_RECORD")
+            records.append(record)
+        with open(anchor,"r",encoding="utf-8") as handle:
+            witness=json.load(handle)
+        if (type(witness) is not dict or set(witness)!={
+                "schema","scope","log_sha256","entry_count"} or
+            witness["schema"]!="software-engineer/local-retention-anchor-v1" or
+            witness["scope"]!=scope or
+            type(witness["entry_count"]) is not int or
+            witness["entry_count"]!=len(records) or
+            witness["log_sha256"]!=hashlib.sha256(raw).hexdigest()):
+            raise RetentionIntegrityError("RETENTION_ANCHOR_MISMATCH")
+        return records,raw
+    except RetentionIntegrityError:
+        raise
+    except (OSError,ValueError,TypeError,UnicodeError) as exc:
+        raise RetentionIntegrityError("RETENTION_HISTORY_INVALID") from exc
+
+
+def _write_retention_anchor(state_dir:str, scope:str,
+                            raw:bytes, record_count:int)->None:
+    directory=os.path.dirname(digest_log_path(state_dir,scope))
+    body={
+        "schema":"software-engineer/local-retention-anchor-v1",
+        "scope":scope,
+        "log_sha256":hashlib.sha256(raw).hexdigest(),
+        "entry_count":record_count,
+    }
+    fd,temp=tempfile.mkstemp(dir=directory,prefix=".retention-",suffix=".tmp")
+    target=os.path.join(directory,RETENTION_ANCHOR_NAME)
+    try:
+        with os.fdopen(fd,"w",encoding="utf-8") as handle:
+            json.dump(body,handle,sort_keys=True)
+            handle.write("\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temp,target)
+        if hasattr(os,"O_DIRECTORY"):
+            parent=os.open(directory,os.O_RDONLY|os.O_DIRECTORY)
+            try:os.fsync(parent)
+            finally:os.close(parent)
+    finally:
+        if os.path.exists(temp):
+            os.unlink(temp)
+
+
+def append_digest_entry(state_dir: str, scope: str, entry: dict) -> None:
+    """Append and anchor one terminal digest before deleting the claim file.
+
+    Must be called under ClaimGate's per-scope exclusive lock. A torn append,
+    failed anchor write or older unanchored log remains held for operator
+    reconciliation. No implicit migration of an unverified legacy log.
+    """
+    if (type(entry) is not dict or
+        any(key not in entry for key in (
+            "claim_id","payload_digest","state","pruned_ts")) or
+        entry["state"] not in ("EFFECT_DONE","CANCELLED") or
+        type(entry["payload_digest"]) is not str or
+        not re.fullmatch("[0-9a-f]{64}",entry["payload_digest"])):
+        raise RetentionIntegrityError("RETENTION_ENTRY_INVALID")
+    path=digest_log_path(state_dir,scope)
+    os.makedirs(os.path.dirname(path),exist_ok=True)
+    existing,raw=_checked_retention(state_dir,scope)
+    line=(json.dumps(entry,sort_keys=True,allow_nan=False)+"\n").encode("utf-8")
+    if len(raw)+len(line)>MAX_RETENTION_LOG_BYTES:
+        raise RetentionIntegrityError("RETENTION_HISTORY_FULL")
+    flags=os.O_WRONLY|os.O_APPEND|os.O_CREAT|getattr(os,"O_NOFOLLOW",0)
+    fd=os.open(path,flags,0o600)
+    with os.fdopen(fd,"ab") as handle:
+        handle.write(line)
+        handle.flush()
+        os.fsync(handle.fileno())
+    # Appending before updating the anchor is intentional: a crash here
+    # yields an inconsistent log and causes all future claims to HOLD.
+    _write_retention_anchor(state_dir,scope,raw+line,len(existing)+1)
+    checked,_=_checked_retention(state_dir,scope)
+    if len(checked)!=len(existing)+1:
+        raise RetentionIntegrityError("RETENTION_APPEND_READBACK_FAILED")
 
 
 def lookup_pruned(state_dir: str, scope: str, claim_id: str) -> dict | None:
-    """Return the LAST digest-log entry for claim_id, or None.
-
-    Linear scan; the log is append-only and pruned claims are rare relative
-    to live traffic. Returns None when the log is absent or has no entry.
-    """
-    path = digest_log_path(state_dir, scope)
-    if not os.path.exists(path):
-        return None
-    found = None
-    try:
-        fh = open(path, "r", encoding="utf-8")
-    except OSError:
-        # D-D2: the log path is unreadable (e.g. a directory planted by a
-        # rogue local writer). Treat as absent — consistent with a missing
-        # log, and grants no new privilege: a writer who can plant the
-        # directory can already delete the log outright.
-        return None
-    with fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                entry = json.loads(line)
-            except (ValueError, TypeError):
-                continue  # a torn line can only come from a killed writer;
-                # the fsync discipline makes this near-impossible, and a
-                # skipped line fails closed (the claim file is the truth
-                # while it exists).
-            if isinstance(entry, dict) and entry.get("claim_id") == claim_id:
-                found = entry
-    return found
+    """Last verified digest-log record, or None only for a genuine empty scope."""
+    entries,_=_checked_retention(state_dir,scope)
+    return next((entry for entry in reversed(entries)
+                 if entry["claim_id"]==claim_id),None)
 
 
 def has_digest_entry(state_dir: str, scope: str, claim_id: str,
                      payload_digest: str, state: str) -> bool:
-    """True iff the log already records this exact pruned claim.
-
-    Used to make prune crash-idempotent: retrying after a crash between
-    log-append and file-delete must not duplicate the entry.
-    """
-    path = digest_log_path(state_dir, scope)
-    if not os.path.exists(path):
-        return False
-    try:
-        fh = open(path, "r", encoding="utf-8")
-    except OSError:
-        # D-D2: see lookup_pruned — treat an unreadable log as absent.
-        return False
-    with fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                entry = json.loads(line)
-            except (ValueError, TypeError):
-                continue
-            if (isinstance(entry, dict)
-                    and entry.get("claim_id") == claim_id
-                    and entry.get("payload_digest") == payload_digest
-                    and entry.get("state") == state):
-                return True
-    return False
+    """Read-only verified dedup; damaged retention history must refuse."""
+    entries,_=_checked_retention(state_dir,scope)
+    return any(entry["claim_id"]==claim_id and
+               entry["payload_digest"]==payload_digest and
+               entry["state"]==state for entry in entries)
 
 
 def pruned_summary(scope: str, claim_id: str, entry: dict) -> dict:

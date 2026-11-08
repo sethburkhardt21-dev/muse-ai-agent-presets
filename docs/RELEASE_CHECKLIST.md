@@ -30,14 +30,15 @@
 - [ ] Independent result acceptance in an unrelated Muse account
 - [ ] Live medical, malware, model-training, or third-party app probing capability
 
-## Next end-to-end milestones
+## GitHub source-only release milestones — GITHUB_SOURCE_ONLY
 
-1. **Host doctor:** determine supported personal Muse/Hatch tool and file surfaces on a clean authorized account. Version/source-pin each observation.
-2. **Neutral install:** stage a single released preset through supported host interfaces. Prove real model loading and skill discoverability without personal source reuse.
-3. **Port one qualifying engine:** begin with the Garden Companion's owner-scoped proposal and rollback contract or the Learning Coach's source-grounded draft flow. Perform per-file license and provenance review before copying or adapting source.
-4. **Separate native collaboration:** connect a real supported Family Link endpoint with host-issued identity, task/lease admission, recipient readback and independent witness. Keep disabled if any gate is absent.
-5. **Cross-host resilience:** verify restart, storage persistence, clean upgrade, safe rollback, unknown-effect reconciliation and user-data preservation across two fresh supported accounts/hosts.
-6. **Expand to other roles:** add only measured, compatible, separately qualified capabilities. Do not infer release readiness from the size of the donor archive.
+Native host activation is optional; no personal Hatch provider login, live subchat ID or model-selected tool is needed to deliver a tested GitHub source package.
+
+1. **T30 onboarding:** Run the zero-to-one quickstart and all eleven role INSTALL guides from an isolated clean clone, not a historical source checkout.
+2. **T31 public content:** Export only the intended role/source files into a fresh, history-free ZIP; screen actual included third-party components, credentials, private names, binary assets and file hashes with the operator's private denylist kept outside public Git.
+3. **T32 packages:** Independently extract and verify eleven role packages and their actual local examples on Windows/macOS, with platform skips honestly labeled.
+4. **T34 publication:** Use normal, reviewed changes atop the existing public GitHub history. Never wholesale merge or force-push private development history.
+5. **T35 final verification:** Read back public source, documentation, CI and package links. Mark unimplemented native, remote or model capabilities OPTIONAL/NOT_RUN, not secretly active.
 
 ## Per-feature evidence contract
 

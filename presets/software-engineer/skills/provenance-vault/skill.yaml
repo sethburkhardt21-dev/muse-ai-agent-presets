@@ -1,0 +1,10 @@
+name: engineering_source_provenance
+title: Engineering Source Provenance
+description: Local digest pin and donor-manifest verification; no native Muse effects, licensing or publication approval.
+include_in_prompt: false
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: false
+  needs_review: true

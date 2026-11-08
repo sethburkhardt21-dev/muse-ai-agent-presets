@@ -1,0 +1,19 @@
+{
+  "schema": "software-engineer/provenance-vault-runtime-v1",
+  "role_id": "software-engineer",
+  "source_grade": "LOCAL_SOURCE_DERIVED_CANDIDATE",
+  "native_muse_status": "UNBOUND",
+  "external_effects_enabled": false,
+  "registered_native_tools": [],
+  "original_owner_state_included": false,
+  "redistribution_rights_verified": false,
+  "local_evidence_only": true,
+  "source_file": "src/muse_presets/provenance_vault.py",
+  "files": {
+    "provenance_vault.py": "a62c2b3b15e33c2ee3e54be793bc9afbd12ac7d12f4af41e61ece02f16e63625"
+  },
+  "skills": {
+    "SKILL.md": "f634d329b97f6b4e6d70008937298f59b2a0dc6940a50e49179907fa991d7ad5",
+    "skill.yaml": "f53f7c7b35af29946a10f06b97e91d5eeef38e51293a61e599f0b0c9ac77aaa8"
+  }
+}

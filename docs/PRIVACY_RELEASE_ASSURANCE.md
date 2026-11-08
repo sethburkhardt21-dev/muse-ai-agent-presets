@@ -43,8 +43,7 @@ affect imports, configuration keys or runtime behavior.
 Do not migrate original memories, personal learning content, professional
 specializations, chat transcripts, credentials, account tokens, personal
 files, private runtime records, image assets or private model weights to
-generic presets. Verify source ownership and licensing rights before copying
-material from a separate original project.
+generic presets. OWNER_FIRST_PARTY_AUTHORIZED: the owner explicitly permits adaptation and generic GitHub distribution of their first-party Muse/Atlas work. Pin provenance and confirm behavior, but do not demand another first-party rights approval. Review actual third-party assets or dependencies if included.
 
 ## History, attribution and license boundary
 
@@ -61,10 +60,7 @@ distinct from embedding private agent identities or personal data inside
 source. Full author anonymity requires a deliberate account/repository
 migration, not simply a role-name change.
 
-The MIT license applies to admitted public source; it does not create rights
-to private third-party SDKs, licensed asset packs, hidden agent memory,
-external samples or source acquired without permission. Review every new
-original-to-generic transfer separately.
+The MIT license applies to admitted public source; it does not itself license third-party SDKs, asset packs or other external content. Owner-authorized first-party transfers need technical source pins, privacy review and regression tests rather than repeated rights clearance. Public-source packages exclude private memories, secrets and original commit history.
 
 ## Capability and runtime truth
 
@@ -74,6 +70,4 @@ model-originated execution, external authorization, an independently verified
 claim or recipient acknowledgment. Preserve original action-time S1–S5
 gates, refusal rules and all failure/UNKNOWN holds.
 
-**Pass criteria:** Clean public distribution; private-name and license review;
-reproducible regression and denied-input tests; GitHub main readback and CI;
-native host proof only when genuinely observed.
+**GitHub source-only pass criteria:** Clean public distribution; operator-provided private-name screening; actual included third-party dependency checks; reproducible regression and denied-input tests; T32 clean-clone package qualification; GitHub main readback and CI. Native host activation is optional and must not be claimed without evidence.

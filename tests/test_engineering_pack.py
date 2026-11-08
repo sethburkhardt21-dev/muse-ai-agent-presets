@@ -58,10 +58,22 @@ class EngineerPackStaging(unittest.TestCase):
     def test_unsafe_symlink_destination_refuses_without_following(self):
         outside=self.root/'owner'
         outside.mkdir()
-        self.dest.symlink_to(outside,target_is_directory=True)
+        try:
+            self.dest.symlink_to(outside,target_is_directory=True)
+        except OSError as error:
+            if os.name=='nt' and getattr(error,'winerror',None)==1314:
+                self.skipTest('Windows symlink privilege unavailable on this host')
+            raise
         with self.assertRaisesRegex((FileExistsError,ValueError),'DESTINATION'):
             pack.stage_engineer_pack(self.dest)
         self.assertEqual(list(outside.iterdir()),[])
+
+    def test_symlink_destination_guard_without_native_symlink_privilege(self):
+        with patch.object(Path,'is_symlink',autospec=True,
+                          side_effect=lambda path:path==self.dest):
+            with self.assertRaisesRegex(FileExistsError,'DESTINATION_EXISTS'):
+                pack._require_new(self.dest)
+        self.assertFalse(self.dest.exists())
 
     def test_wrong_runtime_sha_refused_before_creating_destination(self):
         original=pack.ENGINE_MANIFEST

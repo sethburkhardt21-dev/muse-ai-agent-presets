@@ -32,12 +32,31 @@ def reject(reason: str) -> None:
     raise CliRefusal(reason)
 
 
+def _admitted_root(root:str,*,error:str)->Path:
+    path=Path(root)
+    if not path.is_absolute() or '..' in path.parts:
+        reject(error)
+    for node in (path,*path.parents):
+        if node.is_symlink() or (
+                hasattr(node,'is_junction') and node.is_junction()):
+            # Apple ships /var, /tmp and /etc as stable links to /private.
+            # Only these exact system-level aliases are permitted.
+            allowed=(sys.platform=='darwin' and
+                     str(node) in ('/var','/tmp','/etc') and
+                     str(node.resolve(strict=True))==
+                         {'/var':'/private/var','/tmp':'/private/tmp',
+                          '/etc':'/private/etc'}[str(node)])
+            if not allowed:
+                reject(error)
+    if not path.is_dir():
+        reject(error)
+    return path
+
+
 def _payload(root: str | None, name: str | None) -> bytes:
     if not root or not name or not _COMPONENT.fullmatch(name) or name.startswith("."):
         reject("SOURCE_PATH_REFUSED")
-    parent=Path(root)
-    if not parent.is_absolute() or not parent.is_dir() or parent.is_symlink():
-        reject("SOURCE_PATH_REFUSED")
+    parent=_admitted_root(root,error="SOURCE_PATH_REFUSED")
     file=parent/name
     if file.is_symlink():
         reject("SOURCE_PATH_REFUSED")
@@ -59,9 +78,7 @@ def _payload(root: str | None, name: str | None) -> bytes:
 
 
 def _state_dir(root: str) -> str:
-    path=Path(root)
-    if not path.is_absolute() or not path.is_dir() or path.is_symlink():
-        reject("STATE_DIRECTORY_NOT_ADMITTED")
+    path=_admitted_root(root,error="STATE_DIRECTORY_NOT_ADMITTED")
     if path.resolve()==Path(path.anchor):
         reject("STATE_DIRECTORY_NOT_ADMITTED")
     return str(path)
@@ -136,6 +153,8 @@ def run(args: argparse.Namespace) -> dict:
             claimed,prior=gate.claim(scope,identifier,source)
         except ReplayRefused:
             reject("REPLAY_REFUSED")
+        except ClaimGateError:
+            reject("CLAIM_STATE_UNKNOWN_HOLD")
         if claimed:
             state=gate.reconcile_unknown(scope,identifier)
             return _output(scope,identifier,status="LOCAL_CLAIM_RECORDED",
