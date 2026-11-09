@@ -1,0 +1,38 @@
+{
+  "schema": "muse-presets/render-v3",
+  "preset_id": "software-engineer",
+  "display_name": "Software Engineer",
+  "preset_sha256": "ec17acb58001b70a1ba3a0e7bedf66dc98a53a53fab923712a83d66c67cd17db",
+  "template_sha256": {
+    "AGENTS.md": "c1f044a542ccabd468920e7a6dc3ddf15d4b47c09c9c62c3c1d30539cd681436",
+    "SOUL.md": "c9885066864ee98bb9f5dd28d904ec04ca436834a0364b70c5a95e2f65080302",
+    "IDENTITY.md": "44984de2e4401e800d1ead3159109baee475dc90ae387137d42eb652f2efa907",
+    "USER.md": "6ef0d5bd8bed7526c1c7721e60d715d756dd50030b21bf7f13b3f3d1ac0cd3b5",
+    "TOOLS.md": "ff02d1bded61dec139a9dda283b2d3538584d6a8034638ec1c35ca6610f37db2",
+    "MEMORY.md": "0f7f431894c516db0485d032210c0b0d0e2baa7753267f00c9f20f9a57e16298",
+    "HEARTBEAT.md": "d302c059bba23e768c79f57a82d064e806c5bb65bc0d27e22032448bd8e8647e",
+    "PROACTIVE_PREFERENCES.md": "c9e8c48280afca0979c2a6bab6d4b237a8860ae66e81a05665fc52af6a475097",
+    "SYSTEM_INSTRUCTIONS.md": "1ae32996c0d5edd39772e6f393eac8fae7e76b00ead1e817f04362f021475d35",
+    "SUBCHATS.md": "a4272661e82d509abf11bd78c7701dc35558d6b8079165dde22c21ce4bd72fca",
+    "HOOKS.md": "be9b951f358bdc960ef9dd0c76a3cf7a9db08982596ab4fe9480679b4211bd9d"
+  },
+  "playbook_sha256": "27f408d6398808e0238545570efd583b4da939c0606c3dacbd662b540da71e96",
+  "rendered_sha256": {
+    "AGENTS.md": "0243f7a5a1a2bc284878f5842c3ecca9c47f4fae0f6945ee07f9deb65cc68e06",
+    "SOUL.md": "c47b82753d1ba9b45af70532f383b9ec34e87d6cb6fe6e7984e57e3b05037785",
+    "IDENTITY.md": "2c28b315a44a2b7a03b14c8cf0b95e7c6a7faf5185b669f8368afbab9fba8984",
+    "USER.md": "b1c586fa70b1767896bc0cb996dab9f706213acd3d762967cee16a754845caa5",
+    "TOOLS.md": "129bcd12cb0b2ca6ba29fbe237c6d49c0288a08d24d7a3a5560f647e80a31497",
+    "MEMORY.md": "b2dbdef8f87bb2373741642792c6b921d54dd872cb557c7c126e8ecbbfe9749c",
+    "HEARTBEAT.md": "2372977c13ad4546545d2c10d08a4fffa2d3369d50eceec60e514b31a312d8ab",
+    "PROACTIVE_PREFERENCES.md": "e80cdf6f7f2f3262acf6ef7d42c80d717136375a22cf99b8eb7123d3d9b57a8a",
+    "SYSTEM_INSTRUCTIONS.md": "71b3022dbf8daac2d10a152f16a4b085ff5e65d945e040baacca0086cfb60c16",
+    "SUBCHATS.md": "a77092bc3f4007aa09009c527cf537eb524af9e0f43309e10062666f355d7314",
+    "HOOKS.md": "f4623101056ca9d200621d2d701e1433349bbb1c954aa68fae117579398eff8c",
+    "FAMILY_LINK.json": "bdf7eafef341aff7c112e769b6ba7b348bdcfda1266c75c7b6ccdb052c167acf",
+    "ROLE_PLAYBOOK.md": "57ca0ab459e829116c66728ef6a68ea3e204408698e80d35e97c83f3a9d72b6d"
+  },
+  "grade": "LOCAL_DRAFT_ONLY",
+  "warning": "NOT an installed Muse runtime; no host identity, connector, hook, scheduler or native tool is bound",
+  "source": "local source-controlled preset"
+}

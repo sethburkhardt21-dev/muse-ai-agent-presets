@@ -1,0 +1,35 @@
+{
+  "engine": "original-source-neutralized-claim-gate",
+  "external_effects_enabled": false,
+  "files": {
+    "claim_gate.py": "237dbd523bade1363ebb24381efcecfea161f325f513b744e72c07f521ea617f",
+    "distributed_claim_gate.py": "3ef11e844841fd67fbad3032b9be6c60c149f3204ce05d39c3ddd0ecfc847262",
+    "engineering_claim_gate.py": "0151f135dfd550078363ec6781b2307517d65ac220b02fc856337b9045ea2b28",
+    "engineering_workflow.py": "3ddec3667c34ee9b1e9df016fdf53b82b68f3ec2cff9bd684d7cad151fc78cd0",
+    "gate_admission.py": "1475f602ad4a37e90f871c877f76072f533bbfe52ba69fd53174771a9afc0de6",
+    "gate_approval.py": "507691f2c97b9f98c63327369701e87e0bcf0bb63587e4c2f655ccf63e528e36",
+    "gate_composite.py": "567fe5ae94ce0de87499afe716521959f8b759c92305e4fbb00b27dca7e476e0",
+    "gate_restart.py": "e6028eb22d68a9300e839c26f258bf76dd2ed2b3976fd0f6db748d1ab503e8ab",
+    "gate_retention.py": "8344fd9390c95102a3c88e47477e8a2f672e34115d5000a209f617fbb6d59531",
+    "gate_token_guard.py": "eb9138e1935cfd631b7be5a0a34fbd61ffde4cbf27cddd1a239a8943fce71071",
+    "portable_lock.py": "a8877805a9a853be1854380e4df51bd2e663bea02dc6da303cc5f9bde0a02ca8",
+    "workflow_worker.py": "75fbc86abd3c59417710a9edf0815e7d2a64411aab247061ac205393574f0636"
+  },
+  "local_directory_fsync_windows_verified": false,
+  "native_muse_status": "UNBOUND",
+  "original_owner_state_included": false,
+  "portable_windows_runtime": true,
+  "registered_native_tools": [],
+  "role_id": "software-engineer",
+  "runtime": "Python 3.12 or newer, Windows msvcrt or POSIX flock local locks",
+  "schema": "software-engineer/claim-gate-runtime-v1",
+  "skills": {
+    "SKILL.md": "9e02eefa59a7bfaa217f6cc286a4d0d986fbbd5c0167f7dd1fe6fa7a45df39aa",
+    "skill.yaml": "b34cf390bf985991da11a7fe5521908c1714ddae438d5d9fe2f79f44f9c51151"
+  },
+  "source_only_grade": "SOURCE_IMPLEMENTED_LOCAL_TESTED",
+  "windows_destructive_retention_pruning_enabled": false,
+  "workflow_independent_identity_authenticated": false,
+  "workflow_os_sandboxed": false,
+  "workflow_profile": "REVIEWED_PYTHON_UNITTEST_DISPOSABLE_REPOSITORY"
+}

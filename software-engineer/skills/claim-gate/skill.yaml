@@ -1,0 +1,10 @@
+name: engineering_claim_gate
+title: Engineering Claim Gate
+description: Source-tested local claims, no-replay recovery, fencing and approval primitives; no external effects.
+include_in_prompt: false
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: false
+  needs_review: true

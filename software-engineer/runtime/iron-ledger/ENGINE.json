@@ -1,0 +1,21 @@
+{
+  "schema": "software-engineer/iron-ledger-consumer-runtime-v1",
+  "role_id": "software-engineer",
+  "source_grade": "LOCAL_ORIGINAL_INTERFACE_GUIDED_CANDIDATE",
+  "native_muse_status": "UNBOUND",
+  "external_effects_enabled": false,
+  "registered_native_tools": [],
+  "original_owner_state_included": false,
+  "redistribution_rights_verified": false,
+  "local_evidence_only": true,
+  "second_persistent_evidence_ledger_created": false,
+  "original_task_claims_enabled": false,
+  "source_file": "src/muse_presets/iron_ledger_consumer.py",
+  "files": {
+    "iron_ledger_consumer.py": "9f914cf674128c7a89cb513c4a96c742375ff2c6197f7594cc9beb56ffdf3112"
+  },
+  "skills": {
+    "SKILL.md": "a32ea9628707b25799931296950379ac1df538c0b6d52c797abd5bd1f90b42c1",
+    "skill.yaml": "1278e0ec6c9f0d7ccebca6acc516b5f1ec7f7d71f6cf3c6a22ad37989e26d7e8"
+  }
+}

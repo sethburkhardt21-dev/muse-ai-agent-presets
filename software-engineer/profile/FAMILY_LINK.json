@@ -1,0 +1,11 @@
+{
+  "enabled": false,
+  "mode": "proposal-only",
+  "native_recipient": null,
+  "suggested_receivers": [
+    "adversarial-verifier",
+    "claims-adjudicator"
+  ],
+  "transport": "unbound",
+  "trusted_signer": null
+}
