@@ -52,7 +52,7 @@ inspect verb, --root ABSOLUTE_EXTENSION and --stage-sha256 ORIGINAL_STAGE_SHA.
 No opt-in, source drift, altered receipts, links, extra files or occupied paths
 are refused. Staging starts no optimizer, provider, model, service or native agent.
 
-The recovered R60 decimal-linear engine is also present:
+The recovered decimal-linear engine is also present:
 
 python -I -B model-builder/custom-skills/model_development_metrics/run.py --operation linear-demo --allow-local-training
 

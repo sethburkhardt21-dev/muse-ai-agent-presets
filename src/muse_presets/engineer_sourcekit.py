@@ -29,7 +29,7 @@ HEX = re.compile(r"^[0-9a-f]{64}$")
 
 START_HERE = """# Software Engineer: independent offline source kit
 
-Contains the actual source-pinned Python Claim Gate, R55 RED/PATCH/GREEN
+Contains the actual source-pinned Python Claim Gate, RED/PATCH/GREEN
 workflow, source-only profile, disabled skills and a fictional test fixture.
 No native Muse agent, account connector, paid API, or deployment is installed.
 

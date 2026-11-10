@@ -62,22 +62,24 @@ class RoleCleanCloneAcceptanceTests(unittest.TestCase):
             self.assertTrue(item["local_engine_executed"])
             self.assertFalse(item["independent_adjudicator_or_live_capture"])
 
-    def test_four_other_roles_do_not_fabricate_engines(self):
-        for role in ("research-evaluator","creative-studio",
-                     "adversarial-verifier","personal-companion"):
+    def test_three_other_roles_do_not_fabricate_engines(self):
+        for role in ("creative-studio","adversarial-verifier","personal-companion"):
             item=self.report["roles"][role]
             self.assertEqual(item["local_demo_grade"],"SOURCE_TEMPLATE_ONLY")
             self.assertFalse(item["local_engine_executed"])
             self.assertIsNone(item["demo_exit_code"])
 
-    def test_software_engineer_posix_only(self):
+    def test_research_evaluator_executes_only_source_trace_slice(self):
+        item=self.report["roles"]["research-evaluator"]
+        self.assertEqual(item["local_demo_grade"],"LOCAL_SLICE_DEMO_PASSED")
+        self.assertTrue(item["local_engine_executed"])
+        self.assertFalse(item["independent_adjudicator_or_live_capture"])
+        self.assertFalse(item["external_effects_authorized"])
+
+    def test_software_engineer_cross_platform(self):
         item=self.report["roles"]["software-engineer"]
-        if os.name=="posix":
-            self.assertEqual(item["local_demo_grade"],"LOCAL_ENGINE_DEMO_PASSED")
-            self.assertTrue(item["local_engine_executed"])
-        else:
-            self.assertEqual(item["local_demo_grade"],"UNSUPPORTED_POSIX_ENGINE_ON_WINDOWS")
-            self.assertFalse(item["local_engine_executed"])
+        self.assertEqual(item["local_demo_grade"],"LOCAL_ENGINE_DEMO_PASSED")
+        self.assertTrue(item["local_engine_executed"])
         self.assertFalse(item["native_installed"])
 
     def test_shared_evidence_finder_is_not_twelfth_agent(self):

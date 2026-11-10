@@ -63,7 +63,7 @@ START = '''# Model Builder — bounded toy experiment extension candidate
 This kit actually learns a small linear model using batch gradient descent.
 It does NOT train an LLM, load a pretrained checkpoint, use a GPU, install an
 agent, authenticate a reviewer, evaluate the protected final set, or call a
-provider. It extends, rather than replaces, the original R33 verifier.
+provider. It extends, rather than replaces, the original verifier.
 
 Requirements: Python 3.12+. No pip dependencies, network, external account,
 model download, subprocess workload, scheduler or service installation.

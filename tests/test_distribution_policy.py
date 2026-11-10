@@ -68,4 +68,9 @@ class DistributionPolicyTests(unittest.TestCase):
    self.assertEqual(first,(r/'PUBLIC_SOURCE_MANIFEST.json').read_bytes())
    self.assertEqual(a['files'],b['files'])
    self.assertEqual(a['files']['README.md'],hashlib.sha256((r/'README.md').read_bytes()).hexdigest())
+ def test_generated_kit_guides_are_customer_facing(self):
+  from muse_presets import engineer_sourcekit,model_builder_sourcekit,model_toy_sourcekit
+  from muse_presets.distribution import _prose,WORK_ID
+  for name,guide in (('software-engineer',engineer_sourcekit.START_HERE),('model-builder',model_builder_sourcekit.START_HERE),('toy-installer',model_toy_sourcekit.START)):
+   with self.subTest(kit=name):self.assertIsNone(WORK_ID.search(_prose(guide)),name)
 if __name__=='__main__':unittest.main()
