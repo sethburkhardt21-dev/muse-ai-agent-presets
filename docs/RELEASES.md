@@ -2,6 +2,17 @@
 
 The public repository presents the currently published source products. The downloadable ZIPs and release tags remain available even when the README and documentation improve.
 
+## Current toolkit — v0.3.0-alpha
+
+**[Download the complete source and specialist kits](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.3.0-alpha)**
+
+Choose the complete toolkit for all runnable modules, examples and tests. Eleven smaller starter ZIPs provide editable role profiles. Three additional executable kits package the Software Engineer, Coordinator and Model Builder runtimes with their own start guides.
+
+The current toolkit includes portable engineering and builder delivery, small-model training/install examples, research citation/numerical checks, offline handoff and restart utilities. All downloads include SHA-256 checksums. No paid service or native Muse installation is required for the local source examples.
+
+Use the complete toolkit ZIP or clone main for the widest capability set. A profile ZIP is not a substitute for an executable runtime kit. This is an alpha source distribution, not a hosted autonomous service.
+
+
 ## Eleven specialist source kits
 
 **[Download the generic specialist kits (v0.2.0-alpha)](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha)**

@@ -58,7 +58,7 @@ installed Muse agent, publisher-signed release or authorized external executor.
 - custom-skills/ contains three native-style skill descriptor pairs. Their
   config/skills.yaml entries are DISABLED until authorized host admission.
 - custom-skills/engineering_claim_gate/run.py --canary runs an ACTUAL local
-  Claim Gate test on POSIX using temporary fictional state. Never a live effect.
+  Claim Gate test on Windows or POSIX using temporary fictional state. Never a live effect.
 - hooks/HOOKS.json and config/host-binding.json are explicitly disabled.
 - receipts/R33_DROPIN_RECEIPT.json is a local source checksum record, not a
   publisher signature or owner-issued grant.
@@ -83,7 +83,10 @@ BINDING = {
 }
 CAPABILITIES = {
     "schema": "r33/engineer-capabilities-v1",
-    "local_claim_gate": "POSIX_ONLY_SOURCE_TESTED",
+    "local_claim_gate": "WINDOWS_POSIX_LOCAL_SOURCE_TESTED",
+    "local_engineering_workflow": "REVIEWED_PYTHON_RED_PATCH_GREEN_WITH_EXTERNAL_REVIEW_GATE",
+    "workflow_os_sandboxed": False,
+    "workflow_patch_generation": "CALLER_SUPPLIED_NOT_A_MODEL_EXECUTOR",
     "local_provenance_vault": "READ_ONLY_SOURCE_TESTED",
     "local_iron_ledger": "READ_ONLY_EXISTING_EVIDENCE_LEDGER_CONSUMER",
     "host_grants": "NOT_RUN",
@@ -108,7 +111,7 @@ EXTRA_SYSTEM = {
 }
 
 RUNNER = r'''#!/usr/bin/env python3
-"""Disposable REAL local Claim Gate canary. POSIX only; NO native host effects."""
+"""Disposable REAL local Claim Gate canary. Windows/POSIX; NO native host effects."""
 from __future__ import annotations
 
 import argparse
@@ -140,8 +143,6 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     if not args.canary:
         return _print("EXPLICIT_DISPOSABLE_CANARY_REQUIRED")
-    if os.name != "posix":
-        return _print("UNSUPPORTED_PLATFORM_POSIX_FCNTL_REQUIRED")
     root = Path(__file__).resolve().parents[2]
     cli = root / "engine" / "runtime" / "claim-gate" / "engineering_claim_gate.py"
     if not cli.is_file() or cli.is_symlink():
@@ -296,14 +297,21 @@ Use python -I -B scripts/doctor.py to verify local self-checksum continuity.
 This is not a publisher signature; a malicious actor who can change the
 manifest and all files may forge a self-consistent packet.
 
-On POSIX Python 3.12+ you can execute an ACTUAL Claim Gate using fictional
+On Windows or POSIX Python 3.12+ you can execute an ACTUAL Claim Gate using fictional
 temporary state:
 
     python3 -I -B custom-skills/engineering_claim_gate/run.py --canary
 
-On native Windows the original source-derived engine must refuse. Neither
-command invokes Muse, registers a skill, uses a real recipient or issues
-permissions. All original user state remains untouched.
+Neither command invokes Muse, registers a skill, uses a real recipient or
+issues permissions. All original user state remains untouched.
+
+The pinned engine also ships a reviewed-Python engineering workflow:
+
+    python -I -B engine/runtime/claim-gate/engineering_workflow.py --help
+
+Use execute/review/complete with absolute paths, separately pinned inputs and
+operator-observed review receipts. It creates disposable repositories; it is
+NOT an OS sandbox for hostile code and does not generate patches with a model.
 """
 
 def _sha(raw: bytes) -> str:
@@ -328,7 +336,7 @@ def _skill_body(source: bytes, name: str, description: str) -> bytes:
         notice += ("The runnable local test is python -B "
                    "custom-skills/engineering_claim_gate/run.py --canary. "
                    "It exercises the real pinned Claim Gate in temporary "
-                   "fictional state on POSIX, never an external tool.\n\n")
+                   "fictional state on Windows or POSIX, never an external tool.\n\n")
     return (header + notice + text.rstrip() + "\n").encode("utf-8")
 
 

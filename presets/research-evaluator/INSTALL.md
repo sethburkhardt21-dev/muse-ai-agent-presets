@@ -1,44 +1,23 @@
-# Research Evaluator — research-evaluator source kit
+# Set up Research Evaluator
 
-This is one of eleven independently staged generic GitHub source-only
-agent kits. No native Muse/Hatch account, host ID, model invocation,
-scheduler or remote connector is installed or required.
+Use Python 3.12+ and Git. These are portable source files, not a native Muse installation.
 
-**Implemented locally:** Role guidance and offline fixture-only connector planning.
+## From the repository
 
-**Unsupported/optional:** No scholarly retrieval service or independent experiment runner is bundled.
+```bash
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role research-evaluator --to ../my-research-evaluator
+```
 
-## Offline source setup
+On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. Choose a new output directory; existing files are never overwritten. The source kit and its local inspection result do not authenticate a native host or grant tool access.
 
-    PYTHONPATH=src python3 -B examples/github_quickstart.py --role research-evaluator --to ../new-research-evaluator
+## From a download
 
-The quickstart uses the existing T07 create-only source installer and
-checks its source pin, three method-scoped subchats, three disabled
-skill descriptors and deterministic offline connector fixture.
-Choose an absent directory; never point at a live owner's workspace.
+Extract the ZIP into a new directory and follow its included guide. Keep existing user memory separate. For the latest runnable features, use current repository source and [the workflow guide](../../docs/WORKFLOWS.md).
 
-## Bounded role workflows
+Verify exact source quotations, evaluate held-out predictions and check leakage boundaries using the research-trace and research-numeric tools.
 
-- **precommit-experiment** — A proposed model or scientific hypothesis requires a decisive evaluation. Stop: Refuse independent grade if reviewer influenced the candidate or saw the hidden final.
-- **independently-reproduce** — Candidate bytes and original experiment are ready for review. Stop: No original rerun or no correct candidate identity means NOT_RUN, not PASS.
-- **research-synthesis** — A factual finding or competing explanation affects a decision. Stop: Unverified quotes or missing primary evidence must remain uncertain.
+For numerical evaluation, run `examples/numeric_evaluation_demo.py`; see the `research-numeric` workflow.
 
-These are source-authored role instructions, not evidence of model-selected
-tool calls or autonomous work.
+The local receipt is an integrity check, not a native installation or authenticated publisher signature. Optional connectors remain disconnected. See [security guidance](../../docs/SECURITY.md).
 
-## Optional local demonstration
-
-No dedicated runnable local engine is bundled for this role yet.
-
-The local examples use synthetic data and must not be mistaken for an
-authenticated recipient or a live desktop/Space integration.
-
-## Reconfigure, troubleshoot and extend
-
-Use source-controlled presets/ROLE/playbook.json and the canonical
-source builders, not arbitrary edits to generated receipts. Keep
-provider connectors **not connected** unless separately configured by
-the recipient. See [GitHub quickstart](../../docs/GITHUB_QUICKSTART.md)
-and [extension guide](../../docs/EXTENDING_GENERIC_AGENTS.md).
-The source inspector refuses unknown files and modified policy;
-upgrades/uninstall are preview-only to preserve owner data.
+[Complete installation guide](../../docs/GITHUB_QUICKSTART.md)

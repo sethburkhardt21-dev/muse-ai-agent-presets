@@ -2,7 +2,17 @@
 
 This file records published features rather than internal engineering work. Exact release assets remain available under [GitHub Releases](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases).
 
-## Generic Specialist Source Kits — v0.2.0-alpha
+## v0.3.0-alpha — expanded local toolkit
+
+- Portable engineering repairs and opt-in disposable builder tests.
+- Deterministic model training examples, installation and richer source kits.
+- Exact research citations, held-out numerical metrics and leakage checks.
+- Offline restart verification and context-bound handoff envelopes.
+- Recursive product-quality checks and a machine-readable capability catalog.
+
+These features ship in the complete toolkit source. Starter profiles and three executable runtime kits are available separately. Older release ZIPs retain their original contents.
+
+## Generic Specialist Source Kits â€” v0.2.0-alpha
 
 - Eleven individually downloadable neutral specialist starter kits.
 - Editable role methods, source profile templates and offline package inspection.
@@ -12,7 +22,7 @@ This file records published features rather than internal engineering work. Exac
 
 [Download the eleven kits](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha).
 
-## Extended Software Engineer Source Kit — alpha
+## Extended Software Engineer Source Kit â€” alpha
 
 - Separate downloadable engineering source package.
 - Local Claim Gate, evidence and recovery utilities plus reproducible disposable Git tests.
@@ -20,7 +30,7 @@ This file records published features rather than internal engineering work. Exac
 
 [Download the extended kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha).
 
-## Initial alpha — v0.1.0-alpha
+## Initial alpha â€” v0.1.0-alpha
 
 - Starter role profiles, source templates and initial configuration tooling.
 

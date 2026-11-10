@@ -44,7 +44,6 @@ the identity provider — do NOT lowercase inside this layer, which would
 collide identities in case-sensitive deployments.
 """
 
-import fcntl
 import hashlib
 import hmac
 import json
@@ -52,6 +51,7 @@ import os
 import tempfile
 import time
 from contextlib import contextmanager
+from portable_lock import exclusive_lock
 
 from claim_gate import (
     ClaimGate,
@@ -186,12 +186,8 @@ class ApprovalGate:
         d = self._scope_dir(scope)
         os.makedirs(d, exist_ok=True)
         lock_path = os.path.join(d, ".lock")
-        with open(lock_path, "a+b") as fh:
-            fcntl.flock(fh.fileno(), fcntl.LOCK_EX)
-            try:
-                yield
-            finally:
-                fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+        with exclusive_lock(lock_path):
+            yield
 
     def _write_atomic(self, path: str, obj: dict) -> None:
         data = json.dumps(obj, indent=2, sort_keys=True).encode("utf-8")

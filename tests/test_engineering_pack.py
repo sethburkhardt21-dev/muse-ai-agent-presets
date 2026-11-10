@@ -16,7 +16,7 @@ class EngineerPackStaging(unittest.TestCase):
     def test_dry_run_preview_validates_exact_engine_and_leaves_no_files(self):
         result=pack.preview_engineer_pack()
         self.assertEqual(result['status'],'LOCAL_ENGINE_SOURCE_VERIFIED')
-        self.assertEqual(result['runtime_modules'],9)
+        self.assertEqual(result['runtime_modules'],12)
         self.assertEqual(result['role_id'],'software-engineer')
         self.assertEqual(result['native_muse_status'],'UNBOUND')
         self.assertFalse(result['source_owner_authenticated'])
@@ -30,7 +30,7 @@ class EngineerPackStaging(unittest.TestCase):
         self.assertFalse(result['external_effect_authorized'])
         self.assertFalse(result['schedulers_enabled'])
         self.assertEqual(result['role_id'],'software-engineer')
-        self.assertEqual(result['runtime_modules'],9)
+        self.assertEqual(result['runtime_modules'],12)
         self.assertTrue((self.dest/'runtime/claim-gate/claim_gate.py').is_file())
         self.assertTrue((self.dest/'runtime/claim-gate/gate_approval.py').is_file())
         self.assertTrue((self.dest/'runtime/claim-gate/engineering_claim_gate.py').is_file())
@@ -135,8 +135,8 @@ class EngineerPackStaging(unittest.TestCase):
         self.assertEqual(result['status'],'LOCAL_ENGINE_PACK_STAGED')
         self.assertFalse((self.dest/'runtime/claim-gate/__pycache__').exists())
 
-    @unittest.skipUnless(os.name=='nt','Windows-specific refusal contract')
-    def test_windows_execution_cli_refuses_without_importing_posix_engine(self):
+    @unittest.skipUnless(os.name=='nt','Windows-specific portable CLI contract')
+    def test_windows_execution_cli_runs_read_only_inspect(self):
         import subprocess,sys
         from muse_presets.engineering_pack import ENGINE_ROOT
         state=self.root/'state'
@@ -144,10 +144,11 @@ class EngineerPackStaging(unittest.TestCase):
         p=subprocess.run([sys.executable,'-I','-B',str(ENGINE_ROOT/'engineering_claim_gate.py'),
                           '--state-dir',str(state),'--scope','engineering','--claim-id','dry-1','inspect'],
                          capture_output=True,text=True,timeout=8)
-        self.assertEqual(p.returncode,2)
+        self.assertEqual(p.returncode,0,p.stderr)
         answer=json.loads(p.stdout)
-        self.assertEqual(answer['error_code'],'UNSUPPORTED_PLATFORM_POSIX_FCNTL_REQUIRED')
+        self.assertEqual(answer['status'],'LOCAL_CLAIM_ABSENT')
         self.assertFalse(answer['native_muse_invoked'])
+        self.assertFalse(answer['external_effect_authorized'])
 
     def test_invalid_role_or_unexpected_effect_injection_does_not_create_files(self):
         with self.assertRaises(TypeError):

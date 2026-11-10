@@ -1,7 +1,7 @@
-"""Create-only portable Model Builder pack with bounded offline evaluation.
+"""Create-only Model Builder pack with bounded offline evaluation and toy training.
 
-This is neither a model trainer nor a Muse host installation. All native
-skills, subchats, hooks and rights remain unbound or disabled.
+Opt-in integer perceptron experiments are local and finite; no LLM/GPU trainer
+or Muse installation is included. Native skills/hooks and grants stay disabled.
 """
 from __future__ import annotations
 
@@ -19,11 +19,11 @@ from .coordinator_dropin import _tree, DOCTOR as GENERIC_SELF_HASH_DOCTOR
 SCHEMA = "r33/model-builder-dropin-v1"
 SKILLS = {
     "model_development_metrics": {
-        "description":"Bounded development-set scoring with explicit protected final split",
+        "description":"Bounded development scoring and opt-in local toy train/evaluate; final held",
         "method":"evaluate",
     },
     "model_checkpoint_verifier": {
-        "description":"Actual synthetic checkpoint-byte digest verification; not trained weights",
+        "description":"Synthetic byte checks and safe JSON toy-model inference/baseline recovery",
         "method":"checkpoint",
     },
 }
@@ -31,19 +31,19 @@ ROOMS = {
     "data-custody": {
         "purpose":"Admit versioned data/model source only after documented rights and family-split checks",
         "actions":"Check source families across train, dev and protected final, protect final labels from local development code",
-        "stop":"No independently verified rights, held-out boundary or host grant means no training",
+        "stop":"No external training without owner/host grants; local integer toy work requires explicit opt-in and disjoint final boundary",
         "next":"development-evaluation",
     },
     "development-evaluation": {
-        "purpose":"Measure bounded candidate versus baseline development predictions using actual provided rows",
+        "purpose":"Measure provided development predictions or explicitly opted-in bounded toy training and checkpoint inference",
         "actions":"Compute exact integer correct counts, deterministic accuracy and comparative delta for development only",
-        "stop":"Caller predictions and apparent gain cannot count as real inference, training or final examination",
+        "stop":"Distinguish caller predictions from actual local toy inference; neither establishes LLM training or final examination",
         "next":"artifact-verification",
     },
     "artifact-verification": {
-        "purpose":"Verify bounded synthetic checkpoint bytes and retain source lineage without declaring optimizer steps",
+        "purpose":"Verify synthetic bytes or safe numeric toy checkpoints; recover baseline bytes without deploying a model",
         "actions":"Rehash actual supplied bytes, correlate input source digests and require separate external training provenance",
-        "stop":"No authenticated weights, optimizer record, examiner and owner grant means SOURCE_ONLY/HOLD",
+        "stop":"Local toy updates and hashes are not authenticated external training provenance, examiner identity or promotion authority",
         "next":"data-custody",
     },
 }
@@ -69,16 +69,23 @@ HOOKS = {"schema":"r33/model-builder-hooks-v1","enabled":False,
          "installed":False,"scheduler_enabled":False,"event_handlers":[]}
 README = """# Model Builder — neutral source-only development verifier
 
-The two callable local skills are development-metric scoring and bounded
-synthetic checkpoint SHA-256 verification. No optimizer, training step,
-actual model weights, GPU, model download, paid API, data rights clearance,
-blind final evaluation or native Muse invocation occurs here.
+The two disabled local skills expose development scoring and checkpoint checks,
+plus opt-in integer-perceptron and decimal-linear toy training with actual
+JSON-weight inference. Use --operation linear-demo --allow-local-training for
+64 bounded gradient updates, recomputed persisted evidence and byte-exact
+baseline restoration. The runtime/model_toy_bundle.py CLI also supports
+run/verify/restore-baseline with explicit dataset and receipt hashes.
+These local routines do not grant a provider, GPU or production promotion.
+Integer toy training is bounded to 8 features, 96 rows and 32 epochs. No LLM/LoRA,
+GPU, model download, paid API, rights clearance, protected-final examination
+or native Muse invocation is performed.
 
 The checked-in runtime accepts strictly bounded caller-provided rows and
 synthetic bytes. It verifies disjoint source families, holds protected-final
 labels, measures development accuracy, and refuses forged training and
-promotion claims. The checkpoint is intentionally synthetic, NOT an actual
-trained adapter. The original host's registration, model-selected calls,
+promotion claims. The legacy checkpoint is intentionally synthetic, NOT a trained adapter.
+The separate toy operations execute local perceptron updates and replay saved
+numeric weights; they do not establish independent provenance or promotion. The original host's registration, model-selected calls,
 reviewer authority, recipient readback and wrong-owner denial are NOT_RUN.
 
 Two skill descriptors exist with local scripts; config/skills.yaml is disabled.
@@ -88,7 +95,7 @@ Run scripts/doctor.py for local self-hash, not publisher authentication.
 """
 
 RUNNER = r'''#!/usr/bin/env python3
-"""No training/GPU/provider calls. Real local scoring and SHA-256 only."""
+"""Bounded local scoring, JSON toy inference and explicitly opted-in toy training. No GPU/provider."""
 from __future__ import annotations
 import argparse
 import base64
@@ -97,6 +104,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
+import tempfile
 
 
 def refuse(reason):
@@ -143,7 +151,9 @@ def demo():
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--operation",required=True,
-                        choices=("demo","evaluate","checkpoint"))
+                        choices=("demo","evaluate","checkpoint","toy-demo","toy-train","toy-evaluate","toy-restore","linear-demo"))
+    parser.add_argument("--allow-local-training",action="store_true",
+                        help="allow only the bounded integer toy experiment, never host training")
     args=parser.parse_args(argv)
     root=Path(__file__).resolve().parents[2]
     engine=root/"runtime"/"model_eval.py"
@@ -161,8 +171,67 @@ def main(argv=None):
             source.get("files_sha256",{}).get("runtime/model_eval.py")!=
                 hashlib.sha256(engine.read_bytes()).hexdigest()):
             return refuse("SOURCE_RUNTIME_DRIFT_OR_FORGED_GRANT")
+        if args.operation.startswith("toy-"):
+            toy=root/"runtime"/"toy_model.py"
+            if (toy.is_symlink() or not toy.is_file() or toy.stat().st_size>65536 or
+                source.get("files_sha256",{}).get("runtime/toy_model.py")!=
+                    hashlib.sha256(toy.read_bytes()).hexdigest()):
+                return refuse("SOURCE_TOY_RUNTIME_DRIFT")
+            if args.operation in ("toy-train","toy-demo") and not args.allow_local_training:
+                return refuse("EXPLICIT_LOCAL_TRAINING_OPT_IN_REQUIRED")
+        if args.operation=="linear-demo":
+            if not args.allow_local_training:
+                return refuse("EXPLICIT_LOCAL_TRAINING_OPT_IN_REQUIRED")
+            for name in ("model_toy_math.py","model_toy_bundle.py","model_toy_fixture.py","model_training_demo.py"):
+                file=root/"runtime"/name
+                if (file.is_symlink() or not file.is_file() or file.stat().st_size>65536 or
+                    source.get("files_sha256",{}).get("runtime/"+name)!=hashlib.sha256(file.read_bytes()).hexdigest()):
+                    return refuse("SOURCE_LINEAR_RUNTIME_DRIFT")
         sys.path.insert(0,str(root/"runtime"))
         from model_eval import evaluate_development,verify_checkpoint_bytes
+        if args.operation=="linear-demo":
+            from model_training_demo import run_linear_demo
+            report=run_linear_demo(allow_training=args.allow_local_training)
+            print(json.dumps(report,sort_keys=True))
+            return 0
+        if args.operation.startswith("toy-"):
+            from toy_model import (run_toy_experiment,score_toy_checkpoint,
+                                   restore_toy_baseline,example_toy_experiment)
+            if args.operation=="toy-demo":
+                request=example_toy_experiment()
+                experiment=run_toy_experiment(request,allow_training=args.allow_local_training)
+                if experiment.get("status")!="LOCAL_TOY_TRAIN_EVAL_COMPLETE":
+                    return refuse("TOY_EXPERIMENT_REFUSED")
+                with tempfile.TemporaryDirectory(prefix="model-builder-toy-demo-") as temp:
+                    directory=Path(temp)
+                    candidate=directory/"candidate.json"
+                    baseline=directory/"baseline.json"
+                    recovered=directory/"recovered-baseline.json"
+                    candidate.write_bytes(experiment["checkpoint_utf8"].encode("utf-8"))
+                    baseline.write_bytes(experiment["baseline_checkpoint_utf8"].encode("utf-8"))
+                    evaluation=score_toy_checkpoint(candidate.read_bytes(),
+                        experiment["checkpoint_sha256"],
+                        [row for row in request["rows"] if row["split"]=="dev"])
+                    rollback=restore_toy_baseline(candidate.read_bytes(),experiment["checkpoint_sha256"],
+                        baseline.read_bytes(),experiment["baseline_checkpoint_sha256"])
+                    if (evaluation.get("status")!="LOCAL_TOY_CHECKPOINT_EVALUATED" or
+                        rollback.get("status")!="LOCAL_BASELINE_BYTES_RECOVERED"):
+                        return refuse("TOY_RELOAD_OR_BASELINE_REFUSED")
+                    recovered.write_bytes(rollback["checkpoint_utf8"].encode("utf-8"))
+                    if recovered.read_bytes()!=baseline.read_bytes():
+                        return refuse("TOY_BASELINE_RECOVERY_BYTES_DIFFER")
+                print(json.dumps({"status":"LOCAL_TOY_MODEL_DEMO_PASSED",
+                    "trained_this_call":True,"checkpoint_reloaded":True,
+                    "baseline_recovered":True,"candidate_correct":evaluation["correct"],
+                    "baseline_correct":experiment["baseline_correct"],
+                    "dev_n":experiment["dev_n"],"training_steps":experiment["training_steps"],
+                    "update_count":experiment["update_count"],
+                    "checkpoint_sha256":experiment["checkpoint_sha256"],
+                    "baseline_checkpoint_sha256":experiment["baseline_checkpoint_sha256"],
+                    "final_status":"HELD_UNEVALUATED","native_tool_invoked":False,
+                    "external_effect_authorized":False,"promotion_authorized":False,
+                    "training_provenance_verified":False,"gpu_used":False,"network_used":False},sort_keys=True))
+                return 0
         if args.operation=="demo":
             data,manifest,blob=demo()
             metric=evaluate_development(data)
@@ -179,12 +248,28 @@ def main(argv=None):
                 "external_effect_authorized":False,"final_status":"HELD_UNEVALUATED",
             },sort_keys=True))
             return 0
-        raw=sys.stdin.buffer.read(16385)
-        if len(raw)>16384 or not raw:
+        budget=65536 if args.operation.startswith("toy-") else 16384
+        raw=sys.stdin.buffer.read(budget+1)
+        if len(raw)>budget or not raw:
             return refuse("INPUT_SIZE_REFUSED")
         data=json.loads(raw,object_pairs_hook=unique_pairs,
                         parse_constant=lambda _: (_ for _ in ()).throw(ValueError("NONSTANDARD_NUMBER")))
-        if args.operation=="evaluate":
+        if args.operation=="toy-train":
+            result=run_toy_experiment(data,allow_training=args.allow_local_training)
+        elif args.operation=="toy-evaluate":
+            if (type(data) is not dict or set(data)!={"checkpoint_utf8","expected_sha256","rows"}
+                or type(data["checkpoint_utf8"]) is not str):
+                return refuse("TOY_EVALUATION_SCHEMA")
+            result=score_toy_checkpoint(data["checkpoint_utf8"].encode("utf-8"),
+                                        data["expected_sha256"],data["rows"])
+        elif args.operation=="toy-restore":
+            if (type(data) is not dict or set(data)!={"candidate_utf8","candidate_sha256",
+                                                     "baseline_utf8","baseline_sha256"}
+                or type(data["candidate_utf8"]) is not str or type(data["baseline_utf8"]) is not str):
+                return refuse("TOY_RESTORE_SCHEMA")
+            result=restore_toy_baseline(data["candidate_utf8"].encode("utf-8"),data["candidate_sha256"],
+                                       data["baseline_utf8"].encode("utf-8"),data["baseline_sha256"])
+        elif args.operation=="evaluate":
             result=evaluate_development(data)
         else:
             if type(data) is not dict or set(data)!={"manifest","bytes_base64"}:
@@ -197,7 +282,9 @@ def main(argv=None):
         result={**result,"native_tool_invoked":False,"external_effect_authorized":False}
         print(json.dumps(result,sort_keys=True))
         return 0 if result["status"] in (
-            "LOCAL_DEV_METRICS_ONLY","LOCAL_CHECKPOINT_DIGEST_MATCH") else 2
+            "LOCAL_DEV_METRICS_ONLY","LOCAL_CHECKPOINT_DIGEST_MATCH",
+            "LOCAL_TOY_TRAIN_EVAL_COMPLETE","LOCAL_TOY_CHECKPOINT_EVALUATED",
+            "LOCAL_BASELINE_BYTES_RECOVERED") else 2
     except (OSError,ValueError,TypeError,KeyError,ImportError,json.JSONDecodeError,binascii.Error):
         return refuse("UNTRUSTED_INPUT_OR_RUNTIME")
 
@@ -233,6 +320,19 @@ def _runtime_source() -> bytes:
     return file.read_bytes()
 
 
+def _runtime_sources() -> dict[str,bytes]:
+    toy=Path(__file__).with_name("toy_model.py")
+    if toy.is_symlink() or not toy.is_file() or toy.stat().st_size>65536:
+        raise ValueError("TOY_SOURCE_NOT_ADMITTED")
+    result={"runtime/model_eval.py":_runtime_source(),"runtime/toy_model.py":toy.read_bytes()}
+    for name in ("model_toy_math.py","model_toy_bundle.py","model_toy_fixture.py","model_training_demo.py", "model_toy_sourcekit.py", "model_toy_install.py"):
+        source=Path(__file__).with_name(name)
+        if source.is_symlink() or not source.is_file() or source.stat().st_size>65536:
+            raise ValueError("LINEAR_MODEL_SOURCE_NOT_ADMITTED")
+        result["runtime/"+name]=source.read_bytes()
+    return result
+
+
 def _sidecars(profile: Path) -> dict[str,bytes]:
     content={"README.md":README.encode("utf-8"),
              "scripts/doctor.py":_doctor().encode("utf-8")}
@@ -253,7 +353,7 @@ def _sidecars(profile: Path) -> dict[str,bytes]:
             f"---\nname: {name}\ndescription: {settings['description']}\n---\n\n"
             f"# Model Builder {settings['method'].title()}\n\n"
             "Execute run.py only for bounded synthetic or explicitly approved "
-            "offline source inputs. No training, paid model call, publisher "
+            "offline source inputs. Toy training requires explicit local opt-in; no external training, paid model call, publisher "
             "release, native host or independent examination is authorized. "
             "The package-local registry stays disabled.\n"
         ).encode("utf-8")
@@ -319,18 +419,18 @@ def _receipt(root: Path, files: dict[str,bytes]) -> dict:
 def stage_model_builder_dropin(destination: Path) -> dict:
     target=Path(destination)
     _admitted_destination(target)
-    frozen=_runtime_source()
+    frozen=_runtime_sources()
     target.mkdir(exist_ok=False)
     marker=target/"STAGING_INCOMPLETE"
     marker.write_text("Local pack incomplete; do not install or retry blindly.\n")
     render_preset("model-builder",target/"profile",display_name="Model Builder")
-    files={"runtime/model_eval.py":frozen,**_sidecars(target/"profile")}
+    files={**frozen,**_sidecars(target/"profile")}
     for relative,raw in sorted(files.items()):
         path=target/relative
         path.parent.mkdir(exist_ok=True,parents=True)
         with path.open("xb") as handle:
             handle.write(raw)
-    if frozen!=_runtime_source():
+    if frozen!=_runtime_sources():
         raise ValueError("MODEL_SOURCE_CHANGED_DURING_STAGE")
     manifest=_receipt(target,files)
     path=target/"receipts"/"MODEL_BUILDER_RECEIPT.json"
@@ -358,7 +458,7 @@ def inspect_model_builder_dropin(destination: Path) -> dict:
         profile=root/"profile"
         if inspect_render(profile)["status"]!="LOCAL_MATCH":
             return refused
-        sidecars={"runtime/model_eval.py":_runtime_source(),**_sidecars(profile)}
+        sidecars={**_runtime_sources(),**_sidecars(profile)}
         expected=_receipt(root,sidecars)
         file=root/"receipts"/"MODEL_BUILDER_RECEIPT.json"
         if file.is_symlink() or not file.is_file() or file.stat().st_size>30000:

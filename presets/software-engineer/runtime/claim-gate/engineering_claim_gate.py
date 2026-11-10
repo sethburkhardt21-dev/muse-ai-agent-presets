@@ -5,8 +5,8 @@ Execution is SOURCE-LOCAL only. This CLI DOES NOT execute a work item,
 authenticate Muse owners, authorize a third-party effect, or call a model.
 Every mutating verb changes only explicit local claim-state files.
 
-On Windows, do not import POSIX-fcntl modules. Refuse the CLI until a
-separately tested platform adapter is available.
+Uses the portable local Claim Gate lock adapter on Windows and POSIX.
+No local disk claim authorizes an external effect or grants host identity.
 """
 from __future__ import annotations
 
@@ -114,8 +114,8 @@ def _output(scope: str,claim_id: str,*,status: str,
 
 
 def run(args: argparse.Namespace) -> dict:
-    if os.name!="posix":
-        reject("UNSUPPORTED_PLATFORM_POSIX_FCNTL_REQUIRED")
+    if os.name not in ("posix", "nt"):
+        reject("UNSUPPORTED_LOCAL_LOCK_PLATFORM")
     if args.action not in _ALLOWED:
         reject("UNSUPPORTED_ACTION")
     if not _COMPONENT.fullmatch(args.scope) or not _COMPONENT.fullmatch(args.claim_id):
@@ -126,7 +126,7 @@ def run(args: argparse.Namespace) -> dict:
     source=(_payload(args.source_root,args.payload)
             if args.action in ("claim","verify-bytes") else None)
 
-    # Only import the source-derived modules AFTER rejecting unsupported OS
+    # Only import source-derived modules AFTER rejecting unsupported OS
     # and unsafe state paths; no arbitrary plugins or imports are executed.
     module_home=Path(__file__).resolve().parent
     if module_home.is_symlink():

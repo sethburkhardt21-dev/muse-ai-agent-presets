@@ -38,7 +38,6 @@ Usage pattern for a consumer:
 
 from __future__ import annotations
 
-import fcntl
 import hashlib
 import hmac
 import json
@@ -48,6 +47,7 @@ import re
 import tempfile
 import time
 from contextlib import contextmanager
+from portable_lock import exclusive_lock, sync_directory
 
 from gate_retention import (append_digest_entry, digest_log_path,
                             has_digest_entry, lookup_pruned, pruned_summary,
@@ -175,12 +175,8 @@ class ClaimGate:
         scope_dir = self._scope_dir(scope)
         os.makedirs(scope_dir, exist_ok=True)
         lock_path = self._lock_path(scope)
-        with open(lock_path, "a+b") as fh:
-            fcntl.flock(fh, fcntl.LOCK_EX)
-            try:
-                yield
-            finally:
-                fcntl.flock(fh, fcntl.LOCK_UN)
+        with exclusive_lock(lock_path):
+            yield
 
     # -- atomic persistence ---------------------------------------------------
 
@@ -266,12 +262,9 @@ class ClaimGate:
                 fh.flush()
                 os.fsync(fh.fileno())
             os.replace(tmp, path)  # atomic on same filesystem
-            # fsync the directory so the rename is durable
-            dfd = os.open(scope_dir, os.O_DIRECTORY)
-            try:
-                os.fsync(dfd)
-            finally:
-                os.close(dfd)
+            # POSIX directory sync. Windows cannot attest post-power-loss
+            # rename persistence from stdlib; fail closed on uncertain effects.
+            sync_directory(scope_dir)
         finally:
             if os.path.exists(tmp):
                 os.unlink(tmp)

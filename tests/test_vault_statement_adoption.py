@@ -238,8 +238,6 @@ class VaultStatementAndAdoptionTests(unittest.TestCase):
         import os
         import subprocess
         import sys
-        if os.name != "posix":
-            self.skipTest("existing Claim Gate requires POSIX fcntl")
         from muse_presets.engineering_pack import stage_engineer_pack
         stage = self.base / "candidate-pack"
         stage_engineer_pack(stage)

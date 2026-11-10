@@ -1,7 +1,9 @@
-# Model Builder — Muse AI specialist preset
+# Model Builder
 
-Plans and executes approved model training, adapter work and candidate provenance.
+Explore small deterministic model training, evaluation, packaging and transactional local installation. Export a standalone Model Builder kit.
 
-Status: **source template only**. Optional Family Link adapter is present and disabled by default. This package does not install a skill, start a model, create a subchat, or perform an external effect.
+**[Install and customize](INSTALL.md)** · **[Capabilities](../../docs/CAPABILITIES.md)** · **[Runnable workflows](../../docs/WORKFLOWS.md)**
 
-See [installation and persistence](../../docs/INSTALL_AND_PERSISTENCE.md) and [Security](../../docs/SECURITY.md).
+This kit includes editable instructions, scoped methods and disabled skill descriptors. Local runtime tools are supplied by the full repository; an older standalone starter ZIP may include only the profile templates.
+
+No native Muse agent, connected account or external action is enabled automatically. Review source before executing local tests.

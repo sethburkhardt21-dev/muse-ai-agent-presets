@@ -32,13 +32,13 @@ Raw-gate paths bypass tree bookkeeping; the Studio's consumer contract
 routes all pipeline claims through this layer / the skill CLI.
 """
 
-import fcntl
 import hmac
 import json
 import os
 import tempfile
 import time
 from contextlib import contextmanager
+from portable_lock import exclusive_lock
 
 from claim_gate import (
     ClaimGateError,
@@ -147,12 +147,8 @@ class CompositeGate:
         # call approval.* methods while holding this.
         d = self._scope_dir(scope)
         os.makedirs(d, exist_ok=True)
-        with open(os.path.join(d, ".lock"), "a+b") as fh:
-            fcntl.flock(fh.fileno(), fcntl.LOCK_EX)
-            try:
-                yield
-            finally:
-                fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+        with exclusive_lock(os.path.join(d, ".lock")):
+            yield
 
     @staticmethod
     def _write_atomic(path: str, obj: dict) -> None:

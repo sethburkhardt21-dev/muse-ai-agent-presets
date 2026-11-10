@@ -1,11 +1,9 @@
-# Learning Coach — Muse AI specialist preset
+# Learning Coach
 
-Runs source-grounded, adaptive study and evidence-based learning reviews.
+Build source-based study sessions, score local practice and preserve review history in SQLite.
 
-Status: **source template only**. Optional Family Link adapter is present and disabled by default. This package does not install a skill, start a model, create a subchat, or perform an external effect.
+**[Install and customize](INSTALL.md)** · **[Capabilities](../../docs/CAPABILITIES.md)** · **[Runnable workflows](../../docs/WORKFLOWS.md)**
 
-See [installation and persistence](../../docs/INSTALL_AND_PERSISTENCE.md) and [Security](../../docs/SECURITY.md).
+This kit includes editable instructions, scoped methods and disabled skill descriptors. Local runtime tools are supplied by the full repository; an older standalone starter ZIP may include only the profile templates.
 
-## Working offline study engine (R6)
-
-Run `PYTHONPATH=src python examples/learning_session_demo.py` from the repository root. It demonstrates a real, local SQLite flow from owner-supplied science definitions through specialist-held question drafts, owner approval, learner scoring and review-due replay. Read [the complete source and authorization contract](../../docs/LEARNING_LOCAL_STUDY.md) before using this in an application. `LearningScope` is a local callback shape, not an authenticated Muse credential. Higher-stakes study, hidden exams and real account migration remain gated.
+No native Muse agent, connected account or external action is enabled automatically. Review source before executing local tests.

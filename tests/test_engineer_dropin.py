@@ -157,16 +157,12 @@ class EngineerDropinTests(unittest.TestCase):
         result=subprocess.run([sys.executable,"-I","-B",str(script),"--canary"],
                               capture_output=True,text=True,timeout=25)
         report=json.loads(result.stdout)
-        if os.name!="posix":
-            self.assertEqual(result.returncode,2)
-            self.assertEqual(report["status"],"UNSUPPORTED_PLATFORM_POSIX_FCNTL_REQUIRED")
-        else:
-            self.assertEqual(result.returncode,0,result.stderr)
-            self.assertEqual(report["status"],"LOCAL_CLAIM_GATE_CANARY_PASSED")
-            self.assertEqual(report["observed"],["LOCAL_CLAIM_RECORDED",
-                                                "LOCAL_CLAIM_REUSED",
-                                                "LOCAL_UNKNOWN_HELD",
-                                                "LOCAL_CLAIM_OBSERVED"])
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertEqual(report["status"],"LOCAL_CLAIM_GATE_CANARY_PASSED")
+        self.assertEqual(report["observed"],["LOCAL_CLAIM_RECORDED",
+                                            "LOCAL_CLAIM_REUSED",
+                                            "LOCAL_UNKNOWN_HELD",
+                                            "LOCAL_CLAIM_OBSERVED"])
         self.assertFalse(report["native_muse_invoked"])
         self.assertFalse(report["external_effect_authorized"])
         self.assertFalse(report["recipient_readback_verified"])
