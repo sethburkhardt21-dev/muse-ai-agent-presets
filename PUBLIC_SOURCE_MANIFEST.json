@@ -2,7 +2,7 @@
   "files": {
     ".gitattributes": "a20f0e8c617e6f8c382868f89ef45b4c72b30a906b59d6f3dd881bace4a093b1",
     ".github/pull_request_template.md": "3cabbfe998a986a047918d80a777e6eeeb6595fa227f81d38e2b4c34b58ee639",
-    ".github/workflows/checks.yml": "9baf7190c30ae79a639da969f1098c930f43640ed1b0fa54fd63bfa0daa5e3e0",
+    ".github/workflows/checks.yml": "6ad89a0fdfd89518ade1c676ecac33bf5708de4cb3af22bfcee252f7e2f58511",
     ".gitignore": "f9a0a64567a39914b27e754fee211afad7b6da159590c3a5a0899e95bb34b395",
     "CHANGELOG.md": "eef7a8665342a4f3595d62614b18bf2c5225a0819b2547eeffe488ab68d4c3d6",
     "CONTRIBUTING.md": "99cb3d7e62795fee1eac8f0986b23729ec9fc0663d323058b9f8e416d7e02311",
