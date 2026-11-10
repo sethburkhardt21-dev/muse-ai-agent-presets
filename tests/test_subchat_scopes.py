@@ -282,7 +282,7 @@ class SubchatScopesTests(unittest.TestCase):
 
     def test_documentation_does_not_embed_original_agent_identities(self):
         text = (Path(__file__).resolve().parents[1] /
-                "docs/R41_SUBCHAT_SCOPES.md").read_text(encoding="utf-8").casefold()
+                "docs/CUSTOMIZE.md").read_text(encoding="utf-8").casefold()
         for original in ("legacy-role-eta", "legacy-role-alpha", "legacy-role-beta", "legacy-role-delta",
                          "legacy-role-gamma", "legacy-role-zeta", "legacy-role-epsilon"):
             self.assertNotIn(original, text)

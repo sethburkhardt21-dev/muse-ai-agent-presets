@@ -1,17 +1,25 @@
-# Contributing to Muse AI Agent Presets
+# Contributing
 
-Contributions should be reusable, neutral, rights-cleared and source-tested. Do not submit private host data, personal memory, credentials, unapproved assets or proprietary SDK implementations.
+Contributions are welcome when they improve the public source kits, documentation, tests or accessibility.
 
-1. Open an issue with the user-visible capability and target Muse host profile.
-2. State origin/commit/license, permissions, connector scopes and exact tests. Prefer existing modules and source references to duplicate implementations.
-3. Add a failing test for behavior changes, implement a narrow repair, run local full suite.
-4. If you claim host compatibility, include original native registration, execution and recipient evidence, not just file installation.
-5. Preserve negative tests, unsupported platforms and failure receipts. Do not silently promote statuses.
+## Before opening a pull request
 
-Code style: Python stdlib, small explicit modules, fail-closed input validation and create-only outputs. Avoid schedules, agents and credential access in the shared core.
+1. Use a separate branch based on the current public `main`.
+2. Keep private assistant memory, credentials, machine-specific records and internal work logs out of public files.
+3. Make one bounded change with an executable example or a test where appropriate.
+4. Run the source tests and privacy check.
+5. Describe the user-visible improvement and any unsupported platforms or untested integrations.
 
-## Adding or improving a specialist
+```bash
+PYTHONPATH=src python3 -B -m unittest discover -s tests -q
+PYTHONPATH=src python3 -B -m muse_presets.cli audit-neutrality
+PYTHONPATH=src python3 -B -m muse_presets.cli doctor
+```
 
-Each source-only specialist has a `preset.json` and exactly one `playbook.json` with three specific methods. The contract validator checks trigger, executable **procedure description** (not actual tool code), two or more evidence obligations, stop condition, and a proposed handoff target permitted by `preset.json`. Provide a first source-only test and a negative case. Do not raise maturity or native-host status without real host evidence.
+On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`.
 
-Run `PYTHONPATH=src python -m muse_presets.cli doctor`, `PYTHONPATH=src python -m muse_presets.cli audit-neutrality`, and the full unittest suite before publishing. For external code, consult [capability fit audit](docs/CAPABILITY_FIT_AUDIT.md), [community intake](docs/COMMUNITY_ROLE_INTEGRATIONS.md), and [rights and provenance](docs/NEUTRALITY_AND_PROVENANCE.md). Preserve original notices; keep third-party implementations optional until independently admitted.
+The public repository is a **product source distribution**, not an engineering scratchpad. Do not add milestone-numbered progress documents, internal task trackers, temporary checkpoints or machine-local receipts to its default branch.
+
+Source-only, independently tested, native-ready and deployed are distinct states. Do not claim a live agent or external tool was invoked unless an actual supported host operation was verified.
+
+For coding conventions and role APIs, see [Extend the toolkit](docs/EXTENDING_GENERIC_AGENTS.md). For sensitive reports, follow [Security](SECURITY.md). Code and documentation contributions must be compatible with the [MIT license](LICENSE).

@@ -6,7 +6,7 @@ Personal Muse/Hatch must independently prove home-file injection, effective inst
 
 Muse Code developer documentation currently describes skills, hooks, MCP and plugin manifests, and warns the plugin surface is Developer Preview. Qualified installations require local review and approval. See [official extension overview](https://meta-models.github.io/muse-code-sdk/next/guides/extend/) and [plugin guidance](https://meta-models.github.io/muse-code-sdk/next/guides/plugins/).
 
-The portable R32 implementation now includes [generic native acceptance](GENERIC_NATIVE_ACCEPTANCE.md) for all eleven specialist roles. It creates independent source-only packets and correlated fixture checks. These do not implement or imply a receiving account's authenticated native skill-search or model invocation.\n\n## Host doctor phases
+The portable R32 implementation now includes [Security](SECURITY.md) for all eleven specialist roles. It creates independent source-only packets and correlated fixture checks. These do not implement or imply a receiving account's authenticated native skill-search or model invocation.\n\n## Host doctor phases
 
 - `D0` offline catalog and renderer checks (this repository can execute now).
 - `D1` real host capability discovery (no inferred tool names).

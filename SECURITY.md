@@ -6,4 +6,4 @@ Do not provide secrets, user data, malware binaries, weaponized exploit samples 
 
 The optional Family Link implementation is local proposal/shape validation only; it provides no authentication, cryptographic signing, live transport, native admission or effects.
 
-Release privacy checks cover the complete public source distribution; a separate private identity/history screen and rights review are still required. See [release privacy assurance](docs/PRIVACY_RELEASE_ASSURANCE.md) and [security and rights](docs/SECURITY_AND_RIGHTS.md).
+Release privacy checks cover the complete public source distribution; a separate private identity/history screen and rights review are still required. See [Security](docs/SECURITY.md) and [Security](docs/SECURITY.md).

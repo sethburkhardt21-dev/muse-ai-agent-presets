@@ -1,131 +1,76 @@
-# GitHub quickstart — eleven generic agent source kits
+# Get started
 
-This guide is for a **GitHub source-only** release. You can prepare, inspect,
-and test all eleven neutral role packages without a Muse/Hatch account or
-paid provider. Native agent installation, model-selected tool use, desktop
-control, Family Link transport, scheduling and remote services are **not
-connected**. They are optional integrations, not release requirements.
+This GitHub repository is a **source-only** toolkit of eleven configurable specialist roles. You can create a local kit and run the offline examples without signing in to Muse, configuring a paid provider or installing native skills. Live connectors are **not connected** by default.
 
-**Release timing:** the public GitHub repository currently holds an earlier
-alpha until the guarded source publication gate (T34) passes. These commands
-apply to the release containing examples/github_quickstart.py; do not
-mistake an older public checkout for the pending release.
+## Prerequisites
 
-## Requirements and checkout
+- Python 3.10+ and Git.
+- Windows with PowerShell, macOS or Linux. Some platform-specific engines are unsupported on Windows; see [capabilities](CAPABILITIES.md).
+- A new output location. The tools refuse to overwrite an existing folder.
 
-- Git and Python 3.10+ are intended; no pip dependencies are needed for
-  the basic examples. The verified release run records exact interpreter
-  versions separately (Python 3.12 on Windows and 3.14 on macOS).
-- At publication, clone the public GitHub repository:
+## Clone and verify
 
-      git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
-      cd muse-ai-agent-presets
+**macOS / Linux**
 
-- Before publication, an authorized maintainer can run the same commands
-  inside the private working source checkout or an isolated frozen-source
-  copy; an older public clone does **not** include the latest features.
+```bash
+git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
+cd muse-ai-agent-presets
+PYTHONPATH=src python3 -B -m muse_presets.cli doctor
+PYTHONPATH=src python3 -B examples/github_quickstart.py --all
+```
 
-### macOS / Linux terminal
+**Windows PowerShell**
 
-    PYTHONPATH=src python3 -B -m muse_presets.cli doctor
-    PYTHONPATH=src python3 -B examples/github_quickstart.py --all
-    PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ../my-new-garden-agent
+```powershell
+git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
+cd muse-ai-agent-presets
+$env:PYTHONPATH = "src"
+python -B -m muse_presets.cli doctor
+python -B examples/github_quickstart.py --all
+```
 
-### Windows PowerShell
+The `--all` smoke check creates temporary examples of all eleven role-source packages, inspects their configuration and verifies synthetic connector observations. It does **not** install native assistants or authenticate a remote account.
 
-    $env:PYTHONPATH = "src"
-    python -B -m muse_presets.cli doctor
-    python -B examples/github_quickstart.py --all
-    python -B examples/github_quickstart.py --role garden-companion --to ../my-new-garden-agent
+## Create a kit
 
-The --all command exercises all eleven role-source manifests, builds each
-T04/T05/T06 package inside a disposable temporary folder, reopens it,
-checks its source pins and disabled skill registry, then verifies one
-synthetic connector observation per role. The folder is cleaned up after
-the check. The --role command checks one role. --to additionally creates
-one *new* source package at the specified absent path and refuses to
-overwrite existing owner files; do not use --all with --to.
+```bash
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ../my-garden-agent
+```
 
-This is an executable **source-only** smoke test; synthetic observations
-are not real connector access or proof of trained agent behavior. Its JSON
-report includes source inspection, three scoped subchats, three disabled
-skills, and an offline fixture result for every selected role.
+Use `python` on Windows after setting `$env:PYTHONPATH`. Each kit includes `INSTALL.md`, a role playbook and configuration templates. Change the name, instructions, capabilities and preferences to fit your work. Existing output directories are never overwritten.
 
-## Choose a role and run its local example
+Other choices include `software-engineer`, `coordinator` and `reverse-engineering-researcher`. [Browse all roles](CAPABILITIES.md).
 
-| Role | Verified local source capability | Local demo or limit |
-| --- | --- | --- |
-| [coordinator](../presets/coordinator/INSTALL.md) | Bounded graph and evidence review | Independent local reviewer demo in existing INSTALL |
-| [software-engineer](../presets/software-engineer/INSTALL.md) | Source-pinned claim/recovery components | POSIX Claim Gate demo; Windows stages but cannot run its POSIX fcntl engine |
-| [model-builder](../presets/model-builder/INSTALL.md) | Synthetic dev metrics and checkpoint digest | Local model-metrics script; no real training, inference or GPU |
-| [research-evaluator](../presets/research-evaluator/INSTALL.md) | Role procedures and offline connector scope | No standalone scholarly retrieval engine shipped |
-| [creative-studio](../presets/creative-studio/INSTALL.md) | Source profile, methods and render scope | No rendering backend bundled |
-| [adversarial-verifier](../presets/adversarial-verifier/INSTALL.md) | Defensive procedures and bounded fixture contract | No live attack engine bundled |
-| [personal-companion](../presets/personal-companion/INSTALL.md) | Configurable profile and notebook scope | No live reminders or personal account integration |
-| [garden-companion](../presets/garden-companion/INSTALL.md) | Transactional local calendar proposals | Run examples/garden_calendar_demo.py |
-| [learning-coach](../presets/learning-coach/INSTALL.md) | Source-grounded local study transactions | Run examples/learning_session_demo.py |
-| [claims-adjudicator](../presets/claims-adjudicator/INSTALL.md) | Claim scope and evidence references | Run examples/priority_slices.py; no autonomous verdict engine |
-| [reverse-engineering-researcher](../presets/reverse-engineering-researcher/INSTALL.md) | Compare supplied observation fixtures | Run examples/priority_slices.py; no live desktop capture |
+## Run local demonstrations
 
-The Evidence Finder is one shared service, **not a twelfth agent**.
-It has a source-tested local SQLite example:
+```bash
+PYTHONPATH=src python3 -B examples/garden_calendar_demo.py
+PYTHONPATH=src python3 -B examples/learning_session_demo.py
+PYTHONPATH=src python3 -B examples/evidence_ledger_demo.py
+PYTHONPATH=src python3 -B examples/priority_slices.py
+```
 
-    PYTHONPATH=src python3 -B examples/evidence_ledger_demo.py
+These programs use fictional inputs and local files. Garden and Learning exercises demonstrate SQLite recovery. A local receipt is not proof of an authenticated native owner or an external action.
 
-On Windows, use python instead of python3 and set PYTHONPATH as shown.
-These examples use synthetic content. Local source tests qualify only the
-implemented capabilities, not an actual personal Muse runtime.
+## Validate or extend
 
-## Run the test suite and inspect a package
+```bash
+PYTHONPATH=src python3 -B -m unittest discover -s tests -q
+PYTHONPATH=src python3 -B -m muse_presets.cli audit-neutrality
+PYTHONPATH=src python3 -B examples/verify_role_packages.py --all
+```
 
-    PYTHONPATH=src python3 -B -m unittest discover -s tests -q
-    PYTHONPATH=src python3 -B -m muse_presets.cli audit-neutrality
-    PYTHONPATH=src python3 -B -m muse_presets.cli dropin-inspect --path ../my-new-garden-agent
+Read [customization](CUSTOMIZE.md), [skills](SKILLS.md) and [extending the source](EXTENDING_GENERIC_AGENTS.md) before adding a provider or executing external tools.
 
-On Windows, the POSIX engine has documented unsupported cases; a test
-**skip** is not an engine PASS. The repository tests source safety and
-expected denials. The source doctor is not a native plugin check.
+## Common issues
 
-To inspect/export or preview an upgrade without changing owner files:
-
-    PYTHONPATH=src python3 -B -m muse_presets.cli dropin-export --path ../my-new-garden-agent --to ../new-garden-source.zip
-    PYTHONPATH=src python3 -B -m muse_presets.cli dropin-upgrade-preview --candidate ../my-new-garden-agent --target ../existing-owner-agent
-    PYTHONPATH=src python3 -B -m muse_presets.cli dropin-uninstall-plan --path ../my-new-garden-agent
-
-Export requires a pristine package and a nonexistent output destination.
-An upgrade preview never applies changes; the uninstall plan never deletes
-files. Back up actual owner data separately before any later host install.
-
-## Source-only role acceptance matrix
-
-The quickstart proves that every role kit can be staged and inspected.
-To test the actual available local demos separately from generic
-templates, run:
-
-    PYTHONPATH=src python3 -B examples/verify_role_packages.py --all
-
-This checks all eleven role ZIP manifests, examples and disabled
-connectors. It labels template-only roles and the unsupported
-Windows POSIX Claim Gate honestly. See
-[GitHub role acceptance](GITHUB_ROLE_ACCEPTANCE.md).
-
-## Add a feature or resolve a failure
-
-[Extension recipes](EXTENDING_GENERIC_AGENTS.md) cover additional role
-methods, SKILL.md generation, local engines, connector contracts, testing,
-source hashes, and fail-closed upgrades.
-
-| Symptom | What to do |
+| Problem | Resolution |
 | --- | --- |
-| ModuleNotFoundError for muse_presets | Run from repo root with PYTHONPATH=src; verify Python 3.10+ |
-| Source pin mismatch / SOURCE_DRIFT | Stop; verify actual repository commit and source bytes; create a new destination. Never bypass hashes |
-| Destination occupied | Choose an absent folder; keep existing owner state intact |
-| REVIEW_REQUIRED / incomplete stage | Preserve the failed output and diagnose it; never retry blindly or delete unrelated files |
-| Desktop/CUA/SSH says not connected | Expected. Only local source contract is shipped; configure an authorized provider separately |
-| Native Muse skill not found | Native skill installation is unsupported in the GitHub-only package; do not edit a live owner's registry |
-| POSIX Claim Gate does not run on Windows | Use its documented source staging/inspection only, or a qualified POSIX host for the local demo |
-| Public repository lacks these commands | It is still the earlier alpha; check the published release tag/commit after T34 |
+| `ModuleNotFoundError` | Run from the repository root with `PYTHONPATH=src`. |
+| Output already exists | Choose a new destination; preserve existing owner files. |
+| A source or receipt hash changed | Inspect the source and create a new verified package rather than bypassing the check. |
+| Connector or native skill unavailable | This is expected until a separately authorized host integration exists. |
+| A POSIX engine is unsupported on Windows | Use its documented source-only path or a compatible POSIX environment. Unsupported is **not** a passed test. |
+| Need a ZIP instead of a clone | Use the individual downloads on the [release page](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha). |
 
-No credentials or private memories should enter bug reports, public issues,
-tests or exported ZIP files. A GitHub source release can be complete while
-native host functionality is unsupported and clearly labeled.
+The toolkit does not provide an OS security sandbox. Run reviewed local source only. Native host activation remains optional and separate from the GitHub distribution.

@@ -112,11 +112,10 @@ class RoleCleanCloneAcceptanceTests(unittest.TestCase):
         self.assertFalse(parsed["public_git_pushed"])
 
     def test_docs_show_real_demo_vs_template(self):
-        docs=(self.root/"docs/GITHUB_ROLE_ACCEPTANCE.md").read_text(encoding="utf-8")
+        docs=(self.root/"docs/CAPABILITIES.md").read_text(encoding="utf-8")
         for role in load_registry()["presets"]:
             self.assertIn(role,docs)
-        for key in ("SOURCE_TEMPLATE_ONLY","UNSUPPORTED_POSIX_ENGINE_ON_WINDOWS",
-                    "CLEAN_CLONE_ROLE_MATRIX_SOURCE_ONLY"):
+        for key in ("Template only","Windows","source-only"):
             self.assertIn(key,docs)
         self.assertIn("source-only",docs.lower())
 

@@ -132,7 +132,7 @@ engine, and a real POSIX Claim Gate canary.
 The R33 pack does not automatically install into personal Muse, enable
 skills/schedules, attach models or make external effects. Original-derived
 source rights remain PRIVATE_REVIEW_ONLY. See
-[the R33 installation contract](../../docs/R33_SOFTWARE_ENGINEER_DROPIN.md).
+[Capabilities](../../docs/CAPABILITIES.md).
 
 ## Pack contents
 

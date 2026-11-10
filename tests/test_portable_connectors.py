@@ -197,7 +197,7 @@ class ConnectorTests(unittest.TestCase):
         self.assertNotEqual(code,0)
 
     def test_operator_documentation_has_no_private_host_id(self):
-        doc=(Path(__file__).resolve().parents[1]/"docs/R44_PORTABLE_CONNECTORS.md").read_text(encoding="utf-8")
+        doc=(Path(__file__).resolve().parents[1]/"docs/CONNECTORS.md").read_text(encoding="utf-8")
         for role in load_registry()["presets"]:
             self.assertIn(role,doc)
         self.assertIn("GitHub",doc)
@@ -245,11 +245,11 @@ class ConnectorTests(unittest.TestCase):
             pc.run_offline_fixture(p,[record])
 
     def test_github_source_release_contract_is_clear(self):
-        doc=(Path(__file__).resolve().parents[1]/"docs/GITHUB_RELEASE_SCOPE.md").read_text(encoding="utf-8")
+        doc=(Path(__file__).resolve().parents[1]/"docs/RELEASES.md").read_text(encoding="utf-8")
         for phrase in ("GitHub", "source", "not required", "native", "clean", "private"):
             self.assertIn(phrase,doc)
         self.assertIn("11",doc)
-        self.assertIn("T32",doc)
+        self.assertIn("v0.2.0-alpha",doc)
 
 
 if __name__=="__main__":

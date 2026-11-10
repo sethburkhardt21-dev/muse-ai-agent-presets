@@ -18,7 +18,7 @@ separately approve actual installation, host-loaded system instructions,
 skill discovery, subchat identity, granted tools and original recipient
 readback. The role-local config/skills.yaml explicitly disables both skills.
 
-See [detailed usage, security and limits](../../docs/R33_COORDINATOR_DROPIN.md).
+See [Capabilities](../../docs/CAPABILITIES.md).
 
 ## GitHub source-only quickstart (R45)
 

@@ -43,7 +43,7 @@ The API-level receipt is durable across local reopen; it is not cryptographicall
 | USED | **Not proven:** original Muse assistant or owner performs the sequence on real persisted records |
 | USEFUL | **Not proven:** independently tested real planting workflow on an authorized receiving account/device |
 
-See [host compatibility](HOST_COMPATIBILITY.md), [lifecycle](INSTALL_AND_PERSISTENCE.md) and [five-layer definitions](FIVE_LAYERS_AND_DOORS.md). Family Link remains proposal-only and disabled in every preset.
+See [host compatibility](HOST_COMPATIBILITY.md), [lifecycle](INSTALL_AND_PERSISTENCE.md) and [Security](SECURITY.md). Family Link remains proposal-only and disabled in every preset.
 
 ## macOS portability regression
 

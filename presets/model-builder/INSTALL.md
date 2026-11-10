@@ -23,7 +23,7 @@ All three subchat contracts are unbound. Both custom skills are disabled
 in the package-local skills.yaml, hooks/cron are off and host identity
 is absent. The installer is create-only and protects existing owner files.
 
-See [full procedures](../../docs/R33_MODEL_BUILDER_DROPIN.md).
+See [Capabilities](../../docs/CAPABILITIES.md).
 
 ## GitHub source-only quickstart (R45)
 

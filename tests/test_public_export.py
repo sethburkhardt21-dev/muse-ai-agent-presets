@@ -186,17 +186,18 @@ class CleanPublicExportTests(unittest.TestCase):
         with zipfile.ZipFile(exported) as z:
             self.assertNotIn("DummySecretName",z.read("PUBLIC_SOURCE_MANIFEST.json").decode())
 
-    def test_release_docs_use_owner_authorized_github_scope(self):
+    def test_public_docs_are_product_facing_and_source_safe(self):
         docs=ROOT/"docs"
-        security=(docs/"SECURITY_AND_RIGHTS.md").read_text(encoding="utf-8")
-        privacy=(docs/"PRIVACY_RELEASE_ASSURANCE.md").read_text(encoding="utf-8")
-        checklist=(docs/"RELEASE_CHECKLIST.md").read_text(encoding="utf-8")
-        self.assertIn("OWNER_FIRST_PARTY_AUTHORIZED",security)
-        self.assertIn("OWNER_FIRST_PARTY_AUTHORIZED",privacy)
-        self.assertIn("GITHUB_SOURCE_ONLY",checklist)
-        self.assertIn("native host activation is optional",checklist.lower())
-        self.assertNotIn("Verify source ownership and licensing rights before copying",privacy)
-        self.assertNotIn("Host doctor: determine supported personal Muse",checklist)
+        security=(docs/"SECURITY.md").read_text(encoding="utf-8")
+        release=(docs/"RELEASES.md").read_text(encoding="utf-8")
+        entry=(ROOT/"README.md").read_text(encoding="utf-8")
+        self.assertIn("MIT",security)
+        self.assertIn("private development repositories",security.lower())
+        self.assertIn("source",release.lower())
+        self.assertIn("native installation is optional",release.lower())
+        self.assertIn("v0.2.0-alpha",entry)
+        self.assertNotIn("Verify source ownership and licensing rights before copying",security)
+        self.assertNotIn("Host doctor: determine supported personal Muse",release)
 
     def test_no_native_or_public_push_claim_in_export(self):
         p=self.base/"candidate.zip"

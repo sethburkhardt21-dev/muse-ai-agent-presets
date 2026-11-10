@@ -47,4 +47,4 @@ The SQLite chain keeps a separate local head. Truncated history, ordinary row de
 
 SQLite retains actual matched document text. Integrators must keep it in the owning user's protected workspace, apply retention and deletion rules and avoid committing real databases to public repositories.
 
-This is one cross-role capability in the [generic specialist showcase](GENERIC_SPECIALIST_SHOWCASE.md). Any native host adapter will require independently proven owner identity, effect admission and recipient readback.
+This is one cross-role capability in the [Capabilities](CAPABILITIES.md). Any native host adapter will require independently proven owner identity, effect admission and recipient readback.

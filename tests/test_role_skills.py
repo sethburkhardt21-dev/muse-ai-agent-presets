@@ -315,12 +315,12 @@ class RoleSkillPackTests(unittest.TestCase):
 
     def test_operator_guide_is_neutral_and_states_source_scope(self):
         doc=(Path(__file__).resolve().parents[1]/
-             "docs/R42_ROLE_SKILLS.md").read_text(encoding="utf-8")
+             "docs/SKILLS.md").read_text(encoding="utf-8")
         for role in load_registry()["presets"]:
             self.assertIn(role,doc)
         for name in ("legacy-role-alpha","legacy-role-gamma","legacy-role-beta","legacy-role-delta","legacy-role-epsilon","legacy-role-zeta","legacy-role-eta"):
             self.assertNotIn(name,doc.casefold())
-        self.assertIn("SOURCE_ONLY",doc)
+        self.assertIn("source-only",doc)
         self.assertIn("native",doc.casefold())
 
 if __name__=="__main__":unittest.main()
