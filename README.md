@@ -71,6 +71,12 @@ Engineering examples execute reviewed code under your OS account, not inside a s
 
 For archived downloads, see the [eleven starter ZIPs](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha) and [extended engineering kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha). **Those versioned ZIPs do not automatically include newer code on main.** Clone this repository for the latest source.
 
+## Standalone offline specialists
+
+Build self-contained **Claims, Garden, Learning and observation-comparison kits**, each with local verification and usage instructions. These complement the existing Coordinator, engineering and model-building packages. [Compare the packages](docs/CAPABILITIES.md#standalone-offline-packages).
+
+The source on `main` includes these new exporters; versioned downloads remain unchanged until a new release is published.
+
 ## Documentation
 
 | Start here | Build on it |

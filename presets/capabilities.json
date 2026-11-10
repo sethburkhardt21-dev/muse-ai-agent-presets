@@ -105,6 +105,34 @@
       "id": "evidence-storage",
       "module": "muse_presets.evidence_ledger",
       "role": "claims-adjudicator"
+    },
+    {
+      "example": "examples/export_claims_sourcekit.py",
+      "grade": "local-executable",
+      "id": "claims-source-kit",
+      "module": "muse_presets.claims_sourcekit",
+      "role": "claims-adjudicator"
+    },
+    {
+      "example": "examples/export_garden_sourcekit.py",
+      "grade": "local-executable",
+      "id": "garden-source-kit",
+      "module": "muse_presets.garden_sourcekit",
+      "role": "garden-companion"
+    },
+    {
+      "example": "examples/export_learning_sourcekit.py",
+      "grade": "local-executable",
+      "id": "learning-source-kit",
+      "module": "muse_presets.learning_sourcekit",
+      "role": "learning-coach"
+    },
+    {
+      "example": "examples/export_reverse_sourcekit.py",
+      "grade": "local-executable",
+      "id": "reverse-source-kit",
+      "module": "muse_presets.reverse_sourcekit",
+      "role": "reverse-engineering-researcher"
     }
   ],
   "roles": [

@@ -46,6 +46,17 @@ Builder tests and reviewed repair cases run under the invoking OS account. They 
 
 Family Link envelopes, Omnium plan previews and restart snapshots are local validation utilities. They do not authenticate another account, reserve a worker, enable a provider or deliver an external action.
 
-[Get started](GITHUB_QUICKSTART.md) Â· [Workflows](WORKFLOWS.md) Â· [Security](SECURITY.md)
+[Get started](GITHUB_QUICKSTART.md) · [Workflows](WORKFLOWS.md) · [Security](SECURITY.md)
 
 All kits remain source-only distributions. Local executable tools do not imply a hosted or authenticated native assistant.
+
+## Standalone offline packages
+
+| Package | Guide |
+| --- | --- |
+| claims-adjudicator | [Build, verify and run](kits/CLAIMS_SOURCEKIT.md) |
+| garden-companion | [Build, verify and run](kits/GARDEN_SOURCEKIT.md) |
+| learning-coach | [Build, verify and run](kits/LEARNING_SOURCEKIT.md) |
+| reverse-engineering-researcher | [Build, verify and run](kits/REVERSE_SOURCEKIT.md) |
+
+These packages include their local engines and tests. They do not require the repository after extraction. The supplied-observation comparison does not access live targets.

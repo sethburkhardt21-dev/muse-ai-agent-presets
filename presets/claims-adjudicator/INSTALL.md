@@ -19,3 +19,9 @@ Review evidence scope conservatively and use the shared local Evidence Finder.
 The local receipt is an integrity check, not a native installation or authenticated publisher signature. Optional connectors remain disconnected. See [security guidance](../../docs/SECURITY.md).
 
 [Complete installation guide](../../docs/GITHUB_QUICKSTART.md)
+
+## Standalone executable kit
+
+Build an independently runnable offline package using `examples/export_claims_sourcekit.py`.
+Follow the [kit guide](../../docs/kits/CLAIMS_SOURCEKIT.md) for verified extraction,
+self-tests and usage. It does not install a native assistant or activate external connectors.

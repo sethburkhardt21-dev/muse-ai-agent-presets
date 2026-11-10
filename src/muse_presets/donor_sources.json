@@ -1,0 +1,80 @@
+{
+  "capabilities": {
+    "animation": {
+      "external_effect_authorized": false,
+      "files_sha256": {},
+      "grade": "SOURCE_LINK_ONLY_NOT_BUNDLED",
+      "original_engine_invoked": false,
+      "provider_authenticated": false,
+      "role": "creative-studio"
+    },
+    "claims": {
+      "external_effect_authorized": false,
+      "files_sha256": {
+        "src/muse_presets/claims.py": "af6e5558024cbca4099d1f65ef2f68ae6d062df105db22eb34aa17da7d79a1e9"
+      },
+      "grade": "LOCAL_EXISTING_ENGINE",
+      "original_engine_invoked": false,
+      "provider_authenticated": false,
+      "role": "claims-adjudicator"
+    },
+    "evaluation": {
+      "external_effect_authorized": false,
+      "files_sha256": {
+        "examples/research_evaluator_demo.py": "4a44d2ed0b922e477c96e41664536020bdb1e37c88102a20aaea8489894c2348",
+        "src/muse_presets/catalog.py": "599bff2ed9847ba82a7787557ec931f2e36e716fdfb16d373e11cc321cb401f8",
+        "src/muse_presets/database_paths.py": "1b3cb8a42cb29036aada91e314bffdbf397c46fdecf6227e4177022ac34acc79",
+        "src/muse_presets/finder.py": "ac843e87c679f43f9aa1068874ba035cbb79aa938ef80f5dacdc60ad3b08fe23",
+        "src/muse_presets/native_canary.py": "8fcfc6d86aec6cfdb559354680b806bb09ab78d4f8d47e1862f85a72667134e9",
+        "src/muse_presets/native_skill_binding.py": "8eea56001fa26a816956d486e11dc84692754de30d671a3f8beaa4af0355ae8b",
+        "src/muse_presets/neutrality.py": "c22e459f40662c35998a203750e0991f7505c4c908f6c138d1cd76cfae97a60c",
+        "src/muse_presets/playbooks.py": "cc368d9a6f9edd9a7893dd1f4a9493d5e2285f5977a6023be5a4daaadc81ce09",
+        "src/muse_presets/research_evaluator.py": "6af1da789cc31bf7cb2b0044de327c5fbd5c03a76757b262074befd4db05f262"
+      },
+      "grade": "LOCAL_EXISTING_ENGINE",
+      "original_engine_invoked": false,
+      "provider_authenticated": false,
+      "role": "research-evaluator"
+    },
+    "garden": {
+      "external_effect_authorized": false,
+      "files_sha256": {
+        "examples/garden_calendar_demo.py": "19c1cd3703bbd48aef210c4a2f5cad540c5efd2827c6add7fba791bf18b41344",
+        "src/muse_presets/database_paths.py": "1b3cb8a42cb29036aada91e314bffdbf397c46fdecf6227e4177022ac34acc79",
+        "src/muse_presets/garden_calendar.py": "af982eb2cdba413e6cb7fcaa04ac3235e37af45fc855e66377b1ca99a9fb662f"
+      },
+      "grade": "LOCAL_EXISTING_ENGINE",
+      "original_engine_invoked": false,
+      "provider_authenticated": false,
+      "role": "garden-companion"
+    },
+    "security": {
+      "external_effect_authorized": false,
+      "files_sha256": {
+        "src/muse_presets/reverse.py": "3d5b4ff667ec996397f85a5a5746913d8aaff03801a864f1bbde5ffbe7dcc800"
+      },
+      "grade": "LOCAL_EXISTING_ENGINE",
+      "original_engine_invoked": false,
+      "provider_authenticated": false,
+      "role": "reverse-engineering-researcher"
+    },
+    "study": {
+      "external_effect_authorized": false,
+      "files_sha256": {
+        "examples/learning_session_demo.py": "4600987556e80ad06c27e8fe0a35d916618635ff5cfaaa49705cd6b9bab014ce",
+        "src/muse_presets/database_paths.py": "1b3cb8a42cb29036aada91e314bffdbf397c46fdecf6227e4177022ac34acc79",
+        "src/muse_presets/learning_session.py": "f81e1e786b6956f1f48acc0437e782c5eabe674f65d16322a0b8f3395dae7d3b"
+      },
+      "grade": "LOCAL_EXISTING_ENGINE",
+      "original_engine_invoked": false,
+      "provider_authenticated": false,
+      "role": "learning-coach"
+    }
+  },
+  "native_muse_registered": false,
+  "original_animation_renderer_bundled": false,
+  "public_distribution_performed": false,
+  "schema": "muse-presets/donor-source-pins-v1",
+  "source_baseline": "generic-first-party-source-v1",
+  "source_repo": "muse-ai-agent-presets"
+}

@@ -78,3 +78,23 @@ PYTHONPATH=src python3 -B examples/evidence_ledger_demo.py
 These examples exercise local SQLite persistence and recovery. They do not send calendar events, enroll a native tutor or authenticate a remote source owner.
 
 [Capabilities](CAPABILITIES.md) · [Customize](CUSTOMIZE.md) · [Development](DEVELOPMENT.md)
+
+## Package an offline specialist
+
+The four [standalone kit guides](CAPABILITIES.md#standalone-offline-packages) cover Claims, Garden, Learning and observation comparison.
+For example, from a source checkout:
+
+```bash
+PYTHONPATH=src python3 -B examples/export_garden_sourcekit.py --to ../garden-kit.zip
+```
+
+Verify the archive digest before extraction into a new directory. Follow the kit guide for its exact runner command.
+
+## Inspect optional local adapters
+
+```bash
+PYTHONPATH=src python3 -B -m muse_presets.cli donor-list
+PYTHONPATH=src python3 -B -m muse_presets.cli donor-inspect --capability garden
+```
+
+Five adapters reuse reviewed local engines. Synthetic execution requires an explicit opt-in; animation remains source-link-only with no bundled renderer.

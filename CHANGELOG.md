@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add independently runnable Claims, Garden, Learning and offline observation-comparison packages with source verification and self-tests.
+- Add optional source-pinned local adapter inspection and explicitly opted-in demonstrations.
+- Harden archive, manifest, linked-path and import boundaries; retain disabled native integrations.
+
 This file records published features rather than internal engineering work. Exact release assets remain available under [GitHub Releases](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases).
 
 ## v0.3.1-alpha — portable release quality
