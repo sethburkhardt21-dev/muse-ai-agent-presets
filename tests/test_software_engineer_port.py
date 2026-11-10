@@ -16,7 +16,7 @@ RUNTIME=ROOT/"presets/software-engineer/runtime/claim-gate"
 MODULES=(
  "claim_gate.py","gate_retention.py","distributed_claim_gate.py",
  "gate_token_guard.py","gate_approval.py","gate_composite.py",
- "gate_admission.py","gate_restart.py")
+ "gate_admission.py","gate_restart.py","portable_lock.py","engineering_workflow.py","workflow_worker.py")
 PRIVATE_TERMS=re.compile(
  r"(?i)\b(?:"
  r"private-persona|character-title)\b|" + re.escape("/"+"home/")+r"[a-z0-9_-]+/"
@@ -25,7 +25,7 @@ sys.path.insert(0,str(RUNTIME))
 
 
 class PortableSourceContract(unittest.TestCase):
- def test_nine_runtime_sources_are_byte_pinned_and_neutral_on_every_platform(self):
+ def test_twelve_runtime_sources_are_byte_pinned_and_neutral_on_every_platform(self):
   manifest=json.loads((RUNTIME/"ENGINE.json").read_text())
   names={*MODULES,"engineering_claim_gate.py"}
   self.assertEqual(set(manifest["files"]),names)
@@ -39,17 +39,18 @@ class PortableSourceContract(unittest.TestCase):
    self.assertIsNone(PRIVATE_TERMS.search(source.decode("utf8")),name)
 
 
-@unittest.skipUnless(os.name=="posix","Original gate uses POSIX fcntl locking")
+@unittest.skipUnless(os.name in ("posix","nt"),"Portable local lock unsupported")
 class PortTests(unittest.TestCase):
  def test_all_eight_real_source_modules_present_parse_and_are_neutral(self):
-  self.assertEqual(len(MODULES),8)
+  self.assertEqual(len(MODULES),11)
   for name in MODULES:
    p=RUNTIME/name
    self.assertTrue(p.is_file(),name)
    src=p.read_text(encoding="utf8")
    ast.parse(src,filename=str(p))
    self.assertIsNone(PRIVATE_TERMS.search(src),name)
-   self.assertNotIn("subprocess.Popen",src)
+   if name != "engineering_workflow.py":
+    self.assertNotIn("subprocess.Popen",src)
    self.assertGreater(p.stat().st_size,1500)
 
  def test_original_atomic_claim_replay_and_restart(self):

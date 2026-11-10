@@ -8,7 +8,7 @@ authority: source-only-owner-boundary-required
 
 # Engineering Claim Gate
 
-This is a locally runnable component of the Software Engineer pack, NOT proof of native Muse registration. Original-source derived claim state machinery is included and is executable on POSIX Python hosts.
+This is a locally runnable component of the Software Engineer pack, NOT proof of native Muse registration. Original-source derived claim state machinery is included and is executable on Windows and POSIX Python hosts.
 
 ## Five-seam procedure
 
@@ -18,7 +18,7 @@ This is a locally runnable component of the Software Engineer pack, NOT proof of
 4. S4 Recovery: one claim per task; changed-byte replay refuses; UNKNOWN stays held until original read-only reconciliation. Use target-side fencing to refuse stale owners.
 5. S5 Outcome: independently verify original recipient readback. Never infer success from local claim-state files.
 
-## Local example (POSIX Python 3.12+)
+## Local example (Windows/POSIX Python 3.12+)
 
 Create a fresh local state and synthetic source directory first. Then run:
 
@@ -48,6 +48,28 @@ aliases are recognized; this does not constitute owner approval.
 
 ## Limits
 
-The source engine uses POSIX fcntl locks. It is not a consensus authority by itself, and no native Muse model, identity, signed source owner, permission, recipient, approval or external effect is verified. Real resource writes must enforce fencing independently. No source-only skill can bypass the actual host permission boundary.
+The source engine uses PORTABLE_LOCAL_FILE_LOCK (Windows msvcrt or POSIX flock).
+On Windows, destructive pruning is disabled and power-loss directory persistence
+is NOT independently attested. It is not a consensus authority by itself, and no native Muse model, identity, signed source owner, permission, recipient, approval or external effect is verified. Real resource writes must enforce fencing independently. No source-only skill can bypass the actual host permission boundary.
 
 All connectors, subchats, hooks, schedulers, and real effects remain disabled by default. Never overwrite recipient memories.
+
+## reviewed-code engineering workflow
+
+The source-pinned engineering_workflow.py and workflow_worker.py extend this
+local engine with an actual disposable Git repository RED -> PATCH -> GREEN
+and separately pinned review replay. Keep all three existing host skills
+DISABLED until genuine receiving-host admission; this adds no native grant.
+
+Use engineering_workflow.py --help for execute, review and complete. Absolute
+paths, exact case/candidate digests, non-test editable-file allowlists and
+reviewed-code admission are mandatory. Tests and test IDs remain frozen.
+A timeout, incomplete test observation or claimed unfinished operation means
+UNKNOWN_EFFECT_HOLD, never blind retry. A successful local demonstration is
+GREEN_TESTED, not independently complete. Two original review receipts and
+separately observed host/SHA/reviewer bindings are required for COMPLETE.
+
+This runs explicitly reviewed Python code with the operating account's
+permissions. It is NOT an OS security sandbox for hostile code and cannot
+prove absence of arbitrary test-code file/network effects. Never derive
+operator approval or reviewer identity from the candidate's own assertions.

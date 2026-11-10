@@ -1,9 +1,9 @@
-# Garden Companion — Muse AI specialist preset
+# Garden Companion
 
-Supports garden observations, planting plans and owner-approved seasonal schedules.
+Plan and review local garden activities with SQLite persistence and recovery examples.
 
-Status: **source template only**. Optional Family Link adapter is present and disabled by default. This package does not install a skill, start a model, create a subchat, or perform an external effect.
+**[Install and customize](INSTALL.md)** · **[Capabilities](../../docs/CAPABILITIES.md)** · **[Runnable workflows](../../docs/WORKFLOWS.md)**
 
-An optional [local SQLite calendar reference](../../docs/GARDEN_LOCAL_CALENDAR.md) supports scoped events, specialist proposals and explicit owner approval with durable receipts. **It is not installed in Muse**, and its authority resolver is only a fixture until bound to an authenticated host. Run `PYTHONPATH=src python examples/garden_calendar_demo.py` from the repository root.
+This kit includes editable instructions, scoped methods and disabled skill descriptors. Local runtime tools are supplied by the full repository; an older standalone starter ZIP may include only the profile templates.
 
-See [installation and persistence](../../docs/INSTALL_AND_PERSISTENCE.md) and [Security](../../docs/SECURITY.md).
+No native Muse agent, connected account or external action is enabled automatically. Review source before executing local tests.

@@ -25,6 +25,7 @@ import math
 import os
 import time
 
+from portable_lock import sync_directory
 from claim_gate import (
     ClaimGate,
     ClaimGateError,
@@ -135,12 +136,9 @@ class DistributedClaimGate(ClaimGate):
             fh.flush()
             os.fsync(fh.fileno())
         os.replace(tmp, path)
-        # fsync the scope dir so the counter bump is durable, like claim files
-        dfd = os.open(os.path.dirname(path), os.O_DIRECTORY)
-        try:
-            os.fsync(dfd)
-        finally:
-            os.close(dfd)
+        # Sync POSIX directory metadata; Windows power-loss durability is
+        # explicitly not independently established by the local source pack.
+        sync_directory(os.path.dirname(path))
         return nxt
 
     # -- lease helpers ----------------------------------------------------------

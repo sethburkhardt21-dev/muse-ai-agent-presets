@@ -27,11 +27,13 @@ from muse_presets.portable_connectors import (
 
 SCHEMA="r47/github-role-acceptance-v1"
 TEMPLATE_ROLES=frozenset({
-    "research-evaluator","creative-studio",
-    "adversarial-verifier","personal-companion",
+    "creative-studio","adversarial-verifier","personal-companion",
 })
-SLICE_ROLES=frozenset({"claims-adjudicator","reverse-engineering-researcher"})
+SLICE_ROLES=frozenset({
+    "claims-adjudicator","reverse-engineering-researcher","research-evaluator",
+})
 SCRIPT_DEMOS={
+    "research-evaluator":("research_evaluator_demo.py","muse-presets/offline-demonstration-v1"),
     "garden-companion":("garden_calendar_demo.py","LOCAL_SQLITE_DEMO_PASSED"),
     "learning-coach":("learning_session_demo.py","LOCAL_NONCLINICAL_STUDY_DEMO_PASSED"),
     "claims-adjudicator":("priority_slices.py","muse-presets/offline-demonstration-v1"),
@@ -57,10 +59,6 @@ def _local_demo(root:Path,role:str,base:Path)->dict:
         return {"local_demo_grade":"SOURCE_TEMPLATE_ONLY",
                 "local_engine_executed":False,"demo_exit_code":None,
                 "independent_adjudicator_or_live_capture":False}
-    if role=="software-engineer" and os.name!="posix":
-        return {"local_demo_grade":"UNSUPPORTED_POSIX_ENGINE_ON_WINDOWS",
-                "local_engine_executed":False,"demo_exit_code":None,
-                "independent_adjudicator_or_live_capture":False}
     if role in ROLE_RUNNERS:
         cmd,runner,expected=ROLE_RUNNERS[role]
         staged=base/"engine-probe"
@@ -78,25 +76,105 @@ def _local_demo(root:Path,role:str,base:Path)->dict:
         if (data.get("status")!=expected or data.get("native_tool_invoked") is not False
             or data.get("external_effect_authorized") is not False):
             raise ValueError("ROLE_ENGINE_EVIDENCE_INVALID")
+        toy_flags={}
+        if role=="model-builder":
+            toy_output=_process([sys.executable,"-I","-B",str(runner_path),
+                                 "--operation","toy-demo","--allow-local-training"],root,timeout=45)
+            toy=json.loads(toy_output)
+            if (toy.get("status")!="LOCAL_TOY_MODEL_DEMO_PASSED"
+                or toy.get("trained_this_call") is not True
+                or toy.get("checkpoint_reloaded") is not True
+                or toy.get("baseline_recovered") is not True
+                or toy.get("candidate_correct")!=4 or toy.get("baseline_correct")!=2
+                or toy.get("promotion_authorized") is not False
+                or toy.get("native_tool_invoked") is not False
+                or toy.get("external_effect_authorized") is not False):
+                raise ValueError("TOY_TRAINING_CHECKPOINT_DEMO_INCOMPLETE")
+            toy_flags={"toy_training_executed":True,"checkpoint_inference_executed":True,
+                       "baseline_recovery_tested":True,
+                       "toy_model_family":"binary-integer-perceptron",
+                       "training_authority":"LOCAL_EXPLICIT_OPT_IN_ONLY"}
+            linear=json.loads(_process([sys.executable,"-I","-B",str(runner_path),
+                "--operation","linear-demo","--allow-local-training"],root,timeout=45))
+            if (linear.get("status")!="LOCAL_LINEAR_MODEL_DEMO_PASSED"
+                or linear.get("optimizer_steps")!=64
+                or linear.get("bundle_recomputed") is not True
+                or linear.get("baseline_restored_byte_exact") is not True
+                or linear.get("final_status")!="HELD_UNEVALUATED"
+                or linear.get("promotion_authorized") is not False
+                or linear.get("native_tool_invoked") is not False
+                or linear.get("external_effect_authorized") is not False):
+                raise ValueError("LINEAR_TRAINING_RECOMPUTATION_OR_ROLLBACK_NOT_PROVEN")
+            toy_flags.update({"linear_training_executed":True,
+                "linear_bundle_recomputed":True,"linear_baseline_restored":True,
+                "linear_optimizer_steps":64})
         return {"local_demo_grade":"LOCAL_ENGINE_DEMO_PASSED",
                 "local_engine_executed":True,"demo_exit_code":0,
-                "independent_adjudicator_or_live_capture":False}
+                "independent_adjudicator_or_live_capture":False,**toy_flags}
     if role=="software-engineer":
         output=_process([sys.executable,"-B",
                          "examples/software_engineer_claim_gate_demo.py"],root,timeout=70)
         if ("Atomic first claim, no-replay, UNKNOWN recovery: PASS" not in output
             or "NOT INVOKED" not in output):
             raise ValueError("ENGINE_CLAIM_GATE_DEMO_INCOMPLETE")
+        workflow_output=_process([sys.executable,"-B",
+                         "examples/software_engineer_workflow_demo.py"],root,timeout=90)
+        workflow=json.loads(workflow_output)
+        trace=workflow.get("workflow",{})
+        if (workflow.get("status")!="LOCAL_ENGINEERING_WORKFLOW_GREEN"
+            or trace.get("red_exit")!=1 or trace.get("green_exit")!=0
+            or trace.get("green_tests")!=4
+            or trace.get("baseline_commit")==trace.get("patched_commit")
+            or workflow.get("independent_review_status")!="PENDING_EXTERNAL_REVIEWS"
+            or workflow.get("native_muse_invoked") is not False
+            or workflow.get("external_effect_authorized") is not False):
+            raise ValueError("ENGINEERING_WORKFLOW_DEMO_INCOMPLETE")
         return {"local_demo_grade":"LOCAL_ENGINE_DEMO_PASSED",
                 "local_engine_executed":True,"demo_exit_code":0,
+                "workflow_red_green_proven":True,
+                "workflow_independent_review_complete":False,
                 "independent_adjudicator_or_live_capture":False}
     if role in SCRIPT_DEMOS:
         file,expected=SCRIPT_DEMOS[role]
         output=_process([sys.executable,"-B","examples/"+file],root,timeout=55)
         report=json.loads(output)
+        numeric_flags={}
         if role in SLICE_ROLES:
             if report.get("schema")!=expected or not report.get("sandbox_only"):
                 raise ValueError("LOCAL_SLICE_DEMO_INVALID")
+            if role=="research-evaluator":
+                trace=report.get("research_evaluator")
+                if (type(trace) is not dict
+                    or trace.get("status")!="LOCAL_SOURCE_TRACE_VERIFIED"
+                    or trace.get("tampered_source_refused") is not True
+                    or trace.get("source_count")!=2
+                    or trace.get("evidence_partitions")!={"development":1,"heldout":1}
+                    or len(trace.get("citations",[]))!=2
+                    or trace.get("scientific_hypothesis_proven") is not False
+                    or trace.get("independent_examiner_verified") is not False
+                    or report.get("native_muse_installed") is not False):
+                    raise ValueError("RESEARCH_EVALUATOR_LOCAL_EVIDENCE_INVALID")
+                numeric_output=_process(
+                    [sys.executable,"-B","examples/numeric_evaluation_demo.py"],
+                    root,timeout=55)
+                numeric_report=json.loads(numeric_output)
+                numeric_trace=numeric_report.get("numeric_evaluation")
+                if (numeric_report.get("schema")!="muse-presets/offline-demonstration-v1"
+                    or numeric_report.get("sandbox_only") is not True
+                    or numeric_report.get("tampered_prediction_refused") is not True
+                    or type(numeric_trace) is not dict
+                    or numeric_trace.get("status")!="LOCAL_NUMERIC_HELDOUT_EVALUATED"
+                    or numeric_trace.get("scientific_hypothesis_proven") is not False
+                    or numeric_trace.get("independent_commitment_time_verified") is not False
+                    or numeric_trace.get("independent_outcome_authenticity_verified") is not False
+                    or numeric_trace.get("partitions",{}).get("heldout",{}).get("paired_accuracy_delta",1)>=0
+                    or numeric_report.get("external_effect_authorized") is not False
+                    or numeric_report.get("native_muse_installed") is not False):
+                    raise ValueError("RESEARCH_NUMERIC_HELDOUT_DEMO_INVALID")
+                numeric_flags={
+                    "numeric_heldout_scored":True,
+                    "numeric_scientific_verdict_verified":False,
+                }
             if role=="claims-adjudicator" and (
                 report["claims_adjudicator"].get("disposition")!="OVERCLAIM"
                 or report["claims_adjudicator"].get("independent_verified") is not False):
@@ -110,7 +188,8 @@ def _local_demo(root:Path,role:str,base:Path)->dict:
         grade="LOCAL_SLICE_DEMO_PASSED" if role in SLICE_ROLES else "LOCAL_ENGINE_DEMO_PASSED"
         return {"local_demo_grade":grade,"local_engine_executed":True,
                 "demo_exit_code":0,
-                "independent_adjudicator_or_live_capture":False}
+                "independent_adjudicator_or_live_capture":False,
+                **numeric_flags}
     raise ValueError("UNCLASSIFIED_ROLE_CAPABILITY")
 
 

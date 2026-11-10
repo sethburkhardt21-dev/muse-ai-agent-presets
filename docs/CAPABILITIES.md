@@ -1,45 +1,51 @@
-# Capabilities by specialist
+# Capabilities
 
-All eleven role packages provide editable instructions, method descriptions, source configuration and offline validation. The presence of a profile or a skill descriptor does **not** mean a native agent has been installed.
+The repository includes eleven editable specialist profiles and a growing set of runnable local tools. This page describes **the source available on current main**, not a hosted service or installed native agent. Versioned downloads may contain older source; see [Downloads](RELEASES.md).
 
-The table below describes the **published repository source-only capabilities**, not private development branches or optional provider installations.
+## Choose the right starting point
 
-| Kit | Available local source | What is not included |
+| Specialist | What ships | What it does not claim |
 | --- | --- | --- |
-| `coordinator` | Bounded local workgraph and evidence review | Native delegation and execution scheduler |
-| `software-engineer` | Local claim/recovery tooling and source inspection; extended executable kit in a separate release | An OS sandbox or autonomous programming agent |
-| `model-builder` | Synthetic development metrics and checkpoint-byte checks | Model training, GPU execution and provider inference |
-| `research-evaluator` | Research methods and offline evidence references | Live scholarly retrieval or authenticated scientific verdict |
-| `creative-studio` | Design and production method templates | Renderer, video engine or connected creative account |
-| `adversarial-verifier` | Defensive-review methods and fixtures | A live security-testing engine |
-| `personal-companion` | Editable profile, memory and everyday-assistance templates | Live reminders, personal data or native voice assistant |
-| `garden-companion` | Local SQLite planning and owner-review demonstration | Authenticated owner account or external garden calendar |
-| `learning-coach` | Local SQLite source-to-study, question, scoring and review demonstration | Native tutor, clinical approval or external scheduling |
-| `claims-adjudicator` | Conservative local claim/scope checker | Independently authenticated adjudication |
-| `reverse-engineering-researcher` | Deterministic comparison of supplied UI-observation records | Live desktop capture, probing or reverse-engineering host access |
+| `coordinator` | Workgraph review, independent-assertion checks, offline restart verification, portable Coordinator ZIP export | A scheduler, autonomous delegation or native worker dispatch |
+| `software-engineer` | Windows/POSIX Claim Gate, disposable Git repairs with failing and passing tests, independent review, builder-delivery CLI and executable ZIP export | An OS sandbox, unattended agent or deployed application |
+| `model-builder` | Small deterministic training examples, grouped held-out evaluation, model artifacts, source-kit export, transactional local install/recovery and verified model execution | GPU training, a production model service or large-model fine-tuning |
+| `research-evaluator` | Exact source/excerpt validation, numerical held-out scoring and leakage checks | Authenticated publisher identity, web research retrieval or scientific proof |
+| `creative-studio` | Editable media/design methods and disabled skill descriptors â€” **Template only** | A bundled renderer or a connected creative account |
+| `adversarial-verifier` | Review methods and refusal-test patterns â€” **Template only** as a standalone agent | Autonomous security testing or third-party access |
+| `personal-companion` | Editable identity, preference and assistance methods â€” **Template only** | A native assistant, live reminders or voice services |
+| `garden-companion` | SQLite garden/calendar workflow with review, persistence and recovery examples | External calendar writes or authenticated owner identity |
+| `learning-coach` | Source-based study sessions, local scoring and review scheduling in SQLite | Clinical approval, native tutoring or external scheduling |
+| `claims-adjudicator` | Conservative claim-scope review; shared Evidence Finder and provenance tooling | An independently authenticated verdict |
+| `reverse-engineering-researcher` | Comparison of supplied observation records and defensive-review methods | Live device capture, network probing or an attack engine |
 
-## Executable local examples
+The **[shared Evidence Finder](../services/evidence-finder/)** stores local findings and supports recovery after source removal. It is not a twelfth assistant.
 
-The following scripts run without a paid API:
+## Run something useful
 
-```bash
-PYTHONPATH=src python3 -B examples/garden_calendar_demo.py
-PYTHONPATH=src python3 -B examples/learning_session_demo.py
-PYTHONPATH=src python3 -B examples/evidence_ledger_demo.py
-PYTHONPATH=src python3 -B examples/priority_slices.py
-PYTHONPATH=src python3 -B examples/verify_role_packages.py --all
-```
+[Step-by-step workflows](WORKFLOWS.md) cover these programs:
 
-The **shared Evidence Finder** stores exact findings in a local SQLite receipt ledger. It is not a separate agent, trusted timestamp authority or source of truth.
+| Task | Runnable example |
+| --- | --- |
+| Check research quotations | `examples/research_evaluator_demo.py` |
+| Score held-out predictions | `examples/numeric_evaluation_demo.py` |
+| Exercise a repository repair | `examples/software_engineer_workflow_demo.py` |
+| Stage and test a disposable build | `examples/builder_delivery_demo.py` |
+| Reopen a saved plan safely | `examples/continuum_checkpoint_demo.py` |
+| Review an offline handoff | `examples/family_offline_handoff_demo.py` |
+| Package a portable model trainer | `examples/export_model_builder_sourcekit.py` |
+| Package a Coordinator | `examples/export_coordinator_sourcekit.py` |
+| Package the engineering runtime | `examples/export_software_engineer_sourcekit.py` |
 
-## Portable packaging
+The `research-numeric` command returns `LOCAL_NUMERIC_HELDOUT_EVALUATED` for an admitted local case. That reports numerical checksâ€”not the truth of a scientific hypothesis. The machine-readable [capability catalog](../presets/capabilities.json) is checked against the shipped modules and examples on every change.
 
-Each source kit can be staged and inspected without native host access. Local source hashes help detect changed files but do not authenticate the person who created them. Optional connectors and Family Link are **not connected** until separately configured.
+## Platform and permission boundaries
 
-Windows, macOS and Linux support the basic Python source workflows. Some POSIX-only Claim Gate operations cannot run on Windows in this published source. The separate [Software Engineer source-kit prerelease](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha) is a distinct distribution; the eleven generic starter ZIPs do not include every advanced engine.
+Use Python **3.12+** and Git. Core source tools work on Windows, macOS and Linux. Swift typechecking requires an installed Swift toolchain on macOS; Windows reports that operation as not run. Some filesystem durability guarantees differ by OS, and unsupported tests are not counted as successful behavior.
 
-## What a passing test means
+Builder tests and reviewed repair cases run under the invoking OS account. They can access its files and network; explicit execution consent is **not a sandbox**. Model training uses small synthetic examples, not a paid provider or GPU job.
 
-Local tests establish local source behavior. They do not imply native Muse tool registration, independent reviewer authority, original owner identity, a hosted production service or external recipient delivery. Source-only and Template only are meaningful distinctions, not missing marketing promises.
+Family Link envelopes, Omnium plan previews and restart snapshots are local validation utilities. They do not authenticate another account, reserve a worker, enable a provider or deliver an external action.
 
-[Choose a kit](../presets/) · [Get started](GITHUB_QUICKSTART.md) · [Skills](SKILLS.md) · [Security](SECURITY.md)
+[Get started](GITHUB_QUICKSTART.md) Â· [Workflows](WORKFLOWS.md) Â· [Security](SECURITY.md)
+
+All kits remain source-only distributions. Local executable tools do not imply a hosted or authenticated native assistant.

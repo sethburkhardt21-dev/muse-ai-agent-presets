@@ -4,7 +4,7 @@ This GitHub repository is a **source-only** toolkit of eleven configurable speci
 
 ## Prerequisites
 
-- Python 3.10+ and Git.
+- Python 3.12+ and Git.
 - Windows with PowerShell, macOS or Linux. Some platform-specific engines are unsupported on Windows; see [capabilities](CAPABILITIES.md).
 - A new output location. The tools refuse to overwrite an existing folder.
 
@@ -74,3 +74,7 @@ Read [customization](CUSTOMIZE.md), [skills](SKILLS.md) and [extending the sourc
 | Need a ZIP instead of a clone | Use the individual downloads on the [release page](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha). |
 
 The toolkit does not provide an OS security sandbox. Run reviewed local source only. Native host activation remains optional and separate from the GitHub distribution.
+
+## Advanced local workflows
+
+Current repository source also includes engineering repair, reviewed builder execution, portable model kits, research metrics and restart verification. See [Runnable workflows](WORKFLOWS.md). Archived ZIPs remain tied to their original release versions.

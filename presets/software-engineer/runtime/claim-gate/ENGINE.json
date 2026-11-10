@@ -2,26 +2,34 @@
   "engine": "original-source-neutralized-claim-gate",
   "external_effects_enabled": false,
   "files": {
-    "claim_gate.py": "e79103d2ab76940d743603947dc6ecdcb8e38b6464e17690ad6fd3c8e7fde90b",
-    "distributed_claim_gate.py": "ff268d860ccbaa5f3123dce8589ae85b1ba2b5b2932a0664ec4f5bc4467e608f",
-    "engineering_claim_gate.py": "2c16f9b3b77072d988e4fe6aa6c32957b497b2d08f8bf52f52a03a495b2d85d7",
+    "claim_gate.py": "237dbd523bade1363ebb24381efcecfea161f325f513b744e72c07f521ea617f",
+    "distributed_claim_gate.py": "3ef11e844841fd67fbad3032b9be6c60c149f3204ce05d39c3ddd0ecfc847262",
+    "engineering_claim_gate.py": "0151f135dfd550078363ec6781b2307517d65ac220b02fc856337b9045ea2b28",
+    "engineering_workflow.py": "3ddec3667c34ee9b1e9df016fdf53b82b68f3ec2cff9bd684d7cad151fc78cd0",
     "gate_admission.py": "1475f602ad4a37e90f871c877f76072f533bbfe52ba69fd53174771a9afc0de6",
-    "gate_approval.py": "1d04804430e9d0afea9e8d8d0227b43dfb5b4c1d09c1778b34e237827c4d3501",
-    "gate_composite.py": "2187a442b31413d8130e688f88b8ecab6c3bd48073836456322298f1f862823c",
+    "gate_approval.py": "507691f2c97b9f98c63327369701e87e0bcf0bb63587e4c2f655ccf63e528e36",
+    "gate_composite.py": "567fe5ae94ce0de87499afe716521959f8b759c92305e4fbb00b27dca7e476e0",
     "gate_restart.py": "e6028eb22d68a9300e839c26f258bf76dd2ed2b3976fd0f6db748d1ab503e8ab",
-    "gate_retention.py": "e18a0eee7c6c57f910031b15d096954594aab1562336663ed3cfea8625d369ea",
-    "gate_token_guard.py": "7a53c47fa74074dc169886fd78ff3da2c96823fd814189848e729462678aea6f"
+    "gate_retention.py": "8344fd9390c95102a3c88e47477e8a2f672e34115d5000a209f617fbb6d59531",
+    "gate_token_guard.py": "eb9138e1935cfd631b7be5a0a34fbd61ffde4cbf27cddd1a239a8943fce71071",
+    "portable_lock.py": "a8877805a9a853be1854380e4df51bd2e663bea02dc6da303cc5f9bde0a02ca8",
+    "workflow_worker.py": "75fbc86abd3c59417710a9edf0815e7d2a64411aab247061ac205393574f0636"
   },
+  "local_directory_fsync_windows_verified": false,
   "native_muse_status": "UNBOUND",
   "original_owner_state_included": false,
-  "portable_windows_runtime": false,
+  "portable_windows_runtime": true,
   "registered_native_tools": [],
   "role_id": "software-engineer",
-  "runtime": "Python 3.12 or newer, POSIX fcntl",
+  "runtime": "Python 3.12 or newer, Windows msvcrt or POSIX flock local locks",
   "schema": "software-engineer/claim-gate-runtime-v1",
   "skills": {
-    "SKILL.md": "c7e400bc9d6c21521bd3864b83bf986d7304ac93cb48204cee035c6fec7b6ebe",
+    "SKILL.md": "d0b39de25f47c93c7892959cae235708e86501cb1d00ce9cd41820e7399a341a",
     "skill.yaml": "b34cf390bf985991da11a7fe5521908c1714ddae438d5d9fe2f79f44f9c51151"
   },
-  "source_only_grade": "SOURCE_IMPLEMENTED_LOCAL_TESTED"
+  "source_only_grade": "SOURCE_IMPLEMENTED_LOCAL_TESTED",
+  "windows_destructive_retention_pruning_enabled": false,
+  "workflow_independent_identity_authenticated": false,
+  "workflow_os_sandboxed": false,
+  "workflow_profile": "REVIEWED_PYTHON_UNITTEST_DISPOSABLE_REPOSITORY"
 }

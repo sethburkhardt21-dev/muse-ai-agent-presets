@@ -1,21 +1,17 @@
-# Evidence Finder shared service
+# Evidence Finder
 
-A neutral, shared service used by the eleven specialist presets. Evidence Finder locates literal source text, preserves whole original findings, and returns an honest null when a literal is absent. It never adjudicates claims, authorizes an external action or sends a message.
+A shared local service for the eleven specialist kits. Find literal source text, preserve findings and record a scoped no-hit result when the requested text is absent.
 
-**Locally executable public source:** The bounded finder is in src/muse_presets/finder.py. The durable source/receipt reference is in src/muse_presets/evidence_ledger.py, with tests and a synthetic example. It persists exact positive findings and scoped no-hit receipts in SQLite, refuses conflicting operation replays and detects ordinary local tampering. See docs/EVIDENCE_LEDGER.md.
+The implementation lives in `src/muse_presets/finder.py`. The SQLite ledger in `src/muse_presets/evidence_ledger.py` preserves findings, rejects conflicting operation replays and supports recovery after an original source file is removed.
 
-The Software Engineer's R32 candidate adds a read-only source-inventory/local-
-seal consumer that accepts the existing EvidenceLedger.verify() chain head.
-It does not write to this ledger, establish a separate controller, or turn a
-local hash into authenticated externally anchored evidence.
+```bash
+PYTHONPATH=src python3 -B examples/evidence_ledger_demo.py
+```
 
-The Software Engineer's R32.2 *local* Iron Ledger consumer accepts an
-already-opened EvidenceLedger from the existing service. It derives a
-bounded, non-persistent receipt index for explicitly named operations and
-re-verifies the scoped chain head before reuse. It does not copy raw source
-observations, append receipts, create a second ledger or perform TaskGuard
-claims. An injected role resolver remains synthetic unless the actual
-host authenticates it; publication of the original-source-guided adapter
-is separately held pending rights review.
+Run this from the repository root. The example uses synthetic local inputs and temporary storage. It does not adjudicate claims, contact a provider or send messages.
 
-All roles can reuse the ledger under an explicit host-supplied EvidenceScope, but the public code does **not** authenticate that scope. Existing Family Link verify_finding validates record shape only. There is no real Muse native registration, external transport, signed receipt, independent truth proof, or verdict. Default denied.
+Other local modules can consume the ledger's verified chain head to inspect source custody and derive a scoped receipt index. Those readers do not create another ledger or mutate the original task controller.
+
+A local hash establishes consistency of bytes, not publisher identity, independent truth, authenticated owner consent or a trustworthy external timestamp.
+
+[Evidence ledger reference](../../docs/EVIDENCE_LEDGER.md) · [Runnable workflows](../../docs/WORKFLOWS.md) · [Security](../../docs/SECURITY.md)

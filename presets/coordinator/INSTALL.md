@@ -1,33 +1,21 @@
-# Coordinator — independent generic native-format source package
+# Set up Coordinator
 
-This Coordinator has two REAL offline skill procedures: workgraph review and
-evidence assertion review. It is a different role from Software Engineer
-and does not require original donor engines or accounts.
+Use Python 3.12+ and Git. These are portable source files, not a native Muse installation.
 
-Stage a fresh folder from repository root:
+## From the repository
 
-    PYTHONPATH=src python -B -m muse_presets.cli coordinator-dropin --to ./new-coordinator
-    PYTHONPATH=src python -B -m muse_presets.cli coordinator-dropin-inspect --path ./new-coordinator
+```bash
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role coordinator --to ../my-coordinator
+```
 
-Run a synthetic, local graph canary:
+On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. Choose a new output directory; existing files are never overwritten. The source kit and its local inspection result do not authenticate a native host or grant tool access.
 
-    python -I -B ./new-coordinator/custom-skills/coordinator_workgraph/run.py --operation demo
+## From a download
 
-No native Muse session or tool call is implied. The receiving owner must
-separately approve actual installation, host-loaded system instructions,
-skill discovery, subchat identity, granted tools and original recipient
-readback. The role-local config/skills.yaml explicitly disables both skills.
+Extract the ZIP into a new directory and follow its included guide. Keep existing user memory separate. For the latest runnable features, use current repository source and [the workflow guide](../../docs/WORKFLOWS.md).
 
-See [Capabilities](../../docs/CAPABILITIES.md).
+Review workgraphs, preserve held effects and verify a saved plan after restarting. Export a standalone offline Coordinator kit.
 
-## GitHub source-only quickstart (R45)
+The local receipt is an integrity check, not a native installation or authenticated publisher signature. Optional connectors remain disconnected. See [security guidance](../../docs/SECURITY.md).
 
-From the repository root with PYTHONPATH=src, run:
-
-    python -B examples/github_quickstart.py --role coordinator --to ../new-coordinator
-
-The destination must not exist. This stages and inspects the neutral
-source profile/subchats/disabled skills and runs a local synthetic
-connector fixture. It does not install a native Muse agent or enable
-a provider. See [GitHub quickstart](../../docs/GITHUB_QUICKSTART.md)
-and [extension methods](../../docs/EXTENDING_GENERIC_AGENTS.md).
+[Complete installation guide](../../docs/GITHUB_QUICKSTART.md)

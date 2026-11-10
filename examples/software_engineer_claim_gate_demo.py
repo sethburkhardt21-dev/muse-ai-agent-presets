@@ -1,7 +1,7 @@
 """Run one real local Claim Gate workflow from a fresh generic Software Engineer pack.
 
 Synthetic inputs, temporary state, no network or native Muse tool effect.
-Requires POSIX fcntl. On Windows staging still works, but this demo refuses.
+Uses the source-pinned cross-platform Claim Gate runtime on Windows and POSIX.
 """
 from __future__ import annotations
 
@@ -16,9 +16,6 @@ from muse_presets.engineering_pack import stage_engineer_pack
 
 
 def main() -> int:
-    if os.name != 'posix':
-        print('UNSUPPORTED_PLATFORM_POSIX_FCNTL_REQUIRED; no local engine invoked')
-        return 2
     with tempfile.TemporaryDirectory(prefix='public-engineer-demo-') as temp:
         root = Path(temp)
         pack = root / 'software-engineer'

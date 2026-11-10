@@ -32,7 +32,7 @@ The shared **[Evidence Finder](services/evidence-finder/)** is available to mult
 
 ## Try the toolkit
 
-Requires **Python 3.10+ and Git**. The core examples use the Python standard library and do not require a paid API.
+Requires **Python 3.12+ and Git**. The core examples use the Python standard library and do not require a paid API.
 
 ```bash
 git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
@@ -47,20 +47,29 @@ On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python` instead of
 
 For a shorter route, download an individual ZIP from the [source-kit release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha), extract it and follow its included `INSTALL.md`.
 
-## Working local examples
+## More than role templates
 
-Some kits contain executable offline utilities; other kits are configurable profiles without a bundled engine. The distinction is documented in the [capability guide](docs/CAPABILITIES.md).
+The current source includes **runnable engineering, model-building and research tools**, alongside the editable starter profiles.
+
+| Goal | Start here |
+| --- | --- |
+| Reproduce and repair a bug | Disposable Git workflow with failing tests, passing tests and independent review |
+| Build and test safely | Source-pinned worktree staging, reviewed Python execution and optional Mac Swift typechecking |
+| Explore model training | Small deterministic training examples, held-out evaluation and transactional local installation |
+| Check research evidence | Exact quotation/source checks and grouped numerical evaluation |
+| Preserve progress | Local restart verification, evidence storage and handoff review |
+
+**[Run a workflow](docs/WORKFLOWS.md)** · **[See exactly what ships](docs/CAPABILITIES.md)**
 
 ```bash
-PYTHONPATH=src python3 -B examples/garden_calendar_demo.py
-PYTHONPATH=src python3 -B examples/learning_session_demo.py
-PYTHONPATH=src python3 -B examples/evidence_ledger_demo.py
-PYTHONPATH=src python3 -B examples/priority_slices.py
+PYTHONPATH=src python3 -B examples/research_evaluator_demo.py
+PYTHONPATH=src python3 -B examples/numeric_evaluation_demo.py
+PYTHONPATH=src python3 -B examples/continuum_checkpoint_demo.py
 ```
 
-These examples use synthetic or local data. They do not send messages to other agents, deploy applications, register skills on a personal account or execute external provider actions.
+Engineering examples execute reviewed code under your OS account, not inside a security sandbox. Model examples train small synthetic models—not large language models. Connectors remain disabled until separately configured.
 
-For more extensive engineering exercises, see the separate [Software Engineer executable source kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha).
+For archived downloads, see the [eleven starter ZIPs](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha) and [extended engineering kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha). **Those versioned ZIPs do not automatically include newer code on main.** Clone this repository for the latest source.
 
 ## Documentation
 
@@ -68,7 +77,7 @@ For more extensive engineering exercises, see the separate [Software Engineer ex
 | --- | --- |
 | [Installation and first run](docs/GITHUB_QUICKSTART.md) | [Customize profiles and methods](docs/CUSTOMIZE.md) |
 | [Which capabilities are executable?](docs/CAPABILITIES.md) | [Skills and local verification](docs/SKILLS.md) |
-| [Optional connectors and Family Link](docs/CONNECTORS.md) | [Extend the toolkit](docs/EXTENDING_GENERIC_AGENTS.md) |
+| [Optional connectors and Family Link](docs/CONNECTORS.md) | [Development and quality checks](docs/DEVELOPMENT.md) |
 | [Security and privacy](docs/SECURITY.md) | [Downloads and versions](docs/RELEASES.md) |
 
 ## Repository layout

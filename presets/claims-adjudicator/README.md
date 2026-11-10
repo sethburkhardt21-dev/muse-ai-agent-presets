@@ -1,7 +1,9 @@
-# Claims Adjudicator — Muse AI specialist preset
+# Claims Adjudicator
 
-Judges claims against exact evidence and preserves limiting conditions.
+Review evidence scope conservatively and use the shared local Evidence Finder.
 
-Status: **source template only**. Optional Family Link adapter is present and disabled by default. This package does not install a skill, start a model, create a subchat, or perform an external effect.
+**[Install and customize](INSTALL.md)** · **[Capabilities](../../docs/CAPABILITIES.md)** · **[Runnable workflows](../../docs/WORKFLOWS.md)**
 
-See [installation and persistence](../../docs/INSTALL_AND_PERSISTENCE.md) and [Security](../../docs/SECURITY.md).
+This kit includes editable instructions, scoped methods and disabled skill descriptors. Local runtime tools are supplied by the full repository; an older standalone starter ZIP may include only the profile templates.
+
+No native Muse agent, connected account or external action is enabled automatically. Review source before executing local tests.

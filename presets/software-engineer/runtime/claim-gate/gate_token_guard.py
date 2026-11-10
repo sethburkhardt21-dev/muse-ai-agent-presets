@@ -42,7 +42,6 @@ guard dir belongs to the resource, not to the gate's claims dir.
 
 from __future__ import annotations
 
-import fcntl
 import json
 import os
 import re
@@ -50,6 +49,7 @@ import sys
 import tempfile
 import time
 from contextlib import contextmanager
+from portable_lock import exclusive_lock, sync_directory
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -114,17 +114,10 @@ class TokenGuard:
                 "token guard lock path %s exists and is not a regular "
                 "file; refusing" % self._lock_path)
         try:
-            fd = os.open(self._lock_path, os.O_CREAT | os.O_RDWR, 0o644)
+            with exclusive_lock(self._lock_path):
+                yield
         except OSError as exc:
-            raise ClaimGateError(
-                "token guard lock at %s cannot be opened: %s"
-                % (self._lock_path, exc))
-        try:
-            fcntl.flock(fd, fcntl.LOCK_EX)
-            yield
-        finally:
-            fcntl.flock(fd, fcntl.LOCK_UN)
-            os.close(fd)
+            raise ClaimGateError("token guard lock unavailable: %s" % exc) from exc
 
     @staticmethod
     def _bad_constant(name):
@@ -201,11 +194,7 @@ class TokenGuard:
             except OSError:
                 pass
             raise
-        dfd = os.open(self._dir, os.O_RDONLY)
-        try:
-            os.fsync(dfd)
-        finally:
-            os.close(dfd)
+        sync_directory(self._dir)
 
     @staticmethod
     def _key(scope: str, claim_id: str) -> str:

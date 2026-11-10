@@ -95,7 +95,7 @@ def _validate_file(path:Path,relative:Path)->bytes:
         raise PublicExportError("PRIVATE_CONTROL_REFERENCE")
     return raw
 
-def select_public_files(root:Path)->dict[str,bytes]:
+def select_public_files(root:Path,*,verify_manifest:bool=True)->dict[str,bytes]:
     """Inspect current directory bytes; use a frozen archive for final release."""
     root=Path(root)
     if root.is_symlink() or not root.is_dir():
@@ -152,7 +152,7 @@ def select_public_files(root:Path)->dict[str,bytes]:
             if len(values)>MAX_FILES or total>MAX_TOTAL_BYTES:
                 raise PublicExportError("PUBLIC_SOURCE_RESOURCE_LIMIT")
     values=dict(sorted(values.items()))
-    if existing_manifest is not None:
+    if existing_manifest is not None and verify_manifest:
         expected_files={name:_sha(data) for name,data in values.items()}
         if (not isinstance(existing_manifest,dict)
             or existing_manifest.get("schema")!=SCHEMA
@@ -192,7 +192,8 @@ def export_public_snapshot(root:Path,destination:Path,*,
             path=stage/name
             path.parent.mkdir(parents=True,exist_ok=True)
             with path.open("xb") as out:out.write(data)
-        findings=audit_public_tree(stage,forbidden_terms=forbidden_terms)
+        from .distribution import product_findings
+        findings=product_findings(stage)+audit_public_tree(stage,forbidden_terms=forbidden_terms)
         if findings:
             raise PublicExportError("PUBLIC_NEUTRALITY_FAILED:"+",".join(
                 f["reason"] for f in findings[:8]))

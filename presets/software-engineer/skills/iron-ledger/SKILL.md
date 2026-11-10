@@ -38,7 +38,7 @@ provenance journal, operator controller or host native wiring.
    a separately authorized claim or task. Iron Ledger never grants
    release, deployment, model execution or external provider effects.
 
-## TaskGuard recovery — R32.2b read-only (not original TaskGuard)
+## TaskGuard recovery — read-only (not original TaskGuard)
 
 5. Use `task_run_claim_id(task_id,run_id)` for deterministic, bounded
    task/run identity in the **existing** Claim Gate namespace. This merely
@@ -56,7 +56,7 @@ provenance journal, operator controller or host native wiring.
    A human/authorized host must reconcile the actual original outcome
    at its true recipient and enforce fencing separately.
 
-## Actor and recipient observation — R32.2c (source-only)
+## Actor and recipient observation — (source-only)
 
 8. Bind one exact owner/actor/session, task/run, scope, recipient and
    payload SHA-256. Inject three independently scoped *readers*: an

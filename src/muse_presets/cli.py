@@ -101,6 +101,32 @@ def main(argv=None) -> int:
     fixture.add_argument('--capability',required=True)
     fixture.add_argument('--request-id',required=True)
     fixture.add_argument('--file',type=Path,required=True)
+    research=sub.add_parser('research-trace',help='Validate caller-provided research excerpts and heldout source-family trace offline')
+    research.add_argument('--file',type=Path,required=True)
+    numeric=sub.add_parser('research-numeric',help='Score caller-supplied heldout binary predictions offline, without scientific proof')
+    numeric.add_argument('--file',type=Path,required=True)
+    omnium_plan=sub.add_parser('omnium-plan-preview',help='Review caller-supplied Omnium plan for absent worker routes; no dispatch')
+    omnium_plan.add_argument('--file',type=Path,required=True)
+    omnium_plan.add_argument('--sha256',required=True)
+    builder_plan=sub.add_parser('builder-plan',help='Read-only Appwright/Swiftwright source-recipe preview')
+    builder_plan.add_argument('--role',choices=['appwright','swiftwright'],required=True)
+    builder_plan.add_argument('--repo',type=Path,required=True)
+    builder_plan.add_argument('--commit',required=True)
+    builder_stage=sub.add_parser('builder-stage',help='Opt-in detached disposable Git worktree; no tests')
+    builder_stage.add_argument('--role',choices=['appwright','swiftwright'],required=True)
+    builder_stage.add_argument('--repo',type=Path,required=True)
+    builder_stage.add_argument('--commit',required=True)
+    builder_stage.add_argument('--to',type=Path,required=True)
+    builder_stage.add_argument('--evidence',type=Path,required=True)
+    builder_stage.add_argument('--allow-disposable-stage',action='store_true')
+    builder_inspect=sub.add_parser('builder-inspect',help='Read-only pinned worktree stage inspection')
+    builder_inspect.add_argument('--evidence',type=Path,required=True)
+    builder_inspect.add_argument('--stage-sha256',required=True)
+    builder_run=sub.add_parser('builder-run',help='Explicit opt-in local reviewed source test/typecheck')
+    builder_run.add_argument('--evidence',type=Path,required=True)
+    builder_run.add_argument('--stage-sha256',required=True)
+    builder_run.add_argument('--to',type=Path,required=True)
+    builder_run.add_argument('--allow-reviewed-execution',action='store_true')
     sub.add_parser('audit-neutrality',help='Read-only scan of the complete public source distribution')
     profile_plan=sub.add_parser('system-profile-plan',help='Read-only source plan for a complete neutral profile')
     profile_plan.add_argument('--preset',required=True)
@@ -140,6 +166,68 @@ def main(argv=None) -> int:
         errors=validate_catalog()
         print(json.dumps({'status':'PASS' if not errors else 'FAIL','errors':errors,'native_muse_status':'NOT_CHECKED'},indent=2))
         return 0 if not errors else 2
+    if args.command in ('builder-plan','builder-stage','builder-inspect','builder-run'):
+        from .builder_delivery import (
+            preview_builder_delivery,stage_builder_worktree,
+            inspect_builder_worktree,run_builder_worktree)
+        try:
+            if args.command=='builder-plan':
+                result=preview_builder_delivery(args.repo,args.commit,args.role)
+            elif args.command=='builder-stage':
+                result=stage_builder_worktree(args.repo,args.commit,args.role,
+                      args.to,args.evidence,
+                      allow_disposable_stage=args.allow_disposable_stage)
+            elif args.command=='builder-inspect':
+                result=inspect_builder_worktree(args.evidence,args.stage_sha256)
+            else:
+                result=run_builder_worktree(args.evidence,args.stage_sha256,
+                      args.to,
+                      allow_reviewed_execution=args.allow_reviewed_execution)
+            print(json.dumps(result,sort_keys=True,indent=2))
+            if result['status'] in ('LOCAL_REVIEWED_TEST_FAIL',
+                'LOCAL_REVIEWED_TEST_NOT_STARTED',
+                'LOCAL_REVIEWED_TEST_TIMEOUT_HOLD',
+                'NOT_RUN_SWIFT_TOOLCHAIN_REQUIRED'):
+                return 2
+            return 0
+        except (OSError,ValueError,TypeError,KeyError) as exc:
+            print(json.dumps({'status':'REFUSED','reason':str(exc),
+                'native_app_installed':False,'external_effect_authorized':False},
+                sort_keys=True))
+            return 2
+    if args.command=='omnium-plan-preview':
+        from .omnium_plan_review import (
+            load_omnium_plan_file,review_omnium_plan_only,
+            OMNIUM_SCHEMA_SHA256,OMNIUM_REGISTRY_SHA256)
+        try:
+            report=review_omnium_plan_only(
+                load_omnium_plan_file(args.file),args.sha256,
+                expected_schema_sha256=OMNIUM_SCHEMA_SHA256,
+                expected_registry_sha256=OMNIUM_REGISTRY_SHA256)
+            print(json.dumps(report,sort_keys=True,indent=2))
+            return 0
+        except (OSError,ValueError,TypeError,KeyError) as exc:
+            print(json.dumps({'status':'REFUSED','reason':str(exc),
+                 'external_effect_authorized':False},sort_keys=True))
+            return 2
+    if args.command=='research-numeric':
+        from .numeric_evaluation import load_numeric_file,evaluate_numeric_case
+        try:
+            result=evaluate_numeric_case(load_numeric_file(args.file))
+            print(json.dumps(result,indent=2,sort_keys=True,ensure_ascii=False))
+            return 0
+        except (OSError,ValueError,TypeError,KeyError) as exc:
+            print(json.dumps({'status':'REFUSED','reason':str(exc)},sort_keys=True))
+            return 2
+    if args.command=='research-trace':
+        from .research_evaluator import load_case_file,evaluate_research_case
+        try:
+            result=evaluate_research_case(load_case_file(args.file))
+            print(json.dumps(result,indent=2,sort_keys=True,ensure_ascii=False))
+            return 0
+        except (OSError,ValueError,TypeError,KeyError) as exc:
+            print(json.dumps({'status':'REFUSED','reason':str(exc)},sort_keys=True))
+            return 2
     if args.command=='host-doctor':
         from .native_host_doctor import probe_host
         report=probe_host(args.host,binary_path=args.bin_path,process_root=args.proc_root,skills_root=args.skills_root)

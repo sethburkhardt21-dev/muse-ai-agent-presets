@@ -32,6 +32,7 @@ RUNTIME_FILES=frozenset({
     "claim_gate.py","gate_retention.py","distributed_claim_gate.py",
     "gate_token_guard.py","gate_approval.py","gate_composite.py",
     "gate_admission.py","gate_restart.py","engineering_claim_gate.py",
+    "portable_lock.py","engineering_workflow.py","workflow_worker.py",
 })
 SKILL_FILES=frozenset({"SKILL.md","skill.yaml"})
 PROFILE_FILES=frozenset({
@@ -91,7 +92,8 @@ def _manifest()->tuple[dict,dict[str,str]]:
         spec.get('native_muse_status')!='UNBOUND' or
         spec.get('external_effects_enabled') is not False or
         spec.get('original_owner_state_included') is not False or
-        spec.get('registered_native_tools')!=[]):
+        spec.get('registered_native_tools')!=[] or
+        spec.get('portable_windows_runtime') is not True):
         raise ValueError('SOURCE_MANIFEST_INVALID')
     listed=spec.get('files')
     if not isinstance(listed,dict) or set(listed)!=RUNTIME_FILES:
@@ -269,8 +271,8 @@ def preview_engineer_pack()->dict:
         'iron_consumer_runtime_modules':len(iron['files']),
         'iron_ledger_rights_verified':False,
         'new_receipt_ledger_created':False,
-        'runtime_platform':'POSIX_FCNTL',
-        'platform_execution_supported':os.name=='posix',
+        'runtime_platform':'PORTABLE_LOCAL_FILE_LOCK',
+        'platform_execution_supported':os.name in ('nt','posix'),
         'native_muse_status':'UNBOUND',
         'native_installed':False,
         'source_owner_authenticated':False,
@@ -376,7 +378,7 @@ def stage_engineer_pack(destination:Path)->dict:
         'external_effect_authorized':False,
         'schedulers_enabled':False,
         'profile_owner_memory_imported':False,
-        'platform_execution_supported':os.name=='posix',
+        'platform_execution_supported':os.name in ('nt','posix'),
         'local_source_custody_verified':True,
         'evidence_grade':'LOCAL_FILE_STAGE_NOT_NATIVE_PROOF',
     }
@@ -393,7 +395,7 @@ def stage_engineer_pack(destination:Path)->dict:
         'native_installed':False,
         'external_effect_authorized':False,
         'schedulers_enabled':False,
-        'platform_execution_supported':os.name=='posix',
+        'platform_execution_supported':os.name in ('nt','posix'),
     }
 
 

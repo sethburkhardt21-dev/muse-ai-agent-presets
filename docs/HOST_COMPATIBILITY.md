@@ -6,7 +6,7 @@ Personal Muse/Hatch must independently prove home-file injection, effective inst
 
 Muse Code developer documentation currently describes skills, hooks, MCP and plugin manifests, and warns the plugin surface is Developer Preview. Qualified installations require local review and approval. See [official extension overview](https://meta-models.github.io/muse-code-sdk/next/guides/extend/) and [plugin guidance](https://meta-models.github.io/muse-code-sdk/next/guides/plugins/).
 
-The portable R32 implementation now includes [Security](SECURITY.md) for all eleven specialist roles. It creates independent source-only packets and correlated fixture checks. These do not implement or imply a receiving account's authenticated native skill-search or model invocation.\n\n## Host doctor phases
+The portable implementation now includes [Security](SECURITY.md) for all eleven specialist roles. It creates independent source-only packets and correlated fixture checks. These do not implement or imply a receiving account's authenticated native skill-search or model invocation.\n\n## Host doctor phases
 
 - `D0` offline catalog and renderer checks (this repository can execute now).
 - `D1` real host capability discovery (no inferred tool names).
@@ -17,7 +17,7 @@ The portable R32 implementation now includes [Security](SECURITY.md) for all ele
 If a feature is missing, log `HOST_UNSUPPORTED`, never create a second controller to bypass it. Integrations never read or publish owner secrets. No unsupported filesystem write is assumed to update a managed Space.
 
 
-## R32.S2 read-only host inventory (source-only)
+## .S2 read-only host inventory (source-only)
 
 `PYTHONPATH=src python -m muse_presets.cli host-doctor --host personal-hatch` reads only candidate executable presence, short process names, installed skill directory names and optional `@hatch/space-sdk` package metadata. It never launches a candidate executable, including with `--version`: a caller-supplied executable may mutate state. Without a supported trusted host metadata source, its runtime version is `null` and its status is `HOST_UNVERIFIED`. For the independent developer product use `--host muse-code`; it looks for the Muse Code binary and **does not infer Hatch agent support**. No login, installation, model call, network request, state mutation or external recipient action occurs. The probe cannot attest the local machine and prints `provenance: UNATTESTED_LOCAL_PROCESS_OBSERVATION`.
 
@@ -28,7 +28,7 @@ Every host invocation, owner grant, skill-search capability, authenticated Space
 Muse Code's independently documented `muse serve` protocol and `@muse-code/sdk` do not imply those surfaces exist in personal Hatch. Do not install or authenticate Muse Code as part of the personal Hatch gate.
 
 
-## R32.S2 native custom-skill catalog reconciliation (read-only)
+## .S2 native custom-skill catalog reconciliation (read-only)
 
 One reference-host configuration suggests checking (1) a custom
 `SKILL.md` trigger, (2) `skill.yaml` metadata, (3) a local catalog,

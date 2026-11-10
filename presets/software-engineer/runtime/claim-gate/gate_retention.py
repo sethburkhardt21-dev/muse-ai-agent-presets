@@ -179,6 +179,10 @@ def append_digest_entry(state_dir: str, scope: str, entry: dict) -> None:
         type(entry["payload_digest"]) is not str or
         not re.fullmatch("[0-9a-f]{64}",entry["payload_digest"])):
         raise RetentionIntegrityError("RETENTION_ENTRY_INVALID")
+    if os.name != "posix":
+        # Never delete an original terminal claim when the append/rename
+        # retention witness cannot be directory-synced on this platform.
+        raise RetentionIntegrityError("RETENTION_PRUNING_DISABLED_PLATFORM")
     path=digest_log_path(state_dir,scope)
     os.makedirs(os.path.dirname(path),exist_ok=True)
     existing,raw=_checked_retention(state_dir,scope)

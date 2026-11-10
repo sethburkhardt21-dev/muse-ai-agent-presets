@@ -12,7 +12,7 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 CLI=ROOT/"presets/software-engineer/runtime/claim-gate/engineering_claim_gate.py"
 
-@unittest.skipUnless(os.name=="posix","Exact original implementation requires POSIX fcntl")
+@unittest.skipUnless(os.name in ("posix","nt"),"Portable local lock unsupported")
 class CliContractTests(unittest.TestCase):
  def setUp(self):
   self.temp=tempfile.TemporaryDirectory(prefix="neutral-engineering-")

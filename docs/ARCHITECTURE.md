@@ -41,18 +41,18 @@ Public preset code is not a host-issued identity, ToolGrant, signer, schedule, d
 
 Generate a fresh role profile and confirm distinct `ROLE_PLAYBOOK.md` methods; inspect the identity and disabled adapter; create a proposal preview to an allowed test recipient; reject wrong receiver and path traversal; rerun source tests. This is deliberately a **LOCAL_TESTED** slice, not a Muse native canary.
 
-## R41 role-method subchat source scopes
+## role-method subchat source scopes
 
 The [Customization guide](CUSTOMIZE.md) derives three distinct scoped subchat drafts per neutral role directly from the approved playbooks. It preserves owner memory, creates host-unbound subchat IDs and disabled skills.yaml, and provides safe create-only staging, inspection and a read-only diff. Native Hatch registration and actual per-subchat memory persistence remain separately unproven; these files are not live agent instances.
 
-## R42 skill descriptors, scoped to T05 method IDs
+## skill descriptors, scoped to method IDs
 
-The [Skills guide](SKILLS.md) generates three disabled descriptor pairs and one exact source-bound registry proposal per generic role. It reuses T04 profiles, T05 method scopes and existing custom-skill source-doctor format; role-specific local code references are pinned but not automatically installed or executed. The host-issued skills.yaml, owner grants, tool selection, real subchat registration and recipient readback remain separate native gates.
+The [Skills guide](SKILLS.md) generates three disabled descriptor pairs and one exact source-bound registry proposal per generic role. It reuses profiles, method scopes and existing custom-skill source-doctor format; role-specific local code references are pinned but not automatically installed or executed. The host-issued skills.yaml, owner grants, tool selection, real subchat registration and recipient readback remain separate native gates.
 
-## R43 standalone source-package lifecycle
+## standalone source-package lifecycle
 
-The [Get started](GITHUB_QUICKSTART.md) composes the T04 profile, T05 subchat and T06 disabled skill implementations, retaining their independent manifests, source pins and fail-closed staging semantics. Export works only on pristine uncustomized source; upgrades and uninstall are preview-only until authenticated host ownership, grants and recipient readback are independently verified. This is not a native Muse installer or a runtime deployment claim.
+The [Get started](GITHUB_QUICKSTART.md) composes the profile, subchat and disabled skill implementations, retaining their independent manifests, source pins and fail-closed staging semantics. Export works only on pristine uncustomized source; upgrades and uninstall are preview-only until authenticated host ownership, grants and recipient readback are independently verified. This is not a native Muse installer or a runtime deployment claim.
 
-## R44 GitHub-only connector and release boundary
+## GitHub-only connector and release boundary
 
 The [Downloads and versions](RELEASES.md) removes native-host activation from the product acceptance gates, without claiming that unverified personal Muse skill registration has occurred. The [Connectors](CONNECTORS.md) derives role capabilities from their checked-in playbooks and provides deterministic offline request/observation contracts; desktop/SSH/CUA providers are optional disabled extensions and are not secretly invoked.
