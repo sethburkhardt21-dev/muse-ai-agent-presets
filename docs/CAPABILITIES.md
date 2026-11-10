@@ -10,9 +10,9 @@ The repository includes eleven editable specialist profiles and a growing set of
 | `software-engineer` | Windows/POSIX Claim Gate, disposable Git repairs with failing and passing tests, independent review, builder-delivery CLI and executable ZIP export | An OS sandbox, unattended agent or deployed application |
 | `model-builder` | Small deterministic training examples, grouped held-out evaluation, model artifacts, source-kit export, transactional local install/recovery and verified model execution | GPU training, a production model service or large-model fine-tuning |
 | `research-evaluator` | Exact source/excerpt validation, numerical held-out scoring and leakage checks | Authenticated publisher identity, web research retrieval or scientific proof |
-| `creative-studio` | Editable media/design methods and disabled skill descriptors â€” **Template only** | A bundled renderer or a connected creative account |
-| `adversarial-verifier` | Review methods and refusal-test patterns â€” **Template only** as a standalone agent | Autonomous security testing or third-party access |
-| `personal-companion` | Editable identity, preference and assistance methods â€” **Template only** | A native assistant, live reminders or voice services |
+| `creative-studio` | Editable media/design methods and disabled skill descriptors — **Template only** | A bundled renderer or a connected creative account |
+| `adversarial-verifier` | Review methods and refusal-test patterns — **Template only** as a standalone agent | Autonomous security testing or third-party access |
+| `personal-companion` | Editable identity, preference and assistance methods — **Template only** | A native assistant, live reminders or voice services |
 | `garden-companion` | SQLite garden/calendar workflow with review, persistence and recovery examples | External calendar writes or authenticated owner identity |
 | `learning-coach` | Source-based study sessions, local scoring and review scheduling in SQLite | Clinical approval, native tutoring or external scheduling |
 | `claims-adjudicator` | Conservative claim-scope review; shared Evidence Finder and provenance tooling | An independently authenticated verdict |
@@ -36,7 +36,7 @@ The **[shared Evidence Finder](../services/evidence-finder/)** stores local find
 | Package a Coordinator | `examples/export_coordinator_sourcekit.py` |
 | Package the engineering runtime | `examples/export_software_engineer_sourcekit.py` |
 
-The `research-numeric` command returns `LOCAL_NUMERIC_HELDOUT_EVALUATED` for an admitted local case. That reports numerical checksâ€”not the truth of a scientific hypothesis. The machine-readable [capability catalog](../presets/capabilities.json) is checked against the shipped modules and examples on every change.
+The `research-numeric` command returns `LOCAL_NUMERIC_HELDOUT_EVALUATED` for an admitted local case. That reports numerical checks—not the truth of a scientific hypothesis. The machine-readable [capability catalog](../presets/capabilities.json) is checked against the shipped modules and examples on every change.
 
 ## Platform and permission boundaries
 
