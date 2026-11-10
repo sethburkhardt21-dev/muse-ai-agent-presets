@@ -2,7 +2,7 @@
 
 This file records published features rather than internal engineering work. Exact release assets remain available under [GitHub Releases](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases).
 
-## Current repository source
+## v0.3.0-alpha — expanded local toolkit
 
 - Portable engineering repairs and opt-in disposable builder tests.
 - Deterministic model training examples, installation and richer source kits.
@@ -10,7 +10,7 @@ This file records published features rather than internal engineering work. Exac
 - Offline restart verification and context-bound handoff envelopes.
 - Recursive product-quality checks and a machine-readable capability catalog.
 
-These features are available by cloning current main; older release ZIPs retain their original contents.
+These features ship in the complete toolkit source. Starter profiles and three executable runtime kits are available separately. Older release ZIPs retain their original contents.
 
 ## Generic Specialist Source Kits â€” v0.2.0-alpha
 

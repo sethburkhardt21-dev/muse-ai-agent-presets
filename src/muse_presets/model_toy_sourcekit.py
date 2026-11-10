@@ -58,7 +58,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
 
-START = '''# Model Builder — bounded toy experiment extension candidate
+START = '''# Model Builder — small-model experiment toolkit
 
 This kit actually learns a small linear model using batch gradient descent.
 It does NOT train an LLM, load a pretrained checkpoint, use a GPU, install an
