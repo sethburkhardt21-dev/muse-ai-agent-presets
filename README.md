@@ -8,7 +8,7 @@
 
 Build a focused AI assistant from reusable role profiles, editable methods, skill descriptions, local examples and optional connector contracts. Download a ready-to-customize source kit or use the repository to generate one yourself.
 
-[**Download v0.3.0 alpha**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.3.0-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
+[**Download v0.3.1 alpha**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.3.1-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
 
 > **What ships:** source-only packages and offline tooling—not eleven preinstalled, autonomous Muse agents. Native host connections, accounts and external actions require separate setup and authorization. The project is unofficial and is not affiliated with or endorsed by Meta.
 
@@ -45,7 +45,7 @@ PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion 
 
 On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python` instead of `python3`. The last command creates a **new** folder and refuses to overwrite existing user files.
 
-For a shorter route, download an individual ZIP from the [current release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.3.0-alpha), extract it and follow its included `INSTALL.md`.
+For a shorter route, download an individual ZIP from the [current release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.3.1-alpha), extract it and follow its included `INSTALL.md`.
 
 ## More than role templates
 

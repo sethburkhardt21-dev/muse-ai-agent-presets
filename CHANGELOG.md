@@ -2,6 +2,14 @@
 
 This file records published features rather than internal engineering work. Exact release assets remain available under [GitHub Releases](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases).
 
+## v0.3.1-alpha — portable release quality
+
+- Clean Unicode typography throughout the product guides.
+- Required source tests on Windows, macOS and Linux.
+- Publication checks reject skipped or failed platform checks.
+- The complete toolkit and all starter and executable kits remain separately downloadable.
+
+
 ## v0.3.0-alpha — expanded local toolkit
 
 - Portable engineering repairs and opt-in disposable builder tests.
@@ -12,7 +20,7 @@ This file records published features rather than internal engineering work. Exac
 
 These features ship in the complete toolkit source. Starter profiles and three executable runtime kits are available separately. Older release ZIPs retain their original contents.
 
-## Generic Specialist Source Kits â€” v0.2.0-alpha
+## Generic Specialist Source Kits — v0.2.0-alpha
 
 - Eleven individually downloadable neutral specialist starter kits.
 - Editable role methods, source profile templates and offline package inspection.
@@ -22,7 +30,7 @@ These features ship in the complete toolkit source. Starter profiles and three e
 
 [Download the eleven kits](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha).
 
-## Extended Software Engineer Source Kit â€” alpha
+## Extended Software Engineer Source Kit — alpha
 
 - Separate downloadable engineering source package.
 - Local Claim Gate, evidence and recovery utilities plus reproducible disposable Git tests.
@@ -30,7 +38,7 @@ These features ship in the complete toolkit source. Starter profiles and three e
 
 [Download the extended kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha).
 
-## Initial alpha â€” v0.1.0-alpha
+## Initial alpha — v0.1.0-alpha
 
 - Starter role profiles, source templates and initial configuration tooling.
 

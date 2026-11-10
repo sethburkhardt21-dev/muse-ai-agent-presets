@@ -51,6 +51,7 @@ def product_findings(root:Path)->list[dict[str,str]]:
     if p.stat().st_size>MAX_TEXT:raise ValueError('too large')
     body=p.read_text(encoding='utf-8')
    except (OSError,UnicodeError,ValueError):add(rel,'UNREADABLE_PRODUCT_PAGE');continue
+   if '\ufffd' in body or '\u00e2\u20ac' in body:add(rel,'CORRUPTED_PRODUCT_TEXT')
    if WORK_ID.search(_prose(body)):add(rel,'INTERNAL_WORK_LANGUAGE')
    for match in LINK.finditer(body):
     target=match.group(1).strip().split('#',1)[0].split('?',1)[0]
