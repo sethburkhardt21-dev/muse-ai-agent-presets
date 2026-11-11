@@ -4,7 +4,7 @@ This source-only toolkit includes **eight runnable offline Python tools** and **
 
 ## Run a standalone tool without cloning
 
-Choose an **executable** ZIP from the [current v0.4.1-alpha release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha), not a smaller **starter** profile ZIP. **Python 3.12+; Git is not required** for an extracted executable kit.
+Choose an **executable** ZIP from the [current v0.4.1-alpha release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha), not a smaller **starter** profile ZIP. For this Creative Studio example, **Python 3.12+; Git is not required**. Software Engineer workflows may require Git; check each kit's included `START_HERE.md` for additional dependencies.
 
 [Download the Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip), verify its hash with [SHA256SUMS.txt](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt), and extract into a new directory. Inside it, run:
 
@@ -17,7 +17,7 @@ These commands run a fictional production planner and textual storyboard. They d
 
 ## Prerequisites
 
-- For cloning: Python 3.12+ and Git. For executable ZIPs: Python 3.12+ only.
+- For cloning or engineering workflows: Python 3.12+ and Git. For the Creative Studio example: Python 3.12+ alone. Other kits list their own requirements in `START_HERE.md`.
 - Windows with PowerShell, macOS or Linux. Some platform-specific engines are unsupported on Windows; see [capabilities](CAPABILITIES.md).
 - A new output location. The tools refuse to overwrite an existing folder.
 
