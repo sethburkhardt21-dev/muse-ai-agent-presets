@@ -34,6 +34,9 @@ class ProductPositioningTests(unittest.TestCase):
         self.assertIn("python -I -B run.py --operation self-test",quick)
         self.assertIn("python -I -B run.py --operation demo --to ../creative-production-demo",quick)
         self.assertIn("Python 3.12+; Git is not required",quick)
+        self.assertIn("For this Creative Studio example",quick)
+        self.assertIn("Software Engineer workflows may require Git",quick)
+        self.assertNotIn("For executable ZIPs: Python 3.12+ only.",quick)
         self.assertRegex(quick,r"Need a ZIP instead of a clone[^\n]+v0\.4\.1-alpha")
         self.assertIn("not connected",quick.lower())
 
