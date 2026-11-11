@@ -1,10 +1,11 @@
 # Changelog
 
-## Unreleased
+## v0.4.0-alpha — independently runnable specialist kits
 
 - Add independently runnable Claims, Garden, Learning and offline observation-comparison packages with source verification and self-tests.
 - Add optional source-pinned local adapter inspection and explicitly opted-in demonstrations.
 - Harden archive, manifest, linked-path and import boundaries; retain disabled native integrations.
+- Preserve bounded process logs and explicit HOLD state when owned-process cleanup cannot be confirmed; never retry automatically.
 
 This file records published features rather than internal engineering work. Exact release assets remain available under [GitHub Releases](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases).
 
