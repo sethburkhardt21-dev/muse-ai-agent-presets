@@ -291,21 +291,33 @@ def _capture(argv, root, timeout):
     for thread in threads:
         thread.start()
     reason = None
+    cleanup_failure = None
+    def terminate():
+        nonlocal cleanup_failure
+        try:
+            _terminate_owned(process)
+        except (OSError, ValueError) as exc:
+            # A failed kill/reap must not discard bounded stdout/stderr.
+            # Preserve uncertainty: no patch, successful result or automatic retry.
+            cleanup_failure = type(exc).__name__ + ":" + str(getattr(exc, "errno", None))
     deadline = time.monotonic() + timeout
     while process.poll() is None:
         if too_large.is_set() or time.monotonic() >= deadline:
             reason = "OUTPUT_LIMIT" if too_large.is_set() else "TIMEOUT"
-            _terminate_owned(process)
+            terminate()
             break
         time.sleep(0.01)
     for thread in threads:
         thread.join(timeout=1)
     if any(t.is_alive() for t in threads):
         reason = "DESCENDANT_PIPE_UNRECONCILED"
-        _terminate_owned(process)
-    if too_large.is_set():
+        if cleanup_failure is None:
+            terminate()
+    if cleanup_failure is not None:
+        reason = "OWNED_CHILD_CLEANUP_UNCONFIRMED:" + cleanup_failure
+    elif too_large.is_set():
         reason = "OUTPUT_LIMIT"
-    return process.returncode, bytes(buffers[0]), bytes(buffers[1]), reason
+    return process.poll(), bytes(buffers[0]), bytes(buffers[1]), reason
 
 
 def _observation_valid(value):

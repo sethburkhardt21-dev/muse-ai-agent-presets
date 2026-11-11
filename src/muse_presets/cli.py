@@ -127,6 +127,12 @@ def main(argv=None) -> int:
     builder_run.add_argument('--stage-sha256',required=True)
     builder_run.add_argument('--to',type=Path,required=True)
     builder_run.add_argument('--allow-reviewed-execution',action='store_true')
+    sub.add_parser('donor-list',help='Read-only list of six optional source-backed role adapters')
+    donor_inspect=sub.add_parser('donor-inspect',help='Verify an existing first-party adapter source')
+    donor_inspect.add_argument('--capability',required=True)
+    donor_fixture=sub.add_parser('donor-fixture',help='Run a reviewed local synthetic donor exercise only')
+    donor_fixture.add_argument('--capability',required=True)
+    donor_fixture.add_argument('--allow-reviewed-fixture',action='store_true')
     sub.add_parser('audit-neutrality',help='Read-only scan of the complete public source distribution')
     profile_plan=sub.add_parser('system-profile-plan',help='Read-only source plan for a complete neutral profile')
     profile_plan.add_argument('--preset',required=True)
@@ -166,6 +172,23 @@ def main(argv=None) -> int:
         errors=validate_catalog()
         print(json.dumps({'status':'PASS' if not errors else 'FAIL','errors':errors,'native_muse_status':'NOT_CHECKED'},indent=2))
         return 0 if not errors else 2
+    if args.command in ('donor-list','donor-inspect','donor-fixture'):
+        from .donor_source import donor_catalog,inspect_donor,run_donor_fixture
+        try:
+            if args.command=='donor-list':
+                report=donor_catalog(ROOT)
+            elif args.command=='donor-inspect':
+                report=inspect_donor(ROOT,args.capability)
+            else:
+                report=run_donor_fixture(ROOT,args.capability,
+                    allow_reviewed_fixture=args.allow_reviewed_fixture)
+            print(json.dumps(report,sort_keys=True,indent=2))
+            return 0
+        except (OSError,TypeError,ValueError,KeyError) as exc:
+            print(json.dumps({'status':'REFUSED','reason':str(exc),
+                'native_tool_invoked':False,
+                'external_effect_authorized':False},sort_keys=True))
+            return 2
     if args.command in ('builder-plan','builder-stage','builder-inspect','builder-run'):
         from .builder_delivery import (
             preview_builder_delivery,stage_builder_worktree,
