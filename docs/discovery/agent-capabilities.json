@@ -1,0 +1,101 @@
+{
+  "schema": "specialist-ai-agent-kits/discovery/v1",
+  "project": "Specialist AI Agent Kits",
+  "repository": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets",
+  "release": "v0.4.1-alpha",
+  "license": "MIT",
+  "source_only_distribution": true,
+  "python_minimum": "3.12",
+  "dependency_note": "Git requirements vary by executable kit; read its included start guide. The Creative Studio example needs Python 3.12+ without Git.",
+  "sha256_index": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt",
+  "complete_toolkit": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/specialist-toolkit-v0.4.1-alpha.zip",
+  "starter_roles": [
+    "coordinator",
+    "software-engineer",
+    "model-builder",
+    "research-evaluator",
+    "creative-studio",
+    "adversarial-verifier",
+    "personal-companion",
+    "garden-companion",
+    "learning-coach",
+    "claims-adjudicator",
+    "reverse-engineering-researcher"
+  ],
+  "starter_only_standalone_roles": [
+    "research-evaluator",
+    "adversarial-verifier",
+    "personal-companion"
+  ],
+  "executable_offline_kits": [
+    {
+      "role": "coordinator",
+      "zip": "coordinator-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/coordinator-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_coordinator_sourcekit.py"
+    },
+    {
+      "role": "software-engineer",
+      "zip": "software-engineer-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/software-engineer-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_software_engineer_sourcekit.py"
+    },
+    {
+      "role": "model-builder",
+      "zip": "model-builder-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/model-builder-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_model_builder_sourcekit.py"
+    },
+    {
+      "role": "claims-adjudicator",
+      "zip": "claims-adjudicator-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/claims-adjudicator-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_claims_sourcekit.py"
+    },
+    {
+      "role": "garden-companion",
+      "zip": "garden-companion-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/garden-companion-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_garden_sourcekit.py"
+    },
+    {
+      "role": "learning-coach",
+      "zip": "learning-coach-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/learning-coach-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_learning_sourcekit.py"
+    },
+    {
+      "role": "reverse-engineering-researcher",
+      "zip": "reverse-engineering-researcher-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/reverse-engineering-researcher-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_reverse_sourcekit.py"
+    },
+    {
+      "role": "creative-studio",
+      "zip": "creative-studio-executable-v0.4.1-alpha.zip",
+      "download": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip",
+      "exporter": "examples/export_creative_sourcekit.py"
+    }
+  ],
+  "boundaries": {
+    "native_muse_agents_installed": false,
+    "hosted_agent_service": false,
+    "autonomous_model_backed_agents_out_of_box": false,
+    "external_connectors_enabled": false,
+    "independent_rights_authentication": false,
+    "large_language_model_training": false
+  },
+  "verification": {
+    "archive_digest_mechanism": "SHA-256 checksum index supplied with release",
+    "example_verified_included_self_tests": "python -I -B run.py --operation self-test",
+    "example_role": "creative-studio",
+    "older_release_assets_replaced": false
+  },
+  "source_entrypoints": {
+    "readme": "https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/README.md",
+    "quickstart": "https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/GITHUB_QUICKSTART.md",
+    "capabilities": "https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/CAPABILITIES.md",
+    "agent_questions": "https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/discovery/AI_AGENT_GUIDE.md",
+    "security": "https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/SECURITY.md"
+  }
+}

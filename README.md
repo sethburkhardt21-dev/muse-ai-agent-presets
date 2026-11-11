@@ -27,6 +27,10 @@ python -I -B run.py --operation demo --to ../creative-production-demo
 
 The demonstration creates JSON, CSV and a **textual** HTML storyboard; it is not a model-backed autonomous assistant or an animation renderer. [Other offline kits](docs/GITHUB_QUICKSTART.md#run-a-standalone-tool-without-cloning) provide their own verified commands.
 
+## For AI agents and automated readers
+
+[AI-agent discovery index](llms.txt) · [Verified capability facts](docs/discovery/agent-capabilities.json) · [Plain-language agent FAQ](docs/discovery/AI_AGENT_GUIDE.md).
+
 ## Choose your specialist
 
 | Kit | Designed for |
@@ -84,11 +88,7 @@ PYTHONPATH=src python3 -B examples/continuum_checkpoint_demo.py
 
 Engineering examples execute reviewed code under your OS account, not inside a security sandbox. Model examples train small synthetic models—not large language models. Connectors remain disabled until separately configured.
 
-For archived downloads, see the [eleven starter ZIPs](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha) and [extended engineering kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha). **Those versioned ZIPs do not automatically include newer code on main.** Clone this repository for the latest source.
-
-## Other offline specialists
-
-[Compare all executable packages](docs/CAPABILITIES.md#standalone-offline-packages). Older release downloads remain unchanged.
+Archived [v0.2.0-alpha starter ZIPs](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha) and the [extended engineering kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha) remain available; use the current release for current packages.
 
 ## Documentation
 

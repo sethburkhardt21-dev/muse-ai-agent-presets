@@ -18,7 +18,7 @@ PUBLIC_DIRS=frozenset({
 })
 PUBLIC_ROOT_FILES=frozenset({
     ".gitattributes", ".gitignore", "CHANGELOG.md",
-    "CONTRIBUTING.md", "LICENSE", "README.md", "SECURITY.md",
+    "CONTRIBUTING.md", "LICENSE", "README.md", "SECURITY.md", "llms.txt",
 })
 PRIVATE_EXCLUDED_DIRS=frozenset({
     ".git", "control", "__pycache__", ".pytest_cache", ".mypy_cache",
