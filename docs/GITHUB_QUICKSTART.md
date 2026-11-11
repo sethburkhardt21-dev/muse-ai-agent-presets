@@ -1,10 +1,23 @@
 # Get started
 
-This GitHub repository is a **source-only** toolkit of eleven configurable specialist roles. You can create a local kit and run the offline examples without signing in to Muse, configuring a paid provider or installing native skills. Live connectors are **not connected** by default.
+This source-only toolkit includes **eight runnable offline Python tools** and **eleven starter role profiles**. Download an executable ZIP without cloning, or customize a profile from source. The starter profiles are not installed assistants, and live connectors are **not connected** by default.
+
+## Run a standalone tool without cloning
+
+Choose an **executable** ZIP from the [current v0.4.1-alpha release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha), not a smaller **starter** profile ZIP. **Python 3.12+; Git is not required** for an extracted executable kit.
+
+[Download the Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip), verify its hash with [SHA256SUMS.txt](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt), and extract into a new directory. Inside it, run:
+
+```bash
+python -I -B run.py --operation self-test
+python -I -B run.py --operation demo --to ../creative-production-demo
+```
+
+These commands run a fictional production planner and textual storyboard. They do not connect a provider, render a movie, or install a native Muse agent. Other executable kits contain their own `START_HERE.md`. Starter role ZIPs are **not a model-backed autonomous assistant**.
 
 ## Prerequisites
 
-- Python 3.12+ and Git.
+- For cloning: Python 3.12+ and Git. For executable ZIPs: Python 3.12+ only.
 - Windows with PowerShell, macOS or Linux. Some platform-specific engines are unsupported on Windows; see [capabilities](CAPABILITIES.md).
 - A new output location. The tools refuse to overwrite an existing folder.
 
@@ -71,7 +84,7 @@ Read [customization](CUSTOMIZE.md), [skills](SKILLS.md) and [extending the sourc
 | A source or receipt hash changed | Inspect the source and create a new verified package rather than bypassing the check. |
 | Connector or native skill unavailable | This is expected until a separately authorized host integration exists. |
 | A POSIX engine is unsupported on Windows | Use its documented source-only path or a compatible POSIX environment. Unsupported is **not** a passed test. |
-| Need a ZIP instead of a clone | Use the individual downloads on the [release page](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha). |
+| Need a ZIP instead of a clone | Use the eight **executable** ZIP downloads on the [current release page](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha). Starter ZIPs are for customization. |
 
 The toolkit does not provide an OS security sandbox. Run reviewed local source only. Native host activation remains optional and separate from the GitHub distribution.
 

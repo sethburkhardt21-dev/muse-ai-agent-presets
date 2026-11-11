@@ -7,7 +7,7 @@
     "CHANGELOG.md": "cc327bd83e9b49e95358cd53d54671644944c21efb32cd3acc63af22877b92c7",
     "CONTRIBUTING.md": "99cb3d7e62795fee1eac8f0986b23729ec9fc0663d323058b9f8e416d7e02311",
     "LICENSE": "af30e586ca6503924d5e4d99894ec6c7ce61ba77a55ba081b7a129d33f43fddf",
-    "README.md": "a1eaedb1b49cff9e016efc332d7951f5e5ba357f63fc84a4146d41dc1f662db0",
+    "README.md": "0302daa4eac659ae8cc38becb8b073e701fb9dd9442176b5d7497e226a27b89e",
     "SECURITY.md": "629e9c23228531771d01f644973019c14e228e52cab3dd71490be4a2bf558ba6",
     "docs/ARCHITECTURE.md": "f3b9afd35001b5e37f2534e3c5d61ed3d1ad0f3bf7296c61f982f28c8500d57a",
     "docs/CAPABILITIES.md": "603579239df2135fe2b9dfc5135b9bf731f0329ce9410fcbbf0d72f41ed7f3bf",
@@ -18,12 +18,12 @@
     "docs/EXTENDING_GENERIC_AGENTS.md": "21b2d3133872f5bf2c2bd5e31c8f80d72743885df11a21e37193c4756fbf77f7",
     "docs/FAMILY_LINK.md": "9b58a380908eb31a85297337b12e9f817ac6e49e396ae5fbe44a29629ea8f8fd",
     "docs/GARDEN_LOCAL_CALENDAR.md": "d7abf2d6dfe5bb7574fe58d20d26b2d58629f9eb58be61bdcc64c3b2b4ec0ff0",
-    "docs/GITHUB_QUICKSTART.md": "e45f0002e6460656a630d9dc4667cec896a381f593cd75a08bdcca28df99d123",
+    "docs/GITHUB_QUICKSTART.md": "910e36d7299ac460eddb624352e0fc12697bfd8269d1203004a4439651ae4d77",
     "docs/HOST_COMPATIBILITY.md": "a3824df3685d87856933effcc69846f111da44e7f9d4f218315b12bdbbe44cc6",
     "docs/INSTALL_AND_PERSISTENCE.md": "9f1963203cc06e8cca75b4d8d54d06001f6abb6979639d617b7d77381b4ce43b",
     "docs/LEARNING_LOCAL_STUDY.md": "abc403411065ab50160a2357494a709dccc93144b80f1129acb5e89155ff156c",
     "docs/OPTIONAL_DONOR_ADAPTERS.md": "0b7763f43e3fe5e1dae345830edd87d9f646e69cc7018c5d8a9fa700a2b8f4fe",
-    "docs/RELEASES.md": "07182eab8500dabf26b362b7957fe33ecf6007bd854018cdd977b174ba9d4de2",
+    "docs/RELEASES.md": "0d1b05103c898388f645eaf7f91d8ce247e4f579c3a58268c6da80daa988a754",
     "docs/SECURITY.md": "dab0ec7780645381f94eb43ef6b95cb8634ee2313e4d7f3863c3b486addad4af",
     "docs/SKILLS.md": "cbcdb0e9cfb1b304d66861c0e0c0c0515dd52f3f2a419c9a4972ee22d177fc17",
     "docs/WORKFLOWS.md": "f888958ad6017345dacb6363ff625090faf3007e01d583f10b8ae9862bb30def",
@@ -272,6 +272,7 @@
     "tests/test_priority_slices.py": "42994dce813c63f25cdbbbfdea34b510cea6a89c6c391451d39eb5cc06290c5f",
     "tests/test_provenance_vault_port.py": "bc0e4e6d6f880aee73d50fac0a0d4f73d1a0629272fbbc538a0ec781f81d5b37",
     "tests/test_public_export.py": "43c94df8970265ff59e8ed23e235bb46f1cc5bee804c63af201ded6580bcac9b",
+    "tests/test_public_positioning.py": "6b0781ddad1fe0ba5ac95e11b411f752da2696dbdfe21d461ff9a7a4c500dab8",
     "tests/test_public_product_surface.py": "9cf83f93c8119c9742634240065f0e3e813c5e7b491ffbc57e2378e2c988b959",
     "tests/test_r32_release_safety.py": "3d485e67737ae7b32c95a41850cdb7912b83be00901a711c566c3e7853c605ca",
     "tests/test_release_readiness.py": "886a2801a8c30beeaa6c35c6534dffc5367a739ac78f6d810e72fd6ad741e9ae",
@@ -308,5 +309,5 @@
   "publisher_approval_granted": false,
   "release_kind": "GITHUB_SOURCE_ONLY",
   "schema": "r46/public-source-snapshot-v1",
-  "source_file_count": 299
+  "source_file_count": 300
 }

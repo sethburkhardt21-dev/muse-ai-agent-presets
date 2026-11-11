@@ -1,16 +1,31 @@
 # Specialist AI Agent Kits
 
-**Eleven customizable assistant starter kits. One open-source toolkit.**
+**Eight runnable offline Python tools. Eleven customizable specialist AI role kits. One open-source toolkit.**
 
 [![Source checks](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml/badge.svg)](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Source kits](https://img.shields.io/badge/assistant_kits-11-555.svg)](presets/catalog.json)
 
-Build a focused AI assistant from reusable role profiles, editable methods, skill descriptions, local examples and optional connector contracts. Download a ready-to-customize source kit or use the repository to generate one yourself.
+Download an **executable specialist kit** to run an offline workflow today, or customize one of eleven role-source starter kits. The shipped tools cover engineering, planning, local calendars, study and evidence workflows. No paid API is needed for their offline examples.
 
 [**Download v0.4.1 alpha**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
 
-> **What ships:** source-only packages and offline tooling—not eleven preinstalled, autonomous Muse agents. Native host connections, accounts and external actions require separate setup and authorization. The project is unofficial and is not affiliated with or endorsed by Meta.
+> **Two products ship:** eight **runnable** offline Python tools and eleven editable **starter profiles**, as source-only ZIPs. These are **not installed native Muse agents** or a hosted agent service. Extracting a profile does not install a model-backed autonomous assistant; live accounts and effects require separate authorization. Unofficial; not affiliated with or endorsed by Meta.
+
+## Run a standalone tool now
+
+Pick the **executable** ZIP, not the **starter** profile ZIP.
+
+1. [Download Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip) and verify its SHA-256 with [SHA256SUMS.txt](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt).
+2. Extract it to a new directory. Python 3.12+ is required; Git, an API key, and native Muse installation are not.
+3. From the extracted directory, run:
+
+```bash
+python -I -B run.py --operation self-test
+python -I -B run.py --operation demo --to ../creative-production-demo
+```
+
+The demonstration creates JSON, CSV and a **textual** HTML storyboard; it is not a model-backed autonomous assistant or an animation renderer. [Other offline kits](docs/GITHUB_QUICKSTART.md#run-a-standalone-tool-without-cloning) provide their own verified commands.
 
 ## Choose your specialist
 
@@ -71,11 +86,9 @@ Engineering examples execute reviewed code under your OS account, not inside a s
 
 For archived downloads, see the [eleven starter ZIPs](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha) and [extended engineering kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha). **Those versioned ZIPs do not automatically include newer code on main.** Clone this repository for the latest source.
 
-## Standalone offline specialists
+## Other offline specialists
 
-Build self-contained **Creative Studio, Claims, Garden, Learning and observation-comparison kits**, each with local verification and usage instructions. These complement the existing Coordinator, engineering and model-building packages. [Compare the packages](docs/CAPABILITIES.md#standalone-offline-packages).
-
-These executable kits are also distributed as versioned ZIPs. Earlier release files are preserved byte-for-byte.
+[Compare all executable packages](docs/CAPABILITIES.md#standalone-offline-packages). Older release downloads remain unchanged.
 
 ## Documentation
 
