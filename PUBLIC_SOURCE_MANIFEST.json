@@ -22,6 +22,7 @@
     "docs/HOST_COMPATIBILITY.md": "a3824df3685d87856933effcc69846f111da44e7f9d4f218315b12bdbbe44cc6",
     "docs/INSTALL_AND_PERSISTENCE.md": "9f1963203cc06e8cca75b4d8d54d06001f6abb6979639d617b7d77381b4ce43b",
     "docs/LEARNING_LOCAL_STUDY.md": "abc403411065ab50160a2357494a709dccc93144b80f1129acb5e89155ff156c",
+    "docs/OPTIONAL_DONOR_ADAPTERS.md": "0b7763f43e3fe5e1dae345830edd87d9f646e69cc7018c5d8a9fa700a2b8f4fe",
     "docs/RELEASES.md": "36fc64e0da06d335d08f935efa39ad38c327a7077d7ba02e288d51fe465dfbbc",
     "docs/SECURITY.md": "dab0ec7780645381f94eb43ef6b95cb8634ee2313e4d7f3863c3b486addad4af",
     "docs/SKILLS.md": "cbcdb0e9cfb1b304d66861c0e0c0c0515dd52f3f2a419c9a4972ee22d177fc17",
@@ -297,5 +298,5 @@
   "publisher_approval_granted": false,
   "release_kind": "GITHUB_SOURCE_ONLY",
   "schema": "r46/public-source-snapshot-v1",
-  "source_file_count": 288
+  "source_file_count": 289
 }
