@@ -6,7 +6,9 @@ The public repository presents the currently published source products. The down
 
 **[Download the complete source and specialist kits](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha)**
 
-Choose the complete toolkit for all runnable modules, examples and tests. Eleven smaller starter ZIPs provide editable role profiles. Eight independent executable kits package Coordinator, Software Engineer, Model Builder, Claims Adjudicator, Garden Companion, Learning Coach, Reverse Engineering & Security Researcher, and Creative Studio. Each has a start guide.
+**Two products can be downloaded now:** eight runnable offline Python executable ZIPs (download, verify, extract, run) and eleven starter profile ZIPs (customizable role instructions, not autonomous runtimes). **No native Muse installation** is required for offline tools. A starter ZIP is **not a model-backed autonomous assistant**.
+
+The eight executable kits are Coordinator, Software Engineer, Model Builder, Claims Adjudicator, Garden Companion, Learning Coach, Reverse Engineering & Security Researcher, and Creative Studio. The complete toolkit contains all source modules, documentation and tests. Each executable includes a start guide.
 
 The current toolkit includes portable engineering and builder delivery, small-model training/install examples, research citation/numerical checks, offline handoff and restart utilities. All downloads include SHA-256 checksums. No paid service or native Muse installation is required for the local source examples.
 
