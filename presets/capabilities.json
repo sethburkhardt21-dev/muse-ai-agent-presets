@@ -133,6 +133,13 @@
       "id": "reverse-source-kit",
       "module": "muse_presets.reverse_sourcekit",
       "role": "reverse-engineering-researcher"
+    },
+    {
+      "example": "examples/export_creative_sourcekit.py",
+      "grade": "local-executable",
+      "id": "creative-source-kit",
+      "module": "muse_presets.creative_sourcekit",
+      "role": "creative-studio"
     }
   ],
   "roles": [

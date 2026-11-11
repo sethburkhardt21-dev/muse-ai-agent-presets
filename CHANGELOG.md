@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.4.1-alpha — Creative Studio offline production planning
+
+- Add an executable Creative Studio planner for authored briefs, frame-accurate shot lists, asset tasks and textual storyboards.
+- Add local symbolic continuity checks, revision reports, create-only JSON/CSV/HTML exports and deterministic verification.
+- Keep animation rendering, image generation, native Muse use and independent rights approval out of scope.
+
+
 ## v0.4.0-alpha — independently runnable specialist kits
 
 - Add independently runnable Claims, Garden, Learning and offline observation-comparison packages with source verification and self-tests.
