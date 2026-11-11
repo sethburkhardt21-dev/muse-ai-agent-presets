@@ -81,7 +81,7 @@ These examples exercise local SQLite persistence and recovery. They do not send 
 
 ## Package an offline specialist
 
-The four [standalone kit guides](CAPABILITIES.md#standalone-offline-packages) cover Claims, Garden, Learning and observation comparison.
+The five [standalone kit guides](CAPABILITIES.md#standalone-offline-packages) cover Creative Studio, Claims, Garden, Learning and observation comparison.
 For example, from a source checkout:
 
 ```bash
@@ -89,6 +89,10 @@ PYTHONPATH=src python3 -B examples/export_garden_sourcekit.py --to ../garden-kit
 ```
 
 Verify the archive digest before extraction into a new directory. Follow the kit guide for its exact runner command.
+
+## Creative Studio: compile a textual production board
+
+Use `PYTHONPATH=src python3 -B examples/export_creative_sourcekit.py --to ../creative-studio.zip` to create a new ZIP. Verify its SHA-256 and extract into a fresh directory, then run `python -I -B run.py --operation self-test` and `python -I -B run.py --operation demo --to /absolute/new/production`. The output includes a JSON production plan, CSV shot list and textual HTML storyboard—not an image or animation render. See [the source-kit guide](kits/CREATIVE_SOURCEKIT.md).
 
 ## Inspect optional local adapters
 

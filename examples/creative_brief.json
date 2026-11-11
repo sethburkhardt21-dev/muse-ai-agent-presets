@@ -1,0 +1,156 @@
+{
+  "assets": [
+    {
+      "depends_on": [],
+      "id": "courtyard",
+      "initial_state": {
+        "weather": "clear"
+      },
+      "kind": "background",
+      "label": "Dawn courtyard",
+      "reference": "asset:courtyard",
+      "rights": {
+        "credit": "Synthetic studio example",
+        "license": "original",
+        "person_copy": false,
+        "restricted": false,
+        "source": "Original fictional fixture"
+      }
+    },
+    {
+      "depends_on": [
+        "courtyard"
+      ],
+      "id": "courier",
+      "initial_state": {
+        "carrying": "nothing",
+        "coat": "blue"
+      },
+      "kind": "character",
+      "label": "Fictional courier",
+      "reference": "asset:courier",
+      "rights": {
+        "credit": "Synthetic studio example",
+        "license": "original",
+        "person_copy": false,
+        "restricted": false,
+        "source": "Original fictional fixture"
+      }
+    },
+    {
+      "depends_on": [],
+      "id": "lantern",
+      "initial_state": {
+        "glow": "off"
+      },
+      "kind": "prop",
+      "label": "Paper lantern",
+      "reference": "asset:lantern",
+      "rights": {
+        "credit": "Synthetic studio example",
+        "license": "original",
+        "person_copy": false,
+        "restricted": false,
+        "source": "Original fictional fixture"
+      }
+    }
+  ],
+  "project": {
+    "aspect_ratio": "16:9",
+    "audience": "General audience",
+    "constraints": [
+      "No dialogue",
+      "Keep the courier coat blue"
+    ],
+    "fps": 24,
+    "id": "lantern-walk",
+    "summary": "A courier lights a lantern and leaves the courtyard.",
+    "title": "The Lantern Walk"
+  },
+  "scenes": [
+    {
+      "id": "arrival",
+      "location": "courtyard",
+      "shots": [
+        {
+          "assets": [
+            "courier",
+            "lantern"
+          ],
+          "changes": {},
+          "depends_on": [],
+          "description": "Wide view of the courier entering.",
+          "duration_frames": 48,
+          "framing": "wide",
+          "id": "establish",
+          "requires": {
+            "courier": {
+              "coat": "blue"
+            },
+            "lantern": {
+              "glow": "off"
+            }
+          }
+        },
+        {
+          "assets": [
+            "courier",
+            "lantern"
+          ],
+          "changes": {
+            "courier": {
+              "carrying": "lantern"
+            },
+            "lantern": {
+              "glow": "warm"
+            }
+          },
+          "depends_on": [
+            "establish"
+          ],
+          "description": "Close view of the lantern lighting.",
+          "duration_frames": 72,
+          "framing": "close",
+          "id": "light",
+          "requires": {
+            "lantern": {
+              "glow": "off"
+            }
+          }
+        }
+      ],
+      "title": "Arrival"
+    },
+    {
+      "id": "departure",
+      "location": "courtyard",
+      "shots": [
+        {
+          "assets": [
+            "courier",
+            "lantern"
+          ],
+          "changes": {},
+          "depends_on": [
+            "light"
+          ],
+          "description": "The courier walks out with the glowing lantern.",
+          "duration_frames": 48,
+          "framing": "medium",
+          "id": "depart",
+          "requires": {
+            "courier": {
+              "carrying": "lantern",
+              "coat": "blue"
+            },
+            "lantern": {
+              "glow": "warm"
+            }
+          }
+        }
+      ],
+      "title": "Departure"
+    }
+  ],
+  "schema": "muse-presets/creative-brief-v1"
+}

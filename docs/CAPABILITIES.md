@@ -10,7 +10,7 @@ The repository includes eleven editable specialist profiles and a growing set of
 | `software-engineer` | Windows/POSIX Claim Gate, disposable Git repairs with failing and passing tests, independent review, builder-delivery CLI and executable ZIP export | An OS sandbox, unattended agent or deployed application |
 | `model-builder` | Small deterministic training examples, grouped held-out evaluation, model artifacts, source-kit export, transactional local install/recovery and verified model execution | GPU training, a production model service or large-model fine-tuning |
 | `research-evaluator` | Exact source/excerpt validation, numerical held-out scoring and leakage checks | Authenticated publisher identity, web research retrieval or scientific proof |
-| `creative-studio` | Editable media/design methods and disabled skill descriptors — **Template only** | A bundled renderer or a connected creative account |
+| `creative-studio` | Offline creative production planner, shot timeline, symbolic continuity, revisions and executable source kit | Rendered imagery, rights clearance or a connected creative account |
 | `adversarial-verifier` | Review methods and refusal-test patterns — **Template only** as a standalone agent | Autonomous security testing or third-party access |
 | `personal-companion` | Editable identity, preference and assistance methods — **Template only** | A native assistant, live reminders or voice services |
 | `garden-companion` | SQLite garden/calendar workflow with review, persistence and recovery examples | External calendar writes or authenticated owner identity |
@@ -54,6 +54,7 @@ All kits remain source-only distributions. Local executable tools do not imply a
 
 | Package | Guide |
 | --- | --- |
+| creative-studio | [Build, verify and run](kits/CREATIVE_SOURCEKIT.md) |
 | claims-adjudicator | [Build, verify and run](kits/CLAIMS_SOURCEKIT.md) |
 | garden-companion | [Build, verify and run](kits/GARDEN_SOURCEKIT.md) |
 | learning-coach | [Build, verify and run](kits/LEARNING_SOURCEKIT.md) |

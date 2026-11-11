@@ -8,7 +8,7 @@
 
 Build a focused AI assistant from reusable role profiles, editable methods, skill descriptions, local examples and optional connector contracts. Download a ready-to-customize source kit or use the repository to generate one yourself.
 
-[**Download v0.4.0 alpha**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.0-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
+[**Download v0.4.1 alpha**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
 
 > **What ships:** source-only packages and offline tooling—not eleven preinstalled, autonomous Muse agents. Native host connections, accounts and external actions require separate setup and authorization. The project is unofficial and is not affiliated with or endorsed by Meta.
 
@@ -20,7 +20,7 @@ Build a focused AI assistant from reusable role profiles, editable methods, skil
 | [Software Engineer](presets/software-engineer/) | Debugging, source review and controlled engineering workflows |
 | [Model Builder](presets/model-builder/) | Model evaluation methods, data checks and development workflows |
 | [Research Evaluator](presets/research-evaluator/) | Evidence tracking, evaluation design and held-out comparisons |
-| [Creative Studio](presets/creative-studio/) | Design briefs, media workflows and production checklists |
+| [Creative Studio](presets/creative-studio/) | Offline production briefs, timelines, continuity checks, and textual storyboards |
 | [Adversarial Verifier](presets/adversarial-verifier/) | Defensive testing, failure analysis and independent review |
 | [Personal Companion](presets/personal-companion/) | Everyday organization and adaptable assistant experiences |
 | [Garden Companion](presets/garden-companion/) | Plant notes, planning and local calendar examples |
@@ -45,7 +45,7 @@ PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion 
 
 On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python` instead of `python3`. The last command creates a **new** folder and refuses to overwrite existing user files.
 
-For a shorter route, download an individual ZIP from the [current release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.0-alpha), extract it and follow its included `INSTALL.md`.
+For a shorter route, download an individual ZIP from the [current release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha), extract it and follow its included `INSTALL.md`.
 
 ## More than role templates
 
@@ -73,9 +73,9 @@ For archived downloads, see the [eleven starter ZIPs](https://github.com/sethbur
 
 ## Standalone offline specialists
 
-Build self-contained **Claims, Garden, Learning and observation-comparison kits**, each with local verification and usage instructions. These complement the existing Coordinator, engineering and model-building packages. [Compare the packages](docs/CAPABILITIES.md#standalone-offline-packages).
+Build self-contained **Creative Studio, Claims, Garden, Learning and observation-comparison kits**, each with local verification and usage instructions. These complement the existing Coordinator, engineering and model-building packages. [Compare the packages](docs/CAPABILITIES.md#standalone-offline-packages).
 
-The source on `main` includes these new exporters; versioned downloads remain unchanged until a new release is published.
+These executable kits are also distributed as versioned ZIPs. Earlier release files are preserved byte-for-byte.
 
 ## Documentation
 
