@@ -1,27 +1,21 @@
-# Set up Reverse Engineering Researcher
+# Set up Reverse Engineering & Security Researcher
 
-Use Python 3.12+ and Git. These are portable source files, not a native Muse installation.
+## Run the executable
 
-## From the repository
+[Download the executable ZIP](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/reverse-engineering-researcher-executable-v0.4.1-alpha.zip) and compare its SHA-256 with [the release checksum list](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt). Extract into a new directory and read its `START_HERE.md` or `INSTALL.md`. Python 3.12+ is required; follow the guide for additional dependencies such as Git.
+
+## Create a profile copy
+
+From the repository root:
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role reverse-engineering-researcher --to ../my-reverse-engineering-researcher
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role reverse-engineering-researcher --to ./my-reverse-engineering-researcher
 ```
 
-On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. Choose a new output directory; existing files are never overwritten. The source kit and its local inspection result do not authenticate a native host or grant tool access.
+On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. The destination must not exist. Read the generated guide before editing your copy, and keep personal memory and credentials outside the repository.
 
-## From a download
+## Check before connecting
 
-Extract the ZIP into a new directory and follow its included guide. Keep existing user memory separate. For the latest runnable features, use current repository source and [the workflow guide](../../docs/WORKFLOWS.md).
+Run the package's supported local checks and review the files it creates. A hash receipt detects changed bytes; it does not establish a host identity or grant tool access. No external account, skill registration or scheduled job is activated by these steps.
 
-Compare supplied observation records and document authorized behavioral analysis. No live capture or network probing is performed.
-
-The local receipt is an integrity check, not a native installation or authenticated publisher signature. Optional connectors remain disconnected. See [security guidance](../../docs/SECURITY.md).
-
-[Complete installation guide](../../docs/GITHUB_QUICKSTART.md)
-
-## Standalone executable kit
-
-Build an independently runnable offline package using `examples/export_reverse_sourcekit.py`.
-Follow the [kit guide](../../docs/kits/REVERSE_SOURCEKIT.md) for verified extraction,
-self-tests and usage. It does not install a native assistant or activate external connectors.
+[Role guide](README.md) · [Installation and saved data](../../docs/INSTALL_AND_PERSISTENCE.md)

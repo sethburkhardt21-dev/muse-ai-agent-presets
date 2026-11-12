@@ -17,7 +17,7 @@ Only run Python programs from sources you trust. Some examples execute repositor
 
 ## Source and distribution
 
-The original public files are offered under the [MIT license](../LICENSE). The project's first-party generic code is published for reuse; third-party packages, media and SDKs have their own applicable terms. Private development repositories and histories are not bundled in this public distribution.
+The original public files are offered under the [MIT license](../LICENSE). The project's first-party code is published for reuse; third-party packages, media and SDKs have their own applicable terms. Private development repositories and histories are not bundled in this public distribution.
 
 A source release should contain only its intended files, accurate instructions and validated examples. Changing public documentation does not modify the bytes of previously published release ZIPs. Refer to [Releases](RELEASES.md) for distribution details.
 

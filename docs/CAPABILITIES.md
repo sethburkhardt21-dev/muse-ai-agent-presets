@@ -1,63 +1,48 @@
 # Capabilities
 
-The repository includes eleven editable specialist profiles and a growing set of runnable local tools. This page describes **the source available on current main**, not a hosted service or installed native agent. Versioned downloads may contain older source; see [Downloads](RELEASES.md).
+This page describes the code on the public main branch. A downloaded ZIP contains the code from its release, so use the instructions included with that package. [Downloads](RELEASES.md) explains the choices.
 
-## Choose the right starting point
+## Choose a tool or profile
 
-| Specialist | What ships | What it does not claim |
+| Specialist | Available here | Limits |
 | --- | --- | --- |
-| `coordinator` | Workgraph review, independent-assertion checks, offline restart verification, portable Coordinator ZIP export | A scheduler, autonomous delegation or native worker dispatch |
-| `software-engineer` | Windows/POSIX Claim Gate, disposable Git repairs with failing and passing tests, independent review, builder-delivery CLI and executable ZIP export | An OS sandbox, unattended agent or deployed application |
-| `model-builder` | Small deterministic training examples, grouped held-out evaluation, model artifacts, source-kit export, transactional local install/recovery and verified model execution | GPU training, a production model service or large-model fine-tuning |
-| `research-evaluator` | Exact source/excerpt validation, numerical held-out scoring and leakage checks | Authenticated publisher identity, web research retrieval or scientific proof |
-| `creative-studio` | Offline creative production planner, shot timeline, symbolic continuity, revisions and executable source kit | Rendered imagery, rights clearance or a connected creative account |
-| `adversarial-verifier` | Review methods and refusal-test patterns — **Template only** as a standalone agent | Autonomous security testing or third-party access |
-| `personal-companion` | Editable identity, preference and assistance methods — **Template only** | A native assistant, live reminders or voice services |
-| `garden-companion` | SQLite garden/calendar workflow with review, persistence and recovery examples | External calendar writes or authenticated owner identity |
-| `learning-coach` | Source-based study sessions, local scoring and review scheduling in SQLite | Clinical approval, native tutoring or external scheduling |
-| `claims-adjudicator` | Conservative claim-scope review; shared Evidence Finder and provenance tooling | An independently authenticated verdict |
-| `reverse-engineering-researcher` | Comparison of supplied observation records and defensive-review methods | Live device capture, network probing or an attack engine |
+| `coordinator` | Review task plans, dependencies and supplied completion evidence; export a standalone tool. | Does not dispatch workers or run a scheduler. |
+| `software-engineer` | Stage code with hash checks; run reviewed repairs and tests in disposable Git repositories; export the runtime. | Not an OS sandbox or unattended deployment service. |
+| `model-builder` | Train small synthetic models, calculate held-out metrics and inspect local model artifacts. | No GPU service or large-model fine-tuning. |
+| `research-evaluator` | Match quotations to supplied text; score predictions and check group leakage. | Does not authenticate publishers or establish scientific truth. |
+| `creative-studio` | Build production briefs, shot timelines, continuity records and textual storyboards. | Does not render images or video or clear third-party rights. |
+| `adversarial-verifier` | Defensive review instructions and refusal-test patterns. **Template only** as a standalone public package. | No autonomous testing or third-party access. |
+| `personal-companion` | Editable preferences, identity and everyday-assistance methods. **Template only** in the public package. | No live reminders, connected accounts or hosted assistant. |
+| `garden-companion` | Record observations and review local calendar changes in SQLite. | No external calendar writes or biological diagnosis. |
+| `learning-coach` | Build source-based study sessions, score practice and store review history. | No clinical approval or independent mastery assessment. |
+| `claims-adjudicator` | Review claims against supplied evidence and record qualifications. | Not an independently authenticated verdict. |
+| `reverse-engineering-researcher` | Compare supplied application-observation records. | No live capture, network probing or attack engine. |
 
-The **[shared Evidence Finder](../services/evidence-finder/)** stores local findings and supports recovery after source removal. It is not a twelfth assistant.
+The [Evidence Finder](../services/evidence-finder/) preserves local findings for these tools. It is a shared service, not another assistant.
 
-## Run something useful
+## Run an example
 
-[Step-by-step workflows](WORKFLOWS.md) cover these programs:
+[Workflows](WORKFLOWS.md) provides the commands and expected results. Start with `examples/research_evaluator_demo.py` for quotation checks, `examples/numeric_evaluation_demo.py` for scoring, or `examples/software_engineer_workflow_demo.py` for a disposable repair exercise.
 
-| Task | Runnable example |
-| --- | --- |
-| Check research quotations | `examples/research_evaluator_demo.py` |
-| Score held-out predictions | `examples/numeric_evaluation_demo.py` |
-| Exercise a repository repair | `examples/software_engineer_workflow_demo.py` |
-| Stage and test a disposable build | `examples/builder_delivery_demo.py` |
-| Reopen a saved plan safely | `examples/continuum_checkpoint_demo.py` |
-| Review an offline handoff | `examples/family_offline_handoff_demo.py` |
-| Package a portable model trainer | `examples/export_model_builder_sourcekit.py` |
-| Package a Coordinator | `examples/export_coordinator_sourcekit.py` |
-| Package the engineering runtime | `examples/export_software_engineer_sourcekit.py` |
+The `research-numeric` result `LOCAL_NUMERIC_HELDOUT_EVALUATED` means the supplied data passed the numerical checks. It does not prove the truth of a scientific hypothesis. The [capability catalog](../presets/capabilities.json) connects declared features to their modules and examples.
 
-The `research-numeric` command returns `LOCAL_NUMERIC_HELDOUT_EVALUATED` for an admitted local case. That reports numerical checks—not the truth of a scientific hypothesis. The machine-readable [capability catalog](../presets/capabilities.json) is checked against the shipped modules and examples on every change.
+## Requirements and permissions
 
-## Platform and permission boundaries
+Use Python 3.12+. Git is required for repository workflows; individual packages document other prerequisites. Core tools support Windows, macOS and Linux, with platform-specific limitations. Swift typechecking needs an installed Swift toolchain on macOS.
 
-Use Python **3.12+** and Git. Core source tools work on Windows, macOS and Linux. Swift typechecking requires an installed Swift toolchain on macOS; Windows reports that operation as not run. Some filesystem durability guarantees differ by OS, and unsupported tests are not counted as successful behavior.
+Reviewed code executes under your OS account and can access its files and network. Explicit execution consent is **not a sandbox**. Local handoff, plan and restart utilities do not authenticate another account or authorize an external action.
 
-Builder tests and reviewed repair cases run under the invoking OS account. They can access its files and network; explicit execution consent is **not a sandbox**. Model training uses small synthetic examples, not a paid provider or GPU job.
-
-Family Link envelopes, Omnium plan previews and restart snapshots are local validation utilities. They do not authenticate another account, reserve a worker, enable a provider or deliver an external action.
-
-[Get started](GITHUB_QUICKSTART.md) · [Workflows](WORKFLOWS.md) · [Security](SECURITY.md)
-
-All kits remain source-only distributions. Local executable tools do not imply a hosted or authenticated native assistant.
+These are source-only distributions: runnable code and editable profiles, not a hosted service or installed native assistants. [Host compatibility](HOST_COMPATIBILITY.md) explains the separate integration checks.
 
 ## Standalone offline packages
 
 | Package | Guide |
 | --- | --- |
-| creative-studio | [Build, verify and run](kits/CREATIVE_SOURCEKIT.md) |
-| claims-adjudicator | [Build, verify and run](kits/CLAIMS_SOURCEKIT.md) |
-| garden-companion | [Build, verify and run](kits/GARDEN_SOURCEKIT.md) |
-| learning-coach | [Build, verify and run](kits/LEARNING_SOURCEKIT.md) |
-| reverse-engineering-researcher | [Build, verify and run](kits/REVERSE_SOURCEKIT.md) |
+| Creative Studio | [Build, verify and run](kits/CREATIVE_SOURCEKIT.md) |
+| Claims Adjudicator | [Build, verify and run](kits/CLAIMS_SOURCEKIT.md) |
+| Garden Companion | [Build, verify and run](kits/GARDEN_SOURCEKIT.md) |
+| Learning Coach | [Build, verify and run](kits/LEARNING_SOURCEKIT.md) |
+| Reverse Engineering & Security Researcher | [Build, verify and run](kits/REVERSE_SOURCEKIT.md) |
+| Coordinator, Software Engineer and Model Builder | [Runnable workflows](WORKFLOWS.md) |
 
-These packages include their local engines and tests. They do not require the repository after extraction. The supplied-observation comparison does not access live targets.
+[Get started](GITHUB_QUICKSTART.md) · [Downloads](RELEASES.md) · [Security](SECURITY.md)

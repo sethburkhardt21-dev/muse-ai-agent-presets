@@ -194,8 +194,8 @@ class CleanPublicExportTests(unittest.TestCase):
         self.assertIn("MIT",security)
         self.assertIn("private development repositories",security.lower())
         self.assertIn("source",release.lower())
-        self.assertIn("native installation is optional",release.lower())
-        self.assertIn("v0.2.0-alpha",entry)
+        self.assertIn("no native muse installation",release.lower())
+        self.assertIn("v0.4.1-alpha",entry)
         self.assertNotIn("Verify source ownership and licensing rights before copying",security)
         self.assertNotIn("Host doctor: determine supported personal Muse",release)
 

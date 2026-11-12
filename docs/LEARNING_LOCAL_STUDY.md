@@ -1,6 +1,6 @@
 # Learning Coach — local study ledger (R6)
 
-**Source-tested only.** `src/muse_presets/learning_session.py` is a newly authored, standard-library Python/SQLite reference implementation. It does **not** install a Muse personal assistant, claim approved educational/clinical content, prove model or connector authorization, or create a native reminder. The original private learning engine was used as a design/evaluation reference, **not copied**.
+`src/muse_presets/learning_session.py` provides local study sessions and review history using Python and SQLite. It does **not** install a Muse personal assistant, claim approved educational/clinical content, prove model or connector authorization, or create a native reminder. The implementation is first-party code; reference material was not copied.
 
 ## Runnable vertical slice
 

@@ -1,47 +1,51 @@
-# Install, customize, update, recover
+# Installation and saved data
 
-## What is available today
+Choose whether you want to run a tool or customize a profile. An executable package contains runnable Python code; a starter profile contains instructions and configuration for an assistant you connect separately. Extracting either package does not install a native Muse agent.
 
-Run `PYTHONPATH=src python -m muse_presets.cli render --preset learning-coach --to ./my-learning-coach --name "My Learning Coach"`. This creates a **local draft**. It does not deploy into Muse. `doctor` checks local source only.
+## Run a downloaded tool
 
-## Offline inspection of rendered drafts (source increment after v0.1.0-alpha)
+Download an executable ZIP, check it against the release's `SHA256SUMS.txt`, and extract it into a new directory. Follow its `START_HERE.md` or `INSTALL.md`. Requirements vary: use Python 3.12+, and install Git for workflows that operate on repositories.
 
-New drafts use a `render-v3` receipt recording the exact preset, role-playbook, and template hashes plus every generated managed-file hash. A copy of `ROLE_PLAYBOOK.md` is generated from each validated source role contract. Run:
+The [quickstart](GITHUB_QUICKSTART.md) gives a complete Creative Studio example. Keep generated output and personal data outside the extracted package so you can replace code without losing your work.
+
+## Create a profile
+
+From the repository root, choose a destination that does not already exist:
 
 ```bash
-PYTHONPATH=src python -m muse_presets.cli inspect --path ./my-learning-coach
+PYTHONPATH=src python3 -B -m muse_presets.cli render --preset learning-coach --to ./my-learning-coach --name "My Learning Coach"
+PYTHONPATH=src python3 -B -m muse_presets.cli inspect --path ./my-learning-coach
 ```
 
-The command is **read-only**. `LOCAL_MATCH` means its files match the untrusted original local receipt; `OWNER_CUSTOMIZED` names changed personal/instruction files without altering them; `REVIEW_REQUIRED` flags missing files, source drift, changed specialist playbook policy, or changed Family Link policy; `LEGACY_UNVERIFIABLE` preserves older v1 profile drafts without guessing their baseline. Symlinked managed files and malformed manifest entries are refused. An altered receipt could be forged together with the files: hashes are not signatures or host attestation. **None of these statuses prove Muse installed, loaded, refreshed or used the draft.** Source updates and user changes require a later, owner-authorized three-way merge; `inspect` never performs one.
+On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. The renderer creates local files only. `inspect` is read-only and reports:
 
-## Source-only engineering pack staging
+| Result | Meaning |
+| --- | --- |
+| `LOCAL_MATCH` | Files match the recorded local hashes. |
+| `OWNER_CUSTOMIZED` | Personal or instruction files have changed. Your edits are preserved. |
+| `REVIEW_REQUIRED` | Files are missing or policy/source content differs from its recorded baseline. |
+| `LEGACY_UNVERIFIABLE` | An older receipt cannot establish the baseline. Do not guess or overwrite it. |
 
-The Software Engineer now includes executable local Claim Gate modules and an offline create-only pack stager:
+The receipt includes preset, playbook, template and generated-file hashes. It can detect changes, but someone able to replace both the files and receipt can forge that match. A hash match does not prove publisher identity, host loading or successful execution.
 
-    PYTHONPATH=src python -m muse_presets.engineering_pack --to ./new-engineer-pack
+## Stage an engineering package
 
-This generates a new generic profile, source-pinned runtime, neutral skill and a file-hash receipt. It refuses existing destinations and does not merge personal memory or install native Muse tooling. The original Claim Gate uses POSIX fcntl; Windows can stage the pack but cannot execute that engine without a separately qualified adapter. See presets/software-engineer/INSTALL.md.
+```bash
+PYTHONPATH=src python3 -B -m muse_presets.engineering_pack --to ./my-engineering-pack
+```
 
-## Planned host-aware installation
+This creates a profile, runtime files, skill descriptions and an integrity receipt in a new directory. The local locking implementation supports Windows and POSIX; filesystem durability and retention limits still vary by platform. Read the [Software Engineer guide](../presets/software-engineer/INSTALL.md) before running code or pruning state.
 
-1. Identify the correct receiving account, host type, current SDK/schema and callable tools. Stop on mismatch.
-2. Back up owner-controlled configuration and record original hashes. Do not export personal memory or tokens into source releases.
-3. Stage the approved package in a new path. Never blind-sync over a live tree.
-4. Apply only permitted package-owned files through supported host interfaces; obtain real version/registration receipt.
-5. Read the loaded instruction or skill in a new turn, not merely the file on disk.
-6. For hooks, schedules, subchats, Spaces or connectors, obtain separate approvals and original host IDs. No automatic activation.
-7. Run a representative native task and verify the recipient outcome before marking `WIRED/USED/USEFUL`.
+## Preserve personal changes
 
-## Files and ownership
+Keep a copy of the original package and a separate working copy. Compare the original files, the new package and your edits before updating. Resolve conflicts deliberately rather than copying a new tree over personal memory, credentials or active configuration.
 
-`AGENTS.md`, `SOUL.md`, `IDENTITY.md`, `USER.md`, `TOOLS.md`, `MEMORY.md`, `HEARTBEAT.md`, `PROACTIVE_PREFERENCES.md`, optional instructions, hooks, scripts, Spaces and generated artifacts have **different write owners**. The package owns defaults; the person owns overrides and private memories; Muse owns host IDs/credentials/scheduled registrations; the original task ledger owns receipts. They must never be silently merged into one mutable file.
+`AGENTS.md`, `USER.md`, `MEMORY.md`, instructions and preferences serve different purposes. A saved `HEARTBEAT.md` is not an active schedule, a script is not an enabled hook, and a generated chat ID is not a registered conversation. The receiving host decides what it loads and executes.
 
-## Regeneration / persistence
+## Recovery and removal
 
-For a managed-file refresh or VM replacement: observe current loaded source, compare approved template + prior installed baseline + current user edits (three-way), restore only authorized package-owned portions and revalidate the new host. Preserve conflicts with their original hashes; do not resolve them by guessing. An auto-generated file may overwrite external edits; move durable user configuration to an owner-controlled supported path, then verify how the host loads it.
+Keep incomplete-operation evidence until you know whether an action occurred. An unknown external outcome must not be retried automatically. Stop only processes you started and remove only package-owned files whose paths and ownership you have verified.
 
-A generated `ROLE_PLAYBOOK.md` is a source-only procedure and policy surface; it is not a Muse skill, automatic agent task, or proof of deployment. A saved `HEARTBEAT.md` is advisory. A script is not an active hook. An ID in a manifest is not a native chat. Home disk persistence is not equivalent to full prompt injection or correct memory indexing.
+Updating or removing local code does not cancel remote jobs or remove host registrations. Handle those through the original provider with explicit permission.
 
-## Recovery and uninstall
-
-No blind retry of unknown external effects. Release only owned reservations, stop only owned child processes, retain failure evidence. Uninstall package-owned files only after checking hashes and current user changes; do not delete native private state or existing jobs without explicit owner authority. No automatic wake or hook is shipped in this alpha.
+[Architecture](ARCHITECTURE.md) · [Host compatibility](HOST_COMPATIBILITY.md)

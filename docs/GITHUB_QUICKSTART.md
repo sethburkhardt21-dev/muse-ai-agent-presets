@@ -1,27 +1,25 @@
 # Get started
 
-This source-only toolkit includes **eight runnable offline Python tools** and **eleven starter role profiles**. Download an executable ZIP without cloning, or customize a profile from source. The starter profiles are not installed assistants, and live connectors are **not connected** by default.
+Choose an executable kit to run a tool, or a starter profile to customize an assistant's instructions. The current release has eight runnable offline Python tools and eleven starter profiles. External accounts are not connected by default.
 
 ## Run a standalone tool without cloning
 
-Choose an **executable** ZIP from the [current v0.4.1-alpha release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha), not a smaller **starter** profile ZIP. For this Creative Studio example, **Python 3.12+; Git is not required**. Software Engineer workflows may require Git; check each kit's included `START_HERE.md` for additional dependencies.
+For this Creative Studio example, you need Python 3.12+, but not Git. Software Engineer workflows may require Git; check each package's start guide.
 
-[Download the Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip), verify its hash with [SHA256SUMS.txt](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt), and extract into a new directory. Inside it, run:
+Download the [Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip), compare its SHA-256 with [SHA256SUMS.txt](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt), and extract it into a new folder. Open a terminal in that folder:
 
 ```bash
 python -I -B run.py --operation self-test
-python -I -B run.py --operation demo --to ../creative-production-demo
+python -I -B run.py --operation demo --to "$HOME/creative-production-demo"
 ```
 
-These commands run a fictional production planner and textual storyboard. They do not connect a provider, render a movie, or install a native Muse agent. Other executable kits contain their own `START_HERE.md`. Starter role ZIPs are **not a model-backed autonomous assistant**.
+These commands also work in Windows PowerShell. The destination must be a new absolute path; choose another name if it already exists. Do not use a path containing `..`.
 
-## Prerequisites
-
-- For cloning or engineering workflows: Python 3.12+ and Git. For the Creative Studio example: Python 3.12+ alone. Other kits list their own requirements in `START_HERE.md`.
-- Windows with PowerShell, macOS or Linux. Some platform-specific engines are unsupported on Windows; see [capabilities](CAPABILITIES.md).
-- A new output location. The tools refuse to overwrite an existing folder.
+The demo creates production JSON, a shot-list CSV and a textual HTML storyboard from a fictional brief. It does not render a movie or connect to a model provider. A starter profile is not a model-backed autonomous assistant.
 
 ## Clone and verify
+
+Use Python 3.12+ and Git to work from the repository.
 
 **macOS / Linux**
 
@@ -42,52 +40,38 @@ python -B -m muse_presets.cli doctor
 python -B examples/github_quickstart.py --all
 ```
 
-The `--all` smoke check creates temporary examples of all eleven role-source packages, inspects their configuration and verifies synthetic connector observations. It does **not** install native assistants or authenticate a remote account.
+The doctor checks local source. The `--all` example creates temporary packages for all eleven roles and checks their configuration. Neither command installs a native assistant or authenticates a remote account.
 
-## Create a kit
+## Customize a profile
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ../my-garden-agent
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ./my-garden-companion
 ```
 
-Use `python` on Windows after setting `$env:PYTHONPATH`. Each kit includes `INSTALL.md`, a role playbook and configuration templates. Change the name, instructions, capabilities and preferences to fit your work. Existing output directories are never overwritten.
+Use `python` on Windows after setting `PYTHONPATH`. Choose an unused destination: the renderer refuses to overwrite existing files. Read the generated `INSTALL.md`, then edit the instructions and preferences in your own copy. [Customization](CUSTOMIZE.md) explains the files.
 
-Other choices include `software-engineer`, `coordinator` and `reverse-engineering-researcher`. [Browse all roles](CAPABILITIES.md).
+## Run a workflow
 
-## Run local demonstrations
+From the repository root:
 
 ```bash
 PYTHONPATH=src python3 -B examples/garden_calendar_demo.py
 PYTHONPATH=src python3 -B examples/learning_session_demo.py
-PYTHONPATH=src python3 -B examples/evidence_ledger_demo.py
-PYTHONPATH=src python3 -B examples/priority_slices.py
+PYTHONPATH=src python3 -B examples/research_evaluator_demo.py
 ```
 
-These programs use fictional inputs and local files. Garden and Learning exercises demonstrate SQLite recovery. A local receipt is not proof of an authenticated native owner or an external action.
-
-## Validate or extend
-
-```bash
-PYTHONPATH=src python3 -B -m unittest discover -s tests -q
-PYTHONPATH=src python3 -B -m muse_presets.cli audit-neutrality
-PYTHONPATH=src python3 -B examples/verify_role_packages.py --all
-```
-
-Read [customization](CUSTOMIZE.md), [skills](SKILLS.md) and [extending the source](EXTENDING_GENERIC_AGENTS.md) before adding a provider or executing external tools.
+The examples use fictional inputs and local files. [Workflows](WORKFLOWS.md) covers engineering, model development, research checks and recovery in more detail.
 
 ## Common issues
 
-| Problem | Resolution |
+| Problem | What to do |
 | --- | --- |
 | `ModuleNotFoundError` | Run from the repository root with `PYTHONPATH=src`. |
-| Output already exists | Choose a new destination; preserve existing owner files. |
-| A source or receipt hash changed | Inspect the source and create a new verified package rather than bypassing the check. |
-| Connector or native skill unavailable | This is expected until a separately authorized host integration exists. |
-| A POSIX engine is unsupported on Windows | Use its documented source-only path or a compatible POSIX environment. Unsupported is **not** a passed test. |
-| Need a ZIP instead of a clone | Use the eight **executable** ZIP downloads on the [current release page](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha). Starter ZIPs are for customization. |
+| Output already exists | Choose a new directory; do not delete personal files to make a command pass. |
+| `PATH_TRAVERSAL_REFUSED` | Use a new absolute output path without `..`. |
+| A checksum differs | Stop and check the download or source change. Do not bypass the check. |
+| Connector or native skill unavailable | Configure and verify the host integration separately. |
+| Platform-specific operation unsupported | Check [Capabilities](CAPABILITIES.md); an unsupported operation is not a passed test. |
+| Need a ZIP instead of a clone | Use the [v0.4.1-alpha downloads](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha). |
 
-The toolkit does not provide an OS security sandbox. Run reviewed local source only. Native host activation remains optional and separate from the GitHub distribution.
-
-## Advanced local workflows
-
-Current repository source also includes engineering repair, reviewed builder execution, portable model kits, research metrics and restart verification. See [Runnable workflows](WORKFLOWS.md). Archived ZIPs remain tied to their original release versions.
+For code changes, follow [Development](DEVELOPMENT.md). Local execution is not a sandbox; read [Security](SECURITY.md) before running untrusted code.

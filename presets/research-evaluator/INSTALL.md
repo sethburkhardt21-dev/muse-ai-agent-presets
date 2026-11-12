@@ -1,23 +1,19 @@
 # Set up Research Evaluator
 
-Use Python 3.12+ and Git. These are portable source files, not a native Muse installation.
+This public starter contains instructions and configuration, not an installed assistant. Use the complete toolkit for any local examples linked from the [role guide](README.md).
 
-## From the repository
+## Create a profile copy
+
+From the repository root:
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role research-evaluator --to ../my-research-evaluator
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role research-evaluator --to ./my-research-evaluator
 ```
 
-On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. Choose a new output directory; existing files are never overwritten. The source kit and its local inspection result do not authenticate a native host or grant tool access.
+On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. The destination must not exist. Read the generated guide before editing your copy, and keep personal memory and credentials outside the repository.
 
-## From a download
+## Check before connecting
 
-Extract the ZIP into a new directory and follow its included guide. Keep existing user memory separate. For the latest runnable features, use current repository source and [the workflow guide](../../docs/WORKFLOWS.md).
+Run the package's supported local checks and review the files it creates. A hash receipt detects changed bytes; it does not establish a host identity or grant tool access. No external account, skill registration or scheduled job is activated by these steps.
 
-Verify exact source quotations, evaluate held-out predictions and check leakage boundaries using the research-trace and research-numeric tools.
-
-For numerical evaluation, run `examples/numeric_evaluation_demo.py`; see the `research-numeric` workflow.
-
-The local receipt is an integrity check, not a native installation or authenticated publisher signature. Optional connectors remain disconnected. See [security guidance](../../docs/SECURITY.md).
-
-[Complete installation guide](../../docs/GITHUB_QUICKSTART.md)
+[Role guide](README.md) · [Installation and saved data](../../docs/INSTALL_AND_PERSISTENCE.md)
