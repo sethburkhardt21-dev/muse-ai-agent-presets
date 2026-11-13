@@ -1,4 +1,4 @@
-"""Portable, source-pinned scoped subchat drafts for the 11 generic Muse roles.
+"""Portable, source-pinned scoped subchat drafts for the 15 generic Muse roles.
 
 No host IDs are discovered or minted here. This module cannot install, spawn,
 grant tools, activate cron, hand off messages or modify the recipient's files.
@@ -49,7 +49,7 @@ def _source(role: str) -> tuple[dict, dict, dict[str, bytes]]:
     frozen = {p: _regular_bytes(SOURCE_ROOT / p, MAX_FILE_BYTES) for p in paths}
     catalog = _read_json(frozen[paths[0]])
     if (not isinstance(catalog, dict) or type(catalog.get("presets")) is not list
-            or len(catalog["presets"]) != 11 or len(set(catalog["presets"])) != 11
+            or len(catalog["presets"]) != 15 or len(set(catalog["presets"])) != 15
             or role not in catalog["presets"]):
         raise ValueError("INVALID_SUBCHAT_CATALOG")
     preset = _read_json(frozen[paths[1]])

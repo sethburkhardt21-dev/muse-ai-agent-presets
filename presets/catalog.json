@@ -12,7 +12,11 @@
     "garden-companion",
     "learning-coach",
     "claims-adjudicator",
-    "reverse-engineering-researcher"
+    "reverse-engineering-researcher",
+    "data-engineering-architect",
+    "infrastructure-reliability-engineer",
+    "automation-engineer",
+    "product-interface-designer"
   ],
   "services": [
     "evidence-finder"

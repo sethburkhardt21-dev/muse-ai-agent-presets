@@ -44,7 +44,7 @@ class SystemProfileTests(unittest.TestCase):
                              'SYSTEM_INSTRUCTIONS.md','CONNECTORS.md','BROWSER.md','VOICE.md',
                              'ROLE_PLAYBOOK.md','FAMILY_LINK.json'}.issubset(names))
             signatures.add((dest / 'profile/ROLE_PLAYBOOK.md').read_bytes())
-        self.assertEqual(len(signatures), 11)
+        self.assertEqual(len(signatures), 15)
 
     def test_uses_explicit_neutral_display_name(self):
         self.stage()

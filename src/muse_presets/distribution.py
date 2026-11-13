@@ -70,7 +70,7 @@ def capability_findings(root:Path,catalog:object)->list[dict[str,str]]:
   return [{'path':'presets/capabilities.json','reason':'INVALID_CAPABILITY_CATALOG'}]
  if catalog.get('external_effects_enabled') is not False:add('catalog','NATIVE_AUTHORITY_NOT_ALLOWED')
  roles=catalog.get('roles');features=catalog.get('features')
- if type(roles) is not list or len(roles)!=11 or not all(type(x) is str for x in roles) or len(set(roles))!=11:
+ if type(roles) is not list or len(roles)!=15 or not all(type(x) is str for x in roles) or len(set(roles))!=15:
   add('roles','INVALID_ROLES')
  if type(features) is not list:return out+[{'path':'features','reason':'INVALID_FEATURES'}]
  ids=set()

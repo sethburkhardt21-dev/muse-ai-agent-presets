@@ -1,6 +1,6 @@
 # Get started
 
-This source-only toolkit includes **eight runnable offline Python tools** and **eleven starter role profiles**. Download an executable ZIP without cloning, or customize a profile from source. The starter profiles are not installed assistants, and live connectors are **not connected** by default.
+This source-only toolkit includes **eight runnable offline Python tools** and **eleven current released starter ZIPs plus four new source-tree roles**. Download an executable ZIP without cloning, or customize a profile from source. The starter profiles are not installed assistants, and live connectors are **not connected** by default.
 
 ## Run a standalone tool without cloning
 
@@ -10,7 +10,7 @@ Choose an **executable** ZIP from the [current v0.4.1-alpha release](https://git
 
 ```bash
 python -I -B run.py --operation self-test
-python -I -B run.py --operation demo --to ../creative-production-demo
+python -I -B run.py --operation demo --to "$HOME/creative-production-demo"
 ```
 
 These commands run a fictional production planner and textual storyboard. They do not connect a provider, render a movie, or install a native Muse agent. Other executable kits contain their own `START_HERE.md`. Starter role ZIPs are **not a model-backed autonomous assistant**.
@@ -42,12 +42,12 @@ python -B -m muse_presets.cli doctor
 python -B examples/github_quickstart.py --all
 ```
 
-The `--all` smoke check creates temporary examples of all eleven role-source packages, inspects their configuration and verifies synthetic connector observations. It does **not** install native assistants or authenticate a remote account.
+The `--all` smoke check creates temporary examples of all fifteen role-source packages, inspects their configuration and verifies synthetic connector observations. It does **not** install native assistants or authenticate a remote account.
 
 ## Create a kit
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ../my-garden-agent
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to "$HOME/my-garden-agent"
 ```
 
 Use `python` on Windows after setting `$env:PYTHONPATH`. Each kit includes `INSTALL.md`, a role playbook and configuration templates. Change the name, instructions, capabilities and preferences to fit your work. Existing output directories are never overwritten.
@@ -91,3 +91,15 @@ The toolkit does not provide an OS security sandbox. Run reviewed local source o
 ## Advanced local workflows
 
 Current repository source also includes engineering repair, reviewed builder execution, portable model kits, research metrics and restart verification. See [Runnable workflows](WORKFLOWS.md). Archived ZIPs remain tied to their original release versions.
+
+## One-command source quickstart (15 roles)
+
+After cloning, run `python -B quickstart.py --all` on Windows or `python3 -B quickstart.py --all` on macOS/Linux. The wrapper loads local source without a PYTHONPATH environment variable, package installation or Muse account. To stage one unbound profile, run `python -B quickstart.py --role automation-engineer --to "$HOME/my-automation-kit"`. The destination must not exist; all eight skill descriptors and three subchat drafts stay disabled/unbound.
+
+The separate local fixture can be run with `PYTHONPATH=src python3 -B examples/specialist_engine_demo.py --role automation-engineer` (set `$env:PYTHONPATH = "src"` in PowerShell).
+
+## Export instructions for another compatible assistant
+
+`python -B examples/export_portable_skills.py --to "$HOME/my-portable-skills"` generates the same 50 unique procedures as portable skill folders. Inspect them with `python -B examples/export_portable_skills.py --inspect "$HOME/my-portable-skills"`. This is not a native Muse installer or an authorization to call external tools. See [Skills](SKILLS.md#portable-instruction-library).
+
+All `$HOME/...` examples expect an unused absolute path after expansion by PowerShell or your POSIX shell. Choose another name when a folder exists; do not use `..` to work around path admission. No user data is deleted to make a first run pass.

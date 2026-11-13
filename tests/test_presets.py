@@ -9,8 +9,8 @@ from muse_presets.family import propose_handoff, verify_finding, FamilyLinkRefus
 class PresetCatalogTests(unittest.TestCase):
     def test_eleven_unique_specialists_and_one_service(self):
         reg = load_registry()
-        self.assertEqual(len(reg['presets']), 11)
-        self.assertEqual(len(set(reg['presets'])), 11)
+        self.assertEqual(len(reg['presets']), 15)
+        self.assertEqual(len(set(reg['presets'])), 15)
         self.assertEqual(reg['services'], ['evidence-finder'])
 
     def test_every_preset_has_default_denied_family_link(self):
@@ -32,7 +32,7 @@ class PresetCatalogTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             target = Path(tmp) / 'installed'
             render_preset('garden-companion', target, display_name='My Garden Guide')
-            expected = {'AGENTS.md', 'SOUL.md', 'IDENTITY.md', 'USER.md', 'TOOLS.md', 'MEMORY.md', 'HEARTBEAT.md', 'PROACTIVE_PREFERENCES.md', 'SYSTEM_INSTRUCTIONS.md', 'SUBCHATS.md', 'HOOKS.md', 'FAMILY_LINK.json', 'ROLE_PLAYBOOK.md', 'RECEIPT.json'}
+            expected = {'AGENTS.md', 'SOUL.md', 'IDENTITY.md', 'USER.md', 'TOOLS.md', 'MEMORY.md', 'HEARTBEAT.md', 'PROACTIVE_PREFERENCES.md', 'SYSTEM_INSTRUCTIONS.md', 'SUBCHATS.md', 'HOOKS.md', 'FAMILY_LINK.json', 'ROLE_PLAYBOOK.md', 'RECEIPT.json', 'OPINION.md', 'SYSTEM_PROMPT.md', 'VOICE.md', 'DOORS.md', 'ENGINE_MATRIX.md'}
             self.assertEqual({x.name for x in target.iterdir()}, expected)
             self.assertIn('My Garden Guide', (target/'IDENTITY.md').read_text())
             self.assertEqual(json.loads((target/'FAMILY_LINK.json').read_text())['enabled'], False)

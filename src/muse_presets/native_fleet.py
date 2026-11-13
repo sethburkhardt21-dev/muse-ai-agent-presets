@@ -1,4 +1,4 @@
-"""Create-only 11-role generic source fleet and two separate host handoffs per role.
+"""Create-only 15-role generic source fleet and two separate host handoffs per role.
 
 This module never installs into or reads a personal agent. A filesystem
 candidate is not a native authenticated skill, subchat, scheduler or service.

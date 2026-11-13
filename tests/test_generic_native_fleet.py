@@ -24,8 +24,8 @@ class GenericNativeFleetTests(unittest.TestCase):
         p=self.stage()
         result=inspect_generic_fleet(p)
         self.assertEqual(result["status"],"LOCAL_FLEET_MATCH")
-        self.assertEqual(result["profile_count"],11)
-        self.assertEqual(result["native_canary_count"],22)
+        self.assertEqual(result["profile_count"],15)
+        self.assertEqual(result["native_canary_count"],30)
         self.assertFalse(result["native_installed"])
         self.assertFalse(result["external_effect_authorized"])
         roles=load_registry()["presets"]

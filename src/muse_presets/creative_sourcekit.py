@@ -19,7 +19,7 @@ SOURCE_SHA={
     'presets/creative-studio/preset.json':'d6b89a7f0851258af12afcbc224f822e4b0ec76e26e58ee993c789ee4b4ccd48',
     'presets/creative-studio/playbook.json':'3a1210f10e5b75f923e2db4a0e3955bb66d686fd50f042d9191a42da13508bcd',
     'examples/creative_brief.json':'ac766aa9e21313d6845051e485978e15e0dd058344f4e00bca6cb787e931a8ee',
-    'docs/kits/CREATIVE_SOURCEKIT.md':'25eaeb0b044081120a4fd430739aebfc20aff8d2c9d9d17d7ef317f905c170c5',
+    'docs/kits/CREATIVE_SOURCEKIT.md':'1ec9aac268d94e48314eb80a8fa85d06f7836d8960119cb00594c7027cbd48a8',
 }
 SOURCE_MAP={
     'LICENSE':'LICENSE',

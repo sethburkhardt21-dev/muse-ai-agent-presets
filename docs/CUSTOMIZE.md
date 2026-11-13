@@ -17,7 +17,7 @@ The source includes method and skill descriptions, not live native registrations
 From the repository root:
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role coordinator --to ../my-coordinator
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role coordinator --to "$HOME/my-coordinator"
 ```
 
 Read the new folder's `INSTALL.md` and editable configuration. The command refuses an occupied destination, so owner memory and existing agent state are not overwritten.

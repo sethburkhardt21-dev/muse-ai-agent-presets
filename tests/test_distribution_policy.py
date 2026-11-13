@@ -7,6 +7,12 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
 
 class DistributionPolicyTests(unittest.TestCase):
+ def test_public_text_bytes_match_declared_lf_checkout_policy(self):
+  from muse_presets.public_export import select_public_files
+  files=select_public_files(ROOT,verify_manifest=False)
+  noncanonical=[name for name,raw in files.items() if b'\r\n' in raw]
+  self.assertEqual(noncanonical,[], 'Manifest hashes must match Git-normalized source on every platform')
+
  def engine(self):
   self.assertIsNotNone(importlib.util.find_spec('muse_presets.distribution'),
       'A reusable public distribution quality gate must ship with the source')
@@ -45,7 +51,7 @@ class DistributionPolicyTests(unittest.TestCase):
    self.assertTrue(self.engine().product_findings(r))
  def test_capabilities_match_actual_modules_and_examples(self):
   d=self.engine();catalog=json.loads((ROOT/'presets/capabilities.json').read_text())
-  self.assertEqual(len(catalog['roles']),11)
+  self.assertEqual(len(catalog['roles']),15)
   self.assertEqual(d.capability_findings(ROOT,catalog),[])
   bad=json.loads(json.dumps(catalog));bad['features'][0]['module']='muse_presets.does_not_exist'
   self.assertTrue(d.capability_findings(ROOT,bad))

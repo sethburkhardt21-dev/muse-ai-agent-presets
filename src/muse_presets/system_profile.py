@@ -20,9 +20,9 @@ from .playbooks import render_playbook, validate_playbook
 
 SOURCE_ROOT = ROOT
 SCHEMA = 'r40/system-profile-v1'
-EXTRA_DOCUMENTS = ('CONNECTORS.md', 'BROWSER.md', 'VOICE.md')
+EXTRA_DOCUMENTS = ('CONNECTORS.md', 'BROWSER.md')
 OWNER_FILES = frozenset({'IDENTITY.md', 'SOUL.md', 'USER.md', 'MEMORY.md',
-                         'PROACTIVE_PREFERENCES.md'})
+                         'PROACTIVE_PREFERENCES.md', 'OPINION.md', 'VOICE.md'})
 MANIFEST = 'PROFILE_MANIFEST.json'
 MAX_FILE_BYTES = 131072
 _SHA = re.compile(r'^[0-9a-f]{64}$')
@@ -51,8 +51,8 @@ def _source(role: str) -> dict[str, bytes]:
     frozen = {name: _regular_bytes(SOURCE_ROOT / name, MAX_FILE_BYTES) for name in paths}
     catalog = _parse(frozen['presets/catalog.json'])
     roles = catalog.get('presets') if isinstance(catalog, dict) else None
-    if (not isinstance(roles, list) or len(roles) != 11 or
-            any(not isinstance(x, str) for x in roles) or len(set(roles)) != 11 or role not in roles):
+    if (not isinstance(roles, list) or len(roles) != 15 or
+            any(not isinstance(x, str) for x in roles) or len(set(roles)) != 15 or role not in roles):
         raise ValueError('INVALID_PROFILE_CATALOG')
     return frozen
 

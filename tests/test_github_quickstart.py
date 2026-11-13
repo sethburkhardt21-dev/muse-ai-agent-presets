@@ -38,10 +38,10 @@ class GitHubQuickstartTests(unittest.TestCase):
         self.assertEqual(result,0)
         self.assertEqual(data["schema"],"r45/github-quickstart-v1")
         self.assertEqual(data["mode"],"DISPOSABLE_SOURCE_CHECK")
-        self.assertEqual(data["role_count"],11)
+        self.assertEqual(data["role_count"],15)
         self.assertEqual(set(data["roles"]),set(load_registry()["presets"]))
-        self.assertEqual(data["total_subchat_scopes"],33)
-        self.assertEqual(data["total_disabled_skills"],33)
+        self.assertEqual(data["total_subchat_scopes"],45)
+        self.assertEqual(data["total_disabled_skills"],120)
         self.assertFalse(data["native_installed"])
         self.assertFalse(data["can_publish"])
         for role,item in data["roles"].items():
@@ -49,7 +49,7 @@ class GitHubQuickstartTests(unittest.TestCase):
             self.assertEqual(item["offline_example"],"CONSISTENT_OFFLINE_FIXTURE_ONLY")
             self.assertRegex(item["profile_source_sha256"],r"^[0-9a-f]{64}$")
             self.assertEqual(item["subchats"],3)
-            self.assertEqual(item["disabled_skills"],3)
+            self.assertEqual(item["disabled_skills"],8)
             self.assertFalse(item["real_model_invocation"])
         self.assertEqual(list(self.folder.iterdir()),[])
 
@@ -101,7 +101,7 @@ class GitHubQuickstartTests(unittest.TestCase):
             self.assertIn("github_quickstart.py",doc)
             self.assertIn("GITHUB_QUICKSTART.md",doc)
             self.assertIn("source",doc.lower())
-        self.assertEqual(len(load_registry()["presets"]),11)
+        self.assertEqual(len(load_registry()["presets"]),15)
 
     def test_release_guide_has_os_commands_and_truthful_tiers(self):
         guide=(ROOT/"docs/GITHUB_QUICKSTART.md").read_text(encoding="utf-8")

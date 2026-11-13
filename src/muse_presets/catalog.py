@@ -18,7 +18,9 @@ SLUG = re.compile(r'^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$')
 DISPLAY = re.compile(r'^[A-Za-z0-9][A-Za-z0-9 ._\-]{0,79}$')
 DOCUMENTS = ('AGENTS.md', 'SOUL.md', 'IDENTITY.md', 'USER.md', 'TOOLS.md',
              'MEMORY.md', 'HEARTBEAT.md', 'PROACTIVE_PREFERENCES.md',
-             'SYSTEM_INSTRUCTIONS.md', 'SUBCHATS.md', 'HOOKS.md')
+             'SYSTEM_INSTRUCTIONS.md', 'SUBCHATS.md', 'HOOKS.md',
+             'OPINION.md', 'SYSTEM_PROMPT.md', 'DOORS.md',
+             'ENGINE_MATRIX.md', 'VOICE.md')
 
 
 def _check_slug(slug: str) -> None:

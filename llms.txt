@@ -26,3 +26,8 @@ The eight executable ZIPs can run locally with requirements specified by their g
 ## Optional
 - [Security and permissions](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/SECURITY.md): local OS account execution is not a sandbox.
 - [Repository home](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets): README, MIT license and source.
+
+## Source-only expansion (not extra release ZIPs)
+- [All 15 source roles](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/presets): 11 released starter roles and four newer source-only roles.
+- [Five shared source skills](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/skills/shared): source-proven guidance; 45 role-method procedures plus five shared = 50 unique disabled skill procedures, not native grants.
+- [Four synthetic offline demos](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/blob/main/examples/specialist_engine_demo.py): data, service-level, task graph and static UI controls.

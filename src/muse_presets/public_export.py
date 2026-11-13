@@ -14,11 +14,12 @@ from .neutrality import audit_public_tree
 SCHEMA="r46/public-source-snapshot-v1"
 PUBLIC_DIRS=frozenset({
     ".github", "docs", "examples", "presets", "scripts",
-    "services", "src", "templates", "tests",
+    "services", "src", "templates", "tests", "skills",
 })
 PUBLIC_ROOT_FILES=frozenset({
     ".gitattributes", ".gitignore", "CHANGELOG.md",
     "CONTRIBUTING.md", "LICENSE", "README.md", "SECURITY.md", "llms.txt",
+    "quickstart.py",
 })
 PRIVATE_EXCLUDED_DIRS=frozenset({
     ".git", "control", "__pycache__", ".pytest_cache", ".mypy_cache",
