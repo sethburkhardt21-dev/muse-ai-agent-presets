@@ -21,11 +21,18 @@ SOURCE_ROOT=ROOT
 SCHEMA="r42/role-skills-v1"
 MANIFEST="ROLE_SKILL_RECEIPT.json"
 MAX_FILE_BYTES=131072
+SHARED_SKILLS=("evidence_audit","safe_resume","research_verification",
+               "consent_and_effects","quality_handoff")
+
 LOCAL_MODULES={
     "coordinator": ("coordinator_dropin.py", "coordinator_review.py"),
     "software-engineer": ("engineer_dropin.py", "engineering_pack.py",
                            "provenance_vault.py", "iron_ledger_consumer.py"),
     "model-builder": ("model_builder_dropin.py", "model_eval.py"),
+    "data-engineering-architect": ("specialist_engines.py",),
+    "infrastructure-reliability-engineer": ("specialist_engines.py",),
+    "automation-engineer": ("specialist_engines.py",),
+    "product-interface-designer": ("specialist_engines.py",),
 }
 _HEX=re.compile(r"^[0-9a-f]{64}$")
 
@@ -45,6 +52,9 @@ def _sha(data:bytes)->str:
 
 def _source(role:str)->tuple[dict,dict,dict[str,bytes]]:
     preset,book,frozen=_role_source(role)
+    for sid in SHARED_SKILLS:
+        rel="skills/shared/"+sid.replace("_","-")+"/SKILL.md"
+        frozen[rel]=_regular_bytes(SOURCE_ROOT/rel,MAX_FILE_BYTES)
     for filename in LOCAL_MODULES.get(role,()):
         rel="src/muse_presets/"+filename
         frozen[rel]=_regular_bytes(SOURCE_ROOT/rel,MAX_FILE_BYTES)
@@ -90,7 +100,8 @@ def _build(role:str,display_name:str|None)->tuple[dict[str,bytes],dict,dict[str,
               "include_in_prompt: false\n")
         steps="\n".join(f"{i}. {v}" for i,v in enumerate(method["steps"],1))
         evidence="\n".join(f"- {v}" for v in method["evidence"])
-        doc=(f"# {name}: {mid}\n\n"
+        doc=(f"---\nname: {sid}\ndescription: {description}\n---\n\n"
+             f"# {name}: {mid}\n\n"
              f"Role: {role}. This skill is not installed. It is a source-only, "
              "owner-unbound procedure; no host identity, tool call or consent is implied.\n\n"
              f"## Trigger\n\n{description}\n\n"
@@ -111,8 +122,23 @@ def _build(role:str,display_name:str|None)->tuple[dict[str,bytes],dict,dict[str,
         }]
     if len(names)!=3 or len(set(names))!=3:
         raise ValueError("INVALID_SKILL_METHOD_SET")
+    for sid in SHARED_SKILLS:
+        original="skills/shared/"+sid.replace("_","-")+"/SKILL.md"
+        source=frozen[original].decode("utf-8")
+        expected="name: "+sid.replace("_","-")
+        if not source.startswith("---\n"+expected+"\n"):
+            raise ValueError("INVALID_SHARED_SKILL_SOURCE")
+        body=source.replace(expected,"name: "+sid,1)
+        files[f"custom-skills/{sid}/SKILL.md"]=body.encode("utf-8")
+        desc=next(line[len("description: "):] for line in source.splitlines()
+                  if line.startswith("description: "))
+        if "\n" in desc or len(desc)>400:
+            raise ValueError("INVALID_SHARED_SKILL_DESCRIPTION")
+        files[f"custom-skills/{sid}/skill.yaml"]=(f"name: {sid}\n"
+             f"title: Shared - {sid.replace(chr(95),chr(32)).title()}\n"
+             f"description: {desc}\ninclude_in_prompt: false\n").encode("utf-8")
     registry="version: 1\nentries:\n"+"".join(
-        f"  {sid}:\n    status: disabled\n" for sid in sorted(names))
+        f"  {sid}:\n    status: disabled\n" for sid in sorted([*names,*SHARED_SKILLS]))
     files["config/skills.yaml"]=registry.encode("utf-8")
     files["config/subchat-skills.json"]=_json({
         "schema":SCHEMA,"role":role,"mapping":mapping,
@@ -149,6 +175,7 @@ def _build(role:str,display_name:str|None)->tuple[dict[str,bytes],dict,dict[str,
         "source_pins":source_pins,
         "profile_source_sha256":profile["source_sha256"],
         "method_ids":methods,"skill_ids":names,
+        "shared_skill_ids":list(SHARED_SKILLS),
         "files":{p:_sha(data) for p,data in files.items()},
         "grade":"LOCAL_SKILL_DESCRIPTOR_ONLY",
         "provider_issued_skill_ids":False,
@@ -164,7 +191,8 @@ def plan_role_skills(role:str,*,display_name:str|None=None)->dict:
     files,receipt,_=_build(role,display_name)
     return {"status":"SOURCE_PLAN_ONLY","role":role,
             "profile_source_sha256":receipt["profile_source_sha256"],
-            "skill_ids":receipt["skill_ids"],"file_count":len(files),
+            "skill_ids":receipt["skill_ids"],
+            "shared_skill_ids":receipt["shared_skill_ids"],"file_count":len(files),
             "native_registered":False,"can_apply":False}
 
 
@@ -206,7 +234,7 @@ def stage_role_skills(destination:Path,role:str,*,display_name:str|None=None,
     _write_new(dest/MANIFEST,_json(receipt))
     (dest/"STAGING_INCOMPLETE").unlink()
     return {"status":"LOCAL_ROLE_SKILLS_STAGED","role":role,
-            "skill_count":len(receipt["skill_ids"]),
+            "skill_count":len(receipt["skill_ids"])+len(receipt["shared_skill_ids"]),
             "native_registered":False,"external_effect_authorized":False,
             "source_sha256":receipt["profile_source_sha256"]}
 
@@ -218,7 +246,7 @@ def _closed_tree(dest:Path,expected:set[str],names:list[str])->bool:
         entries=list(dest.rglob("*"))
     except OSError:
         return False
-    if len(entries)>35:
+    if len(entries)>65:
         return False
     for entry in entries:
         if _unsafe_source_path(entry):
@@ -251,16 +279,17 @@ def inspect_role_skills(destination:Path)->dict:
         if claim.get("source_pins")!=expected["source_pins"] or (
                 claim.get("profile_source_sha256")!=expected["profile_source_sha256"]):
             return {**failure,"status":"SOURCE_DRIFT"}
-        if raw!=_json(expected) or not _closed_tree(dest,set(files),expected["skill_ids"]):
+        if raw!=_json(expected) or not _closed_tree(dest,set(files),expected["skill_ids"]+expected["shared_skill_ids"]):
             return failure
         for relative,data in files.items():
             if _regular_bytes(dest/relative,MAX_FILE_BYTES)!=data:
                 return failure
         registered,registry_sha=_registry(dest/"config/skills.yaml")
-        if registered!={name:"disabled" for name in expected["skill_ids"]}:
+        if registered!={name:"disabled" for name in expected["skill_ids"]+expected["shared_skill_ids"]}:
             return failure
         return {**failure,"status":"LOCAL_ROLE_SKILLS_MATCH",
                 "role":expected["role"],"skill_ids":expected["skill_ids"],
+                "shared_skill_ids":expected["shared_skill_ids"],
                 "registry_sha256":registry_sha,
                 "profile_source_sha256":expected["profile_source_sha256"]}
     except (OSError,ValueError,TypeError,KeyError):

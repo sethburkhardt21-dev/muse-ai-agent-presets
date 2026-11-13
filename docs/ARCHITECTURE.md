@@ -4,9 +4,15 @@ The toolkit separates assistant instructions, local programs and host integratio
 
 ## Role profiles
 
-`presets/catalog.json` lists the eleven roles. Each role has a `preset.json` for its settings and a `playbook.json` for its working methods. The files in `templates/profile/` provide editable instructions, preferences and memory placeholders.
+`presets/catalog.json` lists the 15 source roles. Each role has a `preset.json` for its settings and a `playbook.json` for its working methods. The files in `templates/profile/` provide editable instructions, preferences and memory placeholders.
 
 The renderer creates a new folder rather than replacing an existing assistant. Its receipt records the source and output hashes so later inspection can distinguish unchanged files, personal edits and missing files. A receipt is an integrity record, not proof of identity or permission.
+
+## Generated profiles and procedures
+
+`quickstart.py` composes three inspectable parts: `system-profile/profile/` for editable agent-home drafts, `subchat-scopes/` for three method-specific contexts with separate blank memory, and `role-skills/` for disabled descriptors. Identity, soul, user, opinion, voice and prompt defaults are not imported private personas or host registrations.
+
+The catalog has **45 role-specific methods plus five shared procedures = 50 unique procedures**. Reusing the shared procedures across all roles yields 120 descriptor instances, not additional unique skills. The separate `portable_skill_export` adapter emits 50 hyphen-named folders with matching frontmatter without renaming the native-style registry IDs. Neither representation installs a skill or grants a tool.
 
 ## Local tools
 

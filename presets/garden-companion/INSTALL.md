@@ -9,13 +9,15 @@
 From the repository root:
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ./my-garden-companion
+python -B quickstart.py --role garden-companion --to "$HOME/my-garden-companion"
 ```
 
-On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. The destination must not exist. Read the generated guide before editing your copy, and keep personal memory and credentials outside the repository.
+Use `python3` on macOS/Linux where appropriate; the wrapper also works in Windows PowerShell without setting `PYTHONPATH`. The destination must not exist. Read the generated guide before editing your copy, and keep personal memory and credentials outside the repository.
 
 ## Check before connecting
 
 Run the package's supported local checks and review the files it creates. A hash receipt detects changed bytes; it does not establish a host identity or grant tool access. No external account, skill registration or scheduled job is activated by these steps.
 
 [Role guide](README.md) · [Installation and saved data](../../docs/INSTALL_AND_PERSISTENCE.md)
+
+For the complete source setup, expected outputs and troubleshooting, see [Get started](../../docs/GITHUB_QUICKSTART.md).

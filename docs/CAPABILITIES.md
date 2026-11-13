@@ -2,6 +2,8 @@
 
 This page describes the code on the public main branch. A downloaded ZIP contains the code from its release, so use the instructions included with that package. [Downloads](RELEASES.md) explains the choices.
 
+The source provides **15 profiles and 50 unique instruction procedures**. The unchanged **v0.4.1-alpha** download contains **eight executable ZIPs and eleven starter profiles**. The four newer roles have source-tree offline examples, not new tagged executable packages or native agents.
+
 ## Choose a tool or profile
 
 | Specialist | Available here | Limits |
@@ -17,6 +19,10 @@ This page describes the code on the public main branch. A downloaded ZIP contain
 | `learning-coach` | Build source-based study sessions, score practice and store review history. | No clinical approval or independent mastery assessment. |
 | `claims-adjudicator` | Review claims against supplied evidence and record qualifications. | Not an independently authenticated verdict. |
 | `reverse-engineering-researcher` | Compare supplied application-observation records. | No live capture, network probing or attack engine. |
+| `data-engineering-architect` | Check supplied rows and keys; report duplicates and null observations. | No live database access, migration or lineage certification. |
+| `infrastructure-reliability-engineer` | Calculate failure fractions and error-budget use from supplied synthetic events. | No live monitoring or production reliability certification. |
+| `automation-engineer` | Produce stable dependency order; reject cycles, duplicate IDs and unknown prerequisites. | Does not schedule jobs, run adapters or prove external idempotency. |
+| `product-interface-designer` | Flag missing control labels in supplied screen descriptions. | Not a rendered-browser, screen-reader or human usability audit. |
 
 The [Evidence Finder](../services/evidence-finder/) preserves local findings for these tools. It is a shared service, not another assistant.
 
@@ -25,6 +31,8 @@ The [Evidence Finder](../services/evidence-finder/) preserves local findings for
 [Workflows](WORKFLOWS.md) provides the commands and expected results. Start with `examples/research_evaluator_demo.py` for quotation checks, `examples/numeric_evaluation_demo.py` for scoring, or `examples/software_engineer_workflow_demo.py` for a disposable repair exercise.
 
 The `research-numeric` result `LOCAL_NUMERIC_HELDOUT_EVALUATED` means the supplied data passed the numerical checks. It does not prove the truth of a scientific hypothesis. The [capability catalog](../presets/capabilities.json) connects declared features to their modules and examples.
+
+For the four newer roles, run `PYTHONPATH=src python3 -B examples/specialist_engine_demo.py --role automation-engineer` from the source checkout, substituting one of the four role IDs above. On PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. The demo processes a fictional fixture and returns explicit offline-only evidence. Skill text alone does not execute these engines.
 
 ## Requirements and permissions
 

@@ -36,6 +36,10 @@ The inspector checks the named descriptors, Markdown, entrypoints and supported 
 
 A file being present, a catalog saying `connected`, and a model being able to invoke a tool are different observations. Verify each separately.
 
+## Portable instructions are a separate format
+
+The source exporter can create 50 hyphen-named `SKILL.md` folders. The native-style role drafts retain their existing underscore-based identifiers and disabled `skills.yaml`. Format compatibility alone proves neither native registration nor model-selected invocation. Use only the format and supported import route accepted by your receiving host; do not copy a portable directory over a live registry.
+
 ## Verify a real integration
 
 1. Confirm the receiving account, host version and supported API.

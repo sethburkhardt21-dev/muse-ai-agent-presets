@@ -4,7 +4,7 @@ Each kit is intentionally editable. Start with a new role package and preserve t
 
 ## Project structure
 
-- `presets/catalog.json` indexes the eleven available roles.
+- `presets/catalog.json` indexes the fifteen source roles.
 - `presets/ROLE/playbook.json` represents the methods and optional tool categories for a chosen role. Replace `ROLE` with a real slug such as `garden-companion`.
 - `src/muse_presets/role_skills.py` stages and inspects local skill descriptions.
 - `src/muse_presets/portable_connectors.py` describes disabled provider contracts and offline observations.

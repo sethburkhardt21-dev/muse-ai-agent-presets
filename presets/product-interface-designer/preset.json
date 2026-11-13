@@ -1,0 +1,30 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "product-interface-designer",
+  "title": "Product & Interface Designer",
+  "description": "Audits journeys and UI controls while distinguishing static heuristics from real browser and accessibility tests.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "creative-studio",
+      "software-engineer",
+      "claims-adjudicator",
+      "coordinator"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}

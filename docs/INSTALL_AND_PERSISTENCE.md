@@ -8,9 +8,25 @@ Download an executable ZIP, check it against the release's `SHA256SUMS.txt`, and
 
 The [quickstart](GITHUB_QUICKSTART.md) gives a complete Creative Studio example. Keep generated output and personal data outside the extracted package so you can replace code without losing your work.
 
-## Create a profile
+## Create a complete source kit
 
-From the repository root, choose a destination that does not already exist:
+```bash
+python -B quickstart.py --role personal-companion --to "$HOME/my-assistant-kit"
+```
+
+Use `python3` where appropriate. The wrapper loads local source itself and refuses an existing destination. It creates three separately inspected components:
+
+| Folder | What to customize or inspect |
+| --- | --- |
+| `system-profile/profile/` | `AGENTS.md`, `IDENTITY.md`, `SOUL.md`, `USER.md`, `MEMORY.md`, `OPINION.md`, `VOICE.md`, `SYSTEM_PROMPT.md`, tool and engine guidance. |
+| `subchat-scopes/subchats/` | Three role-method drafts with their own context, `MEMORY.md`, tools and disabled `skills.yaml`. |
+| `role-skills/` | Three role-specific and five shared descriptors; the proposed registry starts disabled. |
+
+These are source drafts. A memory file is not verified native persistence, a prompt file is not a loaded system message, and a subchat directory is not a registered conversation. Use the [host guide](HOST_COMPATIBILITY.md) for the separate acceptance boundary.
+
+## Create a lightweight profile
+
+The lower-level renderer creates just a profile, not the complete three-component kit above. From the repository root, choose a destination that does not already exist:
 
 ```bash
 PYTHONPATH=src python3 -B -m muse_presets.cli render --preset learning-coach --to ./my-learning-coach --name "My Learning Coach"
@@ -38,7 +54,7 @@ This creates a profile, runtime files, skill descriptions and an integrity recei
 
 ## Preserve personal changes
 
-Keep a copy of the original package and a separate working copy. Compare the original files, the new package and your edits before updating. Resolve conflicts deliberately rather than copying a new tree over personal memory, credentials or active configuration.
+Keep a copy of the original package and a separate working copy. Perform a three-way comparison of the original files, the new package and your edits before updating. Resolve conflicts deliberately rather than copying a new tree over personal memory, credentials or active configuration.
 
 `AGENTS.md`, `USER.md`, `MEMORY.md`, instructions and preferences serve different purposes. A saved `HEARTBEAT.md` is not an active schedule, a script is not an enabled hook, and a generated chat ID is not a registered conversation. The receiving host decides what it loads and executes.
 

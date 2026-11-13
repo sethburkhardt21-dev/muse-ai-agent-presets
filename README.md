@@ -1,6 +1,6 @@
 # Specialist AI Agent Kits
 
-**Eight runnable offline Python tools. Eleven customizable specialist profiles.**
+**Eight runnable offline Python tools. Fifteen customizable specialist profiles.**
 
 [![Source checks](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml/badge.svg)](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml) · [MIT license](LICENSE)
 
@@ -8,7 +8,9 @@ Run tools for software repair, model experiments, evidence review, study, planni
 
 [**Download tools and profiles**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
 
-Executable ZIPs contain programs you can run; starter ZIPs contain instructions you can edit. They are **not installed native Muse agents**. A starter profile is not a model-backed autonomous assistant. The source-only downloads contain readable code rather than a hosted service, and live accounts require separate integration.
+**Choose the right version:** the published **v0.4.1-alpha** has eight executable ZIPs and eleven starter-profile ZIPs. The current source has **15 profiles and 50 unique instruction procedures**, including four newer source-only roles. Published archives have not been replaced.
+
+Executable ZIPs contain programs you can run; starter profiles contain instructions you can edit. They are **not installed native Muse agents**. A starter profile is not a model-backed autonomous assistant. Live accounts, native installation and model-selected tool use require separate integration and verification.
 
 ## Run a standalone tool now
 
@@ -42,21 +44,39 @@ The same commands work in Windows PowerShell. Choose a new absolute destination 
 | [Learning Coach](presets/learning-coach/) | Build study sessions from supplied sources, score practice and keep review history. |
 | [Claims Adjudicator](presets/claims-adjudicator/) | Compare claims with supplied evidence and record qualifications or corrections. |
 | [Reverse Engineering & Security Researcher](presets/reverse-engineering-researcher/) | Compare recorded application behavior and review observations. |
+| [Data Engineering & Database Architect](presets/data-engineering-architect/) | Detect duplicate keys and plan reversible schema changes |
+| [Infrastructure & Reliability Engineer](presets/infrastructure-reliability-engineer/) | Calculate fictional error budgets and review incident evidence |
+| [Automation Engineer](presets/automation-engineer/) | Order dependency graphs, reject cycles and plan safe retries |
+| [Product & Interface Designer](presets/product-interface-designer/) | Find unlabeled controls in supplied screen descriptions |
 
-The [capability guide](docs/CAPABILITIES.md) distinguishes executable tools from profiles. The shared [Evidence Finder](services/evidence-finder/) serves these roles; it is not a twelfth assistant.
+The [capability guide](docs/CAPABILITIES.md) distinguishes executable tools from profiles. The shared [Evidence Finder](services/evidence-finder/) serves these roles; it is not another assistant.
 
-## Work from source
+## Create your own profile from source
 
-Use Python 3.12+ and Git. From a terminal on macOS or Linux:
+Use Python 3.12+ and Git. Clone the repository, then create a new kit:
 
 ```bash
 git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
 cd muse-ai-agent-presets
-PYTHONPATH=src python3 -B -m muse_presets.cli doctor
-PYTHONPATH=src python3 -B examples/github_quickstart.py --all
+python -B quickstart.py --role personal-companion --to "$HOME/my-assistant-kit"
+python -B quickstart.py --all
 ```
 
-On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python` instead of `python3`. The doctor and examples inspect local packages; they do not install assistants or connect external services.
+Use `python3` instead of `python` on macOS/Linux where appropriate. These commands also work in Windows PowerShell. The wrapper needs no `PYTHONPATH` setting or pip installation. Choose a new absolute destination: existing files are never overwritten. The `--all` command checks all 15 source kits in temporary folders; it does not install assistants.
+
+Your kit contains an editable identity, soul, user preferences, memory, opinion, voice and system-prompt draft under `system-profile/profile/`. Its three `subchat-scopes/` keep separate context and blank owner memory. `role-skills/` contains eight **disabled** descriptors: three role-specific methods plus five shared procedures. See [Installation and saved data](docs/INSTALL_AND_PERSISTENCE.md) before customizing or connecting a host.
+
+## Use the portable instruction library
+
+The source has **45 role methods plus five shared procedures = 50 unique procedures**. The five shared methods cover evidence, recovery, research, consent and handoff; repeating them across 15 kits creates 120 descriptor instances, not 120 different capabilities.
+
+```bash
+python -B examples/export_portable_skills.py --plan
+python -B examples/export_portable_skills.py --to "$HOME/my-portable-skills"
+python -B examples/export_portable_skills.py --inspect "$HOME/my-portable-skills"
+```
+
+The exporter creates 50 portable `SKILL.md` folders. It preserves native-style registry identifiers separately and does not register skills or grant tools. [Skills](docs/SKILLS.md) explains the two formats; [Capabilities](docs/CAPABILITIES.md) distinguishes runnable programs from instructions and offline fixtures.
 
 ## Documentation
 

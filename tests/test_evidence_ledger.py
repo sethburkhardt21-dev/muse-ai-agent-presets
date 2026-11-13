@@ -154,7 +154,7 @@ class EvidenceLedgerTests(unittest.TestCase):
                 out = store.capture(self.sources, 'example.txt', 'alpha', operation_id='role-op')
                 self.assertEqual(out['scope']['role_id'], role)
                 self.assertEqual(store.verify()['receipt_count'], 1)
-        self.assertEqual(len(ids['presets']), 11)
+        self.assertEqual(len(ids['presets']), 15)
         self.assertEqual(len(ids['services']), 1)
 
     def test_unknown_role_or_missing_authority_fails_closed(self):

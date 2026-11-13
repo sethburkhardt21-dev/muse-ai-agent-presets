@@ -14,6 +14,12 @@ No native Muse installation or paid API is needed for the included offline examp
 
 The executable kits cover Coordinator, Software Engineer, Model Builder, Claims Adjudicator, Garden Companion, Learning Coach, Reverse Engineering & Security Researcher, and Creative Studio.
 
+## Current source is newer than these downloads
+
+The repository source contains **15 profiles and 50 unique instruction procedures**: 45 role-specific methods plus five shared procedures. The four newer roles are Data Engineering & Database Architect, Infrastructure & Reliability Engineer, Automation Engineer, and Product & Interface Designer. Their bounded local examples run from a source checkout.
+
+The tagged v0.4.1-alpha still has eight executable ZIPs and eleven starter profiles. The new source does not replace those assets or create a new release. Use the source [quickstart](GITHUB_QUICKSTART.md) for the full 15-role catalog and portable instruction export.
+
 ## Verify and run
 
 Download `SHA256SUMS.txt` from the same release and compare the ZIP's SHA-256. Extract into a new directory, then follow `START_HERE.md` or `INSTALL.md`. Keep the license, dependency notices and verification files with the code.

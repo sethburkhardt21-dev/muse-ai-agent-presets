@@ -23,7 +23,7 @@ SCHEMA="muse-presets/optional-donor-source-v1"
 PINS_SCHEMA="muse-presets/donor-source-pins-v1"
 BASE="generic-first-party-source-v1"
 # Immutable local source digest, NOT a publisher signature.
-PINNED_MANIFEST_SHA256="7fd8d6179206218c36dce9458a588cab043dc891f1150b99b4c2c4ab9a5284f6"
+PINNED_MANIFEST_SHA256="f808e1e5b00345dbcb95e217a90199534aa0e71f0a53a204e981a9653cc84324"
 MAX_MANIFEST=40_000
 MAX_MODULE=300_000
 MAX_OUTPUT=256_000

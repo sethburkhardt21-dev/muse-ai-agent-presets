@@ -27,7 +27,7 @@ class GenericHostCanaryTests(unittest.TestCase):
 
     def test_all_eleven_roles_have_inert_staged_canaries_for_both_hosts(self):
         roles = load_registry()["presets"]
-        self.assertEqual(len(roles), 11)
+        self.assertEqual(len(roles), 15)
         for host in HOSTS:
             (self.root / host).mkdir()
             for role in roles:

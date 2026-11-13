@@ -1,6 +1,6 @@
 """R47 GitHub clean-clone role package verifier.
 
-Exercises eleven pristine local source packages and only supported offline
+Exercises fifteen pristine local source packages and only supported offline
 examples. No native Muse/Hatch account, plugin, network, desktop, model or
 remote machine is accessed. Unavailable engines are labelled, never faked.
 """
@@ -55,6 +55,31 @@ def _process(args:list[str],cwd:Path,*,timeout:int=60)->str:
 
 
 def _local_demo(root:Path,role:str,base:Path)->dict:
+    # These new source-tree engines perform bounded analysis, not native activation.
+    fixture_expectations = {
+        "data-engineering-architect": ("duplicate_count", 1),
+        "infrastructure-reliability-engineer": ("failures", 1),
+        "automation-engineer": ("order", ["build", "test"]),
+        "product-interface-designer": ("missing_control_labels", 1),
+    }
+    if role in fixture_expectations:
+        output=_process([sys.executable,"-B","examples/specialist_engine_demo.py",
+                         "--role",role],root,timeout=30)
+        data=json.loads(output)
+        field,expected=fixture_expectations[role]
+        if (type(data) is not dict or data.get("role")!=role
+                or data.get("grade")!="OFFLINE_FIXTURE_ONLY"
+                or data.get(field)!=expected
+                or data.get("native_registered") is not False
+                or data.get("external_effect_authorized") is not False
+                or data.get("production_effect_verified") is not False
+                or (role=="product-interface-designer"
+                    and data.get("actual_browser_test")!="NOT_RUN")):
+            raise ValueError("SPECIALIST_FIXTURE_EVIDENCE_INVALID")
+        return {"local_demo_grade":"LOCAL_OFFLINE_FIXTURE_DEMO_PASSED",
+                "local_engine_executed":True,"demo_exit_code":0,
+                "fixture_result_checked":True,
+                "independent_adjudicator_or_live_capture":False}
     if role in TEMPLATE_ROLES:
         return {"local_demo_grade":"SOURCE_TEMPLATE_ONLY",
                 "local_engine_executed":False,"demo_exit_code":None,
@@ -288,7 +313,7 @@ def verify_all(root:Path,roles:list[str])->dict:
 
 
 def main(argv:list[str]|None=None)->int:
-    parser=argparse.ArgumentParser(description="GitHub source-only eleven role qualification")
+    parser=argparse.ArgumentParser(description="GitHub source-only fifteen role qualification")
     options=parser.add_mutually_exclusive_group(required=True)
     options.add_argument("--all",action="store_true")
     options.add_argument("--role",choices=load_registry()["presets"])

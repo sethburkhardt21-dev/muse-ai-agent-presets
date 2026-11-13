@@ -22,7 +22,7 @@
       "external_effect_authorized": false,
       "files_sha256": {
         "examples/research_evaluator_demo.py": "4a44d2ed0b922e477c96e41664536020bdb1e37c88102a20aaea8489894c2348",
-        "src/muse_presets/catalog.py": "599bff2ed9847ba82a7787557ec931f2e36e716fdfb16d373e11cc321cb401f8",
+        "src/muse_presets/catalog.py": "8d2f49924dbdf538c61c5b3fc25d588812309ec4901d3f289ae0f387ca76c445",
         "src/muse_presets/database_paths.py": "1b3cb8a42cb29036aada91e314bffdbf397c46fdecf6227e4177022ac34acc79",
         "src/muse_presets/finder.py": "ac843e87c679f43f9aa1068874ba035cbb79aa938ef80f5dacdc60ad3b08fe23",
         "src/muse_presets/native_canary.py": "8fcfc6d86aec6cfdb559354680b806bb09ab78d4f8d47e1862f85a72667134e9",

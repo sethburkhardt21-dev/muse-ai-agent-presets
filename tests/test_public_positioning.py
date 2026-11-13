@@ -14,7 +14,7 @@ class ProductPositioningTests(unittest.TestCase):
         value=README.read_text(encoding="utf-8")
         hero=value.split("## Choose your specialist",1)[0].lower()
         self.assertIn("eight runnable offline python tools",hero)
-        self.assertIn("eleven customizable specialist",hero)
+        self.assertIn("fifteen customizable specialist",hero)
         self.assertIn("v0.4.1-alpha",hero)
         self.assertIn("not installed",hero)
         self.assertIn("native muse",hero)

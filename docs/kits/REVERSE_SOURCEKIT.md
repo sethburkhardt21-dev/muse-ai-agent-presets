@@ -10,7 +10,7 @@ network probing, desktop control, sandbox administration or authorization grants
 
 From this repository:
 
-    PYTHONPATH=src python3 -B examples/export_reverse_sourcekit.py --to ../reverse-offline-kit.zip
+    PYTHONPATH=src python3 -B examples/export_reverse_sourcekit.py --to "$HOME/reverse-offline-kit.zip"
     PYTHONPATH=src python3 -B examples/export_reverse_sourcekit.py --verify ../reverse-offline-kit.zip --sha256 <trusted-sha256>
 
 On Windows PowerShell, set `$env:PYTHONPATH='src'` and use `python`. The exporter

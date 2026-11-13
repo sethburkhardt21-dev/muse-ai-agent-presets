@@ -1,0 +1,30 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "automation-engineer",
+  "title": "Automation Engineer",
+  "description": "Validates workflow dependencies and idempotency with explicit consent, without scheduling external effects.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "coordinator",
+      "software-engineer",
+      "claims-adjudicator",
+      "adversarial-verifier"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}

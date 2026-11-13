@@ -18,7 +18,9 @@ ROLE_SLUGS={
  "coordinator","software-engineer","model-builder","research-evaluator",
  "creative-studio","adversarial-verifier","personal-companion",
  "garden-companion","learning-coach","claims-adjudicator",
- "reverse-engineering-researcher",
+ "reverse-engineering-researcher","data-engineering-architect",
+ "infrastructure-reliability-engineer","automation-engineer",
+ "product-interface-designer",
 }
 VISITOR_DOCS={
  "CAPABILITIES.md","CUSTOMIZE.md","SKILLS.md","CONNECTORS.md",

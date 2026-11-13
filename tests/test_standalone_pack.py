@@ -32,7 +32,7 @@ class StandaloneInstallTests(unittest.TestCase):
 
     def test_all_eleven_independent_standalone_packs(self):
         roles=load_registry()["presets"]
-        self.assertEqual(len(roles),11)
+        self.assertEqual(len(roles),15)
         for role in roles:
             d=self.make(role)
             self.assertEqual({p.name for p in d.iterdir()},
@@ -43,7 +43,7 @@ class StandaloneInstallTests(unittest.TestCase):
             self.assertFalse(report["native_installed"])
             self.assertFalse(report["can_apply"])
             self.assertEqual(report["subchat_count"],3)
-            self.assertEqual(report["skill_count"],3)
+            self.assertEqual(report["skill_count"],8)
             self.assertIsNone(report.get("provider_owner_id"))
             receipt=json.loads((d/api.MANIFEST).read_text(encoding="utf-8"))
             self.assertEqual(len(receipt["components"]),3)
