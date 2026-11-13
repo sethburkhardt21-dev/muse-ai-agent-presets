@@ -37,3 +37,5 @@ Use these only when you need the corresponding historical package:
 Published archives do not change when documentation on the main branch is edited. A repository checkout may contain changes not included in a release; use the instructions that match the code you downloaded.
 
 [Get started](GITHUB_QUICKSTART.md) · [Develop a tool](DEVELOPMENT.md)
+
+GitHub source snapshots are exported from a clean public tree without private history or owner memory. A native Muse account is not required for the offline examples. The historical 11 starter ZIPs remain tied to their original release; source additions do not replace them.

@@ -19,3 +19,5 @@ Run the package's supported local checks and review the files it creates. A hash
 [Role guide](README.md) · [Installation and saved data](../../docs/INSTALL_AND_PERSISTENCE.md)
 
 For the complete source setup, expected outputs and troubleshooting, see [Get started](../../docs/GITHUB_QUICKSTART.md).
+
+The source wrapper delegates to [examples/github_quickstart.py](../../examples/github_quickstart.py); use the wrapper above for the no-environment-variable route.

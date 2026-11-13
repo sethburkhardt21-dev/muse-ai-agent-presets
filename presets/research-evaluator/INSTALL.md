@@ -19,3 +19,16 @@ Run the package's supported local checks and review the files it creates. A hash
 [Role guide](README.md) · [Installation and saved data](../../docs/INSTALL_AND_PERSISTENCE.md)
 
 For the complete source setup, expected outputs and troubleshooting, see [Get started](../../docs/GITHUB_QUICKSTART.md).
+
+The source wrapper delegates to [examples/github_quickstart.py](../../examples/github_quickstart.py); use the wrapper above for the no-environment-variable route.
+
+## Try source checks and numerical evaluation
+
+From the repository root on macOS/Linux:
+
+```bash
+PYTHONPATH=src python3 -B examples/research_evaluator_demo.py
+PYTHONPATH=src python3 -B examples/numeric_evaluation_demo.py
+```
+
+In PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. The first command checks supplied quotations; the second scores fictional held-out predictions and rejects tampered input. `LOCAL_NUMERIC_HELDOUT_EVALUATED` is a local numerical result, not independently verified scientific truth or native Muse execution.

@@ -19,7 +19,7 @@ The demo creates production JSON, a shot-list CSV and a textual HTML storyboard 
 
 ## Clone and verify the current source
 
-Use Python 3.12+ and Git. Run the commands below in bash or Windows PowerShell; use `python3` on macOS/Linux if that is your installed command.
+Clone the source from GitHub using Python 3.12+ and Git. Run the commands below in bash or Windows PowerShell; use `python3` on macOS/Linux if that is your installed command.
 
 ```bash
 git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
@@ -35,7 +35,7 @@ No `PYTHONPATH` setting or pip install is needed for this wrapper. It creates an
 python -B quickstart.py --role personal-companion --to "$HOME/my-assistant-kit"
 ```
 
-Choose an unused absolute destination. Read the generated `INSTALL.md`; then edit your own identity, instructions and preferences under `system-profile/profile/`. Each of three subchat drafts has separate context and blank memory. Eight descriptors per role start disabled. The copy is yours to customize; do not overwrite owner memory or treat a directory as proof of host installation. See [Installation and saved data](INSTALL_AND_PERSISTENCE.md).
+Other source-only role choices include `software-engineer`, `reverse-engineering-researcher` and the four newer specialists in [Capabilities](CAPABILITIES.md). Choose an unused absolute destination. Read the generated `INSTALL.md`; then edit your own identity, instructions and preferences under `system-profile/profile/`. Each of three subchat drafts has separate context and blank memory. Eight descriptors per role start disabled. The copy is yours to customize; do not overwrite owner memory or treat a directory as proof of host installation. See [Installation and saved data](INSTALL_AND_PERSISTENCE.md).
 
 ## Export portable instructions
 
