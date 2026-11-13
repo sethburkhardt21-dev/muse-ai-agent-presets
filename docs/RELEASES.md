@@ -1,46 +1,41 @@
-# Downloads and versions
+# Downloads
 
-The public repository presents the currently published source products. The downloadable ZIPs and release tags remain available even when the README and documentation improve.
+[Open the current release: v0.4.1-alpha](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha)
 
-## Current toolkit — v0.4.1-alpha
+## Choose a package
 
-**[Download the complete source and specialist kits](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha)**
+| Download | Use it for |
+| --- | --- |
+| **Executable kit** | Run one of eight runnable offline Python tools. Each includes source, a start guide and local examples. |
+| **Starter profile** | Customize one of eleven starter profiles with your own instructions and methods. A starter profile is not a model-backed autonomous assistant. |
+| **Complete toolkit** | Inspect or develop all modules, examples and tests included in this release. |
 
-**Two products can be downloaded now:** eight runnable offline Python executable ZIPs (download, verify, extract, run) and eleven starter profile ZIPs (customizable role instructions, not autonomous runtimes). **No native Muse installation** is required for offline tools. A starter ZIP is **not a model-backed autonomous assistant**.
+No native Muse installation or paid API is needed for the included offline examples. Check the package's guide for Python, Git and platform requirements. To choose by task, read [Capabilities](CAPABILITIES.md).
 
-The eight executable kits are Coordinator, Software Engineer, Model Builder, Claims Adjudicator, Garden Companion, Learning Coach, Reverse Engineering & Security Researcher, and Creative Studio. The complete toolkit contains all source modules, documentation and tests. Each executable includes a start guide.
+The executable kits cover Coordinator, Software Engineer, Model Builder, Claims Adjudicator, Garden Companion, Learning Coach, Reverse Engineering & Security Researcher, and Creative Studio.
 
-The current toolkit includes portable engineering and builder delivery, small-model training/install examples, research citation/numerical checks, offline handoff and restart utilities. All downloads include SHA-256 checksums. No paid service or native Muse installation is required for the local source examples.
+## Current source is newer than these downloads
 
-Use the complete toolkit ZIP or clone main for the widest capability set. A profile ZIP is not a substitute for an executable runtime kit. This is an alpha source distribution, not a hosted autonomous service.
+The repository source contains **15 profiles and 50 unique instruction procedures**: 45 role-specific methods plus five shared procedures. The four newer roles are Data Engineering & Database Architect, Infrastructure & Reliability Engineer, Automation Engineer, and Product & Interface Designer. Their bounded local examples run from a source checkout.
 
+The tagged v0.4.1-alpha still has eight executable ZIPs and eleven starter profiles. The new source does not replace those assets or create a new release. Use the source [quickstart](GITHUB_QUICKSTART.md) for the full 15-role catalog and portable instruction export.
 
-## Eleven specialist source kits
+## Verify and run
 
-**[Download the generic specialist kits (v0.2.0-alpha)](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha)**
+Download `SHA256SUMS.txt` from the same release and compare the ZIP's SHA-256. Extract into a new directory, then follow `START_HERE.md` or `INSTALL.md`. Keep the license, dependency notices and verification files with the code.
 
-11 separately downloadable source ZIPs—one for each role. Each contains a source profile, editable methods and local setup information. Native installation is not required to inspect or customize a kit.
+A checksum verifies the downloaded bytes against the published list. It does not authenticate an account, approve third-party rights or authorize external actions. See [Security](SECURITY.md).
 
-## Software Engineer executable source kit
+## Earlier releases
 
-**[Download the extended Software Engineer kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha)**
+Use these only when you need the corresponding historical package:
 
-A separate, larger offline engineering source package with a reviewed local Claim Gate and disposable Git test exercises. It is not the same ZIP as the smaller generic Software Engineer starter.
+- [Eleven starter profiles — v0.2.0-alpha](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha).
+- [Software Engineer executable archive](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha), which includes the local Claim Gate and disposable Git repair exercises.
+- [Initial source archive — v0.1.0-alpha](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.1.0-alpha).
 
-## Earlier source archive
+Published archives do not change when documentation on the main branch is edited. A repository checkout may contain changes not included in a release; use the instructions that match the code you downloaded.
 
-The [initial alpha package](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.1.0-alpha) remains available for historical compatibility.
+[Get started](GITHUB_QUICKSTART.md) · [Develop a tool](DEVELOPMENT.md)
 
-## Version expectations
-
-- This is a GitHub source distribution. Its programs and templates can be inspected locally without a native Muse account.
-- Downloaded ZIPs are versioned artifacts; new repository documentation does not silently replace or modify their bytes.
-- The source code, examples and tests are available under MIT. Release files and dependency notices should be retained together.
-- A **clean public GitHub export** contains product files, not the private development history or machine-specific records.
-- Native installation is optional and not required for the source release. Live services and external effects are not included by default.
-
-For the current list of features, see [Capabilities](CAPABILITIES.md) and [Get started](GITHUB_QUICKSTART.md). If you are extending a role, use the [development guide](EXTENDING_GENERIC_AGENTS.md). Verification commands and privacy checks are documented under [Security](SECURITY.md).
-
-## New source roles beyond the current ZIP release
-
-The source adds four new editable profiles: Data Engineering & Database Architect, Infrastructure & Reliability Engineer, Automation Engineer, and Product & Interface Designer. Their four offline exercises are **source-tree examples, not additional published standalone ZIPs**. The tagged v0.4.1-alpha remains eight executable ZIPs and eleven starter ZIPs. New source files do not constitute native Muse installation. See [Capabilities](CAPABILITIES.md) and [Get started](GITHUB_QUICKSTART.md).
+GitHub source snapshots are exported from a clean public tree without private history or owner memory. A native Muse account is not required for the offline examples. The historical 11 starter ZIPs remain tied to their original release; source additions do not replace them.

@@ -1,15 +1,23 @@
-# Reverse Engineering Researcher
+# Reverse Engineering & Security Researcher
 
-Compare supplied observation records and document authorized behavioral analysis. No live capture or network probing is performed.
+Compare recorded application behavior and review observations.
 
-**[Install and customize](INSTALL.md)** · **[Capabilities](../../docs/CAPABILITIES.md)** · **[Runnable workflows](../../docs/WORKFLOWS.md)**
+## Run the tool
 
-This kit includes editable instructions, scoped methods and disabled skill descriptors. Local runtime tools are supplied by the full repository; an older standalone starter ZIP may include only the profile templates.
+[Download the executable kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/reverse-engineering-researcher-executable-v0.4.1-alpha.zip) and its [checksum list](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt). Extract into a new folder and follow the included start guide.
 
-No native Muse agent, connected account or external action is enabled automatically. Review source before executing local tests.
+From the repository root:
 
-## Standalone executable kit
+```bash
+PYTHONPATH=src python3 -B examples/priority_slices.py
+```
 
-Build an independently runnable offline package using `examples/export_reverse_sourcekit.py`.
-Follow the [kit guide](../../docs/kits/REVERSE_SOURCEKIT.md) for verified extraction,
-self-tests and usage. It does not install a native assistant or activate external connectors.
+## Customize the profile
+
+Use [the setup guide](INSTALL.md) to create a separate working copy, then edit its instructions and preferences. Generated skills and connectors remain disabled until you configure an integration.
+
+## Limits
+
+This tool compares supplied records; it does not capture live devices or probe network targets. No native Muse installation is performed.
+
+[Package guide](../../docs/kits/REVERSE_SOURCEKIT.md) · [Installation and saved data](../../docs/INSTALL_AND_PERSISTENCE.md)

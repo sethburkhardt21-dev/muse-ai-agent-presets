@@ -33,7 +33,7 @@ class ProductPositioningTests(unittest.TestCase):
         self.assertIn("creative-studio-executable-v0.4.1-alpha.zip",quick)
         self.assertIn("python -I -B run.py --operation self-test",quick)
         self.assertIn('python -I -B run.py --operation demo --to "$HOME/creative-production-demo"',quick)
-        self.assertIn("Python 3.12+; Git is not required",quick)
+        self.assertIn("you need Python 3.12+, but not Git",quick)
         self.assertIn("For this Creative Studio example",quick)
         self.assertIn("Software Engineer workflows may require Git",quick)
         self.assertNotIn("For executable ZIPs: Python 3.12+ only.",quick)

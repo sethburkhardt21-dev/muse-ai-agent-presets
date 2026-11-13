@@ -1,13 +1,23 @@
 # Creative Studio
 
-Customize a design and media-production source profile. An offline production planner is also available; no image or animation renderer is bundled.
+Plan shots, timelines and continuity, then export production files and a textual storyboard.
 
-**[Install and customize](INSTALL.md)** · **[Capabilities](../../docs/CAPABILITIES.md)** · **[Runnable workflows](../../docs/WORKFLOWS.md)**
+## Run the tool
 
-This kit includes editable instructions, scoped methods and disabled skill descriptors. Local runtime tools are supplied by the full repository; an older standalone starter ZIP may include only the profile templates.
+[Download the executable kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip) and its [checksum list](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt). Extract into a new folder and follow the included start guide.
 
-No native Muse agent, connected account or external action is enabled automatically. Review source before executing local tests.
+From the repository root:
 
-## Standalone Creative Studio production planner
+```bash
+PYTHONPATH=src python3 -B examples/creative_studio_demo.py
+```
 
-The [offline source kit](../../docs/kits/CREATIVE_SOURCEKIT.md) compiles an authored brief into stable shot IDs, a frame timeline, symbolic continuity checks, asset tasks and an accessible textual HTML board. Run the source exporter `examples/export_creative_sourcekit.py` or download the independently verified executable ZIP. It does not generate or render images or authenticate media rights.
+## Customize the profile
+
+Use [the setup guide](INSTALL.md) to create a separate working copy, then edit its instructions and preferences. Generated skills and connectors remain disabled until you configure an integration.
+
+## Limits
+
+This is a production planner, not an image or video renderer. No native Muse installation is performed.
+
+[Package guide](../../docs/kits/CREATIVE_SOURCEKIT.md) · [Installation and saved data](../../docs/INSTALL_AND_PERSISTENCE.md)

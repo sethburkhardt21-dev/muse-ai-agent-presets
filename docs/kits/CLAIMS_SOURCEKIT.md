@@ -2,7 +2,7 @@
 
 A self-contained source ZIP wraps the existing first-party Claims Adjudicator scope checker, preserving its conservative evidence grades and every limiting condition. It runs actual local Python logic, but **does not authenticate the supplied evidence**, deliver an external opinion, modify accounts, install native Muse skills, or judge factual truth.
 
-The downloadable kit is separate from the smaller generic Claims Adjudicator starter. It includes two executable Python source files, a disabled role profile, editable playbook, a fictional input, installation directions, license and byte-integrity manifest.
+The executable kit contains runnable claim-review code; the Claims Adjudicator starter contains editable instructions. It includes two executable Python source files, a disabled role profile, editable playbook, a fictional input, installation directions, license and byte-integrity manifest.
 
 ## Build, verify and run
 
