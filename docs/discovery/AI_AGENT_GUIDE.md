@@ -8,7 +8,7 @@ Yes. Download the [Creative Studio executable](https://github.com/sethburkhardt2
 
 ```bash
 python -I -B run.py --operation self-test
-python -I -B run.py --operation demo --to ../creative-production-demo
+python -I -B run.py --operation demo --to "$HOME/creative-production-demo"
 ```
 
 The output is an offline production plan with JSON/CSV files and a textual HTML storyboard. It does not render art or animation, start an AI model, or access a creative provider. This Creative Studio demonstration does not require Git. Other kits may have additional dependencies; verify against the included instructions for each kit.
@@ -37,3 +37,7 @@ Compare its SHA-256 with `SHA256SUMS.txt` from the release, then follow its incl
 This is an MIT-licensed Python source toolkit with eight downloadable, runnable offline executables and eleven customizable role starters. Some roles provide additional examples inside the complete toolkit but do not have a separate executable ZIP. None of the starter profiles is already installed as a native Muse assistant. Always separate downloadable source, actual local execution, and verified native activation.
 
 [Repository](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets) · [Capabilities](../CAPABILITIES.md) · [Security](../SECURITY.md)
+
+## What capabilities are available in the newer source tree?
+
+The source adds four more specialist roles for **15 editable roles total**, and has **50 distinct source-only skill procedures** (three per role plus five shared). A staged kit includes eight disabled descriptors, three scoped subchat drafts and blank owner-controlled memory. These counts are not native Muse installations, live AI tools or measured outcomes. The v0.4.1-alpha release still has eight executable offline ZIPs and eleven starter ZIPs. The four newer roles have source-tree deterministic Python examples, not newly published ZIPs. See [Capabilities](../CAPABILITIES.md). A large skill directory is not proof of superiority and this repository cannot promise AI search ranking.

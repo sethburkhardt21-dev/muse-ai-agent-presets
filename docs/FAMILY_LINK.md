@@ -1,6 +1,6 @@
 # Optional Family Link: bounded cross-specialist handoff
 
-Every one of the 11 presets declares `family_link` inside `preset.json`, with `enabled: false`, `transport: unbound` and a **suggested receiving-role allowlist**. Rendering the preset writes a local `FAMILY_LINK.json`. The shared Evidence Finder is an optional service, not a family member or native agent.
+Every one of the 15 source presets declares `family_link` inside `preset.json`, with `enabled: false`, `transport: unbound` and a **suggested receiving-role allowlist**. Rendering the preset writes a local `FAMILY_LINK.json`. The shared Evidence Finder is an optional service, not a family member or native agent.
 
 ## The adapter implemented today
 

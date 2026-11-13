@@ -45,7 +45,7 @@ class AgentDiscoveryTests(unittest.TestCase):
   self.assertEqual(doc["license"],"MIT")
   catalog=json.loads((ROOT/"presets/catalog.json").read_text(encoding="utf-8"))
   self.assertEqual(sorted(doc["starter_roles"]),sorted(catalog["presets"]))
-  self.assertEqual(len(doc["starter_roles"]),11)
+  self.assertEqual(len(doc["starter_roles"]),15)
   kits=doc["executable_offline_kits"]
   self.assertEqual(len(kits),8)
   self.assertEqual({x["role"] for x in kits},set(EIGHT))

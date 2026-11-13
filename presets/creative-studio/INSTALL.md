@@ -5,7 +5,7 @@ Use Python 3.12+ and Git. These are portable source files, not a native Muse ins
 ## From the repository
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role creative-studio --to ../my-creative-studio
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role creative-studio --to "$HOME/my-creative-studio"
 ```
 
 On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. Choose a new output directory; existing files are never overwritten. The source kit and its local inspection result do not authenticate a native host or grant tool access.
@@ -22,4 +22,4 @@ The local receipt is an integrity check, not a native installation or authentica
 
 ## Executable offline production planner
 
-From this repository, run `PYTHONPATH=src python3 -B examples/export_creative_sourcekit.py --to ../creative-studio.zip`. Verify the archive hash and extract into a new directory. Then run `python -I -B run.py --operation self-test` and `python -I -B run.py --operation demo --to /absolute/new/production`. See [supported briefs and safety boundaries](../../docs/kits/CREATIVE_SOURCEKIT.md). No native account is connected, and user briefs stay outside the immutable kit.
+From this repository, run `PYTHONPATH=src python3 -B examples/export_creative_sourcekit.py --to "$HOME/creative-studio.zip"`. Verify the archive hash and extract into a new directory. Then run `python -I -B run.py --operation self-test` and `python -I -B run.py --operation demo --to /absolute/new/production`. See [supported briefs and safety boundaries](../../docs/kits/CREATIVE_SOURCEKIT.md). No native account is connected, and user briefs stay outside the immutable kit.

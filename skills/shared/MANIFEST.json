@@ -1,0 +1,14 @@
+{
+  "schema": "muse-presets/shared-source-skills-v1",
+  "skills": [
+    "evidence-audit",
+    "safe-resume",
+    "research-verification",
+    "consent-and-effects",
+    "quality-handoff"
+  ],
+  "native_installed": false,
+  "default_enabled": false,
+  "source_grade": "PORTABLE_WORKFLOW_GUIDANCE_ONLY",
+  "count": 5
+}

@@ -289,7 +289,7 @@ def _source_runtime() -> dict[str, bytes]:
         raise ValueError("SOURCE_NOT_ADMITTED")
     raw=path.read_bytes()
     names=load_registry()["presets"]
-    if (type(names) is not list or len(names)!=11 or len(set(names))!=11 or
+    if (type(names) is not list or len(names)!=15 or len(set(names))!=15 or
         "coordinator" not in names):
         raise ValueError("CATALOG_INVALID")
     roles=_serialized({"schema":"r33/generic-role-catalog-v1","roles":sorted(names)})

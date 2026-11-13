@@ -14,7 +14,7 @@ import re
 import stat
 import sys
 
-from .catalog import ROOT,render_preset
+from .catalog import ROOT,render_preset,DOCUMENTS
 
 PACK_ROOT=ROOT/"presets"/"software-engineer"
 ENGINE_ROOT=PACK_ROOT/"runtime"/"claim-gate"
@@ -35,12 +35,8 @@ RUNTIME_FILES=frozenset({
     "portable_lock.py","engineering_workflow.py","workflow_worker.py",
 })
 SKILL_FILES=frozenset({"SKILL.md","skill.yaml"})
-PROFILE_FILES=frozenset({
-    "AGENTS.md","FAMILY_LINK.json","HEARTBEAT.md","HOOKS.md",
-    "IDENTITY.md","MEMORY.md","PROACTIVE_PREFERENCES.md",
-    "RECEIPT.json","ROLE_PLAYBOOK.md","SOUL.md","SUBCHATS.md",
-    "SYSTEM_INSTRUCTIONS.md","TOOLS.md","USER.md",
-})
+PROFILE_FILES=frozenset((*DOCUMENTS,"FAMILY_LINK.json",
+                          "RECEIPT.json","ROLE_PLAYBOOK.md"))
 HEX=re.compile(r'^[0-9a-f]{64}$')
 
 

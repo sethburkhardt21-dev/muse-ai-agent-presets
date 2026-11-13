@@ -32,7 +32,7 @@ class SubchatScopesTests(unittest.TestCase):
 
     def test_all_eleven_roles_three_unique_nonempty_subchats(self):
         roles = load_registry()["presets"]
-        self.assertEqual(len(roles), 11)
+        self.assertEqual(len(roles), 15)
         total = 0
         for role in roles:
             dest = self.stage(role)
@@ -56,7 +56,7 @@ class SubchatScopesTests(unittest.TestCase):
             self.assertFalse(report["native_loaded"])
             self.assertFalse(report["can_apply"])
             total += 3
-        self.assertEqual(total, 33)
+        self.assertEqual(total, 45)
 
     def test_staging_pin_mismatch_before_creating_destination(self):
         dest = self.root / "bad"

@@ -1,6 +1,6 @@
 # Capabilities
 
-The repository includes eleven editable specialist profiles and a growing set of runnable local tools. This page describes **the source available on current main**, not a hosted service or installed native agent. Versioned downloads may contain older source; see [Downloads](RELEASES.md).
+The source tree provides fifteen editable specialist profiles (eleven shipped in v0.4.1-alpha starter ZIPs), eight separately downloadable offline executables and four additional source-tree-only offline demos. These grades are different. This page describes **the source available on current main**, not a hosted service or installed native agent. Versioned downloads may contain older source; see [Downloads](RELEASES.md).
 
 ## Choose the right starting point
 
@@ -17,8 +17,12 @@ The repository includes eleven editable specialist profiles and a growing set of
 | `learning-coach` | Source-based study sessions, local scoring and review scheduling in SQLite | Clinical approval, native tutoring or external scheduling |
 | `claims-adjudicator` | Conservative claim-scope review; shared Evidence Finder and provenance tooling | An independently authenticated verdict |
 | `reverse-engineering-researcher` | Comparison of supplied observation records and defensive-review methods | Live device capture, network probing or an attack engine |
+| `data-engineering-architect` | Schema, deduplication and read-only migration planning; source-only role plus deterministic local fixture | Duplicate-key and null-field report; no production data |
+| `infrastructure-reliability-engineer` | SLOs, incident evidence and bounded recovery planning; source-only role plus deterministic local fixture | Synthetic error-budget calculation; no live monitoring |
+| `automation-engineer` | Deterministic task dependencies and idempotency; source-only role plus deterministic local fixture | Ordered DAG with cycle refusal; no scheduled effect |
+| `product-interface-designer` | First-use journeys and controls/accessibility review; source-only role plus deterministic local fixture | Static missing-label report; not a browser certificate |
 
-The **[shared Evidence Finder](../services/evidence-finder/)** stores local findings and supports recovery after source removal. It is not a twelfth assistant.
+The **[shared Evidence Finder](../services/evidence-finder/)** stores local findings and supports recovery after source removal. It is not an additional assistant.
 
 ## Run something useful
 

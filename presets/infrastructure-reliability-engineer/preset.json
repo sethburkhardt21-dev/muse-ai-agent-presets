@@ -1,0 +1,30 @@
+{
+  "schema": "muse-presets/preset-v1",
+  "id": "infrastructure-reliability-engineer",
+  "title": "Infrastructure & Reliability Engineer",
+  "description": "Reviews local incidents, service-level signals and recovery evidence without changing production infrastructure.",
+  "maturity": "SOURCE_TEMPLATE_ONLY",
+  "native_muse_status": "UNBOUND",
+  "host_profiles": [
+    "personal-muse-unverified",
+    "muse-code-separate-adapter"
+  ],
+  "family_link": {
+    "enabled": false,
+    "transport": "unbound",
+    "mode": "proposal-only",
+    "suggested_receivers": [
+      "coordinator",
+      "adversarial-verifier",
+      "claims-adjudicator",
+      "software-engineer"
+    ],
+    "trusted_signer": null,
+    "native_recipient": null
+  },
+  "requirements": {
+    "permissions": [],
+    "external_services": [],
+    "secret_values": []
+  }
+}

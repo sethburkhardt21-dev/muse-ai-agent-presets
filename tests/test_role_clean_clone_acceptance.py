@@ -23,10 +23,10 @@ class RoleCleanCloneAcceptanceTests(unittest.TestCase):
     def test_all_eleven_distinct_packages_source_checked(self):
         result=self.report
         self.assertEqual(result["status"],"CLEAN_CLONE_ROLE_MATRIX_SOURCE_ONLY")
-        self.assertEqual(result["role_count"],11)
+        self.assertEqual(result["role_count"],15)
         self.assertEqual(set(result["roles"]),set(load_registry()["presets"]))
-        self.assertEqual(result["subchats"],33)
-        self.assertEqual(result["disabled_skills"],33)
+        self.assertEqual(result["subchats"],45)
+        self.assertEqual(result["disabled_skills"],120)
         self.assertFalse(result["native_installed"])
         self.assertFalse(result["public_git_pushed"])
         self.assertFalse(result["provider_connected"])
@@ -36,7 +36,7 @@ class RoleCleanCloneAcceptanceTests(unittest.TestCase):
             self.assertRegex(item["role_zip_sha256"],r"^[0-9a-f]{64}$")
             self.assertTrue(item["role_zip_file_count"]>20)
             self.assertEqual(item["subchats"],3)
-            self.assertEqual(item["disabled_skills"],3)
+            self.assertEqual(item["disabled_skills"],8)
             self.assertFalse(item["external_effects_authorized"])
             self.assertFalse(item["native_installed"])
             self.assertFalse(item["provider_connected"])
@@ -109,7 +109,7 @@ class RoleCleanCloneAcceptanceTests(unittest.TestCase):
             with redirect_stdout(buffer):
                 self.assertEqual(verify.main(["--all"]),0)
         parsed=json.loads(buffer.getvalue())
-        self.assertEqual(parsed["role_count"],11)
+        self.assertEqual(parsed["role_count"],15)
         self.assertFalse(parsed["native_installed"])
         self.assertFalse(parsed["public_git_pushed"])
 

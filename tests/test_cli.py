@@ -17,7 +17,7 @@ class CliTests(unittest.TestCase):
         output=io.StringIO()
         with redirect_stdout(output): code=main(['list'])
         self.assertEqual(code,0)
-        self.assertEqual(len(output.getvalue().splitlines()),11)
+        self.assertEqual(len(output.getvalue().splitlines()),15)
 
     def test_render_then_deny_existing(self):
         with tempfile.TemporaryDirectory() as tmp:

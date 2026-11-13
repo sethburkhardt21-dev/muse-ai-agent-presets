@@ -1,113 +1,82 @@
 # Specialist AI Agent Kits
 
-**Eight runnable offline Python tools. Eleven customizable specialist AI role kits. One open-source toolkit.**
+**Eight runnable offline Python tools. Fifteen customizable specialist AI role profiles. Fifty distinct source procedures.**
 
 [![Source checks](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml/badge.svg)](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Source kits](https://img.shields.io/badge/assistant_kits-11-555.svg)](presets/catalog.json)
+[![Source roles: 15](https://img.shields.io/badge/source_roles-15-555.svg)](presets/catalog.json)
 
-Download an **executable specialist kit** to run an offline workflow today, or customize one of eleven role-source starter kits. The shipped tools cover engineering, planning, local calendars, study and evidence workflows. No paid API is needed for their offline examples.
+**Start with a useful result:** run an offline executable, or create a personal assistant source kit with editable identity, memory, voice, methods, subchats and disabled skills. No paid API is needed for the included fictional demos.
 
 [**Download v0.4.1 alpha**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
 
-> **Two products ship:** eight **runnable** offline Python tools and eleven editable **starter profiles**, as source-only ZIPs. These are **not installed native Muse agents** or a hosted agent service. Extracting a profile does not install a model-backed autonomous assistant; live accounts and effects require separate authorization. Unofficial; not affiliated with or endorsed by Meta.
+> **Released vs source:** v0.4.1-alpha contains **eight runnable offline Python executable ZIPs and eleven starter-profile ZIPs**. This source tree adds four editable specialist roles and local examples—not four new released ZIPs. Starter profiles are **not installed native Muse agents**, model-backed autonomous services or authenticated accounts. Real Muse permissions and tools require separate supported host setup. Unofficial; not affiliated with or endorsed by Meta.
 
-## Run a standalone tool now
+## Run a released offline executable
 
-Pick the **executable** ZIP, not the **starter** profile ZIP.
-
-1. [Download Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip) and verify its SHA-256 with [SHA256SUMS.txt](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt).
-2. Extract it to a new directory. Python 3.12+ is required; Git, an API key, and native Muse installation are not.
-3. From the extracted directory, run:
+1. [Download Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip) and verify its SHA-256 against [SHA256SUMS.txt](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/SHA256SUMS.txt).
+2. Extract to a new directory. Use Python 3.12+; this demo needs no Git, API key or Muse installation.
+3. Inside the extracted folder:
 
 ```bash
 python -I -B run.py --operation self-test
-python -I -B run.py --operation demo --to ../creative-production-demo
+python -I -B run.py --operation demo --to "$HOME/creative-production-demo"
 ```
 
-The demonstration creates JSON, CSV and a **textual** HTML storyboard; it is not a model-backed autonomous assistant or an animation renderer. [Other offline kits](docs/GITHUB_QUICKSTART.md#run-a-standalone-tool-without-cloning) provide their own verified commands.
+This creates JSON/CSV and a **textual HTML storyboard**. It does not render animation; it is not a model-backed autonomous assistant. [Other executable ZIPs](docs/RELEASES.md) offer offline engineering, planning, study and evidence workflows.
 
-## For AI agents and automated readers
+## Create a source-only agent kit
 
-[AI-agent discovery index](llms.txt) · [Verified capability facts](docs/discovery/agent-capabilities.json) · [Plain-language agent FAQ](docs/discovery/AI_AGENT_GUIDE.md).
-
-## Choose your specialist
-
-| Kit | Designed for |
-| --- | --- |
-| [Coordinator](presets/coordinator/) | Organizing tasks, reviewing plans and documenting handoffs |
-| [Software Engineer](presets/software-engineer/) | Debugging, source review and controlled engineering workflows |
-| [Model Builder](presets/model-builder/) | Model evaluation methods, data checks and development workflows |
-| [Research Evaluator](presets/research-evaluator/) | Evidence tracking, evaluation design and held-out comparisons |
-| [Creative Studio](presets/creative-studio/) | Offline production briefs, timelines, continuity checks, and textual storyboards |
-| [Adversarial Verifier](presets/adversarial-verifier/) | Defensive testing, failure analysis and independent review |
-| [Personal Companion](presets/personal-companion/) | Everyday organization and adaptable assistant experiences |
-| [Garden Companion](presets/garden-companion/) | Plant notes, planning and local calendar examples |
-| [Learning Coach](presets/learning-coach/) | Source-based study, questions and review planning |
-| [Claims Adjudicator](presets/claims-adjudicator/) | Evidence boundaries, claim qualification and correction |
-| [Reverse Engineering & Security Researcher](presets/reverse-engineering-researcher/) | Authorized observation and behavioral comparison |
-
-The shared **[Evidence Finder](services/evidence-finder/)** is available to multiple roles; it is not a twelfth agent. Individual kits include a role profile, methods, configuration templates, local documentation and disabled optional connector declarations.
-
-## Try the toolkit
-
-Requires **Python 3.12+ and Git**. The core examples use the Python standard library and do not require a paid API.
+Clone and use the source wrapper—**no PYTHONPATH or pip install needed**:
 
 ```bash
 git clone https://github.com/sethburkhardt21-dev/muse-ai-agent-presets.git
 cd muse-ai-agent-presets
-
-PYTHONPATH=src python3 -B -m muse_presets.cli doctor
-PYTHONPATH=src python3 -B examples/github_quickstart.py --all
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role garden-companion --to ../my-garden-agent
+python -B quickstart.py --role personal-companion --to "$HOME/my-assistant-kit"
 ```
 
-On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python` instead of `python3`. The last command creates a **new** folder and refuses to overwrite existing user files.
+Use `python3` on macOS/Linux as appropriate. It refuses an existing destination. The created `system-profile/` contains AGENTS, IDENTITY, SOUL, USER, MEMORY, OPINION, VOICE, SYSTEM_PROMPT, TOOLS, HEARTBEAT, DOORS and ENGINE_MATRIX. Three separate `subchat-scopes/` have their own context and blank memory. `role-skills/` has eight **disabled** skill descriptors per role. No native host registration occurs.
 
-For a shorter route, download an individual ZIP from the [current release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha), extract it and follow its included `INSTALL.md`.
+Run `python -B quickstart.py --all` to smoke all 15 roles in temporary directories. Four new specialist engines have separate **fictional offline examples**: set `PYTHONPATH=src`, then run `python -B examples/specialist_engine_demo.py --role automation-engineer` (PowerShell: `$env:PYTHONPATH = "src"`). This reports a graph; it does not dispatch jobs.
 
-## More than role templates
+## For AI agents and automated readers
 
-The current source includes **runnable engineering, model-building and research tools**, alongside the editable starter profiles.
+[AI-agent discovery index](llms.txt) ? [Verified capability facts](docs/discovery/agent-capabilities.json) ? [Agent FAQ](docs/discovery/AI_AGENT_GUIDE.md).
 
-| Goal | Start here |
+## Choose your specialist
+
+| Role | Useful source-based task |
 | --- | --- |
-| Reproduce and repair a bug | Disposable Git workflow with failing tests, passing tests and independent review |
-| Build and test safely | Source-pinned worktree staging, reviewed Python execution and optional Mac Swift typechecking |
-| Explore model training | Small deterministic training examples, held-out evaluation and transactional local installation |
-| Check research evidence | Exact quotation/source checks and grouped numerical evaluation |
-| Preserve progress | Local restart verification, evidence storage and handoff review |
+| [Coordinator](presets/coordinator/) | Scope tasks, reconcile interruptions and review handoffs |
+| [Software Engineer](presets/software-engineer/) | Reproduce defects, test repairs and review Git source |
+| [Model Builder](presets/model-builder/) | Small synthetic model-training and evaluation examples |
+| [Research Evaluator](presets/research-evaluator/) | Check quotations, held-out scores and evaluation limits |
+| [Creative Studio](presets/creative-studio/) | Offline briefs, timelines and textual storyboards |
+| [Adversarial Verifier](presets/adversarial-verifier/) | Defensive review methods; starter template |
+| [Personal Companion](presets/personal-companion/) | Editable organization, preference and assistance methods |
+| [Garden Companion](presets/garden-companion/) | Local SQLite plant records and calendar review |
+| [Learning Coach](presets/learning-coach/) | Source-based study, scores and review sessions |
+| [Claims Adjudicator](presets/claims-adjudicator/) | Evidence boundaries and conservative claim review |
+| [Reverse Engineering & Security Researcher](presets/reverse-engineering-researcher/) | Compare supplied observations, not live targets |
+| [Data Engineering & Database Architect](presets/data-engineering-architect/) | Detect duplicate keys and plan reversible schema changes |
+| [Infrastructure & Reliability Engineer](presets/infrastructure-reliability-engineer/) | Calculate fictional error budgets and review incident evidence |
+| [Automation Engineer](presets/automation-engineer/) | Order dependency graphs, reject cycles and plan safe retries |
+| [Product & Interface Designer](presets/product-interface-designer/) | Find unlabeled controls in supplied screen descriptions |
 
-**[Run a workflow](docs/WORKFLOWS.md)** · **[See exactly what ships](docs/CAPABILITIES.md)**
+## Fifty unique source procedures
 
-```bash
-PYTHONPATH=src python3 -B examples/research_evaluator_demo.py
-PYTHONPATH=src python3 -B examples/numeric_evaluation_demo.py
-PYTHONPATH=src python3 -B examples/continuum_checkpoint_demo.py
-```
+There are **45 role-specific methods plus five shared methods**: [evidence audit](skills/shared/evidence-audit/SKILL.md), [safe resume](skills/shared/safe-resume/SKILL.md), [research verification](skills/shared/research-verification/SKILL.md), [consent/effects](skills/shared/consent-and-effects/SKILL.md), and [quality handoff](skills/shared/quality-handoff/SKILL.md). The five shared methods repeat in each export: 15×8 = 120 descriptor instances, **not 120 different skills**. They are all disabled until a real owner and native host separately configure them.
 
-Engineering examples execute reviewed code under your OS account, not inside a security sandbox. Model examples train small synthetic models—not large language models. Connectors remain disabled until separately configured.
+Engines differ by role: released offline executables run local programs; four new roles provide bounded source-only Python demos; others remain instruction templates. The [capability matrix](docs/CAPABILITIES.md) differentiates them. [Evidence Finder](services/evidence-finder/) is a shared service, **not another agent**.
 
-Archived [v0.2.0-alpha starter ZIPs](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha) and the [extended engineering kit](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/software-engineer-sourcekit-r56-alpha) remain available; use the current release for current packages.
+For a portable 50-folder instruction library, run `python -B examples/export_portable_skills.py --to "$HOME/my-portable-skills"`. This uses standard hyphenated names without changing native IDs. [Details](docs/SKILLS.md#portable-instruction-library).
 
-## Documentation
+## Evidence, permissions and discovery
 
-| Start here | Build on it |
-| --- | --- |
-| [Installation and first run](docs/GITHUB_QUICKSTART.md) | [Customize profiles and methods](docs/CUSTOMIZE.md) |
-| [Which capabilities are executable?](docs/CAPABILITIES.md) | [Skills and local verification](docs/SKILLS.md) |
-| [Optional connectors and Family Link](docs/CONNECTORS.md) | [Development and quality checks](docs/DEVELOPMENT.md) |
-| [Security and privacy](docs/SECURITY.md) | [Downloads and versions](docs/RELEASES.md) |
+External [donor research](docs/donors/DONOR_RESEARCH.json) records pinned source references and licensing observations. No donor executable code, identity, memory or credentials are imported. Local Python execution uses your OS account, **not a security sandbox**. Family Link, connectors, hooks, schedules and external effects start disabled.
 
-## Repository layout
+AI-facing resources: [llms.txt](llms.txt), [machine-readable capabilities](docs/discovery/agent-capabilities.json), [AI agent FAQ](docs/discovery/AI_AGENT_GUIDE.md). These aid truthful discovery but do not guarantee search results or superiority over other repositories.
 
-- `presets/` — eleven role-specific source packages and setup guides
-- `src/muse_presets/` — standard-library local tooling and supported engines
-- `examples/` — reproducible offline demonstrations
-- `services/evidence-finder/` — shared evidence service source
-- `tests/` — regression and refusal tests
-- `docs/` — product and developer documentation
+[First use](docs/GITHUB_QUICKSTART.md) · [Skills](docs/SKILLS.md) · [Connectors](docs/CONNECTORS.md) · [Customization](docs/CUSTOMIZE.md) · [Releases](docs/RELEASES.md) · [Contribute](CONTRIBUTING.md). Historical [v0.2.0-alpha source ZIPs](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.2.0-alpha) remain available.
 
-**Safety by default:** new files are created without overwriting existing assistant memory; optional connectors are disabled; receipt hashes verify local consistency, not identity or permission. Only run Python code from sources you trust. See [security guidance](docs/SECURITY.md).
-
-MIT licensed. [Contributing](CONTRIBUTING.md) · [Releases](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases) · [Changelog](CHANGELOG.md).
+MIT licensed.

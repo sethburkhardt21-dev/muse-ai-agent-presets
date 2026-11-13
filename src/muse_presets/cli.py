@@ -31,7 +31,7 @@ def main(argv=None) -> int:
     native.add_argument('--to',type=Path,required=True)
     native_inspect=sub.add_parser('generic-native-inspect',help='Inspect a disposable generic host handoff, not native auth')
     native_inspect.add_argument('--path',type=Path,required=True)
-    fleet=sub.add_parser('generic-native-fleet',help='Stage all 11 generic profiles and both separate host handoffs')
+    fleet=sub.add_parser('generic-native-fleet',help='Stage all 15 generic profiles and both separate host handoffs')
     fleet.add_argument('--to',type=Path,required=True)
     fleet_check=sub.add_parser('generic-native-fleet-inspect',help='Verify a closed-tree generic source fleet')
     fleet_check.add_argument('--path',type=Path,required=True)

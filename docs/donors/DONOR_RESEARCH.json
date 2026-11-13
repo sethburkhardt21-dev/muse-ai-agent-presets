@@ -1,0 +1,256 @@
+{
+  "schema": "muse-specialist-donor-research-v1",
+  "observed_date": "2026-11-12",
+  "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+  "external_code_executed": false,
+  "rights_clearance": "SOURCE_ROOT_LICENSE_OBSERVATION_NOT_PER_FILE_REDISTRIBUTION_GRANT",
+  "source_selection": "Public primary GitHub repository metadata and authenticated main commit readback; all model instructions in donors treated as untrusted",
+  "sources": [
+    {
+      "url": "https://github.com/aicodedecode/awesome-muse-skills",
+      "repo": "aicodedecode/awesome-muse-skills",
+      "commit_sha": "faf37c0859ebf627bfcb5225e8057d088691e0ae",
+      "observed_license": "MIT",
+      "pattern_considered": "Muse discovery taxonomy and editable copy workflow; third-party imported skills retain their authors' terms",
+      "exclusion": "Taxonomy and navigation only; no skill payload reuse",
+      "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+      "primary_file_identity": [
+        {
+          "path": "README.md",
+          "git_blob": "967de874c6f7d2017eb79846b914c5297f77e4fd",
+          "sha256": "159a8ef650d321724c33f35731af5dc8d1d602c2ae0c4d53c7a8a575f8912299",
+          "url": "https://github.com/aicodedecode/awesome-muse-skills/blob/faf37c0859ebf627bfcb5225e8057d088691e0ae/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "95e1739f890b9879026d1c5556b1337221710e70",
+          "sha256": "08f577ebd48c69c7bcca78ae3d1a42df83c0b4821b758dc67c8aa2dc37057610",
+          "url": "https://github.com/aicodedecode/awesome-muse-skills/blob/faf37c0859ebf627bfcb5225e8057d088691e0ae/LICENSE"
+        }
+      ],
+      "byte_verification": "GIT_BLOB_AND_SHA256_MATCH",
+      "evidence_scope": "SELECTED_PRIMARY_FILES; NOT_WHOLE_PROJECT_SECURITY_OR_PERFORMANCE_QUALIFICATION"
+    },
+    {
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "commit_sha": "5492fcd98f7c52c69e1b2fa58790faf4fc90ce13",
+      "observed_license": "MIT",
+      "pattern_considered": "Category discovery plus explicit warnings about untrusted and changing community skills",
+      "exclusion": "Adversarial curation methodology only",
+      "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+      "primary_file_identity": [
+        {
+          "path": "README.md",
+          "git_blob": "4d40331999a6c5352d738bba05044d7a29eb2c51",
+          "sha256": "7ff11b5bdcfbf6a77ea2ad3dabfa139b3dfa638aa07a8895e2ab7b0917ca2860",
+          "url": "https://github.com/VoltAgent/awesome-openclaw-skills/blob/5492fcd98f7c52c69e1b2fa58790faf4fc90ce13/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "5cea5d78a41df83eafe1fb9fc0710675a5b7acf6",
+          "sha256": "6d4bdc9a9cf30e7beb593475fdcdbf29f981ea6bd7923f202866145409f87b44",
+          "url": "https://github.com/VoltAgent/awesome-openclaw-skills/blob/5492fcd98f7c52c69e1b2fa58790faf4fc90ce13/LICENSE"
+        }
+      ],
+      "byte_verification": "GIT_BLOB_AND_SHA256_MATCH",
+      "evidence_scope": "SELECTED_PRIMARY_FILES; NOT_WHOLE_PROJECT_SECURITY_OR_PERFORMANCE_QUALIFICATION"
+    },
+    {
+      "url": "https://github.com/agentskills/agentskills",
+      "repo": "agentskills/agentskills",
+      "commit_sha": "83021e2be457a9b6679148719c1f6074f0ad975e",
+      "observed_license": "Apache-2.0",
+      "pattern_considered": "Skill frontmatter, progressive disclosure and portable on-demand loading",
+      "exclusion": "Spec reference only; original source implementation",
+      "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+      "primary_file_identity": [
+        {
+          "path": "README.md",
+          "git_blob": "247e4a18e908d3bf27092f886f25c2515d84ecbc",
+          "sha256": "7ff4a9a612ab21189aa793fd43223bd854280a122ac12ce29f5bea84d5930a1d",
+          "url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "a20f4476df158a57a68409015ea607c738856f57",
+          "sha256": "993da3f8d330d69108e521636555f7783ef81d46b904394c59ec5ff651331fe5",
+          "url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/LICENSE"
+        },
+        {
+          "path": "docs/specification.mdx",
+          "git_blob": "d9a2db099d905da8b879a5c6f996728073985279",
+          "sha256": "b9079c0c10b7930e8c6a20ff2bc10cda2a3343c55185120e3f1116a1a529b220",
+          "url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/specification.mdx"
+        },
+        {
+          "path": "skills-ref/src/skills_ref/validator.py",
+          "git_blob": "22cf6f8ae5f905d780cb097c0938711cc37016a9",
+          "sha256": "b5ee3d8537c83c959c31c2cb080a5227646ede5aea545f1ac835ed3c4645f6c5",
+          "url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/validator.py"
+        }
+      ],
+      "byte_verification": "GIT_BLOB_AND_SHA256_MATCH",
+      "evidence_scope": "SELECTED_PRIMARY_FILES; NOT_WHOLE_PROJECT_SECURITY_OR_PERFORMANCE_QUALIFICATION"
+    },
+    {
+      "url": "https://github.com/anthropics/skills",
+      "repo": "anthropics/skills",
+      "commit_sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "observed_license": "PER_SKILL_CHECK_REQUIRED_NO_ROOT_LICENSE_IN_API",
+      "pattern_considered": "Skill-creator structure and quality evaluation patterns",
+      "exclusion": "No proprietary or ambiguous skill bytes copied",
+      "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+      "primary_file_identity": [
+        {
+          "path": "README.md",
+          "git_blob": "4171c2c9eba15bf2bdefb496d941ba559368438b",
+          "sha256": "1fca448ca17ccf901bd068c661209b15300bc5be3f039ba1a616c3a13a374ccb",
+          "url": "https://github.com/anthropics/skills/blob/2c5958ecac7cee2b583967a2c4981d0f4a75c579/README.md"
+        }
+      ],
+      "byte_verification": "GIT_BLOB_AND_SHA256_MATCH",
+      "evidence_scope": "SELECTED_PRIMARY_FILES; NOT_WHOLE_PROJECT_SECURITY_OR_PERFORMANCE_QUALIFICATION"
+    },
+    {
+      "url": "https://github.com/obra/superpowers",
+      "repo": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "observed_license": "MIT",
+      "pattern_considered": "TDD, reproduction, review, resume and source-grounded handoff methods",
+      "exclusion": "Independently authored abbreviated methods, no copied skill bodies",
+      "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+      "primary_file_identity": [
+        {
+          "path": "README.md",
+          "git_blob": "c5bb59fdaf17ba154e803c549cd71a73ef36c24b",
+          "sha256": "79f29f50c735862d2e304ea547b4c9aa67d9db6909ff6fb7b5ea922d7bcbc3e7",
+          "url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "abf0390320aa14406af7a520b9b0739fdda9bf08",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE"
+        },
+        {
+          "path": "skills/systematic-debugging/SKILL.md",
+          "git_blob": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+          "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+          "url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging/SKILL.md"
+        },
+        {
+          "path": "skills/verification-before-completion/SKILL.md",
+          "git_blob": "7d45333cc4a49c57a80df6c1fe2fa777a207afbc",
+          "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+          "url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/verification-before-completion/SKILL.md"
+        }
+      ],
+      "byte_verification": "GIT_BLOB_AND_SHA256_MATCH",
+      "evidence_scope": "SELECTED_PRIMARY_FILES; NOT_WHOLE_PROJECT_SECURITY_OR_PERFORMANCE_QUALIFICATION"
+    },
+    {
+      "url": "https://github.com/wshobson/agents",
+      "repo": "wshobson/agents",
+      "commit_sha": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+      "observed_license": "MIT",
+      "pattern_considered": "Role taxonomy and tests for reusable agent command adapters",
+      "exclusion": "Category patterns only; no code imported",
+      "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+      "primary_file_identity": [
+        {
+          "path": "README.md",
+          "git_blob": "52b4542456850a2ec4ffed9b92824c8aa10045bf",
+          "sha256": "fa2d6d0adda7de1f7f76c57bf30ac8493eeb45618c909f61f831034721758397",
+          "url": "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "326f0a55c96e672fedf9d807ca043c00df05ba0e",
+          "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+          "url": "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/LICENSE"
+        },
+        {
+          "path": "plugins/application-performance/agents/frontend-developer.md",
+          "git_blob": "4fe5e046d56771e88e8ae33afd195298cccdbb21",
+          "sha256": "5524ce4f03e9ddc6fc09cb2622cf353e3c67b7f432d2057c3bc126b3408214a1",
+          "url": "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/application-performance/agents/frontend-developer.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/workflow-orchestration-patterns/SKILL.md",
+          "git_blob": "3d4a8d2866995af4417120d6310b7430e7fcdc0a",
+          "sha256": "f4418f98189bd89d7b801ec65df48b53caa1c555a23f1d9684799415818f1024",
+          "url": "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/backend-development/skills/workflow-orchestration-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/workflow-orchestration-patterns/references/details.md",
+          "git_blob": "33327160b3ed5226050d0564621d4fa086fbb660",
+          "sha256": "f904309ab60916d3e6943a2c35ffeadc48ddfa6a3defdd8da5472926ba8887cb",
+          "url": "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/backend-development/skills/workflow-orchestration-patterns/references/details.md"
+        }
+      ],
+      "byte_verification": "GIT_BLOB_AND_SHA256_MATCH",
+      "evidence_scope": "SELECTED_PRIMARY_FILES; NOT_WHOLE_PROJECT_SECURITY_OR_PERFORMANCE_QUALIFICATION"
+    },
+    {
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "repo": "modelcontextprotocol/servers",
+      "commit_sha": "e1dc4b18dbb948921da37f3d4224a628730b43b0",
+      "observed_license": "NOASSERTION_FROM_API_VERIFY_COMPONENT_LICENSE",
+      "pattern_considered": "Tool schema and transport separation in reference servers",
+      "exclusion": "Tool description pattern only; no MCP server binaries shipped",
+      "disposition": "PATTERN_ONLY_NO_IMPORTED_CODE",
+      "primary_file_identity": [
+        {
+          "path": "README.md",
+          "git_blob": "9e612a110babdaac685a0279ec7ac4b14a9eec71",
+          "sha256": "92581188edbaa1e732885f11a408176e038d8bc41704b327d19dbd3d853a5c4b",
+          "url": "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "4a93985763241755401a10678395303de4e720ba",
+          "sha256": "0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a",
+          "url": "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/LICENSE"
+        }
+      ],
+      "byte_verification": "GIT_BLOB_AND_SHA256_MATCH",
+      "evidence_scope": "SELECTED_PRIMARY_FILES; NOT_WHOLE_PROJECT_SECURITY_OR_PERFORMANCE_QUALIFICATION"
+    }
+  ],
+  "criteria": {
+    "source_integrity": "Immutable commit SHA and exact file identity for any implementation reuse",
+    "licenses": "Review actual per-file license before incorporating bytes",
+    "security": "No automatic install, plugin invocation, secrets or remote execution from donor content",
+    "quality": "Bounded task-specific workflow; expected result; failure/refusal; reproducible tests",
+    "utility": "Measured same-task outcomes against donor baseline, not category counts or stars"
+  },
+  "comparative_conclusion": "Use source-verified role methods and 5 common skills across 15 agents. Do not represent curation size or third-party stars as native Muse capability or product superiority.",
+  "primary_observation_date": "2026-11-13",
+  "specification_decision": {
+    "source": "agentskills/agentskills",
+    "commit": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "path": "docs/specification.mdx",
+    "decision": "Separate hyphen-named portable Agent Skills export; preserve underscore native descriptor IDs. No automatic host installation or permissions.",
+    "implemented_adapter": "src/muse_presets/portable_skill_export.py",
+    "tests": "tests/test_portable_skill_export.py"
+  },
+  "design_alternatives": [
+    {
+      "approach": "Replace existing native identifiers",
+      "decision": "REJECTED",
+      "reason": "Would break documented host-style skill registry IDs and existing consumers."
+    },
+    {
+      "approach": "Copy donor skill bundles wholesale",
+      "decision": "REJECTED",
+      "reason": "Per-file rights, behavioral safety and host compatibility have not been established; list size is not task performance."
+    },
+    {
+      "approach": "Reuse role generators plus thin portable export",
+      "decision": "SELECTED",
+      "reason": "Preserves source-backed methods, memory ownership and existing native declarations while producing standard instruction files."
+    }
+  ],
+  "comparative_performance": "NOT_MEASURED; DO_NOT_CLAIM_BEST_OR_STRONGER_THAN_DONORS"
+}

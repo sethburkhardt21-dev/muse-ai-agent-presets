@@ -6,7 +6,7 @@ This independent offline kit bundles the unchanged, source-pinned Garden SQLite 
 
 From this repository, with a new output filename outside the source directory:
 
-    PYTHONPATH=src python3 -B examples/export_garden_sourcekit.py --to ../garden-sourcekit.zip
+    PYTHONPATH=src python3 -B examples/export_garden_sourcekit.py --to "$HOME/garden-sourcekit.zip"
     PYTHONPATH=src python3 -B examples/export_garden_sourcekit.py --verify ../garden-sourcekit.zip --sha256 <trusted-sha256>
 
 On Windows PowerShell, set `$env:PYTHONPATH='src'` and use `python` instead of `python3`. Output is create-only. Verification requires both an external archive digest and exact equality with a regenerated canonical artifact. It does not parse or decompress the supplied archive. Recompressed equivalents, appended bytes, modified manifests and any noncanonical ZIP are refused rather than interpreted.

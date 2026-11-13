@@ -49,13 +49,16 @@ def _current_plan(role:str,display_name:str|None=None)->dict:
     s=role_skills.plan_role_skills(role,display_name=display_name)
     if (p["source_sha256"]!=r["profile_source_sha256"]
             or p["source_sha256"]!=s["profile_source_sha256"]
-            or len(r["methods"])!=3 or len(s["skill_ids"])!=3):
+            or len(r["methods"])!=3 or len(s["skill_ids"])!=3
+            or len(s["shared_skill_ids"])!=5
+            or len(set(s["shared_skill_ids"]))!=5):
         raise ValueError("COMPONENT_SOURCE_OR_ROLE_MISMATCH")
     return {
         "role":role,
         "display_name":role.replace("-"," ").title() if display_name is None else display_name,
         "profile_source_sha256":p["source_sha256"],
         "method_ids":r["methods"],"skill_ids":s["skill_ids"],
+        "shared_skill_ids":s["shared_skill_ids"],
     }
 
 
@@ -78,6 +81,7 @@ def _expected_receipt(role:str,display_name:str|None)->dict:
         "schema":SCHEMA,"role":role,"display_name":plan["display_name"],
         "profile_source_sha256":plan["profile_source_sha256"],
         "method_ids":plan["method_ids"],"skill_ids":plan["skill_ids"],
+        "shared_skill_ids":plan["shared_skill_ids"],
         "components":records,
         "grade":"LOCAL_SOURCE_ONLY",
         "native_installed":False,"provider_owner_id":None,
@@ -151,7 +155,7 @@ def stage_standalone_pack(destination:Path,role:str,*,display_name:str|None=None
     _write_new(dest/MANIFEST,_json(before))
     marker.unlink()
     return {"status":"LOCAL_STANDALONE_STAGED","role":role,
-            "component_count":3,"method_count":3,"skill_count":3,
+            "component_count":3,"method_count":3,"skill_count":8,
             "profile_source_sha256":admitted["profile_source_sha256"],
             "native_installed":False,"external_effect_authorized":False}
 
@@ -178,6 +182,7 @@ def inspect_standalone_pack(destination:Path)->dict:
         expected=_expected_receipt(role,name)
         if (claimed.get("method_ids")!=expected["method_ids"]
                 or claimed.get("skill_ids")!=expected["skill_ids"]
+                or claimed.get("shared_skill_ids")!=expected["shared_skill_ids"]
                 or set(claimed.get("components",{}))!=set(COMPONENTS)):
             return base
         statuses={}
@@ -203,7 +208,7 @@ def inspect_standalone_pack(destination:Path)->dict:
         return {**base,"status":"OWNER_CUSTOMIZED" if customized else "LOCAL_STANDALONE_MATCH",
                 "role":role,"profile_source_sha256":expected["profile_source_sha256"],
                 "subchat_count":len(expected["method_ids"]),
-                "skill_count":len(expected["skill_ids"]),
+                "skill_count":len(expected["skill_ids"])+len(expected["shared_skill_ids"]),
                 "owner_customizations_present":customized,
                 "components":statuses}
     except (OSError,ValueError,TypeError,KeyError,AttributeError):

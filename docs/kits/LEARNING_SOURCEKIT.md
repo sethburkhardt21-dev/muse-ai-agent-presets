@@ -11,7 +11,7 @@ canonical-archive boundaries.
 
 From this repository:
 
-    PYTHONPATH=src python3 -B examples/export_learning_sourcekit.py --to ../learning-coach.zip
+    PYTHONPATH=src python3 -B examples/export_learning_sourcekit.py --to "$HOME/learning-coach.zip"
     PYTHONPATH=src python3 -B examples/export_learning_sourcekit.py --verify ../learning-coach.zip --sha256 <external-sha256>
 
 On Windows set $env:PYTHONPATH='src' and use python instead of python3.

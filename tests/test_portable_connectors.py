@@ -33,7 +33,7 @@ class ConnectorTests(unittest.TestCase):
 
     def test_eleven_role_catalogs_are_exact_and_default_disabled(self):
         roles = load_registry()["presets"]
-        self.assertEqual(len(roles),11)
+        self.assertEqual(len(roles),15)
         for role in roles:
             r = pc.role_connectors(role)
             b = load_playbook(role)

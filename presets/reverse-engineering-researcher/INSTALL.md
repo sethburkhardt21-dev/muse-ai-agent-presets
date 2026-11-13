@@ -5,7 +5,7 @@ Use Python 3.12+ and Git. These are portable source files, not a native Muse ins
 ## From the repository
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role reverse-engineering-researcher --to ../my-reverse-engineering-researcher
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role reverse-engineering-researcher --to "$HOME/my-reverse-engineering-researcher"
 ```
 
 On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. Choose a new output directory; existing files are never overwritten. The source kit and its local inspection result do not authenticate a native host or grant tool access.

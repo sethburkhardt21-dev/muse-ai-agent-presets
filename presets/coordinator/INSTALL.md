@@ -5,7 +5,7 @@ Use Python 3.12+ and Git. These are portable source files, not a native Muse ins
 ## From the repository
 
 ```bash
-PYTHONPATH=src python3 -B examples/github_quickstart.py --role coordinator --to ../my-coordinator
+PYTHONPATH=src python3 -B examples/github_quickstart.py --role coordinator --to "$HOME/my-coordinator"
 ```
 
 On Windows PowerShell, set `$env:PYTHONPATH = "src"` and use `python`. Choose a new output directory; existing files are never overwritten. The source kit and its local inspection result do not authenticate a native host or grant tool access.

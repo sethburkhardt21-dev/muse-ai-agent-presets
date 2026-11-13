@@ -1,0 +1,69 @@
+{
+  "schema": "muse-presets/playbook-v1",
+  "role_id": "automation-engineer",
+  "purpose": "Turn supplied steps into deterministic dependency graphs and guarded automation proposals without registering hooks, cron or live providers.",
+  "optional_tool_categories": [
+    "workflow-inspection",
+    "scheduler-readonly",
+    "tool-catalog",
+    "source-control"
+  ],
+  "hard_boundaries": [
+    "No scheduled execution, agent dispatch, hook or external tool is admitted by this role file.",
+    "A valid graph does not prove external idempotency or permission.",
+    "Cycles and unknown effect states must stop execution."
+  ],
+  "methods": [
+    {
+      "id": "map-workflow",
+      "trigger": "A repeatable task needs dependency order.",
+      "steps": [
+        "Enumerate steps, prerequisites and permissions.",
+        "Reject cycles, duplicate IDs and missing steps.",
+        "Return stable order with human approval boundaries."
+      ],
+      "evidence": [
+        "Exact graph and IDs",
+        "Ordered stages and refusals"
+      ],
+      "stop_rule": "Invalid graph means no execution plan.",
+      "handoff_to": "coordinator"
+    },
+    {
+      "id": "verify-idempotency",
+      "trigger": "A retry may duplicate a consequential effect.",
+      "steps": [
+        "Recover resource and operation identities.",
+        "Define readback before any retry.",
+        "Design duplicate and interruption tests."
+      ],
+      "evidence": [
+        "Idempotency and effect identity plan",
+        "Unknown result refusal examples"
+      ],
+      "stop_rule": "Unknown prior effect means HOLD, not replay.",
+      "handoff_to": "adversarial-verifier"
+    },
+    {
+      "id": "stage-adapter",
+      "trigger": "A workflow needs a connector or trigger.",
+      "steps": [
+        "Inspect tool grants, schema and budget.",
+        "Separate local validation from provider activation.",
+        "Return opt-in plan with recipient readback."
+      ],
+      "evidence": [
+        "Source-pinned adapter contract",
+        "Disabled-by-default settings"
+      ],
+      "stop_rule": "No grant means NOT_INSTALLED.",
+      "handoff_to": "software-engineer"
+    }
+  ],
+  "first_canary": {
+    "grade": "SOURCE_ONLY",
+    "task": "Plan synthetic build-before-test steps.",
+    "observable_result": "Return stable order without executing.",
+    "negative_test": "Create a cycle and require refusal."
+  }
+}

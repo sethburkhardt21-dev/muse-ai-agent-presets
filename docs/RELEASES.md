@@ -40,3 +40,7 @@ The [initial alpha package](https://github.com/sethburkhardt21-dev/muse-ai-agent
 - Native installation is optional and not required for the source release. Live services and external effects are not included by default.
 
 For the current list of features, see [Capabilities](CAPABILITIES.md) and [Get started](GITHUB_QUICKSTART.md). If you are extending a role, use the [development guide](EXTENDING_GENERIC_AGENTS.md). Verification commands and privacy checks are documented under [Security](SECURITY.md).
+
+## New source roles beyond the current ZIP release
+
+The source adds four new editable profiles: Data Engineering & Database Architect, Infrastructure & Reliability Engineer, Automation Engineer, and Product & Interface Designer. Their four offline exercises are **source-tree examples, not additional published standalone ZIPs**. The tagged v0.4.1-alpha remains eight executable ZIPs and eleven starter ZIPs. New source files do not constitute native Muse installation. See [Capabilities](CAPABILITIES.md) and [Get started](GITHUB_QUICKSTART.md).

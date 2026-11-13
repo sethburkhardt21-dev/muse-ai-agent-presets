@@ -34,13 +34,13 @@ class RoleSkillPackTests(unittest.TestCase):
 
     def test_all_eleven_roles_three_explicit_disabled_skill_pairs(self):
         roles=load_registry()["presets"]
-        self.assertEqual(len(roles),11)
+        self.assertEqual(len(roles),15)
         total=0
         for role in roles:
             dest=self.stage(role)
             methods=[x["id"] for x in load_playbook(role)["methods"]]
             folders=list((dest/"custom-skills").iterdir())
-            self.assertEqual(len(folders),3)
+            self.assertEqual(len(folders),8)
             for method in methods:
                 name=api.skill_id(role,method)
                 folder=dest/"custom-skills"/name
@@ -55,10 +55,10 @@ class RoleSkillPackTests(unittest.TestCase):
                 self.assertFalse((folder/"run.py").exists())
             self.assertEqual(api.inspect_role_skills(dest)["status"],"LOCAL_ROLE_SKILLS_MATCH")
             r=(dest/"config/skills.yaml").read_text()
-            self.assertEqual(r.count("status: disabled"),3)
+            self.assertEqual(r.count("status: disabled"),8)
             for method in methods:self.assertIn(api.skill_id(role,method),r)
-            total+=3
-        self.assertEqual(total,33)
+            total+=8
+        self.assertEqual(total,120)
 
     def test_each_role_links_exact_t04_t05_pins_without_grants(self):
         role="software-engineer"
@@ -299,7 +299,7 @@ class RoleSkillPackTests(unittest.TestCase):
         registry=(dest/"config/skills.yaml").read_text()
         self.assertNotIn("status: available",registry)
         self.assertNotIn("status: connected",registry)
-        self.assertEqual(registry.count("status: disabled"),3)
+        self.assertEqual(registry.count("status: disabled"),8)
         binding=json.loads((dest/"config/host-binding.json").read_text())
         self.assertIsNone(binding["session_id"])
         self.assertFalse(binding["model_selected_skill"])

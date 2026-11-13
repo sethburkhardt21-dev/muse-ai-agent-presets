@@ -6,9 +6,9 @@ The toolkit ships **disabled connection contracts**, not a connected shell, brow
 
 `terminal`, `desktop-commander`, `browser-cua` and `ssh` can be described in role playbooks. They are **not connected** by this repository. GitHub source checkout does not enroll a machine, share a token, start a model or grant tool execution.
 
-The source allowlist covers all eleven kits:
+The source allowlist covers all fifteen source kits:
 
-`coordinator` · `software-engineer` · `model-builder` · `research-evaluator` · `creative-studio` · `adversarial-verifier` · `personal-companion` · `garden-companion` · `learning-coach` · `claims-adjudicator` · `reverse-engineering-researcher`.
+`coordinator` · `software-engineer` · `model-builder` · `research-evaluator` · `creative-studio` · `adversarial-verifier` · `personal-companion` · `garden-companion` · `learning-coach` · `claims-adjudicator` · `reverse-engineering-researcher` · `data-engineering-architect` · `infrastructure-reliability-engineer` · `automation-engineer` · `product-interface-designer`.
 
 Their enabled categories depend on each role's existing playbook; the list above does not grant every connector to every role.
 

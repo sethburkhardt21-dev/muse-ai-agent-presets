@@ -61,9 +61,9 @@ def _role_ids() -> set[str]:
         parsed = json.loads(packaged.read_bytes(), object_pairs_hook=pairs_unique)
         if (type(parsed) is not dict or set(parsed) != {"schema", "roles"} or
             parsed["schema"] != "r33/generic-role-catalog-v1" or
-            type(parsed["roles"]) is not list or len(parsed["roles"]) != 11 or
+            type(parsed["roles"]) is not list or len(parsed["roles"]) != 15 or
             any(type(n) is not str or IDENT.fullmatch(n) is None for n in parsed["roles"]) or
-            len(set(parsed["roles"])) != 11 or "coordinator" not in parsed["roles"]):
+            len(set(parsed["roles"])) != 15 or "coordinator" not in parsed["roles"]):
             raise ValueError("INVALID_ROLE_CATALOG")
         return set(parsed["roles"]) - {"coordinator"}
     from .catalog import load_registry

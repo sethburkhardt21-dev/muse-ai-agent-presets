@@ -24,7 +24,7 @@ The role's existing preset and playbook are included unchanged as neutral instru
 Requires Python 3.12+ in the source repository:
 
 ```bash
-PYTHONPATH=src python3 -B examples/export_creative_sourcekit.py --to ../creative-studio.zip
+PYTHONPATH=src python3 -B examples/export_creative_sourcekit.py --to "$HOME/creative-studio.zip"
 PYTHONPATH=src python3 -B examples/export_creative_sourcekit.py --verify ../creative-studio.zip --sha256 <separately-trusted-zip-sha256>
 ```
 

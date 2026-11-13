@@ -1,4 +1,4 @@
-"""Executable zero-to-one GitHub source quickstart for all eleven generic roles.
+"""Executable zero-to-one GitHub source quickstart for all fifteen generic roles.
 
 --all and --role without --to are disposable offline smoke tests. --to is
 create-only and delegates entirely to the existing T07 standalone stager.
@@ -66,7 +66,7 @@ def main(argv=None)->int:
         description="Portable GitHub source quickstart; no native host required")
     group=parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--role",choices=load_registry()["presets"])
-    group.add_argument("--all",action="store_true",help="smoke all eleven in disposable temp paths")
+    group.add_argument("--all",action="store_true",help="smoke all fifteen in disposable temp paths")
     parser.add_argument("--to",type=Path,help="create-only output for one role; never overwrite")
     args=parser.parse_args(argv)
     if args.all and args.to is not None:

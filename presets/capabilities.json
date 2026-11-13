@@ -140,6 +140,34 @@
       "id": "creative-source-kit",
       "module": "muse_presets.creative_sourcekit",
       "role": "creative-studio"
+    },
+    {
+      "id": "data-engineering-architect-offline-review",
+      "role": "data-engineering-architect",
+      "module": "muse_presets.specialist_engines",
+      "example": "examples/specialist_engine_demo.py",
+      "grade": "local-review-only"
+    },
+    {
+      "id": "infrastructure-reliability-engineer-offline-review",
+      "role": "infrastructure-reliability-engineer",
+      "module": "muse_presets.specialist_engines",
+      "example": "examples/specialist_engine_demo.py",
+      "grade": "local-review-only"
+    },
+    {
+      "id": "automation-engineer-offline-review",
+      "role": "automation-engineer",
+      "module": "muse_presets.specialist_engines",
+      "example": "examples/specialist_engine_demo.py",
+      "grade": "local-review-only"
+    },
+    {
+      "id": "product-interface-designer-offline-review",
+      "role": "product-interface-designer",
+      "module": "muse_presets.specialist_engines",
+      "example": "examples/specialist_engine_demo.py",
+      "grade": "local-review-only"
     }
   ],
   "roles": [
@@ -153,7 +181,11 @@
     "garden-companion",
     "learning-coach",
     "claims-adjudicator",
-    "reverse-engineering-researcher"
+    "reverse-engineering-researcher",
+    "data-engineering-architect",
+    "infrastructure-reliability-engineer",
+    "automation-engineer",
+    "product-interface-designer"
   ],
   "schema": "specialist-capabilities/v1"
 }
