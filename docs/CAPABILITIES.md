@@ -60,3 +60,7 @@ These are source-only distributions: runnable code and editable profiles, not a 
 The [75-skill collection](collection/MUSE_CURATED_COLLECTION.md) reuses eleven bounded local implementations across four standalone toolkits. `python -B tools/muse_collection.py demo data-engineer` runs logical schema comparison, versioned-event reconciliation and supplied-query-plan classification. The other toolkit IDs are `reliability-engineer`, `automation-engineer` and `product-interface-designer`; their actual operations and limits are in the [specialist quickstart](collection/SPECIALIST_QUICKSTART.md).
 
 These tools complement the simpler source fixtures above; they do not rename existing public role IDs or establish native integration. Five workflow demos run only their local registered stages and explicitly report the remaining host/human handoffs. A 100-starter bundle selects instructions rather than creating agents. Existing tagged release assets remain unchanged.
+
+## Daily Desk local workbench
+
+[Daily Desk](spaces/DAILY_DESK.md) joins task and note editors to the existing local companion storage and loopback server. The disposable `python -B examples/daily_desk.py` demo verifies three tasks/two notes, editing, reopening, stale-revision refusal and checked restoration into a new store. `--serve` opens the local browser application explicitly. Operation receipts, scoped access and no-overwrite restore are local mechanisms; no native Muse Space, model, scheduler or cloud sync is installed.

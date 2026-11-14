@@ -23,7 +23,7 @@ python -I -B run.py --operation self-test
 python -I -B run.py --operation demo --to "$HOME/creative-production-demo"
 ```
 
-The same commands work in Windows PowerShell. Choose a new absolute destination if that folder already exists. The demo creates JSON production files, a CSV shot list and a textual HTML storyboard. It does not render images or animation.
+This also works in PowerShell. Choose a new destination. The local outputs are JSON, CSV and a textual storyboard, not images or animation.
 
 ## For AI agents and automated readers
 
@@ -34,14 +34,14 @@ The same commands work in Windows PowerShell. Choose a new absolute destination 
 | Specialist | What it is for |
 | --- | --- |
 | [Coordinator](presets/coordinator/) | Review task plans, dependencies and completion evidence. |
-| [Software Engineer](presets/software-engineer/) | Reproduce bugs, apply reviewed patches and check the results in disposable Git repositories. |
-| [Model Builder](presets/model-builder/) | Run small-model training examples and compare development and held-out results. |
+| [Software Engineer](presets/software-engineer/) | Reproduce bugs, review patches and test in disposable Git repositories. |
+| [Model Builder](presets/model-builder/) | Train small examples; compare development and held-out results. |
 | [Research Evaluator](presets/research-evaluator/) | Check quotations against source text and score supplied held-out predictions. |
 | [Creative Studio](presets/creative-studio/) | Plan shots, timelines and continuity, then export production files and a textual storyboard. |
 | [Adversarial Verifier](presets/adversarial-verifier/) | Organize defensive checks, record failures and review evidence. |
-| [Personal Companion](presets/personal-companion/) | Customize an assistant for planning, preferences and everyday organization. |
+| [Personal Companion](presets/personal-companion/) | Plan and organize with your own preferences. |
 | [Garden Companion](presets/garden-companion/) | Keep plant observations and review local calendar changes in SQLite. |
-| [Learning Coach](presets/learning-coach/) | Build study sessions from supplied sources, score practice and keep review history. |
+| [Learning Coach](presets/learning-coach/) | Study from supplied sources and keep scored review history. |
 | [Claims Adjudicator](presets/claims-adjudicator/) | Compare claims with supplied evidence and record qualifications or corrections. |
 | [Reverse Engineering & Security Researcher](presets/reverse-engineering-researcher/) | Compare recorded application behavior and review observations. |
 | [Data Engineering & Database Architect](presets/data-engineering-architect/) | Detect duplicate keys and plan reversible schema changes |
@@ -89,6 +89,8 @@ python -B tools/collection_compatibility.py
 ```
 
 The 75 skills overlap with the original 50 procedures: **not 125 unique capabilities**. [Collection setup](docs/collection/SPECIALIST_QUICKSTART.md) ? [Specialist catalog](docs/collection/SPECIALIST_CATALOG.md) ? [Operating handbook](docs/handbook/README.md). Starters are not new agents; release ZIPs remain unchanged.
+
+**Daily Desk:** [Open the local task-and-note workbench](docs/spaces/DAILY_DESK.md). Run `python -B examples/daily_desk.py` for the disposable edit/reopen/backup/restore demo; no account is needed.
 
 ## Documentation
 
