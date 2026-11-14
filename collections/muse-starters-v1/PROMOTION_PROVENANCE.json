@@ -1137,7 +1137,7 @@
     "collections/muse-starters-v1/specialists.json": {
       "disposition": "REVIEWED_PUBLIC_ADAPTATION",
       "rights": "PROJECT_MIT_ORIGINAL",
-      "sha256": "c35f6ebc30b36566e4bae01ff50a59102d8865b9616959d5c865f61a98a77f50",
+      "sha256": "7346ffdf94bc3d4882c14bedee7b67fb8e5dd5b8ed75518d52ee9e5ee8d76378",
       "source_sha256": "fce5e9b92149193b90418e91febd556615bbb81c4ae3176227eb05b190515d66"
     },
     "collections/muse-starters-v1/starters.json": {
@@ -1911,7 +1911,7 @@
     "docs/collection/SPECIALIST_CATALOG.md": {
       "disposition": "REVIEWED_PUBLIC_ADAPTATION",
       "rights": "PROJECT_MIT_ORIGINAL",
-      "sha256": "e8574744ac7061cf020ff1abc9720cdad597a1d22c404db35fdfb35be3f431f2",
+      "sha256": "344bee762887fc1fe0b8161d36a3a6e2760cdbbc29998ce0d4846478fb965bd5",
       "source_sha256": "1f356d0dfc654fec94db97a4516d4b70a7074f16289929c4cd1ecc2744d93eed"
     },
     "docs/collection/SPECIALIST_QUICKSTART.md": {
