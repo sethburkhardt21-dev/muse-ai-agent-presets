@@ -4,13 +4,13 @@
 
 [![Source checks](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml/badge.svg)](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/actions/workflows/checks.yml) · [MIT license](LICENSE)
 
-Run tools for software repair, model experiments, evidence review, study, planning and creative production. Or customize a role profile with your own instructions and working methods. The included offline examples need no paid API.
+Run useful offline tools or apply specialist methods to your existing assistant. No paid API is needed for the fictional examples.
 
 [**Download tools and profiles**](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha) · [**Get started**](docs/GITHUB_QUICKSTART.md) · [**Compare capabilities**](docs/CAPABILITIES.md)
 
-**Choose the right version:** the published **v0.4.1-alpha** has eight executable ZIPs and eleven starter-profile ZIPs. The current source has **15 profiles and 50 unique instruction procedures**, including four newer source-only roles. Published archives have not been replaced.
+**Choose the right version:** the published **v0.4.1-alpha** has eight executable ZIPs and eleven starter-profile ZIPs. The profile source has **15 roles and 50 profile/shared procedures**; the separate curated collection below provides deeper task methods. Published archives have not been replaced.
 
-Executable ZIPs contain programs you can run; starter profiles contain instructions you can edit. They are **not installed native Muse agents**. A starter profile is not a model-backed autonomous assistant. Live accounts, native installation and model-selected tool use require separate integration and verification.
+Executable ZIPs contain local programs; profiles contain source-only instructions. They are **not installed native Muse agents**. A profile is not a model-backed autonomous assistant. Live tools require real host permissions.
 
 ## Run a standalone tool now
 
@@ -62,13 +62,13 @@ python -B quickstart.py --role personal-companion --to "$HOME/my-assistant-kit"
 python -B quickstart.py --all
 ```
 
-Use `python3` instead of `python` on macOS/Linux where appropriate. These commands also work in Windows PowerShell. The wrapper needs no `PYTHONPATH` setting or pip installation. Choose a new absolute destination: existing files are never overwritten. The `--all` command checks all 15 source kits in temporary folders; it does not install assistants.
+Use `python3` where appropriate; PowerShell is supported. No `PYTHONPATH` or pip setup is needed. Choose a new absolute destination: existing files are preserved. `--all` checks 15 temporary source kits, not installed assistants.
 
-Your kit contains an editable identity, soul, user preferences, memory, opinion, voice and system-prompt draft under `system-profile/profile/`. Its three `subchat-scopes/` keep separate context and blank owner memory. `role-skills/` contains eight **disabled** descriptors: three role-specific methods plus five shared procedures. See [Installation and saved data](docs/INSTALL_AND_PERSISTENCE.md) before customizing or connecting a host.
+The kit has editable identity, memory, voice and prompt drafts in `system-profile/profile/`, three `subchat-scopes/`, and eight **disabled** descriptors in `role-skills/`. [Installation and saved data](docs/INSTALL_AND_PERSISTENCE.md) explains owner control and the separate host boundary.
 
 ## Use the portable instruction library
 
-The source has **45 role methods plus five shared procedures = 50 unique procedures**. The five shared methods cover evidence, recovery, research, consent and handoff; repeating them across 15 kits creates 120 descriptor instances, not 120 different capabilities.
+The original exporter keeps **45 role methods plus five shared procedures = 50 procedures**. Repeating shared methods across 15 kits creates 120 descriptor instances, not 120 different capabilities.
 
 ```bash
 python -B examples/export_portable_skills.py --plan
@@ -76,7 +76,19 @@ python -B examples/export_portable_skills.py --to "$HOME/my-portable-skills"
 python -B examples/export_portable_skills.py --inspect "$HOME/my-portable-skills"
 ```
 
-The exporter creates 50 portable `SKILL.md` folders. It preserves native-style registry identifiers separately and does not register skills or grant tools. [Skills](docs/SKILLS.md) explains the two formats; [Capabilities](docs/CAPABILITIES.md) distinguishes runnable programs from instructions and offline fixtures.
+This creates 50 portable `SKILL.md` folders without renaming native-style IDs or granting tools. See [Skills](docs/SKILLS.md) for the two formats and [Capabilities](docs/CAPABILITIES.md) for runnable scope.
+
+## Enhance your existing assistant
+
+**15 specialists, 75 skills, 25 workflows and 100 starters** are now available in the [task collection](docs/collection/MUSE_CURATED_COLLECTION.md), without replacing identity or memory.
+
+```sh
+python -B tools/muse_collection.py show daily-planner
+python -B tools/muse_collection.py demo data-engineer
+python -B tools/collection_compatibility.py
+```
+
+The 75 skills overlap with the original 50 procedures: **not 125 unique capabilities**. [Collection setup](docs/collection/SPECIALIST_QUICKSTART.md) ? [Specialist catalog](docs/collection/SPECIALIST_CATALOG.md) ? [Operating handbook](docs/handbook/README.md). Starters are not new agents; release ZIPs remain unchanged.
 
 ## Documentation
 

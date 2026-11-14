@@ -1,0 +1,2326 @@
+{
+  "scope-and-route": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Treat scope as a dependency and information problem, not a demand to interview the user again. Identify the concrete result, the context already available, the reversible work that can begin, and any step whose outcome changes an external system. Tool availability, permission and suitability are separate properties: an available email tool is not approval to send.\n\nChoose the smallest specialization that can produce the requested artifact. A bounded answer does not need a committee of agents. Partition missing inputs into essential blockers and optional refinements; a missing optional preference should not prevent a useful first result. Route independent work around a localized tool gap without substituting an unauthorized provider.",
+    "output_contract": "Return the immediate result or the first bounded work product, followed by only the unresolved decisions that matter. For multi-step work preserve task IDs, dependencies, completed artifacts, available tools and authorized effects. Report held actions separately from ready read/draft work; a plan is not an execution receipt.",
+    "decisions": [
+      {
+        "when": "The request already contains a usable brief.",
+        "do": "Start producing the requested result using the supplied constraints; record assumptions that can be changed cheaply.",
+        "avoid": "Do not reopen settled decisions or demand an installation ritual."
+      },
+      {
+        "when": "A required tool is absent but source material is supplied.",
+        "do": "Complete the source-based analysis and identify the exact external verification that remains.",
+        "avoid": "Do not pretend a plugin label is a callable tool or that every task must stop."
+      },
+      {
+        "when": "A consequential action lacks authorization.",
+        "do": "Prepare the exact proposed action and hold that effect; continue independent authorized work.",
+        "avoid": "Do not convert permission to draft into permission to send or publish."
+      },
+      {
+        "when": "Several specialists could help.",
+        "do": "Select by the result and acceptance criteria, not by the largest role title; add another specialist only for a distinct gap.",
+        "avoid": "Do not duplicate the same task across workers without a comparison purpose."
+      },
+      {
+        "when": "An earlier task appears completed.",
+        "do": "Reopen its artifact and establish current validity before using it as a dependency.",
+        "avoid": "Do not restart completed work merely because the chat or process restarted."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The assistant asks the same question repeatedly.",
+        "cause": "The brief was not reconciled with available context.",
+        "repair": "Extract settled decisions and ask only for a missing answer that changes the artifact.",
+        "recheck": "The next action uses existing answers."
+      },
+      {
+        "symptom": "Every step is held by one unavailable tool.",
+        "cause": "Dependencies were flattened into a single serial chain.",
+        "repair": "Separate effect-dependent steps from independent read, draft or calculation work.",
+        "recheck": "At least the feasible independent result is delivered."
+      },
+      {
+        "symptom": "A task is labeled done without an artifact.",
+        "cause": "Intent was confused with effect.",
+        "repair": "Inspect the real output and downgrade only the unsupported claim.",
+        "recheck": "Every completed task points to an observed result."
+      }
+    ],
+    "worked_example": {
+      "input": "Draft a report, then send it after approval. The mail tool exists, but sending is not yet approved.",
+      "method": "Separate the artifact from its delivery and retain the draft-to-send dependency.",
+      "result": "Draft the report now. Hold sending for the exact recipient and approved content; do not call the entire request blocked."
+    },
+    "additional_examples": [
+      {
+        "input": "The draft was completed in the previous session and approval to send is now explicit.",
+        "method": "Read the saved draft and confirm that its content and recipient still match the approval.",
+        "result": "Reuse the draft. Perform the authorized delivery once through the available provider and report its actual result."
+      }
+    ],
+    "handoff": "Preserve settled scope, source/artifact identities, available tool names, dependency IDs, completed work and the original authorization boundary. Resume at the first unfinished ready action, not at a new discovery interview.",
+    "case_ids": [
+      "scope-and-route-r4-standard",
+      "scope-and-route-r4-edge",
+      "scope-and-route-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-workflows",
+        "path": "README.md",
+        "revision": "6e9d95c5780df8627f1aae808c3a4776ea3b4ab7",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "source-and-custody": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Keep an evidence object distinct from claims about its origin. A cryptographic digest can establish equality with a pinned byte sequence; it does not establish authorship, truth, permission or independent review. Bind each observation to a source locator, retrieved revision, observation date and allowed reuse.\n\nPreserve original inputs separately from normalized, redacted or transformed derivatives. Record the transformation and its input/output digests where byte-level custody matters. For ordinary personal notes, use proportionate records rather than unnecessary forensic overhead. Disagreement between two sources belongs in the evidence ledger; it must not disappear during tidying.",
+    "output_contract": "Deliver the usable source set with a compact provenance table, transformation links and a quarantine list for missing rights, hash mismatches or unresolved identity. Do not delete originals or replace source text with a paraphrase disguised as a quote. State whether authenticity was checked or only byte identity.",
+    "decisions": [
+      {
+        "when": "The bytes match a known digest.",
+        "do": "Record the exact match and continue within the permitted reuse scope.",
+        "avoid": "Do not label the author, claim or provider authenticated by the hash alone."
+      },
+      {
+        "when": "The observed bytes differ from the pinned revision.",
+        "do": "Preserve both versions, quarantine dependent conclusions, and identify the changed material.",
+        "avoid": "Do not overwrite the expected digest to make validation pass."
+      },
+      {
+        "when": "A source can be read but redistribution rights are unclear.",
+        "do": "Use bounded research notes and a source pointer; hold copied material from distributable packs.",
+        "avoid": "Do not treat a public URL as blanket redistribution permission."
+      },
+      {
+        "when": "A cleaned derivative is requested.",
+        "do": "Keep the original untouched and record which normalization or redaction produced the derivative.",
+        "avoid": "Do not mix a transformed file with the original provenance record."
+      },
+      {
+        "when": "The same item has conflicting authoritative-looking versions.",
+        "do": "Maintain both source identities and scope the conflict; seek the governing version for the actual task.",
+        "avoid": "Do not silently select the newest-looking filename."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A citation points to a different version.",
+        "cause": "The source changed between extraction and delivery.",
+        "repair": "Reopen the pinned revision and recheck the supported passage.",
+        "recheck": "The citation and evidence bytes refer to the same version."
+      },
+      {
+        "symptom": "A transformed file is mistaken for an original.",
+        "cause": "Derivative lineage was omitted.",
+        "repair": "Record the original locator and transformation chain.",
+        "recheck": "The reader can distinguish source from edited output."
+      },
+      {
+        "symptom": "A checksum is presented as a trust certificate.",
+        "cause": "Integrity and authenticity were conflated.",
+        "repair": "Limit the claim to byte equality and identify any separate origin check.",
+        "recheck": "The report does not infer identity or truth from a hash."
+      }
+    ],
+    "worked_example": {
+      "input": "One artifact matches its pinned digest; a second differs although both have readable content.",
+      "method": "Verify identity separately for each item and preserve both originals.",
+      "result": "Use the first within its allowed scope. Quarantine the second for revision reconciliation; do not claim either author was authenticated by the digest."
+    },
+    "additional_examples": [
+      {
+        "input": "The original provider later supplies the exact intended second revision and its permitted use.",
+        "method": "Compare the replacement to the independently recorded expected revision rather than relabeling the earlier mismatch.",
+        "result": "Admit the verified replacement; retain the mismatch record and update only dependent outputs."
+      }
+    ],
+    "handoff": "Preserve original source locators and revisions, raw and derivative hashes, rights decisions, unresolved conflicts and the next evidence check. Never place access tokens, private recipient data or copied confidential context into the reusable skill.",
+    "case_ids": [
+      "source-and-custody-r4-standard",
+      "source-and-custody-r4-edge",
+      "source-and-custody-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-workflows",
+        "path": "README.md",
+        "revision": "6e9d95c5780df8627f1aae808c3a4776ea3b4ab7",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "bounded-review": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Review the artifact against the actual brief and the current version, not an imagined ideal product. Freeze the review scope, mandatory requirements, evidence available and decision owner. Distinguish a reproduced defect from a plausible risk, missing evidence and a stylistic preference.\n\nA useful review prioritizes consequence and gives the smallest corrective action. Verify positive controls as well as defects: an intentionally correct case should remain accepted. Independent review is a property of how the reviewer and evidence were obtained, not a label attached to a second script or a second machine.",
+    "output_contract": "Return a requirement-to-evidence matrix, prioritized findings with exact locations and counterexamples, passed checks, unobserved checks and a scope-limited verdict. Include repairs that address the demonstrated issue. Explicitly separate source review, runtime verification and aesthetic judgment.",
+    "decisions": [
+      {
+        "when": "All stated requirements have current supporting evidence.",
+        "do": "Accept only the reviewed scope and name the artifact revision.",
+        "avoid": "Do not promote a local review to deployment, safety certification or market superiority."
+      },
+      {
+        "when": "A mandatory check has not been observed.",
+        "do": "Mark that requirement unverified and identify the smallest evidence-producing step.",
+        "avoid": "Do not count an absent result as a pass or automatic product failure."
+      },
+      {
+        "when": "A specific defect is reproduced.",
+        "do": "Document the triggering input, location, consequence and minimal correction.",
+        "avoid": "Do not bury a concrete correctness issue among stylistic comments."
+      },
+      {
+        "when": "A requested improvement is outside the brief.",
+        "do": "Record it separately as an optional suggestion with cost and impact.",
+        "avoid": "Do not fail the artifact for an unagreed requirement."
+      },
+      {
+        "when": "The artifact changes after review.",
+        "do": "Invalidate affected findings and repeat only the relevant checks on the new revision.",
+        "avoid": "Do not reuse stale approval for materially different bytes."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A review produces many findings but little useful action.",
+        "cause": "Preferences were mixed with defects and evidence gaps.",
+        "repair": "Classify each item and rank by observable impact.",
+        "recheck": "The recipient can identify what must change and why."
+      },
+      {
+        "symptom": "The same correct control is repeatedly rejected.",
+        "cause": "The rubric rewards finding faults rather than correctness.",
+        "repair": "Include an intentionally correct control and examine the rejection logic.",
+        "recheck": "A valid artifact can receive an evidence-backed acceptance."
+      },
+      {
+        "symptom": "A previously approved output fails after editing.",
+        "cause": "Review identity was not bound to the artifact revision.",
+        "repair": "Recheck the changed portions and record a new decision.",
+        "recheck": "The final verdict names the version actually inspected."
+      }
+    ],
+    "worked_example": {
+      "input": "Requirement A has a passing observation; requirement B has a reproduced failure.",
+      "method": "Keep the outcome specific to the two requirements and include the failure evidence.",
+      "result": "Verdict: changes needed for B. A remains passed; neither the whole project nor unrelated functions are declared broken."
+    },
+    "additional_examples": [
+      {
+        "input": "B has no test result rather than a failing result.",
+        "method": "Distinguish unknown from false and request the one missing check.",
+        "result": "Verdict: insufficient evidence for B. Do not fabricate a failure or silently pass it."
+      }
+    ],
+    "handoff": "Preserve the reviewed revision, requirement IDs, exact evidence locations, findings, completed repairs and unobserved checks. Resume on the changed or unverified requirements; do not restart an unchanged full review without reason.",
+    "case_ids": [
+      "bounded-review-r4-standard",
+      "bounded-review-r4-edge",
+      "bounded-review-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-workflows",
+        "path": "README.md",
+        "revision": "6e9d95c5780df8627f1aae808c3a4776ea3b4ab7",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "household-project": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Translate the desired home outcome into measurements, dependencies, materials, access requirements and decisions. Separate estimation from a quote and a proposed appointment from a confirmed booking. Count shared materials once and preserve units, quantities and uncertainty.\n\nTreat physical hazards as scope boundaries. Where electrical, gas, structural or other specialized work needs a qualified professional, make that dependency visible rather than inventing a do-it-yourself procedure. Continue safe planning, measurements from existing records and ordinary procurement comparison without implying that a permit, qualification or contractor acceptance exists.",
+    "output_contract": "Deliver a practical staged checklist, current dimensions, materials and costs, professional/permission dependencies, owners, and the next safe step. Identify assumptions that require a site check. Preserve photos or measurements as observations, not proof of hidden structural conditions.",
+    "decisions": [
+      {
+        "when": "The job is ordinary organization or decoration.",
+        "do": "Break it into small reversible tasks and reuse existing measurements and preferences.",
+        "avoid": "Do not overcomplicate a simple project with unnecessary contractor workflow."
+      },
+      {
+        "when": "A task depends on a measurement not yet verified.",
+        "do": "Prepare alternatives and mark the dimension-dependent purchase as held.",
+        "avoid": "Do not guess a fit and order an irreversible custom item."
+      },
+      {
+        "when": "Specialized physical work is involved.",
+        "do": "Place the relevant task behind an appropriate professional or approval check and continue safe independent preparation.",
+        "avoid": "Do not provide hazardous implementation steps beyond the authorized competence boundary."
+      },
+      {
+        "when": "Several tasks share materials.",
+        "do": "Aggregate quantities and cost once, with waste or contingency shown separately.",
+        "avoid": "Do not double-count a shared purchase or hide a reserve inside a unit price."
+      },
+      {
+        "when": "A contractor or delivery date changes.",
+        "do": "Reconcile the existing booking and update only dependent tasks.",
+        "avoid": "Do not duplicate appointments or erase completed work."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "Materials do not fit the space.",
+        "cause": "Measurements or units were assumed.",
+        "repair": "Compare the actual dimensions and units before committing a replacement order.",
+        "recheck": "The fit decision cites a confirmed measurement."
+      },
+      {
+        "symptom": "A task starts before its prerequisite is complete.",
+        "cause": "Dependencies were described only in prose.",
+        "repair": "Assign explicit prerequisite IDs and a readiness state.",
+        "recheck": "Only safe ready tasks appear in the immediate action list."
+      },
+      {
+        "symptom": "The budget looks low until checkout.",
+        "cause": "Shared, mandatory or contingency costs were omitted.",
+        "repair": "Rebuild a complete itemized total and distinguish estimates.",
+        "recheck": "The total and its uncertainty can be independently recalculated."
+      }
+    ],
+    "worked_example": {
+      "input": "Measure the room, arrange electrical work, and paint. The professional is not yet confirmed; paint depends on measurement.",
+      "method": "Separate professional and dependency holds from ordinary preparation.",
+      "result": "Measure first. Hold electrical work for the professional. Paint can proceed only after the relevant measurement and readiness checks."
+    },
+    "additional_examples": [
+      {
+        "input": "Measurement is complete, but professional scheduling is still unresolved.",
+        "method": "Reuse the measurement and determine which ordinary tasks are independent.",
+        "result": "Continue the safe paint-preparation tasks. Do not declare the whole project blocked or represent electrical work as authorized."
+      }
+    ],
+    "handoff": "Preserve measurements with units and dates, completed tasks, contractor and purchase identities, unresolved professional approvals, cost assumptions and dependencies. Resume only unfinished work and reconcile existing bookings before replacements.",
+    "case_ids": [
+      "household-project-r4-standard",
+      "household-project-r4-edge",
+      "household-project-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-connectors",
+        "path": "README.md",
+        "revision": "85fa8303b195ef4d25a309bc4bfcff88e5e61610",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "teach-back": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Use the learner’s own explanation to reveal understanding, not to reward repetition of your wording. Select a small concept set and ask for mechanism, boundary conditions and an example. Distinguish a missing explanation from an incorrect causal claim and from an answer produced with hints.\n\nRepair one misconception at a time using a discriminating contrast, then ask an unfamiliar transfer question without leaking its solution. Keep source-bound material authoritative for the learning task. The learner’s confidence and fluency are observations, not evidence that every concept is correct or retained.",
+    "output_contract": "Return a concept-level feedback map with what the learner demonstrated, contradictions or omissions, one targeted repair, and the next transfer question. Record assisted versus unaided performance. Never assert durable learning from a single coached answer.",
+    "decisions": [
+      {
+        "when": "The explanation is correct but uses different words.",
+        "do": "Credit the supported concept and ask a transfer question only when useful.",
+        "avoid": "Do not require memorization of the model’s preferred phrasing."
+      },
+      {
+        "when": "A key mechanism is missing.",
+        "do": "Ask a focused causal question and provide the smallest missing connection.",
+        "avoid": "Do not replace the entire explanation with a long lecture."
+      },
+      {
+        "when": "A confident answer contradicts the source.",
+        "do": "Show the exact point of conflict and a contrasting case that distinguishes the two ideas.",
+        "avoid": "Do not treat confidence as correctness or humiliate the learner."
+      },
+      {
+        "when": "The learner needed substantial prompting.",
+        "do": "Label the result assisted and try a fresh unaided example later in the same workflow if appropriate.",
+        "avoid": "Do not score a revealed answer as independent transfer."
+      },
+      {
+        "when": "Two supplied sources disagree.",
+        "do": "Keep versions and conditions separate and ask which governs the task only if unresolved.",
+        "avoid": "Do not invent a merged exam fact."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A polished explanation hides a missing mechanism.",
+        "cause": "Fluency was graded instead of concept evidence.",
+        "repair": "Require one causal link and a counterexample.",
+        "recheck": "The learner can explain when the rule does not apply."
+      },
+      {
+        "symptom": "The same error survives repeated explanations.",
+        "cause": "The repair did not distinguish competing mental models.",
+        "repair": "Use a minimal contrast with different predicted outcomes.",
+        "recheck": "The next response identifies the discriminating condition."
+      },
+      {
+        "symptom": "A coached success is reported as mastery.",
+        "cause": "Assistance and transfer state were omitted.",
+        "repair": "Separate assisted completion from an unseen unaided attempt.",
+        "recheck": "The record does not overstate what was demonstrated."
+      }
+    ],
+    "worked_example": {
+      "input": "The learner explains cause and gives an example but omits the rule’s limit.",
+      "method": "Credit the two demonstrated concepts and target the omitted boundary.",
+      "result": "Feedback: cause and example demonstrated; limit needs repair. Ask a contrasting example instead of reteaching everything."
+    },
+    "additional_examples": [
+      {
+        "input": "After a hint the learner answers the new example correctly.",
+        "method": "Record the assistance before judging transfer.",
+        "result": "The response is useful practice, but unaided transfer is not established; use a fresh unprompted case before making that claim."
+      }
+    ],
+    "handoff": "Preserve source version, concept rubric, the learner’s actual explanation, assistance given, targeted repair and unanswered transfer prompt. Do not copy private learner history into the generic pack or repeat already resolved explanations.",
+    "case_ids": [
+      "teach-back-r4-standard",
+      "teach-back-r4-edge",
+      "teach-back-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-catalog",
+        "path": "README.md",
+        "revision": "faf37c0859ebf627bfcb5225e8057d088691e0ae",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "change-brief": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Compare two explicitly identified states and report meaningful differences without inventing causes. Distinguish added, removed, modified and unchanged items, with stable identifiers where possible. An observation date, publication date and effective date are different fields and should not be silently substituted.\n\nA change summary should explain impact on the user’s actual task, including reversions and uncertainty. Keep observed differences separate from hypotheses about why they happened. When records have been renamed, use evidence of identity rather than guessing that every similar label is the same object.",
+    "output_contract": "Deliver a concise what-changed table with before/after values, source revisions, affected decisions and unresolved identity or date questions. Include a practical next action only when the observed change warrants it. Preserve unchanged controls rather than implying everything moved.",
+    "decisions": [
+      {
+        "when": "Both source snapshots are available.",
+        "do": "Compare their stable IDs and relevant fields and cite the exact versions.",
+        "avoid": "Do not compare a current file with an unlabeled memory of the old state."
+      },
+      {
+        "when": "A prior item disappears.",
+        "do": "Mark removal only within the observed scope and check whether the source listing is complete.",
+        "avoid": "Do not equate a truncated result with confirmed deletion."
+      },
+      {
+        "when": "Only a label changes.",
+        "do": "Resolve identity from IDs or documented history before counting it as a new item.",
+        "avoid": "Do not inflate change counts through cosmetic renaming."
+      },
+      {
+        "when": "A value reverts to an earlier value.",
+        "do": "Report the reversion as a change from the immediate baseline and preserve the sequence.",
+        "avoid": "Do not erase the intervening state from history."
+      },
+      {
+        "when": "The user asks why the change happened.",
+        "do": "Separate supported explanation from plausible hypotheses and name the evidence needed to distinguish them.",
+        "avoid": "Do not present causal inference as a retrieved fact."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The brief says a record was removed when it still exists.",
+        "cause": "The second snapshot was incomplete or differently scoped.",
+        "repair": "Reconcile scope and pagination before classifying absence.",
+        "recheck": "Confirmed removal has complete comparable observations."
+      },
+      {
+        "symptom": "A date in the summary is misleading.",
+        "cause": "Publication and effective dates were conflated.",
+        "repair": "Label each date by meaning and preserve unknowns.",
+        "recheck": "The user can tell when the change applies."
+      },
+      {
+        "symptom": "A summary loses a rollback.",
+        "cause": "Only the oldest and newest state were compared.",
+        "repair": "Include the immediate predecessor and the relevant transition.",
+        "recheck": "The record preserves the actual change sequence."
+      }
+    ],
+    "worked_example": {
+      "input": "A changes from 1 to 3, B disappears, and C appears in complete snapshots v1 and v2.",
+      "method": "Classify by stable IDs and compare values only on shared records.",
+      "result": "A modified; B removed; C added. Reasons for the changes remain unestablished unless separately evidenced."
+    },
+    "additional_examples": [
+      {
+        "input": "A later snapshot restores A to 1.",
+        "method": "Use v2 as the immediate baseline, not the original value alone.",
+        "result": "Report A’s reversion from 3 to 1 at v3; do not label the latest transition unchanged."
+      }
+    ],
+    "handoff": "Preserve both snapshot identities, scope completeness, stable IDs, observed differences, date semantics and unresolved explanations. Resume with the next comparable snapshot, not an inferred history.",
+    "case_ids": [
+      "change-brief-r4-standard",
+      "change-brief-r4-edge",
+      "change-brief-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-workflows",
+        "path": "README.md",
+        "revision": "6e9d95c5780df8627f1aae808c3a4776ea3b4ab7",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "visual-reference": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Translate observed visual references into explicit constraints: hierarchy, spacing, shape language, type roles, palette roles, material treatment and composition. Separate measured or visible properties from guesses about fonts, dimensions or hidden components. A reference you cannot actually inspect is an unverified source, not permission to invent its appearance.\n\nBuild a coherent design rule set rather than collaging incompatible styles. Identify what must stay invariant and what can vary across screens, frames or assets. Preserve usage and redistribution boundaries separately from the ability to view an image. Visual resemblance alone does not establish rights or accessibility.",
+    "output_contract": "Deliver a reference-to-rule table, prioritized visual invariants, permitted variation, conflicts between references and an artifact review checklist. When actual files are generated, inspect the render against these rules; a prompt or token list is not visual verification.",
+    "decisions": [
+      {
+        "when": "The reference is available and clearly observed.",
+        "do": "Extract a few high-value rules with the reference location that supports each.",
+        "avoid": "Do not invent exact font names or color values from an inaccessible source."
+      },
+      {
+        "when": "Several references conflict.",
+        "do": "Choose which reference governs each role and resolve the conflict explicitly.",
+        "avoid": "Do not combine every attractive detail into an incoherent result."
+      },
+      {
+        "when": "The image is named but not provided.",
+        "do": "Use known constraints and mark the missing reference-dependent decisions unverified.",
+        "avoid": "Do not claim to reproduce an image you have not seen."
+      },
+      {
+        "when": "The design must adapt to another format.",
+        "do": "Preserve identity and hierarchy while changing layout to fit the new aspect ratio or device.",
+        "avoid": "Do not distort the subject or shrink essential content solely to force a fit."
+      },
+      {
+        "when": "The user wants to redistribute source assets.",
+        "do": "Check the specific asset’s rights and consent separately from the design analysis.",
+        "avoid": "Do not treat public visibility or an inspiration link as a redistribution license."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The output looks like several unrelated brands.",
+        "cause": "Rules were copied without a hierarchy.",
+        "repair": "Assign a governing source to each visual role and remove incompatible choices.",
+        "recheck": "The rendered result has a consistent visual logic."
+      },
+      {
+        "symptom": "The assistant claims an exact match without inspecting the render.",
+        "cause": "Prompt compliance was mistaken for visual evidence.",
+        "repair": "Open the actual output and compare concrete constraints.",
+        "recheck": "The verification names observed differences and remaining limits."
+      },
+      {
+        "symptom": "A missing reference is filled with plausible details.",
+        "cause": "Availability was not checked.",
+        "repair": "Mark those properties unknown and ask only for the missing asset when essential.",
+        "recheck": "No invented source property is presented as observed."
+      }
+    ],
+    "worked_example": {
+      "input": "Reference one is visible and supports generous spacing; reference two is unavailable but supposedly supplies a typeface.",
+      "method": "Separate observed rules from missing-source claims.",
+      "result": "Spacing rule supported; typeface choice unverified. Produce a provisional layout without claiming faithful typography."
+    },
+    "additional_examples": [
+      {
+        "input": "Reference two becomes available but its narrow type conflicts with the readability requirement.",
+        "method": "Keep the requirement authoritative and adapt the role rather than copying literally.",
+        "result": "Use the reference’s hierarchy and rhythm with a readable type treatment; document the deliberate deviation."
+      }
+    ],
+    "handoff": "Preserve the exact reference files or links, observed properties, rights status, governing role assignments, visual invariants and last rendered evidence. Do not substitute a new reference silently or claim an unobserved image match.",
+    "case_ids": [
+      "visual-reference-r4-standard",
+      "visual-reference-r4-edge",
+      "visual-reference-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-workflows",
+        "path": "README.md",
+        "revision": "6e9d95c5780df8627f1aae808c3a4776ea3b4ab7",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "customer-discovery": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Decompose a business idea into assumptions about a specific person, recurring task, current workaround, consequence and willingness to change. Interview evidence should describe actual behavior before soliciting reactions to a proposed solution. Distinguish what participants said, what they demonstrably did, and what they paid for.\n\nCount people and independent observations rather than the number of quotes. A convenient sample can identify useful problems but does not establish population demand. Keep negative evidence, recruitment filters and leading questions visible. A useful outcome is a sharper hypothesis and next discriminating test, not automatic validation of the founder’s idea.",
+    "output_contract": "Deliver an assumption map, neutral interview questions, source-linked observations grouped by participant, contradictory evidence and a bounded next experiment. Separate direct behavior from opinion and observed willingness to pay from hypothetical enthusiasm. Do not contact participants or store personal details beyond the authorized scope.",
+    "decisions": [
+      {
+        "when": "The user has only an idea and target audience.",
+        "do": "Identify the riskiest behavior assumption and create questions about the last real occurrence of the problem.",
+        "avoid": "Do not lead with a sales pitch or ask whether people like the idea."
+      },
+      {
+        "when": "Interview notes already exist.",
+        "do": "Extract observations with participant IDs and preserve exact context before clustering.",
+        "avoid": "Do not paraphrase every favorable quote into proof of demand."
+      },
+      {
+        "when": "Several quotes come from one participant.",
+        "do": "Count that person once for participant-level patterns and retain the distinct events separately.",
+        "avoid": "Do not inflate support by counting repeated quotations as independent customers."
+      },
+      {
+        "when": "Participants praise the concept but show no behavior.",
+        "do": "Label the evidence as opinion and propose a low-cost test of an actual next step.",
+        "avoid": "Do not equate politeness, clicks or hypothetical payment with sales."
+      },
+      {
+        "when": "Evidence contradicts the initial assumption.",
+        "do": "Narrow, revise or stop the hypothesis and retain the disconfirming observations.",
+        "avoid": "Do not discard inconvenient interviews to rescue the original story."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "Every interview appears positive.",
+        "cause": "Questions introduced the desired answer.",
+        "repair": "Rewrite prompts around recent real behavior and inspect negative or neutral cases.",
+        "recheck": "The next interview can falsify the assumption."
+      },
+      {
+        "symptom": "A pattern is supported by many quotes but few people.",
+        "cause": "The unit of analysis drifted.",
+        "repair": "Deduplicate at the participant level and show the denominator.",
+        "recheck": "The report distinguishes quote count from independent participants."
+      },
+      {
+        "symptom": "A pilot is declared successful before anyone commits.",
+        "cause": "Interest was promoted to purchase evidence.",
+        "repair": "Define a real behavioral success event before the next test.",
+        "recheck": "The outcome uses the original event and denominator."
+      }
+    ],
+    "worked_example": {
+      "input": "Two quotes come from P1 expressing interest; P2 shows a recurring manual workaround.",
+      "method": "Use participant-level counting and separate opinion from behavior.",
+      "result": "Two participants, one with observed workaround behavior, zero observed paying customers. This is a useful problem signal, not proven market demand."
+    },
+    "additional_examples": [
+      {
+        "input": "P2 later pays for a small pilot.",
+        "method": "Add the observed payment event without turning one person into a new participant.",
+        "result": "Two participants, one paying participant. Keep the sample limitation and test whether the problem recurs elsewhere."
+      }
+    ],
+    "handoff": "Preserve the hypothesis version, participant-safe IDs, recruitment criteria, interview questions, raw observations, contradictory evidence and frozen next-test criteria. Resume from actual new evidence rather than rewriting history as validation.",
+    "case_ids": [
+      "customer-discovery-r4-standard",
+      "customer-discovery-r4-edge",
+      "customer-discovery-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "grok-briefs",
+        "path": "README.md",
+        "revision": "a426143ab24476affa5d0c5a4efb4274f57a91ff",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "offer-design": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Shape an offer around a specific customer outcome, a deliverable, a service boundary and evidence the provider can actually supply. Separate the promise from a guarantee. Define what the customer contributes, what is excluded, how completion is accepted and what happens when assumptions fail.\n\nModel capacity and contribution economics explicitly. Revenue is not margin: variable delivery cost, fixed setup cost and the number of customers change the scenario. Cash timing and refundable deposits are separate from economic cost. A profitable spreadsheet is only a scenario until demand, execution cost and acceptance are observed.",
+    "output_contract": "Deliver an offer brief with audience, outcome, deliverables, exclusions, customer prerequisites, acceptance, delivery capacity and transparent price/cost scenarios. Identify unsupported claims and a bounded pilot. Do not invent testimonials, guaranteed results or a payment commitment.",
+    "decisions": [
+      {
+        "when": "The user has skills but no concrete offer.",
+        "do": "Choose a narrow outcome that can be delivered and verified with existing capabilities.",
+        "avoid": "Do not inflate the promise to cover every possible customer need."
+      },
+      {
+        "when": "The scope expands during the discussion.",
+        "do": "Separate the core deliverable from optional additions and expose their time and cost.",
+        "avoid": "Do not hide extra work behind an unchanged price."
+      },
+      {
+        "when": "The price exceeds variable cost but fixed costs are material.",
+        "do": "Calculate per-customer contribution and the full scenario after fixed cost.",
+        "avoid": "Do not report revenue or gross receipts as profit."
+      },
+      {
+        "when": "Demand would exceed delivery capacity.",
+        "do": "Reduce the pilot volume, change sequencing or identify a real resource gap.",
+        "avoid": "Do not promise dates that assume nonexistent staff or tools."
+      },
+      {
+        "when": "The offer depends on an unsupported result claim.",
+        "do": "Replace the claim with an honest deliverable or an explicitly tested outcome.",
+        "avoid": "Do not manufacture case studies or imply an unmeasured guarantee."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The offer is attractive but impossible to deliver consistently.",
+        "cause": "Acceptance and customer prerequisites were vague.",
+        "repair": "Write an observable done condition and required customer inputs.",
+        "recheck": "Both parties can distinguish complete delivery from an open-ended promise."
+      },
+      {
+        "symptom": "A high price is mistaken for a healthy margin.",
+        "cause": "Delivery cost and fixed setup were omitted.",
+        "repair": "Recalculate contribution and scenario margin with stated assumptions.",
+        "recheck": "The arithmetic reconciles to price, unit cost and volume."
+      },
+      {
+        "symptom": "A pilot generates more work than the team can handle.",
+        "cause": "Capacity was not part of the offer.",
+        "repair": "Cap the pilot and define intake or waiting-list behavior.",
+        "recheck": "Committed work remains within actual capacity."
+      }
+    ],
+    "worked_example": {
+      "input": "Price is 200 dollars, variable cost is 120, fixed setup is 100, and the pilot has three customers.",
+      "method": "Calculate contribution before comparing the pilot with available capacity.",
+      "result": "Contribution is 80 dollars per customer; scenario margin is 140 dollars after fixed setup. Pilot suitability still depends on supported scope and actual capacity."
+    },
+    "additional_examples": [
+      {
+        "input": "Five customers request the same pilot but capacity is four.",
+        "method": "Preserve the economics but evaluate the capacity constraint separately.",
+        "result": "The scenario may have positive margin, yet the five-customer offer is not delivery-ready. Cap or sequence intake rather than pretending capacity is unlimited."
+      }
+    ],
+    "handoff": "Preserve the offer version, supported claims, deliverables and exclusions, acceptance criteria, cost assumptions, capacity and actual pilot observations. Resume from changed constraints; do not rewrite a tentative offer as a signed agreement.",
+    "case_ids": [
+      "offer-design-r4-standard",
+      "offer-design-r4-edge",
+      "offer-design-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "grok-briefs",
+        "path": "README.md",
+        "revision": "a426143ab24476affa5d0c5a4efb4274f57a91ff",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "content-system": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Build a content system around reusable, verified source material and an audience need rather than a calendar full of invented claims. Treat each content item as a transformation of identified facts, examples or owned creative material. Separate evergreen material, time-sensitive claims and private source context.\n\nRepurposing should preserve meaning while adapting format, depth and channel. A short post must not turn a qualified finding into certainty, and a case study must not silently expose a private client. Draft approval, scheduling and publication are distinct states. Keep source refresh and withdrawal paths so stale claims can be found without redoing unrelated work.",
+    "output_contract": "Deliver content pillars, a source-to-item map, practical drafts or outlines, channel-specific acceptance checks and a refresh queue. Identify stale, unlicensed or private source dependencies. Record scheduling or publication only when an actual supported service returns evidence.",
+    "decisions": [
+      {
+        "when": "The user has a substantial source artifact.",
+        "do": "Extract reusable claims and examples and assign source IDs before choosing channels.",
+        "avoid": "Do not produce a pile of generic posts detached from the source."
+      },
+      {
+        "when": "A source is outdated or withdrawn.",
+        "do": "Hold affected claims and continue content based on still-valid sources.",
+        "avoid": "Do not refresh a date without rechecking the underlying fact."
+      },
+      {
+        "when": "The same idea is adapted to several formats.",
+        "do": "Keep the core claim and its qualification stable while changing presentation.",
+        "avoid": "Do not count aliases or channel variants as new evidence."
+      },
+      {
+        "when": "The source contains personal or client details.",
+        "do": "Minimize, redact or obtain the appropriate permission for the intended audience.",
+        "avoid": "Do not treat access to a document as authority to publish it."
+      },
+      {
+        "when": "The user requests scheduling or publication.",
+        "do": "Prepare the exact content and channel, then use the actual authorized provider and inspect its result.",
+        "avoid": "Do not claim a draft exists online or promise a background schedule without execution."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A polished post contains a claim absent from the source.",
+        "cause": "The writing process filled a gap with a plausible statement.",
+        "repair": "Remove or qualify it and trace the remaining claims.",
+        "recheck": "Every material factual assertion has support."
+      },
+      {
+        "symptom": "Repurposed content contradicts the original.",
+        "cause": "Compression removed conditions or uncertainty.",
+        "repair": "Restore the key qualification and check the channel version.",
+        "recheck": "The shorter format preserves the original meaning."
+      },
+      {
+        "symptom": "Old content keeps circulating after a correction.",
+        "cause": "Source dependencies were not recorded.",
+        "repair": "Use the source-to-item map to identify affected drafts and publications.",
+        "recheck": "The correction scope is explicit and does not erase unrelated content."
+      }
+    ],
+    "worked_example": {
+      "input": "A blog draft uses current source S1; a social post uses stale source S2.",
+      "method": "Check source currency and reuse scope per item.",
+      "result": "The blog is ready to draft. Hold the post for source refresh. Neither item is marked published."
+    },
+    "additional_examples": [
+      {
+        "input": "S2 is refreshed and approved for reuse.",
+        "method": "Recheck the affected claim and update the item without rebuilding the blog.",
+        "result": "Both drafts can proceed; scheduling and publication remain separate authorized actions."
+      }
+    ],
+    "handoff": "Preserve source revisions, claim IDs, audience, draft versions, approvals and actual provider publication identifiers. Resume by refreshing only affected claims and reconciling ambiguous prior publishing actions.",
+    "case_ids": [
+      "content-system-r4-standard",
+      "content-system-r4-edge",
+      "content-system-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "grok-briefs",
+        "path": "README.md",
+        "revision": "a426143ab24476affa5d0c5a4efb4274f57a91ff",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "service-playbook": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Design a service as explicit states, owners, handoffs and acceptance conditions rather than a checklist that assumes every step succeeded. Distinguish ready work from blocked work, proposed ownership from accepted responsibility, and an unknown external outcome from a never-started task.\n\nUse a small state model that fits the actual service. A handoff closes when the recipient acknowledges the required artifact, not when the sender writes a note. Define a recovery path for delays, missing inputs and ambiguous effects. Escalation should identify the specific decision owner and preserve useful independent work.",
+    "output_contract": "Deliver a service map with step IDs, inputs, outputs, owners, readiness, acceptance and exception paths. Include a compact case record and the next safe action. Do not replace a service’s real task system or invent authority to dispatch people or providers.",
+    "decisions": [
+      {
+        "when": "A step has verified completion evidence.",
+        "do": "Reuse its output and make dependent work eligible.",
+        "avoid": "Do not repeat a completed effect because a later local note is missing."
+      },
+      {
+        "when": "A handoff has no accepted owner.",
+        "do": "Mark the responsibility unassigned or awaiting acceptance and identify who must decide.",
+        "avoid": "Do not assign responsibility merely because someone was mentioned."
+      },
+      {
+        "when": "An external operation timed out.",
+        "do": "Reconcile the original operation identity and hold only dependent effects.",
+        "avoid": "Do not start a replacement with a new identity before knowing the original outcome."
+      },
+      {
+        "when": "A prerequisite is incomplete.",
+        "do": "Keep the dependent step held while continuing independent ready work.",
+        "avoid": "Do not flatten the entire service into a single blocked status."
+      },
+      {
+        "when": "A denial or explicit stop exists.",
+        "do": "Preserve it, explain the affected scope and seek the proper decision owner when necessary.",
+        "avoid": "Do not route through another account to evade the restriction."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A task appears complete but the recipient has nothing usable.",
+        "cause": "Sending and accepted handoff were conflated.",
+        "repair": "Inspect the actual artifact and acknowledgment.",
+        "recheck": "The state distinguishes prepared, sent, received and accepted."
+      },
+      {
+        "symptom": "The service duplicates work after interruption.",
+        "cause": "Original operation IDs and completion evidence were lost.",
+        "repair": "Recover the last confirmed state before dispatching again.",
+        "recheck": "No completed or unknown effect is blindly repeated."
+      },
+      {
+        "symptom": "A small exception stalls every customer.",
+        "cause": "The workflow lacks independent paths.",
+        "repair": "Separate affected dependencies and continue unaffected cases.",
+        "recheck": "The hold is limited to the actual prerequisite."
+      }
+    ],
+    "worked_example": {
+      "input": "A draft is complete, sending has an unknown outcome, and an independent chart is planned with an accepted owner.",
+      "method": "Classify the steps from actual state and dependencies.",
+      "result": "Reuse the draft, reconcile the original send, and proceed with the independent chart. Do not resend."
+    },
+    "additional_examples": [
+      {
+        "input": "The original service later confirms the send completed.",
+        "method": "Use the confirmation to settle that operation rather than creating another.",
+        "result": "Draft and send are completed; the chart remains the next ready action."
+      }
+    ],
+    "handoff": "Preserve service case IDs, accepted owners, artifact locations, actual state transitions, unresolved original operation IDs and dependency relationships. Resume from the last confirmed state without inventing acknowledgments.",
+    "case_ids": [
+      "service-playbook-r4-standard",
+      "service-playbook-r4-edge",
+      "service-playbook-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "grok-briefs",
+        "path": "README.md",
+        "revision": "a426143ab24476affa5d0c5a4efb4274f57a91ff",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "analysis-notebook": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Build an analysis as a reproducible sequence from identified inputs to transformations, checks and conclusions. Preserve the raw dataset, its schema and the unit of observation. Record missing-value handling, exclusions, joins, grouping and the denominator used for every reported metric.\n\nAn executable notebook is not automatically a trustworthy analysis. Re-run from a clean state where the tool allows it, detect hidden execution-order dependence, and reconcile totals with independent controls. Separate descriptive results from causal claims and exploratory patterns from a predeclared test. Never silently impute missing data or drop a group to improve a result.",
+    "output_contract": "Deliver the analysis artifact with data provenance, transformation steps, validation checks, interpretable tables and a conclusion linked to actual results. Provide a clear environment and rerun instruction where code is used. State unavailable inputs or unexecuted cells rather than filling in plausible outputs.",
+    "decisions": [
+      {
+        "when": "The data is complete and the question is descriptive.",
+        "do": "Compute the requested summaries with an explicit unit of analysis and denominator.",
+        "avoid": "Do not expand a simple summary into unsupported prediction."
+      },
+      {
+        "when": "Observations contain missing values.",
+        "do": "Show missingness and choose a stated treatment appropriate to the question.",
+        "avoid": "Do not treat missing values as zero without justification."
+      },
+      {
+        "when": "A notebook depends on cells run out of order.",
+        "do": "Restart in a disposable environment and execute the documented sequence.",
+        "avoid": "Do not call a stale visible output a fresh execution."
+      },
+      {
+        "when": "A join changes the row count unexpectedly.",
+        "do": "Inspect key uniqueness and join cardinality before interpreting the result.",
+        "avoid": "Do not accept duplicated observations as increased sample size."
+      },
+      {
+        "when": "The user asks for a causal explanation from observational data.",
+        "do": "Distinguish association, assumptions and alternative explanations.",
+        "avoid": "Do not infer causation from an attractive chart or a correlation alone."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The mean changes when blank cells are filled with zero.",
+        "cause": "The denominator and missingness policy changed silently.",
+        "repair": "Restore explicit missing-value handling and recompute both quantities.",
+        "recheck": "Observed count, missing count and metric agree."
+      },
+      {
+        "symptom": "A rerun produces a different result.",
+        "cause": "Environment, random state or execution order is uncontrolled.",
+        "repair": "Record the relevant settings and isolate the nondeterministic step.",
+        "recheck": "The difference has an identified cause or remains an explicit limitation."
+      },
+      {
+        "symptom": "A conclusion is unsupported by the displayed table.",
+        "cause": "Narrative was written before the checked result.",
+        "repair": "Recompute the claim from the final table and source scope.",
+        "recheck": "Every quantitative statement reconciles to actual output."
+      }
+    ],
+    "worked_example": {
+      "input": "Rows contain values 2, 4 and one missing value.",
+      "method": "Keep observed and missing rows separate; compute the mean over the declared observed set.",
+      "result": "Three input rows, two observed, one missing; sum 6 and observed mean 3. No imputation has been performed."
+    },
+    "additional_examples": [
+      {
+        "input": "All values in a group are missing.",
+        "method": "Treat the group as unobserved rather than inventing a zero average.",
+        "result": "The group’s mean is undefined, with zero observed rows and explicit missingness."
+      }
+    ],
+    "handoff": "Preserve raw input identity, schema, transformation code or formulas, environment, execution order, exclusions, denominators and unresolved checks. Resume from the last verified transformation, not a stale rendered notebook state.",
+    "case_ids": [
+      "analysis-notebook-r4-standard",
+      "analysis-notebook-r4-edge",
+      "analysis-notebook-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-workflows",
+        "path": "README.md",
+        "revision": "6e9d95c5780df8627f1aae808c3a4776ea3b4ab7",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "chart-story": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Select a chart from the question and data structure: changes over ordered time, a relationship between measurements, or comparisons among categories require different encodings. Preserve units, denominators, missing values and uncertainty. A chart’s persuasive appearance must not outrun the underlying observations.\n\nUse position, length and color deliberately. For bar charts, the baseline affects the encoded length; a truncated baseline can exaggerate differences and must be corrected or explicitly handled. A nonzero axis is not automatically wrong for every other chart. Provide an accessible title, explanatory text and, when useful, a data table. Review the actual render for labels, clipping and distinguishability.",
+    "output_contract": "Deliver a chart or a concrete chart specification with the supporting data, axis units, denominator, source, uncertainty and a brief evidence-bounded takeaway. Include accessible explanatory text. State when only a specification exists rather than claiming a rendered chart was inspected.",
+    "decisions": [
+      {
+        "when": "The question is change over ordered time.",
+        "do": "Use a time-aware view with the actual intervals and mark missing observations.",
+        "avoid": "Do not connect absent data as if it were observed without explanation."
+      },
+      {
+        "when": "The question is category magnitude.",
+        "do": "Use a comparison encoding and check the bar baseline and units.",
+        "avoid": "Do not exaggerate a small difference with a misleading truncated bar axis."
+      },
+      {
+        "when": "The question is a relationship between variables.",
+        "do": "Use an appropriate scatter view and preserve independent observations.",
+        "avoid": "Do not label association as causation."
+      },
+      {
+        "when": "Important groups have different denominators.",
+        "do": "Show rates or denominators explicitly and retain relevant group context.",
+        "avoid": "Do not compare raw totals as if exposure were equal."
+      },
+      {
+        "when": "The chart is generated for a different screen or document size.",
+        "do": "Inspect labels, contrast, overlap and the final reading order in that output.",
+        "avoid": "Do not certify visual quality from the code alone."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A chart’s headline claims more than the data shows.",
+        "cause": "Narrative and encoding were optimized for persuasion.",
+        "repair": "Rewrite the takeaway to match the observed comparison and uncertainty.",
+        "recheck": "The headline survives a direct check against the data."
+      },
+      {
+        "symptom": "The visual comparison is distorted.",
+        "cause": "Axis baseline or aggregation changed the apparent magnitude.",
+        "repair": "Correct the encoding or make the limitation explicit.",
+        "recheck": "The displayed geometry does not misrepresent the quantities."
+      },
+      {
+        "symptom": "The chart is technically correct but unreadable.",
+        "cause": "The final render was not inspected.",
+        "repair": "Review the actual display size and adjust labels and layout.",
+        "recheck": "Critical information remains legible without relying only on color."
+      }
+    ],
+    "worked_example": {
+      "input": "Four category values are shown with a bar axis beginning at 50.",
+      "method": "Recognize that bar length encodes magnitude and examine the baseline.",
+      "result": "Use a bar comparison with a corrected baseline and explicit units; do not infer causation from the differences."
+    },
+    "additional_examples": [
+      {
+        "input": "The same records instead describe paired measurements and units are missing.",
+        "method": "Change the encoding to a relationship view and retain the missing-unit issue.",
+        "result": "Propose a scatter chart, request or recover the units, and hold any causal interpretation."
+      }
+    ],
+    "handoff": "Preserve the data revision, transformations, chart specification, units and denominators, source attribution, final render evidence and unresolved readability checks. Resume from verified data rather than recreating an unsupported narrative.",
+    "case_ids": [
+      "chart-story-r4-standard",
+      "chart-story-r4-edge",
+      "chart-story-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-workflows",
+        "path": "README.md",
+        "revision": "6e9d95c5780df8627f1aae808c3a4776ea3b4ab7",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "portfolio-story": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Turn real work into a narrative of the problem, constraints, personal contribution, implementation choices, verification and observed outcome. Keep a prototype, tested local system, deployed product and independently adopted service distinct. A strong story can be ambitious without pretending unfinished work is complete.\n\nAttribute shared work accurately and preserve evidence for quantitative claims. Personal projects can demonstrate engineering capability without being relabeled as employment or customer success. Explain tradeoffs and failures that changed the design; do not manufacture a polished linear history or unsupported business impact.",
+    "output_contract": "Deliver a case study with a concise problem statement, contribution boundaries, design rationale, screenshots or artifacts where available, test/deployment evidence and honest remaining work. Include a claim-to-proof map and a short version suitable for a portfolio page or interview.",
+    "decisions": [
+      {
+        "when": "The project is implemented and locally tested but not deployed.",
+        "do": "Tell the implementation and verification story with exact scope.",
+        "avoid": "Do not convert local tests into production usage or customer adoption."
+      },
+      {
+        "when": "Several people or agents contributed.",
+        "do": "State the author’s decisions and implemented contribution separately from others’ work.",
+        "avoid": "Do not claim sole ownership of a shared artifact."
+      },
+      {
+        "when": "The user has real measurements.",
+        "do": "Use their baseline, method and observed result with units and context.",
+        "avoid": "Do not invent a percentage improvement from an anecdote."
+      },
+      {
+        "when": "The work contains private or licensed material.",
+        "do": "Use approved redactions, synthetic examples or permitted excerpts.",
+        "avoid": "Do not publish credentials, personal data or unlicensed assets to strengthen the story."
+      },
+      {
+        "when": "A former claim no longer matches the current state.",
+        "do": "Update the claim and preserve the relevant historical context.",
+        "avoid": "Do not quietly retain an obsolete deployment or performance assertion."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The case study sounds impressive but cannot be substantiated.",
+        "cause": "Claims were written without an evidence map.",
+        "repair": "Link each material claim to an actual artifact or observation.",
+        "recheck": "Unsupported claims are removed or clearly limited."
+      },
+      {
+        "symptom": "The narrative obscures the person’s contribution.",
+        "cause": "Team output was described as personal execution.",
+        "repair": "Separate authored decisions, implementation and external contributions.",
+        "recheck": "A reviewer can identify what the person actually did."
+      },
+      {
+        "symptom": "A private demonstration leaks sensitive context.",
+        "cause": "Portfolio adaptation reused original data without a privacy pass.",
+        "repair": "Replace it with an approved neutral demonstration.",
+        "recheck": "The public story preserves technical meaning without exposing protected content."
+      }
+    ],
+    "worked_example": {
+      "input": "Claim C1 says tested and has build/test evidence; C2 says deployed but only build evidence exists.",
+      "method": "Review each claim against its actual evidence stage.",
+      "result": "Keep C1. Rewrite C2 as built or mark deployment unverified; the project remains useful portfolio evidence."
+    },
+    "additional_examples": [
+      {
+        "input": "A later deployment receipt verifies C2.",
+        "method": "Attach the new observation to the relevant claim without changing unrelated history.",
+        "result": "C2 may now be described as deployed within that environment, not automatically as widely adopted or commercially successful."
+      }
+    ],
+    "handoff": "Preserve source and artifact revisions, personal contribution boundaries, measurement methods, privacy decisions and current claim stages. Resume by adding verified new outcomes, never by promoting planned work into accomplished history.",
+    "case_ids": [
+      "portfolio-story-r4-standard",
+      "portfolio-story-r4-edge",
+      "portfolio-story-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "role-fit": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Assess a role against the person’s actual evidence and the posting’s actual requirements. Separate nonnegotiable eligibility conditions, preferred experience, transferable capability and unknown wording. A missing preferred item is not automatically disqualifying; a legally or operationally required credential cannot be replaced by enthusiastic language.\n\nMap requirements to specific projects, employment, education or other relevant evidence while preserving context. Avoid false precision about hiring probability. The useful result is a decision about whether to apply, what to emphasize and what to clarify, not a guarantee that an employer will accept or reject the person.",
+    "output_contract": "Deliver a requirement-to-evidence map, direct and transferable strengths, material gaps, eligibility questions and an application strategy. Keep the user’s real background intact. Distinguish an unknown requirement from a confirmed failure and do not invent years of experience.",
+    "decisions": [
+      {
+        "when": "The posting distinguishes required and preferred criteria.",
+        "do": "Preserve that distinction in the evidence map and application recommendation.",
+        "avoid": "Do not turn every wishlist item into a hard gate."
+      },
+      {
+        "when": "A nonnegotiable credential or authorization is unclear.",
+        "do": "Identify the exact requirement and seek authoritative clarification for the specific role.",
+        "avoid": "Do not claim that unrelated project work satisfies a regulated requirement."
+      },
+      {
+        "when": "A project demonstrates relevant capability without employment history.",
+        "do": "Explain the demonstrated skill and its scope accurately.",
+        "avoid": "Do not relabel personal projects as paid employment or assume they have no value."
+      },
+      {
+        "when": "The person has a transferable but not identical example.",
+        "do": "Show the overlap and the remaining learning gap.",
+        "avoid": "Do not collapse transferable evidence into either perfect fit or no fit."
+      },
+      {
+        "when": "The user asks whether they will be hired.",
+        "do": "Discuss evidence, competition and unknowns without a fabricated probability.",
+        "avoid": "Do not present a deterministic hiring forecast."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A promising application is abandoned over a preferred criterion.",
+        "cause": "Requirement severity was misread.",
+        "repair": "Reclassify required versus preferred items and inspect actual evidence.",
+        "recheck": "The recommendation is proportionate to the posting."
+      },
+      {
+        "symptom": "The resume implies experience the person never had.",
+        "cause": "Fit optimization became fabrication.",
+        "repair": "Keep the true context and describe the demonstrated capability.",
+        "recheck": "Every claim is supported by the person’s record."
+      },
+      {
+        "symptom": "A genuine eligibility condition is missed.",
+        "cause": "The assessment focused only on technical skills.",
+        "repair": "Separate credential, location or authorization conditions from capability.",
+        "recheck": "The unresolved eligibility issue is explicit before consequential action."
+      }
+    ],
+    "worked_example": {
+      "input": "R1 has direct evidence, R2 has transferable evidence, and nonnegotiable R3 has none.",
+      "method": "Map evidence strength without inventing equivalence.",
+      "result": "Emphasize R1, explain R2’s transfer, and clarify R3 before treating eligibility as established. No hiring probability is assigned."
+    },
+    "additional_examples": [
+      {
+        "input": "An authoritative update confirms the person satisfies R3.",
+        "method": "Update only that requirement and retain the existing evidence context.",
+        "result": "The eligibility question is resolved; the assessment still does not guarantee an offer."
+      }
+    ],
+    "handoff": "Preserve the exact posting version, requirement severity, evidence IDs, truthful experience context and unresolved eligibility questions. Resume from changed evidence rather than rewriting the person’s history.",
+    "case_ids": [
+      "role-fit-r4-standard",
+      "role-fit-r4-edge",
+      "role-fit-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "interview-rehearsal": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Rehearse the kind of answer the role actually requires, using truthful examples and a short explicit rubric. For behavioral answers distinguish situation, personal action, result and reflection; for technical answers inspect assumptions, method and checks. Feedback should identify a specific improvement rather than reward confidence alone.\n\nKeep practice separate from assessment. An answer produced after hints is coached, and repeated exposure to the same question can inflate apparent readiness. Use a new prompt or changed constraint to test transfer, while preserving the person’s real facts and natural voice. Timing is a constraint, not a reason to omit the decisive action or result.",
+    "output_contract": "Deliver the interview prompt, observed answer, rubric-based feedback, a revised outline and one next practice target. Record coaching and time used. Do not invent achievements, claim knowledge of a particular interviewer’s private rubric or promise hiring success.",
+    "decisions": [
+      {
+        "when": "The answer is clear but omits the person’s own action.",
+        "do": "Ask for the specific decision or contribution they made.",
+        "avoid": "Do not let a team-level story stand in for personal responsibility."
+      },
+      {
+        "when": "The example has an uncertain outcome.",
+        "do": "Use the actual observation and state the uncertainty.",
+        "avoid": "Do not manufacture a metric or success to complete the narrative."
+      },
+      {
+        "when": "The answer exceeds the available time.",
+        "do": "Cut setup and repetition before removing the core reasoning or result.",
+        "avoid": "Do not optimize for brevity by making the story misleading."
+      },
+      {
+        "when": "The learner needs hints.",
+        "do": "Coach explicitly and label the result assisted.",
+        "avoid": "Do not treat a rehearsed answer as an unseen independent performance."
+      },
+      {
+        "when": "A technical question has several reasonable solutions.",
+        "do": "Evaluate assumptions and tradeoffs against the constraints.",
+        "avoid": "Do not reject a valid alternative merely because it differs from the model’s preferred solution."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "Feedback is encouraging but not actionable.",
+        "cause": "The rubric is implicit or generic.",
+        "repair": "Identify one observable missing element and rehearse it.",
+        "recheck": "The next attempt has a clear change to test."
+      },
+      {
+        "symptom": "The answer becomes polished but untrue.",
+        "cause": "The rewrite invented detail.",
+        "repair": "Return to the person’s actual evidence and simplify the claim.",
+        "recheck": "Facts remain traceable to real experience."
+      },
+      {
+        "symptom": "Practice appears excellent but transfer fails.",
+        "cause": "The same prompt and hints were repeated.",
+        "repair": "Introduce an unfamiliar prompt under comparable conditions.",
+        "recheck": "The record distinguishes memorized delivery from adaptable understanding."
+      }
+    ],
+    "worked_example": {
+      "input": "An answer covers context and action but omits result, using 100 seconds of a 90-second budget.",
+      "method": "Evaluate coverage and duration separately.",
+      "result": "Keep the action, shorten setup, and add the actual result; the answer is ten seconds over budget and result coverage is missing."
+    },
+    "additional_examples": [
+      {
+        "input": "After coaching, the answer includes all rubric elements.",
+        "method": "Record that improvement as coached practice and try a fresh prompt if assessment is needed.",
+        "result": "The revised answer is useful rehearsal, not evidence of unaided readiness on an unseen question."
+      }
+    ],
+    "handoff": "Preserve prompts, actual answers, factual source examples, rubric, time budget, hints given and the next targeted practice condition. Resume from the specific weakness, not an invented ideal answer.",
+    "case_ids": [
+      "interview-rehearsal-r4-standard",
+      "interview-rehearsal-r4-edge",
+      "interview-rehearsal-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "difficult-message": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Build a difficult message from observable facts, the sender’s own experience, a concrete request and a proportionate boundary. Separate an interpretation of someone’s intent from what actually happened. Adapt tone to the relationship, channel and consequence without erasing the sender’s meaning.\n\nUse enough specificity for the recipient to respond, but avoid unnecessary accusations, diagnoses or threats. A boundary describes what the sender will do or accept; it is not a fabricated authority over the recipient. High-stakes employment, legal or safety situations may need qualified advice beyond drafting. Sending remains a separate authorized action.",
+    "output_contract": "Deliver a ready-to-review draft, its concrete ask and any unresolved facts or commitments. Preserve the user’s intended tone and true circumstances. Provide alternatives only when they change a meaningful tradeoff, not a long menu of cosmetic rewrites.",
+    "decisions": [
+      {
+        "when": "The facts and requested outcome are clear.",
+        "do": "Write the draft directly and keep the ask visible.",
+        "avoid": "Do not restart an emotional interview when the user has supplied enough context."
+      },
+      {
+        "when": "The draft attributes motives without evidence.",
+        "do": "Reframe as an observed event or clearly labeled interpretation.",
+        "avoid": "Do not diagnose the recipient or assert hidden intent as fact."
+      },
+      {
+        "when": "A boundary is needed.",
+        "do": "State the sender’s action, condition and realistic follow-through.",
+        "avoid": "Do not add a threat the sender cannot or does not intend to carry out."
+      },
+      {
+        "when": "The message could disclose private information.",
+        "do": "Remove unrelated details and check the intended audience.",
+        "avoid": "Do not include another person’s sensitive history merely to strengthen an argument."
+      },
+      {
+        "when": "The user asks to send the message.",
+        "do": "Confirm the exact recipient and final authorized text through the actual available provider.",
+        "avoid": "Do not confuse a draft with a sent or received message."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The recipient cannot tell what response is requested.",
+        "cause": "The message contains feelings but no concrete ask.",
+        "repair": "Add one specific action or question with a realistic timeframe when appropriate.",
+        "recheck": "A reasonable recipient can identify the next response."
+      },
+      {
+        "symptom": "The draft escalates the conflict unnecessarily.",
+        "cause": "Interpretations were presented as accusations.",
+        "repair": "Separate facts from inferences and retain a proportionate boundary.",
+        "recheck": "The draft remains firm without inventing motives."
+      },
+      {
+        "symptom": "A rewrite no longer sounds like the user.",
+        "cause": "Tone optimization replaced the user’s intent.",
+        "repair": "Restore their level of directness and protected wording.",
+        "recheck": "The final draft expresses the user’s actual position."
+      }
+    ],
+    "worked_example": {
+      "input": "A missed deadline is verified, but the sender’s belief that it was deliberate is unconfirmed.",
+      "method": "Use the missed deadline as fact and avoid asserting intent.",
+      "result": "Draft: the deadline passed, this affected the work, and a revised delivery date is requested. Deliberate disregard is not stated as proven."
+    },
+    "additional_examples": [
+      {
+        "input": "The user explicitly prefers a firmer boundary after repeated verified misses.",
+        "method": "Preserve the documented pattern and state the sender’s realistic next action.",
+        "result": "A firmer draft can set a clear condition without fabricated threats; sending remains unperformed."
+      }
+    ],
+    "handoff": "Preserve verified facts, interpretations, protected wording, relationship and channel, the concrete ask, commitments and actual sending state. Resume from the approved draft rather than generating a new emotional narrative.",
+    "case_ids": [
+      "difficult-message-r4-standard",
+      "difficult-message-r4-edge",
+      "difficult-message-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "negotiation-prep": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Prepare a negotiation by clarifying interests, evidence, alternatives and reservation conditions. Separate a desirable target from the minimum acceptable outcome and from the best available alternative if no agreement occurs. Evaluate packages across guaranteed compensation, costs, workload, timing and nonmonetary constraints.\n\nAvoid invented leverage, fake offers or unsupported market numbers. Conditional bonuses and uncertain benefits should not be treated as guaranteed cash. A proposed package can satisfy arithmetic limits while still requiring judgment about risk or fit. Draft concessions as conditional exchanges, not unilateral promises the user has not authorized.",
+    "output_contract": "Deliver a negotiation brief with priorities, factual support, alternatives, reservation conditions, package comparisons, questions and a concise opening proposal. Distinguish guaranteed and contingent value. Do not accept an offer, disclose confidential limits or commit the user without authorization.",
+    "decisions": [
+      {
+        "when": "Several offers differ in costs and workload.",
+        "do": "Normalize only comparable components and retain nonmonetary constraints.",
+        "avoid": "Do not rank solely by the largest headline number."
+      },
+      {
+        "when": "A benefit is contingent or difficult to value.",
+        "do": "Show it separately with the relevant conditions.",
+        "avoid": "Do not count uncertain value as guaranteed compensation."
+      },
+      {
+        "when": "The user has no credible competing offer.",
+        "do": "Use actual value and alternatives honestly.",
+        "avoid": "Do not invent an offer or a deadline as leverage."
+      },
+      {
+        "when": "A concession is considered.",
+        "do": "Tie it to a reciprocal condition and the user’s reservation limits.",
+        "avoid": "Do not give away a priority without an intended exchange."
+      },
+      {
+        "when": "An offer appears acceptable.",
+        "do": "Check the complete terms and obtain the user’s actual decision before accepting.",
+        "avoid": "Do not report an agreement from a draft or a favorable comparison."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The better-looking offer leaves less usable value.",
+        "cause": "Costs and conditions were ignored.",
+        "repair": "Calculate guaranteed net value and display nonmonetary limits.",
+        "recheck": "The comparison uses consistent assumptions."
+      },
+      {
+        "symptom": "The user accidentally reveals their minimum.",
+        "cause": "Internal preparation was copied into the outward message.",
+        "repair": "Separate private strategy from the proposed communication.",
+        "recheck": "The draft discloses only intended information."
+      },
+      {
+        "symptom": "A negotiation relies on unsupported leverage.",
+        "cause": "The script was optimized for pressure rather than truth.",
+        "repair": "Remove false claims and build a factual request.",
+        "recheck": "Every leverage statement is real and authorized."
+      }
+    ],
+    "worked_example": {
+      "input": "Offer A guarantees 1,000 with 150 in costs; B guarantees 1,000 with 50 in costs. The minimum net is 900 and workload limit is 40 hours.",
+      "method": "Compare guaranteed net value and workload separately.",
+      "result": "A yields 850 and fails the stated floor. B yields 950 and is within limits only if its hours fit. No agreement has been reached."
+    },
+    "additional_examples": [
+      {
+        "input": "B’s workload rises to 45 hours.",
+        "method": "Keep the cash comparison but re-evaluate the independent workload constraint.",
+        "result": "B no longer meets the complete stated limits; negotiate the workload or evaluate an alternative rather than hiding the tradeoff."
+      }
+    ],
+    "handoff": "Preserve factual offer versions, priorities, private reservation limits, alternatives, conditional concessions and the actual communication state. Do not include private limits in a shared packet unless explicitly intended.",
+    "case_ids": [
+      "negotiation-prep-r4-standard",
+      "negotiation-prep-r4-edge",
+      "negotiation-prep-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "meal-plan": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Plan meals from the person’s stated preferences, schedule, equipment, available ingredients and budget. Treat allergies, dietary restrictions and ingredient uncertainty as explicit constraints rather than lifestyle guesses. Use the actual package or authoritative ingredient information when a real safety decision depends on it.\n\nScale recipes with portions and yield, subtract usable pantry quantities in compatible units, and distinguish shopping cost from ingredients already owned. Avoid prescribing medical diets, making weight-loss promises or certifying food safety from a text-only list. A useful plan has practical preparation order and alternatives when an ingredient or label is unknown.",
+    "output_contract": "Deliver a feasible menu, portions, preparation steps at an ordinary cooking-planning level, a unit-consistent shopping list and unresolved label questions. Respect the user’s food preferences and constraints. Keep medical nutrition questions and uncertain allergy safety outside unsupported claims.",
+    "decisions": [
+      {
+        "when": "Preferences and ingredient constraints are clear.",
+        "do": "Build the plan directly around acceptable foods and realistic preparation time.",
+        "avoid": "Do not add disliked foods or unnecessary diet goals."
+      },
+      {
+        "when": "A recipe conflicts with a stated allergen restriction.",
+        "do": "Exclude it or find a clearly verified compatible alternative.",
+        "avoid": "Do not assume that a small amount or an unverified substitution is safe."
+      },
+      {
+        "when": "An ingredient label is unknown.",
+        "do": "Hold the safety-sensitive choice and use a verified alternative where available.",
+        "avoid": "Do not certify safety from a recipe title or generic category."
+      },
+      {
+        "when": "Portions differ from the recipe yield.",
+        "do": "Compute whole batches or a practical scaled quantity and reconcile pantry units.",
+        "avoid": "Do not round down and leave required portions missing."
+      },
+      {
+        "when": "The user has a clinical nutrition requirement.",
+        "do": "Use their qualified clinician’s supplied instructions and clarify unresolved treatment questions appropriately.",
+        "avoid": "Do not invent a therapeutic diet or replace clinical advice."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The shopping list is too small for the requested portions.",
+        "cause": "Yield was rounded down.",
+        "repair": "Recompute batches and ingredient quantities before subtracting pantry stock.",
+        "recheck": "The plan covers the requested portions."
+      },
+      {
+        "symptom": "A restriction is violated by an overlooked ingredient.",
+        "cause": "Constraints were checked only against the recipe name.",
+        "repair": "Inspect the actual ingredient list and labels.",
+        "recheck": "Excluded or uncertain ingredients are not presented as cleared."
+      },
+      {
+        "symptom": "The plan is nutritionally elaborate but impractical.",
+        "cause": "Schedule and equipment were ignored.",
+        "repair": "Reduce preparation burden while preserving stated constraints.",
+        "recheck": "The person can execute the plan with available time and tools."
+      }
+    ],
+    "worked_example": {
+      "input": "Five portions are needed, each batch yields two, each batch uses three units, and four units are in the pantry.",
+      "method": "Round up to three batches, then subtract usable stock from nine required units.",
+      "result": "Buy five units. Exclude the recipe with a stated conflicting allergen; no medical safety certification is implied."
+    },
+    "additional_examples": [
+      {
+        "input": "The apparently compatible recipe’s ingredient label is unavailable.",
+        "method": "Retain the portion calculation but hold the uncertain recipe choice.",
+        "result": "Choose a verified alternative or obtain the actual label; do not treat missing information as safety."
+      }
+    ],
+    "handoff": "Preserve stated preferences and restrictions, recipe versions, observed labels, portions, compatible units, pantry quantities and unresolved clinical or ingredient questions. Resume from verified constraints without inventing dietary goals.",
+    "case_ids": [
+      "meal-plan-r4-standard",
+      "meal-plan-r4-edge",
+      "meal-plan-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-catalog",
+        "path": "README.md",
+        "revision": "faf37c0859ebf627bfcb5225e8057d088691e0ae",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "garden-observe": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Build a plant-specific observation record before proposing care changes. Keep location, light, watering history, substrate, weather context and the actual observed symptom separate. Similar visible symptoms can have multiple causes; a photograph or a single sensor value does not automatically establish a diagnosis.\n\nUse stable plant IDs and dated observations to distinguish a new condition from an old note. Prefer low-risk information gathering when evidence is incomplete. Do not automate watering, pesticide use or other physical effects merely because a generic plant profile suggests a routine. For species-specific treatment or toxicity questions, verify appropriate current sources.",
+    "output_contract": "Deliver an observation log, competing explanations where useful, the missing discriminating measurements and a bounded next observation or care question. Mark diagnosis and treatment state honestly. Keep plants, pots and locations distinguishable across records.",
+    "decisions": [
+      {
+        "when": "A clear dated observation is available.",
+        "do": "Record the symptom and context without adding unobserved details.",
+        "avoid": "Do not convert a description into a confirmed disease diagnosis."
+      },
+      {
+        "when": "Several records describe the same plant.",
+        "do": "Use the current sequence or timestamp and preserve the history.",
+        "avoid": "Do not let input ordering override the latest actual observation."
+      },
+      {
+        "when": "The plant identity or environment is uncertain.",
+        "do": "Ask for the discriminating information needed for the next decision.",
+        "avoid": "Do not prescribe species-specific care from an assumed identity."
+      },
+      {
+        "when": "A measurement conflicts with visible condition.",
+        "do": "Check the measurement location, timing and reliability before choosing an explanation.",
+        "avoid": "Do not treat a sensor reading as infallible."
+      },
+      {
+        "when": "A proposed action changes a physical system or uses a chemical.",
+        "do": "Verify the relevant guidance and actual user authorization; keep uncertain treatment on hold.",
+        "avoid": "Do not trigger irrigation or recommend hazardous treatment from a generic template."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A care suggestion is based on an old observation.",
+        "cause": "Plant history was flattened or sorted incorrectly.",
+        "repair": "Reconcile the latest dated record for the correct plant.",
+        "recheck": "The next step reflects current evidence."
+      },
+      {
+        "symptom": "Repeated care changes make the condition harder to interpret.",
+        "cause": "Several variables were changed simultaneously.",
+        "repair": "Record prior changes and choose a bounded observation strategy.",
+        "recheck": "The next observation can distinguish relevant explanations."
+      },
+      {
+        "symptom": "Two plants’ histories are mixed.",
+        "cause": "Names or pot locations were treated as stable identity.",
+        "repair": "Assign and preserve plant IDs with location history.",
+        "recheck": "Each observation maps to the correct plant."
+      }
+    ],
+    "worked_example": {
+      "input": "P1 has observations at sequences 1 and 2; P2 has one observation but no usable measurement.",
+      "method": "Choose the latest observation for each stable plant ID and preserve the measurement gap.",
+      "result": "Use P1’s sequence-2 record and P2’s existing record. Request the relevant missing P2 observation; no diagnosis or treatment is claimed."
+    },
+    "additional_examples": [
+      {
+        "input": "P2 receives a new observation and a usable measurement.",
+        "method": "Update only P2’s current record and compare it with its own history.",
+        "result": "The missing-measurement hold is resolved, but the evidence still does not by itself prove a diagnosis."
+      }
+    ],
+    "handoff": "Preserve stable plant IDs, dates, environmental context, observed symptoms, measurements, actual care changes and uncertainty. Resume with the latest verified observation rather than automatically repeating an old care schedule.",
+    "case_ids": [
+      "garden-observe-r4-standard",
+      "garden-observe-r4-edge",
+      "garden-observe-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-catalog",
+        "path": "README.md",
+        "revision": "faf37c0859ebf627bfcb5225e8057d088691e0ae",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "hobby-practice": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Design a small practice session around a specific skill, an observable target and feedback the person can actually obtain. Separate warm-up, deliberate work and review time. Match difficulty to current evidence rather than assuming that longer or harder practice is always better.\n\nDistinguish performance during a familiar drill from transfer to a new condition. Preserve the person’s chosen hobby, equipment, accessibility needs and enjoyment. A stop signal such as pain or unsafe equipment takes precedence over the plan; this skill does not diagnose physical symptoms or prescribe rehabilitation.",
+    "output_contract": "Deliver a realistic session plan, a concrete performance cue, a small feedback method and a next adjustment based on what was observed. Keep time totals accurate and avoid claims of mastery from a single session. Do not turn a recreational request into an unwanted productivity system.",
+    "decisions": [
+      {
+        "when": "The person has a clear small target.",
+        "do": "Choose one drill and one feedback cue within the available time.",
+        "avoid": "Do not add unrelated exercises merely to make the plan look comprehensive."
+      },
+      {
+        "when": "The session exceeds the time budget.",
+        "do": "Shorten or defer lower-priority work while retaining useful feedback.",
+        "avoid": "Do not silently compress every step below a workable duration."
+      },
+      {
+        "when": "The task is too easy or too difficult.",
+        "do": "Adjust one difficulty dimension using observed performance.",
+        "avoid": "Do not change several variables and lose the ability to learn from the result."
+      },
+      {
+        "when": "A physical or equipment stop signal appears.",
+        "do": "Stop the affected activity and reassess safety through the appropriate route.",
+        "avoid": "Do not encourage pushing through pain or bypassing a safety condition."
+      },
+      {
+        "when": "The drill improves but unfamiliar performance is unknown.",
+        "do": "Use a separate transfer attempt when appropriate.",
+        "avoid": "Do not equate repetition gains with general mastery."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The session feels busy without improving the target.",
+        "cause": "Too many skills were practiced at once.",
+        "repair": "Choose a narrower cue and a clear observation.",
+        "recheck": "The person can tell what changed."
+      },
+      {
+        "symptom": "The schedule cannot fit the available time.",
+        "cause": "Preparation and review were omitted from the total.",
+        "repair": "Recalculate the whole session and reduce scope.",
+        "recheck": "The complete duration stays within the budget."
+      },
+      {
+        "symptom": "The person is discouraged by unrealistic scoring.",
+        "cause": "The standard ignored current level or conditions.",
+        "repair": "Use a proportionate baseline and compare like conditions.",
+        "recheck": "Feedback is specific and does not invent failure or mastery."
+      }
+    ],
+    "worked_example": {
+      "input": "Warm-up takes three minutes, practice twelve, and review five in a twenty-minute slot.",
+      "method": "Include every section in the duration calculation.",
+      "result": "The session fits exactly. Focus on the stated cue and record the actual result rather than claiming mastery."
+    },
+    "additional_examples": [
+      {
+        "input": "The same session now has only fifteen minutes, or a stop signal occurs.",
+        "method": "Treat time and safety as independent constraints.",
+        "result": "Shorten the session when time is the issue; stop and reassess when safety is the issue. Do not solve a safety problem by rushing."
+      }
+    ],
+    "handoff": "Preserve the target skill, equipment and accessibility constraints, session duration, difficulty, actual observations and stop signals. Resume with one deliberate adjustment instead of an unrelated new routine.",
+    "case_ids": [
+      "hobby-practice-r4-standard",
+      "hobby-practice-r4-edge",
+      "hobby-practice-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-catalog",
+        "path": "README.md",
+        "revision": "faf37c0859ebf627bfcb5225e8057d088691e0ae",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "event-plan": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Plan an event around confirmed people, capacity, access needs, schedule, responsibilities and complete costs. Separate an invitation, a tentative response and confirmed attendance. Staff, facilitators and other occupants can matter for capacity even when they are not counted as guests.\n\nBuild a run-of-show with dependencies, setup and teardown, not only the headline activity. Distinguish a quoted venue from a booked venue and a proposed owner from accepted responsibility. Preserve contingency decisions for weather, cancellation, accessibility and late changes without claiming that reservations or messages were executed.",
+    "output_contract": "Deliver a practical event brief, confirmed/pending guest ledger, capacity and budget calculations, run-of-show, assigned or unassigned responsibilities and contingency triggers. Flag unresolved accessibility or supplier commitments. Use actual service records before reporting a booking or delivery.",
+    "decisions": [
+      {
+        "when": "Attendance is partly confirmed.",
+        "do": "Calculate the confirmed scenario and keep pending guests visible.",
+        "avoid": "Do not treat every invitation as an accepted attendee."
+      },
+      {
+        "when": "Capacity is tight.",
+        "do": "Count all relevant occupants and review the venue’s actual rules.",
+        "avoid": "Do not omit staff or assume a capacity figure applies to every layout."
+      },
+      {
+        "when": "A guest has stated access needs.",
+        "do": "Include those needs in the plan and verify the relevant venue or service feature.",
+        "avoid": "Do not infer needs from identity or assume a generic accessible label is sufficient."
+      },
+      {
+        "when": "The budget includes uncertain attendance.",
+        "do": "Show scenarios and separate fixed, per-person and reserve amounts.",
+        "avoid": "Do not present a single estimate as a final supplier total."
+      },
+      {
+        "when": "A booking or supplier outcome is ambiguous.",
+        "do": "Reconcile the existing reservation or order before replacing it.",
+        "avoid": "Do not create duplicate commitments after a timeout."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The final headcount exceeds the venue limit.",
+        "cause": "Pending guests or staff were counted inconsistently.",
+        "repair": "Reconcile attendee state and all relevant occupants.",
+        "recheck": "Capacity is checked for the actual planned scenario."
+      },
+      {
+        "symptom": "The budget grows unexpectedly.",
+        "cause": "Mandatory setup, supplier or reserve costs were missing.",
+        "repair": "Rebuild the itemized scenario and identify unconfirmed charges.",
+        "recheck": "The total is reproducible and its uncertainty explicit."
+      },
+      {
+        "symptom": "A task falls between organizers.",
+        "cause": "Ownership was mentioned but never accepted.",
+        "repair": "Assign an explicit decision owner and verify acceptance.",
+        "recheck": "The run-of-show distinguishes accepted and unresolved responsibilities."
+      }
+    ],
+    "worked_example": {
+      "input": "Two guests are confirmed, one is pending, and one staff member will attend a venue with capacity three.",
+      "method": "Count confirmed guests and staff separately and retain the pending response.",
+      "result": "The confirmed scenario fits capacity; the pending guest is not silently admitted. Fixed 100, per-guest 20 and reserve 10 give a confirmed-scenario cost of 150."
+    },
+    "additional_examples": [
+      {
+        "input": "The third guest confirms without a capacity change.",
+        "method": "Update the headcount and per-person costs before changing commitments.",
+        "result": "The scenario now exceeds capacity and costs 170. Resolve capacity before claiming the plan is ready; no booking is performed by the calculation."
+      }
+    ],
+    "handoff": "Preserve attendee states, access requirements, venue rules, supplier and booking IDs, costs, accepted owners and contingency decisions. Resume from confirmed commitments and changed conditions, not a fresh set of duplicate bookings.",
+    "case_ids": [
+      "event-plan-r4-standard",
+      "event-plan-r4-edge",
+      "event-plan-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-catalog",
+        "path": "README.md",
+        "revision": "faf37c0859ebf627bfcb5225e8057d088691e0ae",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "purchase-compare": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Compare purchases against the user’s actual use case and hard constraints before optimizing price. Separate must-have features, preferences, compatibility and unknown specifications. Keep exact product variants and evidence dates, because a similar name or old review may describe a different item.\n\nCompute complete comparable costs over a stated horizon: price, shipping, mandatory fees, subscriptions and necessary accessories where relevant. Refundable deposits affect cash required now without necessarily being economic cost. Unknown mandatory charges make a total incomplete, not zero. A low price is not a recommendation if the product does not fit the task.",
+    "output_contract": "Deliver a small comparison table with fit decisions, supported specifications, complete or incomplete totals, cash requirements and meaningful tradeoffs. State the observation date and source for real prices. Do not place an order, endorse a counterfeit, or promise a return or warranty term that was not verified.",
+    "decisions": [
+      {
+        "when": "A product fails a stated must-have requirement.",
+        "do": "Exclude it from the eligible shortlist and explain the specific mismatch.",
+        "avoid": "Do not let a low price override the hard constraint."
+      },
+      {
+        "when": "A mandatory cost or specification is unknown.",
+        "do": "Mark that comparison incomplete and identify the missing fact.",
+        "avoid": "Do not substitute zero cost or an assumed feature."
+      },
+      {
+        "when": "Different options include subscriptions or accessories.",
+        "do": "Normalize the horizon and included components before ranking.",
+        "avoid": "Do not compare an upfront-only price with a complete multi-period cost."
+      },
+      {
+        "when": "A refundable deposit is required.",
+        "do": "Show it as cash tied up separately from nonrefundable cost.",
+        "avoid": "Do not double-count it as permanent expense or hide the liquidity requirement."
+      },
+      {
+        "when": "The user chooses an option.",
+        "do": "Recheck the exact variant, seller, total and terms before any separately authorized order.",
+        "avoid": "Do not report a purchase from a recommendation or cart."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The cheapest option does not solve the user’s problem.",
+        "cause": "Ranking happened before fit filtering.",
+        "repair": "Apply hard constraints first and rerank the eligible set.",
+        "recheck": "Every shortlisted option meets the supported must-haves."
+      },
+      {
+        "symptom": "The checkout total exceeds the comparison.",
+        "cause": "A mandatory fee or recurring charge was omitted.",
+        "repair": "Recompute a complete comparable total with dates and horizon.",
+        "recheck": "Unknown charges remain explicit until verified."
+      },
+      {
+        "symptom": "A review describes a different variant.",
+        "cause": "Product identity was matched only by a broad name.",
+        "repair": "Bind evidence to the exact model and configuration.",
+        "recheck": "The recommendation uses the item actually available."
+      }
+    ],
+    "worked_example": {
+      "input": "A meets the offline requirement and costs 100 plus 20 shipping. B meets it but has an unknown mandatory fee; C lacks offline use.",
+      "method": "Filter by fit and distinguish complete from incomplete totals.",
+      "result": "A has a complete total of 120. B remains unresolved; C is rejected for fit. B is not declared cheapest by assuming its fee is zero."
+    },
+    "additional_examples": [
+      {
+        "input": "B’s fee is later verified as 10 on a price of 90.",
+        "method": "Update B’s complete total without changing the hard requirement.",
+        "result": "B has a complete total of 100 and is the lower-cost eligible option. No purchase is claimed."
+      }
+    ],
+    "handoff": "Preserve the exact product variants, source timestamps, hard constraints, cost horizon, nonrefundable totals, refundable cash requirements and actual order state. Resume by refreshing changed prices or missing terms, not by assuming old availability.",
+    "case_ids": [
+      "purchase-compare-r4-standard",
+      "purchase-compare-r4-edge",
+      "purchase-compare-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "muse-catalog",
+        "path": "README.md",
+        "revision": "faf37c0859ebf627bfcb5225e8057d088691e0ae",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "appointment-prep": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Organize an appointment around the person’s actual concerns, timeline, current records and questions. Separate observed symptoms or events from interpretation and diagnosis. Preserve dates, duration, relevant context and the source of medication or treatment information without silently resolving conflicting instructions.\n\nA concise preparation summary should help the professional understand priorities, not replace the professional’s judgment. Keep urgent safety concerns ahead of paperwork and direct them to appropriate timely help. Share only the information authorized for the intended recipient. This is a logistics and communication skill, not a diagnostic or prescribing service.",
+    "output_contract": "Deliver a brief appointment summary, dated observations, medication or record discrepancies, prioritized questions and practical visit logistics. Mark missing dates and uncertain facts. Do not invent a diagnosis, change treatment or claim that a clinician reviewed the note.",
+    "decisions": [
+      {
+        "when": "The person provides a clear timeline.",
+        "do": "Organize it by actual dates and preserve their descriptions.",
+        "avoid": "Do not add a plausible onset or symptom that was not reported."
+      },
+      {
+        "when": "A date or frequency is missing.",
+        "do": "Mark it unknown and ask only when it changes the usefulness of the visit summary.",
+        "avoid": "Do not turn vague memory into a precise invented history."
+      },
+      {
+        "when": "Medication records conflict.",
+        "do": "Keep both source versions and flag clarification for the appropriate clinician or pharmacist.",
+        "avoid": "Do not choose a dose or timing based on which note looks newer."
+      },
+      {
+        "when": "An urgent safety concern is reported.",
+        "do": "Prioritize appropriate timely human or emergency help rather than finishing the document.",
+        "avoid": "Do not delay help to complete a checklist or offer an unsupported diagnosis."
+      },
+      {
+        "when": "The note will be shared.",
+        "do": "Check recipient and sharing scope, then report actual delivery separately.",
+        "avoid": "Do not claim an appointment occurred or the care team acknowledged the note."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The summary is long but the main concern is unclear.",
+        "cause": "All details were treated as equally important.",
+        "repair": "Lead with the person’s priorities and a short relevant timeline.",
+        "recheck": "The professional can identify the questions the person wants answered."
+      },
+      {
+        "symptom": "A conflicting instruction disappears in cleanup.",
+        "cause": "Normalization selected one version without authority.",
+        "repair": "Restore the discrepancy and its sources.",
+        "recheck": "No treatment change is disguised as administrative editing."
+      },
+      {
+        "symptom": "The note implies clinical certainty.",
+        "cause": "Interpretation was promoted to diagnosis.",
+        "repair": "Return to the reported observation and the unresolved question.",
+        "recheck": "The summary does not exceed the evidence or role."
+      }
+    ],
+    "worked_example": {
+      "input": "One observation is dated Monday, another has no date, and two medication records disagree.",
+      "method": "Preserve known timing, mark the missing date and keep the medication discrepancy explicit.",
+      "result": "The appointment note includes both concerns and questions for clarification; it does not choose a treatment instruction."
+    },
+    "additional_examples": [
+      {
+        "input": "The person later supplies a date and a clinician-confirmed current record.",
+        "method": "Update the specific uncertainties using their actual source.",
+        "result": "The administrative gaps are resolved. The note still does not claim a diagnosis or that the appointment has taken place."
+      }
+    ],
+    "handoff": "Preserve the person’s priorities, actual observation dates, current record versions, unresolved clinical questions, sharing scope and communication state. Resume from confirmed updates without importing private clinical history into generic files.",
+    "case_ids": [
+      "appointment-prep-r4-standard",
+      "appointment-prep-r4-edge",
+      "appointment-prep-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "accessibility-routine": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Adapt a routine to the person’s stated access needs, available supports, preferences and fluctuating capacity. Ask about the task barrier rather than inferring disability or ability from appearance, age or a label. Keep autonomy and the person’s own goals central; an accessible alternative should not unnecessarily remove choice.\n\nSeparate essential task outcomes from one conventional way of doing them. Consider modality, environment, pacing, assistive tools and assistance the person actually accepts. Effort units are a user-defined planning aid, not a clinical measurement. Verify real tool or venue features rather than assuming that an accessibility badge guarantees suitability.",
+    "output_contract": "Deliver a practical routine with compatible steps, adaptation needs, a user-defined effort or time budget, options for variable capacity and an agreed stop or fallback path. Do not infer needs, diagnose conditions or claim a clinical benefit. Preserve existing supports and preferences.",
+    "decisions": [
+      {
+        "when": "The person has clearly stated access requirements.",
+        "do": "Use them directly and identify which steps already fit.",
+        "avoid": "Do not request a diagnosis when the functional need is enough."
+      },
+      {
+        "when": "A conventional step conflicts with the requirement.",
+        "do": "Preserve the goal and offer a compatible method or support.",
+        "avoid": "Do not abandon the goal merely because the default method is unsuitable."
+      },
+      {
+        "when": "Capacity varies across days.",
+        "do": "Provide a small core version and an optional extension using the person’s own limits.",
+        "avoid": "Do not treat a lower-capacity day as noncompliance or failure."
+      },
+      {
+        "when": "An assistive tool is proposed.",
+        "do": "Check that it is actually available, appropriate and acceptable to the person.",
+        "avoid": "Do not invent a device capability or assume consent to assistance."
+      },
+      {
+        "when": "The routine exceeds the agreed effort budget.",
+        "do": "Reduce, reorder or defer work while retaining essential outcomes.",
+        "avoid": "Do not silently raise the person’s budget to make the plan fit."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The routine is described as accessible but contains an incompatible step.",
+        "cause": "Access requirements were not checked at task level.",
+        "repair": "Map each step to the stated need and adapt the failing step.",
+        "recheck": "Compatibility is explicit rather than a blanket label."
+      },
+      {
+        "symptom": "The plan removes too much independence.",
+        "cause": "Support was assumed instead of chosen.",
+        "repair": "Offer the least restrictive suitable option and preserve the person’s preference.",
+        "recheck": "The person retains meaningful control over the routine."
+      },
+      {
+        "symptom": "The schedule works only on the best day.",
+        "cause": "Variable capacity was ignored.",
+        "repair": "Create a smaller fallback with clear stopping points.",
+        "recheck": "The routine remains usable under the stated lower-capacity condition."
+      }
+    ],
+    "worked_example": {
+      "input": "The person requests seated options. Step A supports seated work with effort two; step B does not. The budget is three.",
+      "method": "Check compatibility before summing the usable routine.",
+      "result": "A is compatible and within budget. B requires adaptation; its incompatibility is not hidden by the low total."
+    },
+    "additional_examples": [
+      {
+        "input": "B is adapted to seated use but adds effort three.",
+        "method": "Recalculate the complete routine rather than treating accessibility as the only constraint.",
+        "result": "Both steps are compatible, but total effort five exceeds the agreed budget. Split or defer work rather than changing the person’s limit."
+      }
+    ],
+    "handoff": "Preserve the person’s own access requirements, preferences, accepted supports, effort definitions, compatible alternatives and fallback triggers. Resume from stated needs without inferring private diagnoses or overriding autonomy.",
+    "case_ids": [
+      "accessibility-routine-r4-standard",
+      "accessibility-routine-r4-edge",
+      "accessibility-routine-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "reflection-journal": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Support reflection in the mode the person requests: listening, exploring meaning or planning a next step. Separate the event as described, the person’s feelings and their interpretation of another person’s intentions. Validation of a feeling does not require endorsing an unverified explanation.\n\nUse tentative, ordinary language rather than diagnosis or certainty about hidden motives. Avoid turning every difficult experience into a productivity plan. Keep privacy choices explicit and provide an easy stopping point. When the person expresses an urgent safety concern, prioritize appropriate human support rather than continuing an ordinary journaling exercise.",
+    "output_contract": "Deliver a useful reflection, a gentle distinction or question, and only the level of action planning requested. Preserve the person’s language and uncertainty. Do not diagnose, claim therapeutic effectiveness, reinforce unsupported persecutory explanations, or share private journal content without authorization.",
+    "decisions": [
+      {
+        "when": "The person asks only to be heard.",
+        "do": "Reflect the main experience and feeling without forcing a solution.",
+        "avoid": "Do not convert listening into a task list."
+      },
+      {
+        "when": "An interpretation is presented as certain despite limited evidence.",
+        "do": "Acknowledge the feeling while distinguishing the interpretation from the observed event.",
+        "avoid": "Do not validate an unverified accusation as established fact."
+      },
+      {
+        "when": "The person asks to explore a pattern.",
+        "do": "Compare the actual examples and consider alternative explanations without assigning a diagnosis.",
+        "avoid": "Do not generalize from one event to a fixed identity."
+      },
+      {
+        "when": "The person requests an action plan.",
+        "do": "Offer a small realistic next step that follows their values and constraints.",
+        "avoid": "Do not prescribe a life overhaul or invent commitments."
+      },
+      {
+        "when": "An urgent safety issue appears.",
+        "do": "Shift to timely human support appropriate to the situation.",
+        "avoid": "Do not let the journal structure delay safety or promise confidentiality beyond the actual system."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The response feels like a lecture.",
+        "cause": "The assistant ignored the requested mode.",
+        "repair": "Return to listening or reflection and ask one useful question at most.",
+        "recheck": "The response matches the person’s stated need."
+      },
+      {
+        "symptom": "A feeling is treated as proof of another person’s motive.",
+        "cause": "Emotional validation and factual endorsement were conflated.",
+        "repair": "Validate the experience while preserving uncertainty about external claims.",
+        "recheck": "The distinction is clear without dismissing the person."
+      },
+      {
+        "symptom": "The journal contains unnecessary sensitive detail.",
+        "cause": "The assistant retained more than the task required.",
+        "repair": "Minimize the record and respect the chosen sharing scope.",
+        "recheck": "Only intended information is preserved or shared."
+      }
+    ],
+    "worked_example": {
+      "input": "The record includes an event, a feeling and an interpretation, and the person asks for listening.",
+      "method": "Keep the three categories distinct and honor the requested mode.",
+      "result": "Reflect the experience without diagnosing or adding an action plan; the interpretation remains an interpretation."
+    },
+    "additional_examples": [
+      {
+        "input": "The person later asks for a practical next step.",
+        "method": "Change the response mode because the user changed the request, not because advice is the default.",
+        "result": "Offer one small option grounded in the stated concern while retaining uncertainty and personal control."
+      }
+    ],
+    "handoff": "Preserve only the context the person wants retained, their requested mode, meaningful distinctions and any agreed next step. Do not turn journal entries into diagnostic labels or generic training examples.",
+    "case_ids": [
+      "reflection-journal-r4-standard",
+      "reflection-journal-r4-edge",
+      "reflection-journal-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "habit-experiment": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Treat a habit change as a small, reversible experiment with a defined opportunity, behavior and observation period. Clarify what counts as an opportunity and what counts as completion before reviewing outcomes. Keep the person’s purpose and burden in view; tracking should serve the goal rather than become the goal.\n\nPreserve missing observations as unknown, not automatic success or failure. Compare similar contexts and distinguish adherence from the broader outcome the person cares about. A before-and-after change can be useful personal evidence without establishing causation. Change one major variable at a time when that makes the next observation more informative.",
+    "output_contract": "Deliver a bounded experiment plan or review with opportunity count, observed completions, missing records, context changes and a proportionate next adjustment. Avoid diagnostic, medical or guaranteed-effect claims. Do not create reminders or monitoring jobs unless actually authorized and executed.",
+    "decisions": [
+      {
+        "when": "The desired change is vague.",
+        "do": "Define a small observable behavior and an opportunity that fits the person’s routine.",
+        "avoid": "Do not begin with an elaborate tracking system."
+      },
+      {
+        "when": "The tracking record has gaps.",
+        "do": "Show observed and missing opportunities separately.",
+        "avoid": "Do not silently count missing entries as failures or successes."
+      },
+      {
+        "when": "The behavior is completed but the desired outcome does not improve.",
+        "do": "Separate adherence from outcome and inspect timing and context.",
+        "avoid": "Do not call the intervention successful solely because the checkbox was marked."
+      },
+      {
+        "when": "Several conditions changed at once.",
+        "do": "Record the confounding changes and narrow the next experiment.",
+        "avoid": "Do not attribute the entire difference to one habit."
+      },
+      {
+        "when": "The burden or downside outweighs the value.",
+        "do": "Reduce, pause or stop the experiment using the person’s priorities.",
+        "avoid": "Do not insist on streak preservation at the expense of wellbeing."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "The success rate changes depending on omitted days.",
+        "cause": "The denominator was selected after seeing results.",
+        "repair": "Use the predefined opportunity set and show missingness.",
+        "recheck": "The rate and its coverage are transparent."
+      },
+      {
+        "symptom": "A short improvement is described as a proven effect.",
+        "cause": "Observation and causal inference were conflated.",
+        "repair": "State the observed change and relevant alternatives.",
+        "recheck": "The conclusion does not exceed the design."
+      },
+      {
+        "symptom": "The person abandons the plan because tracking is exhausting.",
+        "cause": "Measurement burden was ignored.",
+        "repair": "Simplify the record and choose a smaller useful question.",
+        "recheck": "The experiment remains practical and voluntary."
+      }
+    ],
+    "worked_example": {
+      "input": "Three opportunities are recorded: one complete, one incomplete and one unknown.",
+      "method": "Compute the observed rate using the two known observations while retaining all three opportunities.",
+      "result": "One success out of two observed opportunities; one record is missing. This is not proof of a causal effect."
+    },
+    "additional_examples": [
+      {
+        "input": "The missing observation is later confirmed complete.",
+        "method": "Update the original opportunity rather than adding another duplicate record.",
+        "result": "Two successes out of three observed opportunities. The changed rate reflects new evidence, not a rewritten denominator."
+      }
+    ],
+    "handoff": "Preserve the experiment version, opportunity definition, observation window, actual logs, missingness, context changes and stopping rule. Resume with the same denominator unless a new experiment is explicitly defined.",
+    "case_ids": [
+      "habit-experiment-r4-standard",
+      "habit-experiment-r4-edge",
+      "habit-experiment-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  },
+  "family-archive": {
+    "schema": "muse-skill-depth/v1",
+    "revision": "R4",
+    "domain_method": "Organize family material while preserving originals, provenance, identity uncertainty and consent. Distinguish byte-identical duplicates from different edits, scans or photographs of the same event. A matching hash can support duplicate-byte grouping but does not identify the people or establish ownership.\n\nRecord names and dates as supplied or evidenced, with uncertainty where needed. Do not infer sensitive relationships or identify people solely from resemblance. Public sharing requires attention to the item’s rights and the consent of relevant people; a private archive and a public album are different audiences. Keep access and redaction decisions reversible where possible.",
+    "output_contract": "Deliver an archive index, original-to-derivative links, duplicate groups, uncertain captions and an audience-specific sharing queue. Keep originals untouched by default. Preserve the source of each name, date or relationship claim and do not present guesses as settled family history.",
+    "decisions": [
+      {
+        "when": "Two files have identical bytes.",
+        "do": "Group them as byte duplicates while preserving original locations and metadata.",
+        "avoid": "Do not delete originals or assume the files have identical historical context."
+      },
+      {
+        "when": "Two images look similar but differ in bytes.",
+        "do": "Treat them as related candidates and inspect metadata or content as appropriate.",
+        "avoid": "Do not merge different crops, annotations or moments automatically."
+      },
+      {
+        "when": "A person or date is uncertain.",
+        "do": "Record the uncertainty and the source of any proposed identification.",
+        "avoid": "Do not identify a real person from facial resemblance alone."
+      },
+      {
+        "when": "The user requests public sharing.",
+        "do": "Check item-level rights and the intended consent scope for relevant people.",
+        "avoid": "Do not treat possession of a photo as permission for every audience."
+      },
+      {
+        "when": "A caption or relationship is corrected.",
+        "do": "Preserve the correction and its basis, updating affected derivatives.",
+        "avoid": "Do not erase the original attribution history or propagate an unsupported old caption."
+      }
+    ],
+    "failure_modes": [
+      {
+        "symptom": "A cleanup loses the only original scan.",
+        "cause": "Visual similarity was treated as disposable duplication.",
+        "repair": "Restore from the preserved original and separate duplicate review from deletion.",
+        "recheck": "No original is removed without explicit informed authorization."
+      },
+      {
+        "symptom": "A tentative identity becomes a permanent caption.",
+        "cause": "Uncertainty was dropped during formatting.",
+        "repair": "Restore the qualifier and source of the identification.",
+        "recheck": "The archive distinguishes confirmed and tentative metadata."
+      },
+      {
+        "symptom": "A private image appears in a public album.",
+        "cause": "Audience and consent were not checked per item.",
+        "repair": "Stop further sharing and use the original provider to address the specific exposure.",
+        "recheck": "The sharing queue admits only the intended authorized items."
+      }
+    ],
+    "worked_example": {
+      "input": "Files A and B have the same digest, but only A has explicit public permission; C is separately authorized.",
+      "method": "Group identical bytes without transferring consent between records.",
+      "result": "A and B form a duplicate-byte group. Public eligibility is evaluated per item; B remains private or unresolved. No original is deleted."
+    },
+    "additional_examples": [
+      {
+        "input": "A newly documented person in C has not granted the required public-sharing consent.",
+        "method": "Update C’s consent evaluation without changing its private archival value.",
+        "result": "Hold C from public sharing until the intended scope is resolved; keep the original safely indexed."
+      }
+    ],
+    "handoff": "Preserve original locations and hashes, derivatives, supplied identity and date evidence, uncertainty, rights and audience-specific consent. Resume from corrected metadata without deleting originals or broadening sharing silently.",
+    "case_ids": [
+      "family-archive-r4-standard",
+      "family-archive-r4-edge",
+      "family-archive-r4-recovery"
+    ],
+    "upstream_items": [
+      {
+        "source_id": "agency",
+        "path": "README.md",
+        "revision": "8ae6164602c95ca78828b148b9052460ee426885",
+        "disposition": "REFERENCE_ONLY_NO_COPY",
+        "review_scope": "DISCOVERY_INDEX_ONLY; no claim that this is the strongest task-specific competitor"
+      }
+    ],
+    "comparison_result": "NOT_RUN",
+    "quality_claim": "Original task procedures and input-derived public exercise checks. No real Muse comparison, independent semantic superiority, clinical effectiveness or consumer adoption has been established.",
+    "practice_scope": "Three authored public exercises cover a routine case, a constraint or ambiguity, and a changed-evidence recovery. Their answers are teaching and regression material, not hidden benchmarks. The checker tests supplied structured records only; a person must still assess usefulness, source fidelity and actual visual or interpersonal quality."
+  }
+}

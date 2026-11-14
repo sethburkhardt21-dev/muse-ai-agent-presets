@@ -1,0 +1,68 @@
+{
+  "specialist": "data-engineer",
+  "jobs": [
+    {
+      "skill_id": "schema-evolution",
+      "inputs": {
+        "current": [
+          {
+            "name": "id",
+            "type": "integer",
+            "nullable": false
+          }
+        ],
+        "proposed": [
+          {
+            "name": "id",
+            "type": "integer",
+            "nullable": false
+          },
+          {
+            "name": "note",
+            "type": "text",
+            "nullable": true
+          }
+        ],
+        "row_count": 40
+      }
+    },
+    {
+      "skill_id": "incremental-pipeline",
+      "inputs": {
+        "state": [
+          {
+            "key": "A",
+            "version": 1,
+            "value": 10,
+            "deleted": false
+          }
+        ],
+        "events": [
+          {
+            "key": "A",
+            "version": 2,
+            "value": 20,
+            "deleted": false
+          },
+          {
+            "key": "A",
+            "version": 1,
+            "value": 10,
+            "deleted": false
+          }
+        ]
+      }
+    },
+    {
+      "skill_id": "query-plan-review",
+      "inputs": {
+        "details": [
+          "SCAN users",
+          "SEARCH orders USING INDEX order_id (id=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ]
+      }
+    }
+  ],
+  "input_origin": "authored public demonstration; not live provider data"
+}

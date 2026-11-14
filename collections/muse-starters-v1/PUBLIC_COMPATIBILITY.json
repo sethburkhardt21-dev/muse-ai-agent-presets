@@ -1,0 +1,612 @@
+{
+  "collection_skill_count": 75,
+  "combined_unique_capability_count": null,
+  "legacy_procedure_count": 50,
+  "model_comparisons": "NOT_PERFORMED_BY_THIS_PROMOTION",
+  "native_installation": "NOT_PERFORMED",
+  "procedure_links": [
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "coordinator_scope_work",
+      "method": "scope-work",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "scope-and-route",
+        "project-prioritization"
+      ],
+      "role": "coordinator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "coordinator_reconcile_interruption",
+      "method": "reconcile-interruption",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "resume-without-replay"
+      ],
+      "role": "coordinator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "coordinator_qualify_completion",
+      "method": "qualify-completion",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "bounded-review",
+        "release-readiness"
+      ],
+      "role": "coordinator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "software_engineer_reproduce_defect",
+      "method": "reproduce-defect",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "bug-reproduction"
+      ],
+      "role": "software-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "software_engineer_patch_and_regress",
+      "method": "patch-and-regress",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "minimal-repair",
+        "code-review"
+      ],
+      "role": "software-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "software_engineer_protect_source_custody",
+      "method": "protect-source-custody",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "source-and-custody",
+        "resume-without-replay"
+      ],
+      "role": "software-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "model_builder_qualify_training_plan",
+      "method": "qualify-training-plan",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "dataset-intake",
+        "model-comparison"
+      ],
+      "role": "model-builder"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "model_builder_train_bounded_candidate",
+      "method": "train-bounded-candidate",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "analysis-notebook",
+        "data-quality-review"
+      ],
+      "role": "model-builder"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "model_builder_distill_or_refine",
+      "method": "distill-or-refine",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "model-comparison"
+      ],
+      "role": "model-builder"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "research_evaluator_precommit_experiment",
+      "method": "precommit-experiment",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "question-to-evidence",
+        "competing-explanations",
+        "model-comparison"
+      ],
+      "role": "research-evaluator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "research_evaluator_independently_reproduce",
+      "method": "independently-reproduce",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "claim-audit",
+        "analysis-notebook"
+      ],
+      "role": "research-evaluator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "research_evaluator_research_synthesis",
+      "method": "research-synthesis",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "literature-triage",
+        "change-brief"
+      ],
+      "role": "research-evaluator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "creative_studio_story_and_asset_plan",
+      "method": "story-and-asset-plan",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "creative-brief",
+        "storyboard",
+        "visual-reference"
+      ],
+      "role": "creative-studio"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "creative_studio_render_and_inspect",
+      "method": "render-and-inspect",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "continuity-review",
+        "accessible-ui"
+      ],
+      "role": "creative-studio"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "creative_studio_package_deliverable",
+      "method": "package-deliverable",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "edit-and-export"
+      ],
+      "role": "creative-studio"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "adversarial_verifier_scope_threat_model",
+      "method": "scope-threat-model",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "bounded-review",
+        "code-review"
+      ],
+      "role": "adversarial-verifier"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "adversarial_verifier_execute_negative_controls",
+      "method": "execute-negative-controls",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "bug-reproduction",
+        "data-quality-review"
+      ],
+      "role": "adversarial-verifier"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "adversarial_verifier_independent_release_review",
+      "method": "independent-release-review",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "release-readiness",
+        "claim-audit"
+      ],
+      "role": "adversarial-verifier"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "personal_companion_private_onboarding",
+      "method": "private-onboarding",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "accessibility-routine",
+        "habit-experiment"
+      ],
+      "role": "personal-companion"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "personal_companion_assist_one_day",
+      "method": "assist-one-day",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "daily-briefing",
+        "meal-plan",
+        "decision-budget"
+      ],
+      "role": "personal-companion"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "personal_companion_quiet_and_recover",
+      "method": "quiet-and-recover",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "resume-without-replay",
+        "reflection-journal"
+      ],
+      "role": "personal-companion"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "garden_companion_observe_plant",
+      "method": "observe-plant",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "garden-observe"
+      ],
+      "role": "garden-companion"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "garden_companion_plan_seasonal_batch",
+      "method": "plan-seasonal-batch",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "garden-observe",
+        "event-plan"
+      ],
+      "role": "garden-companion"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "garden_companion_review_garden_progress",
+      "method": "review-garden-progress",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "garden-observe",
+        "daily-briefing"
+      ],
+      "role": "garden-companion"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "learning_coach_ingest_and_ground",
+      "method": "ingest-and-ground",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "lecture-map",
+        "source-flashcards"
+      ],
+      "role": "learning-coach"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "learning_coach_practice_and_score",
+      "method": "practice-and-score",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "retrieval-practice",
+        "teach-back"
+      ],
+      "role": "learning-coach"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "learning_coach_schedule_due_review",
+      "method": "schedule-due-review",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "exam-plan",
+        "misconception-clinic"
+      ],
+      "role": "learning-coach"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "claims_adjudicator_receive_claim",
+      "method": "receive-claim",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "claim-audit"
+      ],
+      "role": "claims-adjudicator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "claims_adjudicator_adjudicate_scope",
+      "method": "adjudicate-scope",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "claim-audit",
+        "bounded-review"
+      ],
+      "role": "claims-adjudicator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "claims_adjudicator_preserve_correction",
+      "method": "preserve-correction",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "source-and-custody",
+        "change-brief"
+      ],
+      "role": "claims-adjudicator"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "reverse_engineering_researcher_admit_target_and_sandbox",
+      "method": "admit-target-and-sandbox",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "bounded-review",
+        "source-and-custody"
+      ],
+      "role": "reverse-engineering-researcher"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "reverse_engineering_researcher_observe_and_reconstruct",
+      "method": "observe-and-reconstruct",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "api-contract",
+        "competing-explanations"
+      ],
+      "role": "reverse-engineering-researcher"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "reverse_engineering_researcher_inspect_protocol_and_sample",
+      "method": "inspect-protocol-and-sample",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "data-quality-review",
+        "claim-audit"
+      ],
+      "role": "reverse-engineering-researcher"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "data_engineering_architect_profile_dataset",
+      "method": "profile-dataset",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "dataset-intake",
+        "data-quality-review"
+      ],
+      "role": "data-engineering-architect"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "data_engineering_architect_validate_schema",
+      "method": "validate-schema",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "schema-evolution"
+      ],
+      "role": "data-engineering-architect"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "data_engineering_architect_plan_migration",
+      "method": "plan-migration",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "incremental-pipeline",
+        "schema-evolution",
+        "query-plan-review"
+      ],
+      "role": "data-engineering-architect"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "infrastructure_reliability_engineer_budget_reliability",
+      "method": "budget-reliability",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "service-objectives",
+        "capacity-planning"
+      ],
+      "role": "infrastructure-reliability-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "infrastructure_reliability_engineer_triage_incident",
+      "method": "triage-incident",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "incident-triage"
+      ],
+      "role": "infrastructure-reliability-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "infrastructure_reliability_engineer_verify_recovery",
+      "method": "verify-recovery",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "effect-reconciliation",
+        "release-readiness"
+      ],
+      "role": "infrastructure-reliability-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "automation_engineer_map_workflow",
+      "method": "map-workflow",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "automation-contract",
+        "project-prioritization"
+      ],
+      "role": "automation-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "automation_engineer_verify_idempotency",
+      "method": "verify-idempotency",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "effect-reconciliation"
+      ],
+      "role": "automation-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "automation_engineer_stage_adapter",
+      "method": "stage-adapter",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "api-contract",
+        "service-playbook"
+      ],
+      "role": "automation-engineer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "product_interface_designer_map_journey",
+      "method": "map-journey",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "customer-discovery",
+        "interaction-state-coverage"
+      ],
+      "role": "product-interface-designer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "product_interface_designer_audit_controls",
+      "method": "audit-controls",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "design-token-audit",
+        "accessible-ui"
+      ],
+      "role": "product-interface-designer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_ROLE_METHOD",
+      "legacy_id": "product_interface_designer_verify_handback",
+      "method": "verify-handback",
+      "reason": "Keep the existing role-level method and identifier. These narrower task procedures can supply specific steps and evidence; they do not replace the role engine or establish equivalent behavior.",
+      "related_collection_skills": [
+        "interaction-state-coverage",
+        "release-readiness"
+      ],
+      "role": "product-interface-designer"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_COMPATIBILITY",
+      "legacy_id": "evidence_audit",
+      "method": "evidence_audit",
+      "reason": "Preserve the existing shared portable and native-style source contracts. The collection has related task guidance, not another independently counted native capability.",
+      "related_collection_skills": [
+        "claim-audit",
+        "source-and-custody"
+      ],
+      "role": "shared"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_COMPATIBILITY",
+      "legacy_id": "safe_resume",
+      "method": "safe_resume",
+      "reason": "Preserve the existing shared portable and native-style source contracts. The collection has related task guidance, not another independently counted native capability.",
+      "related_collection_skills": [
+        "resume-without-replay"
+      ],
+      "role": "shared"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_COMPATIBILITY",
+      "legacy_id": "research_verification",
+      "method": "research_verification",
+      "reason": "Preserve the existing shared portable and native-style source contracts. The collection has related task guidance, not another independently counted native capability.",
+      "related_collection_skills": [
+        "question-to-evidence",
+        "literature-triage"
+      ],
+      "role": "shared"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_COMPATIBILITY",
+      "legacy_id": "consent_and_effects",
+      "method": "consent_and_effects",
+      "reason": "Preserve the existing shared portable and native-style source contracts. The collection has related task guidance, not another independently counted native capability.",
+      "related_collection_skills": [
+        "automation-contract",
+        "effect-reconciliation"
+      ],
+      "role": "shared"
+    },
+    {
+      "claims_behavioral_equivalence": false,
+      "disposition": "KEEP_COMPATIBILITY",
+      "legacy_id": "quality_handoff",
+      "method": "quality_handoff",
+      "reason": "Preserve the existing shared portable and native-style source contracts. The collection has related task guidance, not another independently counted native capability.",
+      "related_collection_skills": [
+        "release-readiness",
+        "bounded-review"
+      ],
+      "role": "shared"
+    }
+  ],
+  "public_base": "b75ef3091b8195dbbc090a8ab308c9d9130fd585",
+  "role_aliases": {
+    "data-engineer": "data-engineering-architect",
+    "reliability-engineer": "infrastructure-reliability-engineer"
+  },
+  "role_count": 15,
+  "schema": "muse-collection-public-compatibility/v1",
+  "starter_configurations": 100,
+  "workflow_recipes": 25
+}

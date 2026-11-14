@@ -126,5 +126,19 @@
   "unique_source_skill_procedures": 50,
   "shared_source_skills": 5,
   "generated_descriptors_per_role": 8,
-  "new_source_executable_demos": "4 source-tree offline fixtures, not additional published standalone ZIPs"
+  "new_source_executable_demos": "4 source-tree offline fixtures, not additional published standalone ZIPs",
+  "curated_task_collection": {
+    "skills": 75,
+    "workflow_recipes": 25,
+    "starter_configurations": 100,
+    "standalone_extension_kits": 4,
+    "local_extension_operations": 11,
+    "source_compatibility": "Original 15 public roles and 50 procedure IDs preserved",
+    "combined_unique_count": null,
+    "guide": "docs/collection/MUSE_CURATED_COLLECTION.md",
+    "catalog": "collections/muse-starters-v1/SKILL_INDEX.md",
+    "setup": "docs/collection/SPECIALIST_QUICKSTART.md",
+    "native_installation": false,
+    "model_superiority": "NOT_ESTABLISHED"
+  }
 }
