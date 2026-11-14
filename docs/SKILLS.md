@@ -52,3 +52,7 @@ python -B examples/export_portable_skills.py --inspect "$HOME/my-portable-skills
 No PYTHONPATH setting, dependency install or account is needed. The new directory contains 50 unique hyphen-named folders, each with matching name/description frontmatter and a license declaration. It contains instruction text, not installed native tools or model weights. The exporter preserves all existing owner files and refuses reuse of a destination. Import or read one skill through the receiving assistant's supported flow and verify a harmless task; persistence, routing and native permissions remain host-specific. Standard-format inspection is not evidence that a model selected or executed a skill.
 
 The source [donor ledger](donors/DONOR_RESEARCH.json) records exact primary files and the compatibility decision. No external donor code is executed or redistributed by the exporter.
+
+## Task-oriented collection: 75 curated skills
+
+The [curated collection](collection/MUSE_CURATED_COLLECTION.md) offers 75 deeper task procedures selected into 100 starters and 25 workflows. It preserves the original 50 procedure IDs and portable exporter above; related entries are mapped in [PUBLIC_COMPATIBILITY.json](../collections/muse-starters-v1/PUBLIC_COMPATIBILITY.json), not added together as 125 unique capabilities. Start with `python -B tools/muse_collection.py show daily-planner` and select only what the current task needs. [Skill setup](handbook/skill-setup.md) distinguishes reading instructions, exporting a kit, host discovery and actual execution.

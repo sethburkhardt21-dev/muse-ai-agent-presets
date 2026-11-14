@@ -1,0 +1,69 @@
+{
+  "specialist": "automation-engineer",
+  "jobs": [
+    {
+      "skill_id": "automation-contract",
+      "inputs": {
+        "allowed_targets": [
+          "demo"
+        ],
+        "steps": [
+          {
+            "id": "read",
+            "depends_on": [],
+            "kind": "read",
+            "target": "demo",
+            "approval": false,
+            "idempotency_key": null
+          },
+          {
+            "id": "send",
+            "depends_on": [
+              "read"
+            ],
+            "kind": "send",
+            "target": "demo",
+            "approval": false,
+            "idempotency_key": "once"
+          }
+        ]
+      }
+    },
+    {
+      "skill_id": "selector-resilience",
+      "inputs": {
+        "target_id": "submit",
+        "candidates": [
+          {
+            "id": "semantic",
+            "strategy": "role",
+            "matches": 1,
+            "visible": true,
+            "stable": true,
+            "target_id": "submit"
+          }
+        ]
+      }
+    },
+    {
+      "skill_id": "effect-reconciliation",
+      "inputs": {
+        "operation": {
+          "id": "op",
+          "request_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "target": "demo"
+        },
+        "evidence": [
+          {
+            "operation_id": "op",
+            "request_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "target": "demo",
+            "state": "unknown",
+            "receipt_id": null
+          }
+        ]
+      }
+    }
+  ],
+  "input_origin": "authored public demonstration; not live provider data"
+}

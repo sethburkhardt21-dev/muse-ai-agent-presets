@@ -1,0 +1,57 @@
+{
+  "specialist": "product-interface-designer",
+  "jobs": [
+    {
+      "skill_id": "design-token-audit",
+      "inputs": {
+        "tokens": {
+          "ink": "#000000",
+          "paper": "#ffffff"
+        },
+        "pairs": [
+          {
+            "id": "body",
+            "foreground": "ink",
+            "background": "paper",
+            "minimum_ratio": "4.5"
+          }
+        ]
+      }
+    },
+    {
+      "skill_id": "interaction-state-coverage",
+      "inputs": {
+        "states": [
+          "idle",
+          "loading",
+          "success",
+          "error"
+        ],
+        "initial": "idle",
+        "terminal_states": [
+          "success"
+        ],
+        "required_states": [
+          "idle",
+          "loading",
+          "success",
+          "error",
+          "empty"
+        ],
+        "transitions": [
+          {
+            "from": "idle",
+            "event": "submit",
+            "to": "loading"
+          },
+          {
+            "from": "loading",
+            "event": "ok",
+            "to": "success"
+          }
+        ]
+      }
+    }
+  ],
+  "input_origin": "authored public demonstration; not live provider data"
+}

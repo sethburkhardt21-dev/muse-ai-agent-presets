@@ -1,0 +1,962 @@
+[
+  {
+    "skill_id": "scope-and-route",
+    "task": "Help me turn these scattered notes into a decision-ready project brief; the deadline and audience are already in the notes.",
+    "negative_case": "The supplied material makes this condition fail: The result serves the user’s actual goal rather than a substituted infrastructure project. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The result serves the user’s actual goal rather than a substituted infrastructure project.",
+      "Already answered questions are not repeated.",
+      "No missing optional service blocks unrelated work."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "source-and-custody",
+    "task": "Check that this summary accurately reflects the three attached documents and show where each disputed statement came from.",
+    "negative_case": "The supplied material makes this condition fail: Every important factual claim has a supporting location or an explicit inference label. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Every important factual claim has a supporting location or an explicit inference label.",
+      "A hash is not represented as proof of authorship or permission.",
+      "Private data and unrelated source content are excluded from the handoff."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "bounded-review",
+    "task": "Review this itinerary against our budget and accessibility requirements; identify only problems that could affect the trip.",
+    "negative_case": "The supplied material makes this condition fail: Every blocking finding changes the user’s outcome or a real requirement. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Every blocking finding changes the user’s outcome or a real requirement.",
+      "The review does not claim independence merely because the same model changed roles.",
+      "Passing structural checks is not described as proof of task quality."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "resume-without-replay",
+    "task": "The session stopped after preparing a calendar update. Check whether it happened before continuing.",
+    "negative_case": "The supplied material makes this condition fail: Unknown is not silently converted to failed. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Unknown is not silently converted to failed.",
+      "A retry is justified by observed state, not by a missing local receipt alone.",
+      "User-owned files and memory remain intact."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "daily-briefing",
+    "task": "I have meetings at 10 and 3, a 45-minute commute and one report due tomorrow. Help me plan today without overscheduling.",
+    "negative_case": "The supplied material makes this condition fail: Overlapping commitments and time zones are handled explicitly. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Overlapping commitments and time zones are handled explicitly.",
+      "The plan leaves realistic buffers and does not invent urgency.",
+      "Proposed tasks are not presented as existing calendar events."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "weekly-reset",
+    "task": "Here is my backlog and last week’s notes. Build a week that fits around two evening shifts and a family event.",
+    "negative_case": "The supplied material makes this condition fail: Completed work does not reappear as unfinished. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Completed work does not reappear as unfinished.",
+      "The total proposed workload fits a stated capacity range.",
+      "Ambiguous commitments are not silently accepted on the user’s behalf."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "inbox-triage",
+    "task": "Summarize these six threads and draft replies to the two that need decisions; do not send anything.",
+    "negative_case": "The supplied material makes this condition fail: Already resolved threads are not reopened. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Already resolved threads are not reopened.",
+      "Drafts do not invent availability, promises or attachments.",
+      "No message is sent or moved merely because a draft was produced."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "meeting-to-actions",
+    "task": "Turn these project-meeting notes into a decision log and action list; leave unassigned items unassigned.",
+    "negative_case": "The supplied material makes this condition fail: Every decision is supported by the record. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Every decision is supported by the record.",
+      "Suggested dates and owners are labeled as suggestions.",
+      "The summary preserves disagreement that affects execution."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "household-project",
+    "task": "Help me organize a move from a one-bedroom apartment in three weeks using the inventory I attached.",
+    "negative_case": "The supplied material makes this condition fail: Prices or measurements not supplied are marked as estimates. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Prices or measurements not supplied are marked as estimates.",
+      "Electrical, structural and other hazardous work is not treated as casual do-it-yourself instruction.",
+      "The first step is useful without committing the user to purchases."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "decision-budget",
+    "task": "Compare these three phone plans using the bills and usage figures I supplied; show first-year and ongoing cost.",
+    "negative_case": "The supplied material makes this condition fail: Units and billing intervals match. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Units and billing intervals match.",
+      "Taxes, fees or future savings are not invented.",
+      "The user retains control of every account or payment action."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "lecture-map",
+    "task": "Give me a concept map of this kidney-failure lecture before I study it; use only the uploaded slides.",
+    "negative_case": "The supplied material makes this condition fail: No outside facts are added when the task is source-only. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "No outside facts are added when the task is source-only.",
+      "Numbers preserve their units, context and exceptions.",
+      "The overview does not replace the distinctions the exam material emphasizes."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "source-flashcards",
+    "task": "Create 12 short-answer cards from this lecture section, keeping the source’s terminology and numbers.",
+    "negative_case": "The supplied material makes this condition fail: Every answer can be located in the source. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Every answer can be located in the source.",
+      "A card does not hide multiple unrelated learning objectives.",
+      "Unsupported visual interpretation is not silently turned into an answer key."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "retrieval-practice",
+    "task": "Quiz me on these six concepts one at a time. After each answer, explain only what I missed.",
+    "negative_case": "The supplied material makes this condition fail: No score is recorded twice for the same attempt. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "No score is recorded twice for the same attempt.",
+      "Correct alternative wording is accepted when it matches the source.",
+      "Hints and answer exposure are recorded when they affect interpretation."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "misconception-clinic",
+    "task": "I keep mixing up clearance and filtration. Use my lecture to show the difference, then test me with one example.",
+    "negative_case": "The supplied material makes this condition fail: The explanation addresses the learner’s actual error. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The explanation addresses the learner’s actual error.",
+      "Analogies do not contradict the underlying mechanism.",
+      "A correct repeated phrase is not treated as evidence of understanding by itself."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "exam-plan",
+    "task": "I have nine study sessions before the exam and these five slide decks. Build a plan using my missed-question list.",
+    "negative_case": "The supplied material makes this condition fail: All required topics are represented. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "All required topics are represented.",
+      "The schedule fits the available blocks without fabricated free time.",
+      "Weak areas receive practice rather than only more summaries."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "teach-back",
+    "task": "Listen to my explanation of this mechanism and challenge the weakest link before helping me rewrite it.",
+    "negative_case": "The supplied material makes this condition fail: The learner does meaningful explanatory work. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The learner does meaningful explanatory work.",
+      "Simpler wording does not introduce false equivalence.",
+      "Uncertainty is identified rather than concealed by polished prose."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "question-to-evidence",
+    "task": "Find whether this proposed workflow solves our actual failure, using the incident records and current documentation.",
+    "negative_case": "The supplied material makes this condition fail: Alternative explanations receive an explicit search. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Alternative explanations receive an explicit search.",
+      "Publication date and event date are not conflated.",
+      "Search coverage is not described as exhaustive without evidence."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "literature-triage",
+    "task": "Compare these eight papers and identify which three are most useful for understanding the disagreement.",
+    "negative_case": "The supplied material makes this condition fail: Duplicate cohorts are not counted as independent replication. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Duplicate cohorts are not counted as independent replication.",
+      "Missing methods remain unknown.",
+      "Study limitations survive the summary."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "claim-audit",
+    "task": "A report says the whole workflow is complete after unit tests. Check exactly which parts the evidence establishes.",
+    "negative_case": "The supplied material makes this condition fail: The verdict does not exceed the evidence scope. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The verdict does not exceed the evidence scope.",
+      "A self-authored receipt is not treated as independent authority.",
+      "Unsupported does not automatically mean false."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "competing-explanations",
+    "task": "Why did usage rise after our redesign? Compare the redesign hypothesis with promotion and measurement changes.",
+    "negative_case": "The supplied material makes this condition fail: Correlation is not silently converted to causation. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Correlation is not silently converted to causation.",
+      "A preferred explanation is tested against adverse evidence.",
+      "Unknown facts are not filled in to make a story coherent."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "change-brief",
+    "task": "Compare the current product guide with last month’s saved copy and tell me which changes affect my workflow.",
+    "negative_case": "The supplied material makes this condition fail: Old developments are not described as new. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Old developments are not described as new.",
+      "Announcement and availability are distinguished.",
+      "No background watch is implied by a one-time comparison."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "interview-synthesis",
+    "task": "Synthesize these six customer interviews into needs, disagreements and the next prototype questions.",
+    "negative_case": "The supplied material makes this condition fail: Quotes retain their original meaning. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Quotes retain their original meaning.",
+      "One vocal participant does not become a majority.",
+      "Sample limitations remain visible."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "bug-reproduction",
+    "task": "This parser drops the final item. Reproduce the failure on the supplied fixture before changing implementation.",
+    "negative_case": "The supplied material makes this condition fail: The observed failure matches the reported defect. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The observed failure matches the reported defect.",
+      "An unrelated setup failure is not mislabeled reproduction.",
+      "The test fails for the intended reason before a fix."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "minimal-repair",
+    "task": "Fix the reproduced off-by-one bug without rewriting the parser, and test empty and single-item inputs.",
+    "negative_case": "The supplied material makes this condition fail: The original failing case now passes. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The original failing case now passes.",
+      "Nearby valid behavior remains intact.",
+      "Skips and unrun integration tests are not reported as passed."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "code-review",
+    "task": "Review this transaction patch for data-loss paths and show the smallest case for each genuine issue.",
+    "negative_case": "The supplied material makes this condition fail: Every defect finding has a plausible input-to-failure path. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Every defect finding has a plausible input-to-failure path.",
+      "The review does not claim test execution without output.",
+      "Style preferences do not obscure correctness risks."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "api-contract",
+    "task": "Design a small task-update API with examples for stale revisions and a lost response after a successful write.",
+    "negative_case": "The supplied material makes this condition fail: Failure responses are distinguishable without parsing prose. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Failure responses are distinguishable without parsing prose.",
+      "Retry behavior does not duplicate consequential actions.",
+      "Compatibility claims include existing callers."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "accessible-ui",
+    "task": "Review this mobile modal for focus, scrolling and toolbar overlap; distinguish measured findings from screenshot-only concerns.",
+    "negative_case": "The supplied material makes this condition fail: A screenshot is not treated as proof of screen-reader behavior. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "A screenshot is not treated as proof of screen-reader behavior.",
+      "The main task remains usable at the requested viewport.",
+      "Fixes are checked in the rendered interface, not source alone."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "release-readiness",
+    "task": "Check this release ZIP against the acceptance checklist without uploading or publishing it.",
+    "negative_case": "The supplied material makes this condition fail: Test evidence matches the candidate bytes. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Test evidence matches the candidate bytes.",
+      "Build success is not called deployment success.",
+      "Publication is not performed as a side effect of review."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "creative-brief",
+    "task": "Turn this product story into a warm 30-second video brief with three concrete opening ideas.",
+    "negative_case": "The supplied material makes this condition fail: The direction serves the intended audience. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The direction serves the intended audience.",
+      "Reference constraints are preserved.",
+      "The brief describes visible or audible choices, not only vague qualities."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "visual-reference",
+    "task": "Use these three references to define a consistent look for six scenes while preserving the character’s proportions.",
+    "negative_case": "The supplied material makes this condition fail: The reference exists and was actually inspected. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The reference exists and was actually inspected.",
+      "Fixed subject details are not silently replaced.",
+      "Style words map to observable properties."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "storyboard",
+    "task": "Plan a 20-second four-shot sequence showing a character discovering a hidden room.",
+    "negative_case": "The supplied material makes this condition fail: Shot durations fit the requested runtime. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Shot durations fit the requested runtime.",
+      "Every shot advances the intended story or information.",
+      "A textual board is not described as a rendered film."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "continuity-review",
+    "task": "Compare these eight frames for character size, clothing and prop continuity before we animate them.",
+    "negative_case": "The supplied material makes this condition fail: Findings identify the actual frame or transition. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Findings identify the actual frame or transition.",
+      "Intentional changes are not marked defects.",
+      "Unseen frames are not assumed correct."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "edit-and-export",
+    "task": "Prepare this clip for a vertical post, retaining readable captions and checking the first and last frames.",
+    "negative_case": "The supplied material makes this condition fail: The delivered file opens in the intended format. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The delivered file opens in the intended format.",
+      "Timing and dimensions match the brief.",
+      "A successful export log is not substituted for inspecting the result."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "prose-revision",
+    "task": "Rewrite this announcement to sound direct and human without changing its commitments or adding marketing claims.",
+    "negative_case": "The supplied material makes this condition fail: No new factual claims are introduced without support. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "No new factual claims are introduced without support.",
+      "The requested voice survives.",
+      "The revision is finished prose, not merely advice about prose."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "customer-discovery",
+    "task": "Help me test whether small clinics need this document workflow before I build it.",
+    "negative_case": "The supplied material makes this condition fail: Questions do not assume the proposed solution is desirable. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Questions do not assume the proposed solution is desirable.",
+      "Hypothetical enthusiasm is not called purchase evidence.",
+      "Outreach remains a draft unless actually authorized and sent."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "offer-design",
+    "task": "Write a clear offer for a document-cleanup service that cannot promise legal or clinical correctness.",
+    "negative_case": "The supplied material makes this condition fail: Promises match actual delivery capability. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Promises match actual delivery capability.",
+      "Costs and exclusions are visible.",
+      "Unsupported superiority claims are removed."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "content-system",
+    "task": "Turn this guide into a week of useful posts without exaggerating its results or repeating the same hook.",
+    "negative_case": "The supplied material makes this condition fail: Claims retain their source meaning across formats. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Claims retain their source meaning across formats.",
+      "The production load fits the stated capacity.",
+      "No post is represented as published without a real result."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "service-playbook",
+    "task": "Create a customer-return playbook using these five real cases, including missing receipts and disputed delivery.",
+    "negative_case": "The supplied material makes this condition fail: Each handoff has an owner and useful context. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Each handoff has an owner and useful context.",
+      "Exceptions do not vanish into a generic escalation bucket.",
+      "The workflow does not grant new account authority."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "project-prioritization",
+    "task": "Choose the next three tasks from this backlog while protecting the active release and avoiding duplicate work.",
+    "negative_case": "The supplied material makes this condition fail: The chosen batch fits available capacity. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The chosen batch fits available capacity.",
+      "Scores do not hide unverified assumptions.",
+      "Parallel work does not assign two writers to the same artifact."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "metrics-review",
+    "task": "Our support resolution rate fell this month. Check whether case mix or reporting changes explain it.",
+    "negative_case": "The supplied material makes this condition fail: Like-for-like periods are compared. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Like-for-like periods are compared.",
+      "Percent changes include relevant counts.",
+      "An action recommendation is distinguished from a proven causal explanation."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "dataset-intake",
+    "task": "Inspect this survey export before we analyze satisfaction, including duplicate respondents and missing responses.",
+    "negative_case": "The supplied material makes this condition fail: Raw input remains unchanged. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Raw input remains unchanged.",
+      "Missing values are not silently treated as zero.",
+      "Permitted use and technical suitability are separate questions."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "spreadsheet-reconcile",
+    "task": "Find why the monthly total differs from the invoice list without changing the original workbook.",
+    "negative_case": "The supplied material makes this condition fail: Formulas are not replaced by hardcoded results without request. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Formulas are not replaced by hardcoded results without request.",
+      "Units and signs are consistent.",
+      "Reconciliation explains residual differences rather than hiding them."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "analysis-notebook",
+    "task": "Analyze these task durations and explain the median, spread and outliers with reproducible calculations.",
+    "negative_case": "The supplied material makes this condition fail: Results match actually executed computations. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Results match actually executed computations.",
+      "Transformations do not conceal exclusions.",
+      "Uncertainty and sample limits survive presentation."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "chart-story",
+    "task": "Make a chart comparing these response times without hiding the long tail or the sample sizes.",
+    "negative_case": "The supplied material makes this condition fail: The chart does not distort magnitude through an unexplained scale. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The chart does not distort magnitude through an unexplained scale.",
+      "Labels remain readable in the target medium.",
+      "Color is not the only carrier of important meaning."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "model-comparison",
+    "task": "Compare two assistant instructions on the same ten tasks, preserving both failures and token costs.",
+    "negative_case": "The supplied material makes this condition fail: The candidate did not tune on protected final answers. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The candidate did not tune on protected final answers.",
+      "All candidates received equivalent inputs and resources.",
+      "A configured evaluation is not reported as an executed improvement."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "data-quality-review",
+    "task": "Check this cleaned contact table against the original export and account for every removed or merged row.",
+    "negative_case": "The supplied material makes this condition fail: Every dropped row has an explicit reason. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Every dropped row has an explicit reason.",
+      "Key collisions are not silently resolved.",
+      "A successful script exit is not treated as semantic correctness."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "portfolio-story",
+    "task": "Turn this debugging project into a portfolio case study emphasizing the diagnosis, repair and regression evidence.",
+    "negative_case": "The supplied material makes this condition fail: The person’s contribution is not conflated with team or model output. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The person’s contribution is not conflated with team or model output.",
+      "Metrics are supported or omitted.",
+      "Limitations are explained without burying the demonstrated achievement."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "role-fit",
+    "task": "Compare this backend role with my three projects and identify the strongest evidence and the real gaps.",
+    "negative_case": "The supplied material makes this condition fail: Unsupported experience is not invented. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Unsupported experience is not invented.",
+      "Current vacancy and terms are checked when possible.",
+      "Fit is not presented as guaranteed hiring probability."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "resume-tailor",
+    "task": "Tailor this resume for an automation role using only the projects and experience I supplied.",
+    "negative_case": "The supplied material makes this condition fail: Every credential and outcome comes from the person’s record. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Every credential and outcome comes from the person’s record.",
+      "Keywords do not replace substantive evidence.",
+      "Formatting remains readable rather than crowded."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "interview-rehearsal",
+    "task": "Interview me about this architecture decision and challenge any part that sounds vague or overstated.",
+    "negative_case": "The supplied material makes this condition fail: Feedback addresses the actual answer. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Feedback addresses the actual answer.",
+      "The improved response preserves truthful experience.",
+      "Practice performance is not called a hiring prediction."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "difficult-message",
+    "task": "Write a firm but professional message explaining why this repeated scope change needs a revised deadline.",
+    "negative_case": "The supplied material makes this condition fail: The ask is concrete. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The ask is concrete.",
+      "The message does not invent motives or threats.",
+      "The person’s intended relationship and boundaries are respected."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "negotiation-prep",
+    "task": "Help me compare these two project offers and prepare a conversation about scope, payment timing and support obligations.",
+    "negative_case": "The supplied material makes this condition fail: Invented competing offers are excluded. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Invented competing offers are excluded.",
+      "Costs and nonmonetary terms are considered.",
+      "The plan leaves room for the other party’s response."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "itinerary-plan",
+    "task": "Plan a low-walking two-day city visit with one indoor alternative each day and no bookings.",
+    "negative_case": "The supplied material makes this condition fail: Transit time and opening hours are compatible. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Transit time and opening hours are compatible.",
+      "Accessibility assumptions are explicit.",
+      "No reservation is claimed without a booking result."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "meal-plan",
+    "task": "Plan four dinners using these pantry items, with one quick backup and a short shopping list.",
+    "negative_case": "The supplied material makes this condition fail: Known allergens are excluded and cross-contact needs are not assumed solved. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Known allergens are excluded and cross-contact needs are not assumed solved.",
+      "Quantities fit the household.",
+      "The plan is realistic for the available time and equipment."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "garden-observe",
+    "task": "Log these yellowing leaves and help me decide what to observe next before changing the care routine.",
+    "negative_case": "The supplied material makes this condition fail: Uncertain identification remains uncertain. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Uncertain identification remains uncertain.",
+      "Image appearance alone does not establish a pathogen.",
+      "Physical actions and chemical treatment are not automatically performed."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "hobby-practice",
+    "task": "Give me a 15-minute drawing exercise for perspective, then review my attempt against one clear objective.",
+    "negative_case": "The supplied material makes this condition fail: The exercise targets the stated difficulty. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The exercise targets the stated difficulty.",
+      "Progress is judged from actual attempts.",
+      "The plan does not create unnecessary purchases or unsafe physical demands."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "event-plan",
+    "task": "Organize a small game night for eight people with simple food and a plan that works if two guests arrive late.",
+    "negative_case": "The supplied material makes this condition fail: Tasks fit the available people and time. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Tasks fit the available people and time.",
+      "Accessibility and dietary needs are not forgotten.",
+      "Proposed responsibilities are not reported as accepted commitments."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "purchase-compare",
+    "task": "Compare these three devices for my stated workflow, including compatibility and recurring costs.",
+    "negative_case": "The supplied material makes this condition fail: Current claims have current sources. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Current claims have current sources.",
+      "Total cost is not reduced to sticker price when recurring costs matter.",
+      "Sponsored claims or reviews are not treated as independent measurement."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "appointment-prep",
+    "task": "Organize these notes into a one-page appointment summary and questions; do not try to diagnose the problem.",
+    "negative_case": "The supplied material makes this condition fail: The timeline matches the supplied record. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The timeline matches the supplied record.",
+      "Professional instructions are not changed.",
+      "Urgent concerns are not handled as routine scheduling problems."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "care-coordination",
+    "task": "Help organize rides, meals and the written instructions for a family member’s recovery, keeping medical decisions with their clinician.",
+    "negative_case": "The supplied material makes this condition fail: No clinical instruction is modified. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "No clinical instruction is modified.",
+      "Sensitive details are shared only within the requested scope.",
+      "Proposed responsibilities are not labeled confirmed."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "accessibility-routine",
+    "task": "Make this morning checklist easier to follow with one step at a time and a way to resume after interruptions.",
+    "negative_case": "The supplied material makes this condition fail: Adaptations follow stated needs rather than stereotypes. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Adaptations follow stated needs rather than stereotypes.",
+      "The person retains control of decisions.",
+      "Simpler presentation does not omit important safety information."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "reflection-journal",
+    "task": "Help me write about this difficult week without turning it into advice or a diagnosis.",
+    "negative_case": "The supplied material makes this condition fail: The person’s interpretation is not replaced by a confident diagnosis. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The person’s interpretation is not replaced by a confident diagnosis.",
+      "Emotional validation does not affirm unsupported factual beliefs.",
+      "Private material is not added to shared records without permission."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "habit-experiment",
+    "task": "Help me try a ten-minute evening tidy for a week with a fallback for exhausted days.",
+    "negative_case": "The supplied material makes this condition fail: The experiment fits the person’s constraints. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "The experiment fits the person’s constraints.",
+      "Tracking is optional and proportionate.",
+      "Health or performance benefits are not guaranteed."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  },
+  {
+    "skill_id": "family-archive",
+    "task": "Organize these photos and notes into a family album outline, marking unknown dates rather than guessing.",
+    "negative_case": "The supplied material makes this condition fail: Unknown people and dates remain unknown. The candidate must notice the conflict and produce a useful bounded result without inventing missing facts.",
+    "rubric": [
+      "Unknown people and dates remain unknown.",
+      "Originals are preserved.",
+      "Sharing boundaries are respected for living people and sensitive records."
+    ],
+    "results": {
+      "baseline": null,
+      "upstream": null,
+      "candidate": null
+    }
+  }
+]

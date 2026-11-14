@@ -95,7 +95,7 @@ class PublicProductSurfaceTests(unittest.TestCase):
  def test_relative_markdown_links_resolve_across_visible_source(self):
   pages=[ROOT/"README.md",ROOT/"CHANGELOG.md",ROOT/"CONTRIBUTING.md",
          ROOT/"SECURITY.md"]
-  pages.extend(DOCS.glob("*.md"))
+  pages.extend(DOCS.rglob("*.md"))
   pages.extend((ROOT/"presets").rglob("*.md"))
   pages.extend((ROOT/"services").rglob("*.md"))
   broken=[]

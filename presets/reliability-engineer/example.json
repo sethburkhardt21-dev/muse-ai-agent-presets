@@ -1,0 +1,48 @@
+{
+  "specialist": "reliability-engineer",
+  "jobs": [
+    {
+      "skill_id": "service-objectives",
+      "inputs": {
+        "good_events": 998,
+        "total_events": 1000,
+        "target": "0.999",
+        "window_minutes": 60
+      }
+    },
+    {
+      "skill_id": "capacity-planning",
+      "inputs": {
+        "demand_rps": "900",
+        "per_instance_rps": "250",
+        "target_utilization": "0.6",
+        "instances": 4,
+        "reserve_instances": 1
+      }
+    },
+    {
+      "skill_id": "incident-triage",
+      "inputs": {
+        "events": [
+          {
+            "id": "resolved",
+            "at": "2026-01-01T12:20:00Z",
+            "kind": "resolved"
+          },
+          {
+            "id": "start",
+            "at": "2026-01-01T07:00:00-05:00",
+            "kind": "start"
+          },
+          {
+            "id": "mitigated",
+            "at": "2026-01-01T12:05:00Z",
+            "kind": "mitigation"
+          }
+        ],
+        "as_of": "2026-01-01T12:30:00Z"
+      }
+    }
+  ],
+  "input_origin": "authored public demonstration; not live provider data"
+}

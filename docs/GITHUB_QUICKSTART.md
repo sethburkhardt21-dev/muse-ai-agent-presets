@@ -72,3 +72,7 @@ The four new specialist fixtures are available through `PYTHONPATH=src python3 -
 | Need a ZIP instead of a clone | Use the [v0.4.1-alpha downloads](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha). |
 
 For code changes, follow [Development](DEVELOPMENT.md). Local execution is not a sandbox; read [Security](SECURITY.md) before running untrusted code.
+
+## Enhance an existing assistant with a task starter
+
+You do not need a replacement identity or native enrollment to read a useful method. Run `python -B tools/muse_collection.py show daily-planner`, then export a selected starter with `python -B tools/muse_collection.py build daily-planner --to "$HOME/daily-planner.zip"`. Read or attach its instructions through your assistant's supported route and apply them to your current request. No model call or account connection happens during export. The [collection quickstart](collection/SPECIALIST_QUICKSTART.md) also demonstrates four executable offline kits and the full downloadable bundle.

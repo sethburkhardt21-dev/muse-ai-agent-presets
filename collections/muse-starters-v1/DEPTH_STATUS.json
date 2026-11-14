@@ -1,0 +1,594 @@
+[
+  {
+    "skill_id": "scope-and-route",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "source-and-custody",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "bounded-review",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "resume-without-replay",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "daily-briefing",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "weekly-reset",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "inbox-triage",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "meeting-to-actions",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "household-project",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "decision-budget",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "lecture-map",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "source-flashcards",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "retrieval-practice",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "misconception-clinic",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "exam-plan",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "teach-back",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "question-to-evidence",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "literature-triage",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "claim-audit",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "competing-explanations",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "change-brief",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "interview-synthesis",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "bug-reproduction",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "minimal-repair",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "code-review",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "api-contract",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "accessible-ui",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "release-readiness",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "creative-brief",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "visual-reference",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "storyboard",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "continuity-review",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "edit-and-export",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "prose-revision",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "customer-discovery",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "offer-design",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "content-system",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "service-playbook",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "project-prioritization",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "metrics-review",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "dataset-intake",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "spreadsheet-reconcile",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "analysis-notebook",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "chart-story",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "model-comparison",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN"
+  },
+  {
+    "skill_id": "data-quality-review",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "portfolio-story",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "role-fit",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "resume-tailor",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "interview-rehearsal",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "difficult-message",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "negotiation-prep",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "itinerary-plan",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "meal-plan",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "garden-observe",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "hobby-practice",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "event-plan",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "purchase-compare",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "appointment-prep",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "care-coordination",
+    "state": "DEPTH_SOURCE_AND_PUBLIC_FIXTURE_CHECKED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R3"
+  },
+  {
+    "skill_id": "accessibility-routine",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "reflection-journal",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "habit-experiment",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "family-archive",
+    "state": "R4_SOURCE_CANDIDATE_LOCAL_CHECKS_ONLY",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R4"
+  },
+  {
+    "skill_id": "schema-evolution",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "incremental-pipeline",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "query-plan-review",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "service-objectives",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "capacity-planning",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "incident-triage",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "automation-contract",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "selector-resilience",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "effect-reconciliation",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "design-token-audit",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  },
+  {
+    "skill_id": "interaction-state-coverage",
+    "state": "R5_SOURCE_IMPLEMENTED",
+    "concrete_case_count": 3,
+    "paired_muse_runs": 0,
+    "independent_semantic_review": "NOT_RUN",
+    "depth_revision": "R5"
+  }
+]

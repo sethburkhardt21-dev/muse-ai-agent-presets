@@ -31,3 +31,8 @@ The eight executable ZIPs can run locally with requirements specified by their g
 - [All 15 source roles](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/presets): 11 released starter roles and four newer source-only roles.
 - [Five shared source skills](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/skills/shared): source-proven guidance; 45 role-method procedures plus five shared = 50 unique disabled skill procedures, not native grants.
 - [Four synthetic offline demos](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/blob/main/examples/specialist_engine_demo.py): data, service-level, task graph and static UI controls.
+
+## Curated task collection
+- [75 authored task skills, 25 workflows, 100 starters](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/blob/main/docs/collection/MUSE_CURATED_COLLECTION.md): instruction/task bundles for an existing assistant, not new identities; overlap with the preserved 50 source procedures is explicitly mapped.
+- [Runnable specialist collection](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/blob/main/docs/collection/SPECIALIST_QUICKSTART.md): four offline kits, eleven bounded calculations, and reported unexecuted handoffs; no native effect claim.
+- [Practical operating handbook](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/docs/handbook): context, skill setup, workrooms, durable documents and source/host distinctions.

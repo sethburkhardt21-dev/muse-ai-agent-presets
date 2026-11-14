@@ -1,0 +1,286 @@
+[
+  {
+    "id": "coordinator",
+    "title": "Coordinator",
+    "purpose": "Coordinates bounded work, memory, leases and independent acceptance.",
+    "kind": "existing-specialist",
+    "contract": "presets/coordinator/preset.json",
+    "skills": [
+      "customer-discovery",
+      "daily-briefing",
+      "decision-budget",
+      "event-plan",
+      "household-project",
+      "inbox-triage",
+      "interview-synthesis",
+      "meal-plan",
+      "meeting-to-actions",
+      "negotiation-prep",
+      "offer-design",
+      "project-prioritization",
+      "resume-without-replay",
+      "service-playbook",
+      "source-and-custody",
+      "weekly-reset"
+    ],
+    "example": "examples/export_coordinator_sourcekit.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "software-engineer",
+    "title": "Software Engineer",
+    "purpose": "Reproduces defects, implements maintainable repairs and tests exact source.",
+    "kind": "existing-specialist",
+    "contract": "presets/software-engineer/preset.json",
+    "skills": [
+      "accessible-ui",
+      "api-contract",
+      "bug-reproduction",
+      "code-review",
+      "minimal-repair",
+      "source-and-custody"
+    ],
+    "example": "examples/software_engineer_workflow_demo.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "model-builder",
+    "title": "Model Builder",
+    "purpose": "Plans and executes approved model training, adapter work and candidate provenance.",
+    "kind": "existing-specialist",
+    "contract": "presets/model-builder/preset.json",
+    "skills": [
+      "data-quality-review",
+      "dataset-intake",
+      "model-comparison"
+    ],
+    "example": "examples/export_model_builder_sourcekit.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "research-evaluator",
+    "title": "Research & Evaluation Scientist",
+    "purpose": "Runs independent research, held-out experiments and model evaluations.",
+    "kind": "existing-specialist",
+    "contract": "presets/research-evaluator/preset.json",
+    "skills": [
+      "accessibility-routine",
+      "analysis-notebook",
+      "change-brief",
+      "claim-audit",
+      "competing-explanations",
+      "customer-discovery",
+      "data-quality-review",
+      "dataset-intake",
+      "decision-budget",
+      "interview-synthesis",
+      "literature-triage",
+      "metrics-review",
+      "model-comparison",
+      "portfolio-story",
+      "purchase-compare",
+      "question-to-evidence",
+      "role-fit",
+      "source-and-custody",
+      "teach-back"
+    ],
+    "example": "examples/research_evaluator_demo.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "creative-studio",
+    "title": "Creative Studio",
+    "purpose": "Builds source-backed creative artifacts and verifies real rendered output.",
+    "kind": "existing-specialist",
+    "contract": "presets/creative-studio/preset.json",
+    "skills": [
+      "accessible-ui",
+      "analysis-notebook",
+      "bounded-review",
+      "chart-story",
+      "claim-audit",
+      "content-system",
+      "continuity-review",
+      "creative-brief",
+      "edit-and-export",
+      "event-plan",
+      "portfolio-story",
+      "prose-revision",
+      "storyboard",
+      "visual-reference"
+    ],
+    "example": "examples/creative_studio_demo.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "adversarial-verifier",
+    "title": "Adversarial Verifier",
+    "purpose": "Challenges source, security boundaries, tests and failure recovery.",
+    "kind": "existing-specialist",
+    "contract": "presets/adversarial-verifier/preset.json",
+    "skills": [
+      "accessible-ui",
+      "bounded-review",
+      "claim-audit",
+      "code-review",
+      "release-readiness"
+    ],
+    "example": "examples/github_quickstart.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "personal-companion",
+    "title": "Personal Companion",
+    "purpose": "Helps with daily planning, safe wellness information and enjoyable experiences.",
+    "kind": "existing-specialist",
+    "contract": "presets/personal-companion/preset.json",
+    "skills": [
+      "accessibility-routine",
+      "appointment-prep",
+      "care-coordination",
+      "content-system",
+      "daily-briefing",
+      "decision-budget",
+      "difficult-message",
+      "family-archive",
+      "habit-experiment",
+      "household-project",
+      "inbox-triage",
+      "itinerary-plan",
+      "meal-plan",
+      "meeting-to-actions",
+      "negotiation-prep",
+      "project-prioritization",
+      "prose-revision",
+      "purchase-compare",
+      "reflection-journal",
+      "resume-tailor",
+      "role-fit",
+      "service-playbook",
+      "source-and-custody"
+    ],
+    "example": "examples/github_quickstart.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "garden-companion",
+    "title": "Garden Companion",
+    "purpose": "Supports garden observations, planting plans and owner-approved seasonal schedules.",
+    "kind": "existing-specialist",
+    "contract": "presets/garden-companion/preset.json",
+    "skills": [
+      "data-quality-review",
+      "garden-observe",
+      "source-and-custody"
+    ],
+    "example": "examples/garden_calendar_demo.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "learning-coach",
+    "title": "Learning Coach",
+    "purpose": "Runs source-grounded, adaptive study and evidence-based learning reviews.",
+    "kind": "existing-specialist",
+    "contract": "presets/learning-coach/preset.json",
+    "skills": [
+      "bounded-review",
+      "bug-reproduction",
+      "exam-plan",
+      "habit-experiment",
+      "hobby-practice",
+      "interview-rehearsal",
+      "lecture-map",
+      "misconception-clinic",
+      "portfolio-story",
+      "retrieval-practice",
+      "source-flashcards",
+      "teach-back"
+    ],
+    "example": "examples/learning_session_demo.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "claims-adjudicator",
+    "title": "Claims Adjudicator",
+    "purpose": "Judges claims against exact evidence and preserves limiting conditions.",
+    "kind": "existing-specialist",
+    "contract": "presets/claims-adjudicator/preset.json",
+    "skills": [
+      "bounded-review",
+      "claim-audit",
+      "data-quality-review",
+      "source-and-custody",
+      "spreadsheet-reconcile"
+    ],
+    "example": "examples/export_claims_sourcekit.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "reverse-engineering-researcher",
+    "title": "Reverse Engineering & Security Researcher",
+    "purpose": "Performs authorized behavioral analysis, protocol study and isolated defensive research.",
+    "kind": "existing-specialist",
+    "contract": "presets/reverse-engineering-researcher/preset.json",
+    "skills": [
+      "api-contract",
+      "competing-explanations"
+    ],
+    "example": "examples/export_reverse_sourcekit.py",
+    "native_status": "UNBOUND_UNLESS_SEPARATELY_QUALIFIED"
+  },
+  {
+    "id": "data-engineer",
+    "title": "Data Engineering & Database Architect",
+    "purpose": "Design safe data contracts, reconcile incremental records and review query access paths with reproducible offline tools.",
+    "kind": "executable-extension",
+    "contract": "presets/data-engineer/specialist.json",
+    "skills": [
+      "schema-evolution",
+      "incremental-pipeline",
+      "query-plan-review"
+    ],
+    "example": "python tools/muse_collection.py demo data-engineer",
+    "native_status": "NOT_INSTALLED"
+  },
+  {
+    "id": "reliability-engineer",
+    "title": "Infrastructure & Reliability Engineer",
+    "purpose": "Turn service measurements into explicit error budgets, capacity estimates and incident timelines without changing infrastructure.",
+    "kind": "executable-extension",
+    "contract": "presets/reliability-engineer/specialist.json",
+    "skills": [
+      "service-objectives",
+      "capacity-planning",
+      "incident-triage"
+    ],
+    "example": "python tools/muse_collection.py demo reliability-engineer",
+    "native_status": "NOT_INSTALLED"
+  },
+  {
+    "id": "automation-engineer",
+    "title": "Automation Engineer",
+    "purpose": "Prepare bounded application workflows, review target observations and reconcile uncertain effects through the existing host authority.",
+    "kind": "executable-extension",
+    "contract": "presets/automation-engineer/specialist.json",
+    "skills": [
+      "automation-contract",
+      "selector-resilience",
+      "effect-reconciliation"
+    ],
+    "example": "python tools/muse_collection.py demo automation-engineer",
+    "native_status": "NOT_INSTALLED"
+  },
+  {
+    "id": "product-interface-designer",
+    "title": "Product & Interface Designer",
+    "purpose": "Specify coherent interface states and measure real design-token contrast before handing off implementation and rendered-product review.",
+    "kind": "executable-extension",
+    "contract": "presets/product-interface-designer/specialist.json",
+    "skills": [
+      "design-token-audit",
+      "interaction-state-coverage"
+    ],
+    "example": "python tools/muse_collection.py demo product-interface-designer",
+    "native_status": "NOT_INSTALLED"
+  }
+]

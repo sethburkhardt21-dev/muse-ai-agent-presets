@@ -1,0 +1,26 @@
+{
+  "schema": "muse-specialist-extension/v1",
+  "id": "reliability-engineer",
+  "title": "Infrastructure & Reliability Engineer",
+  "purpose": "Turn service measurements into explicit error budgets, capacity estimates and incident timelines without changing infrastructure.",
+  "skills": [
+    "service-objectives",
+    "capacity-planning",
+    "incident-triage"
+  ],
+  "tool_entrypoint": "specialist_extensions.evaluate",
+  "runtime": "Python standard library; read-only supplied-input calculations",
+  "external_actions_performed": false,
+  "native_installed": false,
+  "existing_assistant_identity": "preserved",
+  "permissions_granted": [],
+  "input_budget": {
+    "max_json_bytes": 2000000,
+    "max_tree_nodes": 30000,
+    "max_depth": 32
+  },
+  "workflow_ids": [
+    "incident-recovery"
+  ],
+  "handoff": "Use the existing host for any separately authorized database, browser, infrastructure or publishing effect."
+}

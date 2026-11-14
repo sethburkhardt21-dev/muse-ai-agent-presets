@@ -1,0 +1,415 @@
+[
+  {
+    "id": "calm-day",
+    "title": "A Clear and Feasible Day",
+    "goal": "Turn known commitments into a realistic day without inventing calendar access.",
+    "skills": [
+      "scope-and-route",
+      "daily-briefing",
+      "bounded-review"
+    ],
+    "finish": "Return priorities, time conflicts and one useful next action; do not create reminders by implication."
+  },
+  {
+    "id": "priority-week",
+    "title": "A Week That Fits",
+    "goal": "Choose a feasible week and preserve a simple restart point.",
+    "skills": [
+      "weekly-reset",
+      "project-prioritization",
+      "resume-without-replay"
+    ],
+    "finish": "Return a capacity-aware plan, deferred work and a concise continuation note."
+  },
+  {
+    "id": "exam-cycle",
+    "title": "From Lecture to Retrieval",
+    "goal": "Turn permitted learning sources into a study map and a checked practice session.",
+    "skills": [
+      "lecture-map",
+      "source-flashcards",
+      "retrieval-practice"
+    ],
+    "finish": "Return traceable study material and actual-attempt feedback, not a claim of mastery."
+  },
+  {
+    "id": "concept-repair",
+    "title": "From Confusion to Explanation",
+    "goal": "Identify a specific learning gap and check understanding in a new example.",
+    "skills": [
+      "misconception-clinic",
+      "teach-back"
+    ],
+    "finish": "Return the repaired distinction and an answered or clearly pending transfer question."
+  },
+  {
+    "id": "evidence-brief",
+    "title": "A Source-Grounded Answer",
+    "goal": "Investigate a bounded question and audit the resulting claims.",
+    "skills": [
+      "question-to-evidence",
+      "claim-audit"
+    ],
+    "finish": "Return a supported conclusion, exact evidence locations and the remaining uncertainty."
+  },
+  {
+    "id": "open-question",
+    "title": "Investigate Competing Accounts",
+    "goal": "Compare the strongest plausible explanations without prematurely choosing a story.",
+    "skills": [
+      "competing-explanations",
+      "question-to-evidence",
+      "bounded-review"
+    ],
+    "finish": "Return discriminating evidence and the smallest next observation, not speculative certainty."
+  },
+  {
+    "id": "reproduce-to-repair",
+    "title": "A Verified Small Repair",
+    "goal": "Reproduce an owned-code defect, repair it and inspect the changed behavior.",
+    "skills": [
+      "bug-reproduction",
+      "minimal-repair",
+      "code-review"
+    ],
+    "finish": "Return the narrow patch and real regression results; preserve any unrun integration checks."
+  },
+  {
+    "id": "review-to-release",
+    "title": "Review a Candidate for Delivery",
+    "goal": "Evaluate an exact candidate against its real acceptance criteria.",
+    "skills": [
+      "code-review",
+      "release-readiness"
+    ],
+    "finish": "Return source-bound findings, artifact checks and a scoped delivery decision without publishing."
+  },
+  {
+    "id": "brief-to-board",
+    "title": "A Coherent Creative Sequence",
+    "goal": "Turn a concrete creative brief into a timed sequence with continuity rules.",
+    "skills": [
+      "creative-brief",
+      "storyboard",
+      "continuity-review"
+    ],
+    "finish": "Return a usable shot plan and inspect any actual supplied or generated frames; label text-only boards honestly."
+  },
+  {
+    "id": "draft-to-delivery",
+    "title": "Finish a Creative Deliverable",
+    "goal": "Revise a draft within the brief and verify its requested output form.",
+    "skills": [
+      "creative-brief",
+      "bounded-review",
+      "edit-and-export"
+    ],
+    "finish": "Return the actual deliverable where tools permit, otherwise a precisely labeled production plan."
+  },
+  {
+    "id": "idea-to-offer",
+    "title": "Test an Idea Before Promising It",
+    "goal": "Identify a customer assumption and shape a bounded offer around supported needs.",
+    "skills": [
+      "customer-discovery",
+      "offer-design"
+    ],
+    "finish": "Return a testable offer and evidence-gathering step, with no invented demand or sent outreach."
+  },
+  {
+    "id": "operations-review",
+    "title": "Improve a Repeated Operation",
+    "goal": "Find operational friction, prioritize a repair and define a recoverable process.",
+    "skills": [
+      "metrics-review",
+      "project-prioritization",
+      "service-playbook"
+    ],
+    "finish": "Return a bounded improvement backed by available records and worked exception cases."
+  },
+  {
+    "id": "data-to-decision",
+    "title": "From Raw Records to a Defensible Answer",
+    "goal": "Check a dataset, perform a reproducible analysis and communicate its meaning.",
+    "skills": [
+      "dataset-intake",
+      "analysis-notebook",
+      "chart-story"
+    ],
+    "finish": "Return an inspected analysis with source definitions, calculations and honest uncertainty."
+  },
+  {
+    "id": "model-evaluation",
+    "title": "A Fair Candidate Comparison",
+    "goal": "Prepare a valid dataset and compare model candidates under frozen conditions.",
+    "skills": [
+      "dataset-intake",
+      "model-comparison",
+      "data-quality-review"
+    ],
+    "finish": "Return executed per-case evidence or a clearly unrun comparison packet; never substitute setup for results."
+  },
+  {
+    "id": "application-packet",
+    "title": "A Truthful Application Story",
+    "goal": "Map an actual work record to a role and produce credible application material.",
+    "skills": [
+      "role-fit",
+      "portfolio-story",
+      "resume-tailor"
+    ],
+    "finish": "Return role-relevant evidence and finished prose without inventing experience or submitting automatically."
+  },
+  {
+    "id": "conversation-prep",
+    "title": "Prepare a Consequential Conversation",
+    "goal": "Clarify terms, draft a clear message and prepare for an honest exchange.",
+    "skills": [
+      "negotiation-prep",
+      "difficult-message",
+      "bounded-review"
+    ],
+    "finish": "Return priorities, a complete draft and realistic tradeoffs; leave sending and commitments to the user."
+  },
+  {
+    "id": "practical-plan",
+    "title": "A Practical Personal Plan",
+    "goal": "Scope a personal project and check it against actual constraints.",
+    "skills": [
+      "scope-and-route",
+      "household-project",
+      "bounded-review"
+    ],
+    "finish": "Return a manageable plan with dependencies, costs or access uncertainties and a fallback."
+  },
+  {
+    "id": "practice-cycle",
+    "title": "A Feedback-Rich Hobby Session",
+    "goal": "Choose a small exercise, inspect the attempt and decide what to practice next.",
+    "skills": [
+      "hobby-practice",
+      "bounded-review"
+    ],
+    "finish": "Return an achievable exercise and feedback grounded in the actual attempt."
+  },
+  {
+    "id": "visit-and-handoff",
+    "title": "Organize Questions and Practical Support",
+    "goal": "Prepare for a professional conversation and coordinate logistics without changing the professional plan.",
+    "skills": [
+      "appointment-prep",
+      "care-coordination"
+    ],
+    "finish": "Return a factual question list and privacy-scoped support handoff, not diagnosis or treatment advice."
+  },
+  {
+    "id": "personal-routine",
+    "title": "A Routine That Respects the Person",
+    "goal": "Make a personal routine accessible and test a small change without pressure.",
+    "skills": [
+      "accessibility-routine",
+      "habit-experiment"
+    ],
+    "finish": "Return a person-directed routine, fallback and optional review prompt with no unsolicited scheduling."
+  },
+  {
+    "id": "product-to-implementation",
+    "title": "From Product Contract to Verified Handoff",
+    "goal": "Turn a bounded product request into interface, data and automation contracts that an existing implementation owner can execute.",
+    "skills": [
+      "automation-contract",
+      "interaction-state-coverage",
+      "schema-evolution",
+      "release-readiness"
+    ],
+    "finish": "Deliver the inert dependency review, declared state graph, schema-risk report and exact remaining implementation/release checks; never claim deployment.",
+    "input_contract": [
+      "Approved product scope",
+      "Current interface and data contracts"
+    ],
+    "output_contract": [
+      "Step review",
+      "State coverage report",
+      "Schema compatibility report",
+      "Implementation handoff"
+    ],
+    "tool_bindings": [
+      {
+        "skill_id": "automation-contract",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "interaction-state-coverage",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "schema-evolution",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      }
+    ],
+    "external_execution": "original_supported_host_only; no dispatcher included"
+  },
+  {
+    "id": "pipeline-validation",
+    "title": "Reconcile a Data Pipeline Before Delivery",
+    "goal": "Review schema evolution, reconcile a versioned batch and inspect a supplied query plan without modifying a production database.",
+    "skills": [
+      "schema-evolution",
+      "incremental-pipeline",
+      "query-plan-review",
+      "data-quality-review"
+    ],
+    "finish": "Return the schema decision, reconciled candidate state, conflict ledger and query-plan evidence; retain production transaction and retention obligations.",
+    "input_contract": [
+      "Current/proposed schema",
+      "Prior state and source event batch",
+      "Original query plan"
+    ],
+    "output_contract": [
+      "Schema report",
+      "Candidate state",
+      "Query-plan review"
+    ],
+    "tool_bindings": [
+      {
+        "skill_id": "schema-evolution",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "incremental-pipeline",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "query-plan-review",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      }
+    ],
+    "external_execution": "original_supported_host_only; no dispatcher included"
+  },
+  {
+    "id": "interface-quality",
+    "title": "From Tokens and States to Interface QA",
+    "goal": "Measure supplied color pairs, find missing interaction states and review target observations before actual rendered-interface acceptance.",
+    "skills": [
+      "design-token-audit",
+      "interaction-state-coverage",
+      "selector-resilience",
+      "accessible-ui"
+    ],
+    "finish": "Return contrast calculations, graph gaps and eligible locator candidates; report browser, keyboard and visual checks only when they actually ran.",
+    "input_contract": [
+      "Color tokens and actual pairs",
+      "Required interaction states",
+      "Locator observations"
+    ],
+    "output_contract": [
+      "Contrast report",
+      "State coverage report",
+      "Locator review"
+    ],
+    "tool_bindings": [
+      {
+        "skill_id": "design-token-audit",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "interaction-state-coverage",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "selector-resilience",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      }
+    ],
+    "external_execution": "original_supported_host_only; no dispatcher included"
+  },
+  {
+    "id": "incident-recovery",
+    "title": "From Incident Records to a Bounded Recovery Handoff",
+    "goal": "Reconstruct the incident, calculate its service budget and size a measured capacity hypothesis while preserving original response authority.",
+    "skills": [
+      "incident-triage",
+      "service-objectives",
+      "capacity-planning",
+      "resume-without-replay"
+    ],
+    "finish": "Return the dated incident timeline, event-ratio budget and capacity calculation with hypotheses, observed effects and a precise next authorized action.",
+    "input_contract": [
+      "Incident events",
+      "Eligible service counts",
+      "Measured capacity and demand"
+    ],
+    "output_contract": [
+      "Timeline",
+      "Error-budget report",
+      "Capacity estimate"
+    ],
+    "tool_bindings": [
+      {
+        "skill_id": "incident-triage",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "service-objectives",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "capacity-planning",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      }
+    ],
+    "external_execution": "original_supported_host_only; no dispatcher included"
+  },
+  {
+    "id": "automation-readiness",
+    "title": "Prepare an Automation Without Losing Control of Effects",
+    "goal": "Check a dependency plan, review unique observed targets and reconcile uncertain prior operations before handing off to the existing executor.",
+    "skills": [
+      "automation-contract",
+      "selector-resilience",
+      "effect-reconciliation",
+      "bounded-review"
+    ],
+    "finish": "Return a source-bound execution proposal and concrete blockers; do not dispatch, authenticate supplied evidence or authorize retries.",
+    "input_contract": [
+      "Target-scoped step graph",
+      "Current locator observations",
+      "Original operation evidence"
+    ],
+    "output_contract": [
+      "Plan review",
+      "Target review",
+      "Effect-reconciliation report"
+    ],
+    "tool_bindings": [
+      {
+        "skill_id": "automation-contract",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "selector-resilience",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      },
+      {
+        "skill_id": "effect-reconciliation",
+        "module": "muse_presets.specialist_extensions",
+        "function": "evaluate"
+      }
+    ],
+    "external_execution": "original_supported_host_only; no dispatcher included"
+  }
+]

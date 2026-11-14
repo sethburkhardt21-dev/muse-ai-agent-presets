@@ -1,0 +1,35 @@
+{
+  "schema": "muse-r5-wave/v1",
+  "state": "SOURCE_IMPLEMENTED",
+  "new_specialist_ids": [
+    "data-engineer",
+    "reliability-engineer",
+    "automation-engineer",
+    "product-interface-designer"
+  ],
+  "new_skill_ids": [
+    "schema-evolution",
+    "incremental-pipeline",
+    "query-plan-review",
+    "service-objectives",
+    "capacity-planning",
+    "incident-triage",
+    "automation-contract",
+    "selector-resilience",
+    "effect-reconciliation",
+    "design-token-audit",
+    "interaction-state-coverage"
+  ],
+  "new_workflow_ids": [
+    "product-to-implementation",
+    "pipeline-validation",
+    "interface-quality",
+    "incident-recovery",
+    "automation-readiness"
+  ],
+  "public_cases_added": 33,
+  "native_muse_comparisons": 0,
+  "legacy_protocol_preserved": true,
+  "content_origin": "original-first-party; no new donor prompt copied",
+  "acceptance_recording": "Exact commit CI, generated distribution manifest and retained A/B/C source receipts"
+}

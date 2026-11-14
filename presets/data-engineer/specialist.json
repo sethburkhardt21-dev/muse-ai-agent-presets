@@ -1,0 +1,27 @@
+{
+  "schema": "muse-specialist-extension/v1",
+  "id": "data-engineer",
+  "title": "Data Engineering & Database Architect",
+  "purpose": "Design safe data contracts, reconcile incremental records and review query access paths with reproducible offline tools.",
+  "skills": [
+    "schema-evolution",
+    "incremental-pipeline",
+    "query-plan-review"
+  ],
+  "tool_entrypoint": "specialist_extensions.evaluate",
+  "runtime": "Python standard library; read-only supplied-input calculations",
+  "external_actions_performed": false,
+  "native_installed": false,
+  "existing_assistant_identity": "preserved",
+  "permissions_granted": [],
+  "input_budget": {
+    "max_json_bytes": 2000000,
+    "max_tree_nodes": 30000,
+    "max_depth": 32
+  },
+  "workflow_ids": [
+    "product-to-implementation",
+    "pipeline-validation"
+  ],
+  "handoff": "Use the existing host for any separately authorized database, browser, infrastructure or publishing effect."
+}

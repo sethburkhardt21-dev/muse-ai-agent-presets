@@ -1,0 +1,24 @@
+{
+  "schema": "muse-curation-discovery/v1",
+  "observed_utc": "2026-11-12T10:08:10.317330+00:00",
+  "raw_candidates": 3159,
+  "unique_blob_contents": 3156,
+  "exact_duplicate_groups": 3,
+  "skill_candidates": 2891,
+  "starter_reference_candidates": 268,
+  "admitted_upstream_items": 0,
+  "semantic_deduplication": "NOT_RUN",
+  "automatic_installation": false,
+  "sources": {
+    "msitarzewski/agency-agents": 268,
+    "aicodedecode/awesome-muse-skills": 2683,
+    "Israelmusondaayliffe/muse-skills": 31,
+    "Anil-matcha/awesome-grok-bot": 0,
+    "Anil-matcha/awesome-muse-connectors": 160,
+    "tom-nwachuku/tgl": 2,
+    "lroolle/awesome-grokbot-templates": 0,
+    "obra/superpowers": 15
+  },
+  "candidate_index_sha256": "a17a77f55cb9b3603f0ef4d521fd2103fecb06bbbbdf643f82fb628673d8ff85",
+  "full_candidate_index_location": "Retained on the authorized source host; not bundled into this first product package."
+}
