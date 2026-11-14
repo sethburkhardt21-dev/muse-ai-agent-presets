@@ -13,11 +13,13 @@ class ProductPositioningTests(unittest.TestCase):
     def test_readme_leads_with_runnable_tools(self):
         value=README.read_text(encoding="utf-8")
         hero=value.split("## Choose your specialist",1)[0].lower()
-        self.assertIn("eight runnable offline python tools",hero)
-        self.assertIn("fifteen customizable specialist",hero)
-        self.assertIn("v0.4.1-alpha",hero)
-        self.assertIn("not installed",hero)
-        self.assertIn("native muse",hero)
+        self.assertIn("muse specialist toolkit",hero)
+        self.assertIn("15 ai specialists",hero)
+        self.assertIn("100+ configurations",hero)
+        self.assertIn("150+ custom connectors",hero)
+        self.assertNotIn("offline tools",hero)
+        self.assertIn("v0.4.1-alpha",value.lower())
+        self.assertIn("not installed native muse agents",value.lower())
 
     def test_readme_links_to_real_executable_not_just_starter(self):
         value=README.read_text(encoding="utf-8")

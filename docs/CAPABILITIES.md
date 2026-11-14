@@ -1,5 +1,8 @@
 # Capabilities
 
+
+**V1 capability overview:** [15 specialists](collection/SPECIALIST_CATALOG.md), [100 task starters](../collections/muse-starters-v1/CATALOG.md), [151 custom connectors](connectors/CATALOG.md), [executable specialist tools](collection/SPECIALIST_QUICKSTART.md), and [Personal Companion's Daily Desk](spaces/DAILY_DESK.md). These are different types of capabilities; do not equate configuration counts with installed agents.
+
 This page describes the code on the public main branch. A downloaded ZIP contains the code from its release, so use the instructions included with that package. [Downloads](RELEASES.md) explains the choices.
 
 The source provides **15 profiles and 50 unique instruction procedures**. The unchanged **v0.4.1-alpha** download contains **eight executable ZIPs and eleven starter profiles**. The four newer roles have source-tree offline examples, not new tagged executable packages or native agents.

@@ -1,38 +1,43 @@
-# Specialist AI Agent Kits
+# Muse Specialist Toolkit
 
-> eight runnable offline Python specialist tools and eleven customizable AI agent starter profiles, distributed as MIT-licensed source ZIPs. This is not a native installation of autonomous Muse agents, nor a native Muse agent deployment.
-
-Project: https://github.com/sethburkhardt21-dev/muse-ai-agent-presets
-Current release: v0.4.1-alpha
-The eight executable ZIPs can run locally with requirements specified by their guides. Eleven starter-profile ZIPs are editable role/configuration sources, not already running model-backed assistants. External connectors are disabled by default. Model Builder examples use small synthetic models, not large-language-model training. This repository-level index is optional and publication does not guarantee automatic AI search indexing.
+> Your Muse. Your Specialists. Your Possibilities. 15 AI specialists, 100 task starter configurations plus 15 customizable role profiles, 75 developed task skills, 25 workflows, executable specialist tools, a persistent Personal Companion workspace and 151 custom connector discovery entries. Source-only programs can demonstrate useful results with no paid API; native tools and account permissions are controlled by Muse or the user's host.
 
 ## Product information
-- [Getting started](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/GITHUB_QUICKSTART.md): Python requirements, runnable examples and starter versus executable packages.
-- [Capability matrix](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/CAPABILITIES.md): executable features and unsupported integrations.
-- [Agent questions and limitations](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/discovery/AI_AGENT_GUIDE.md): common questions an AI assistant should answer from evidence.
-- [Machine-readable capability inventory](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/discovery/agent-capabilities.json): package IDs, verified download paths and capability boundaries.
-- [Current verified release](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha): official ZIP downloads and checksums.
+- [Home](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets)
+- [Start with four real workflows](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/v1/START_HERE.md)
+- [Capability matrix](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/CAPABILITIES.md)
+- [Specialist catalog](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/collection/SPECIALIST_CATALOG.md)
+- [100 task starter catalog](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/collections/muse-starters-v1/CATALOG.md)
+- [Custom connector directory](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/connectors/CATALOG.md)
+- [Connector guide](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/connectors/README.md)
+- [Connector machine-readable index](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/connectors/catalog.json)
+- [Connector source provenance](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/connectors/PROVENANCE.json)
+- [Daily Desk full-stack local reference](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/spaces/DAILY_DESK.md)
+- [Evidence and compatibility](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/handbook/source-and-host-capabilities.md)
+- [AI-agent FAQ](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/discovery/AI_AGENT_GUIDE.md)
+- [Verified capability facts](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/discovery/agent-capabilities.json)
+- [First-use quickstart](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/GITHUB_QUICKSTART.md)
+- [Release downloads](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases)
+- [Security and privacy](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/SECURITY.md)
 
-## Runnable offline tools
-- [Coordinator executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/coordinator-executable-v0.4.1-alpha.zip): offline task/plan review.
-- [Software Engineer executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/software-engineer-executable-v0.4.1-alpha.zip): reviewed disposable Git engineering workflow.
-- [Model Builder executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/model-builder-executable-v0.4.1-alpha.zip): deterministic small-model training/evaluation examples.
-- [Claims Adjudicator executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/claims-adjudicator-executable-v0.4.1-alpha.zip): bounded claim/evidence classification.
-- [Garden Companion executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/garden-companion-executable-v0.4.1-alpha.zip): local SQLite garden/calendar examples.
-- [Learning Coach executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/learning-coach-executable-v0.4.1-alpha.zip): offline source-backed study and scores.
-- [Reverse Engineering & Security Researcher executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/reverse-engineering-researcher-executable-v0.4.1-alpha.zip): bounded comparison of supplied, offline observations, not live scanning.
-- [Creative Studio executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip): textual storyboard and production planner, not an image or animation renderer.
+## Runnable specialist tools
+- [Collection tool runner](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/tools/muse_collection.py)
+- [Daily Desk demonstration](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/examples/daily_desk.py)
+- [Data/reliability/automation/design specialized methods](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/collection/SPECIALIST_QUICKSTART.md)
+- [Original released executables](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.4.1-alpha)
+- [coordinator historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/coordinator-executable-v0.4.1-alpha.zip)
+- [software-engineer historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/software-engineer-executable-v0.4.1-alpha.zip)
+- [model-builder historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/model-builder-executable-v0.4.1-alpha.zip)
+- [claims-adjudicator historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/claims-adjudicator-executable-v0.4.1-alpha.zip)
+- [garden-companion historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/garden-companion-executable-v0.4.1-alpha.zip)
+- [learning-coach historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/learning-coach-executable-v0.4.1-alpha.zip)
+- [reverse-engineering-researcher historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/reverse-engineering-researcher-executable-v0.4.1-alpha.zip)
+- [creative-studio historic executable](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/download/v0.4.1-alpha/creative-studio-executable-v0.4.1-alpha.zip)
 
-## Optional
-- [Security and permissions](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/SECURITY.md): local OS account execution is not a sandbox.
-- [Repository home](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets): README, MIT license and source.
+## Optional setup and operations
+- [Use your existing Muse configuration](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/INSTALL_AND_PERSISTENCE.md)
+- [Portable skills](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/SKILLS.md)
+- [Customizable agent profiles](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/CUSTOMIZE.md)
+- [30-day postrelease assessment](https://raw.githubusercontent.com/sethburkhardt21-dev/muse-ai-agent-presets/main/docs/v1/POST_RELEASE.md)
 
-## Source-only expansion (not extra release ZIPs)
-- [All 15 source roles](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/presets): 11 released starter roles and four newer source-only roles.
-- [Five shared source skills](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/skills/shared): source-proven guidance; 45 role-method procedures plus five shared = 50 unique disabled skill procedures, not native grants.
-- [Four synthetic offline demos](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/blob/main/examples/specialist_engine_demo.py): data, service-level, task graph and static UI controls.
-
-## Curated task collection
-- [75 authored task skills, 25 workflows, 100 starters](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/blob/main/docs/collection/MUSE_CURATED_COLLECTION.md): instruction/task bundles for an existing assistant, not new identities; overlap with the preserved 50 source procedures is explicitly mapped.
-- [Runnable specialist collection](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/blob/main/docs/collection/SPECIALIST_QUICKSTART.md): four offline kits, eleven bounded calculations, and reported unexecuted handoffs; no native effect claim.
-- [Practical operating handbook](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/docs/handbook): context, skill setup, workrooms, durable documents and source/host distinctions.
+Source and installation are separate: a task starter and this discovery index are not a native Muse installation or a credential grant. Verify against the included instructions; actual connector use requires platform-supported setup and authorization. 100 starters do not create 100 separate agent identities, and the 50 existing procedures overlap the 75-skill library. No guaranteed AI recommendations or rankings are claimed.

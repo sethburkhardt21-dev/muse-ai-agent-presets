@@ -1,8 +1,8 @@
 {
   "schema": "specialist-ai-agent-kits/discovery/v1",
-  "project": "Specialist AI Agent Kits",
+  "project": "Muse Specialist Toolkit",
   "repository": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets",
-  "release": "v0.4.1-alpha",
+  "release": "v1.0.0",
   "license": "MIT",
   "source_only_distribution": true,
   "python_minimum": "3.12",
@@ -162,5 +162,45 @@
     "cloud_sync": false,
     "scheduled_notifications": false,
     "tagged_release_asset": false
-  }
+  },
+  "release_publication": "SOURCE_CANDIDATE_PENDING_TAG_AND_ASSET_READBACK",
+  "historical_release": "v0.4.1-alpha",
+  "configuration_count": 115,
+  "configuration_breakdown": {
+    "task_starters": 100,
+    "specialist_profiles": 15
+  },
+  "skill_collection": {
+    "developed_task_skills": 75,
+    "workflows": 25,
+    "original_overlapping_procedures": 50,
+    "catalog": "https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/tree/main/collections/muse-starters-v1"
+  },
+  "custom_connector_count": 151,
+  "custom_connector_catalog": {
+    "path": "docs/connectors/catalog.json",
+    "source": "bluman1/muse-connectors",
+    "commit": "73f302c2d8569fdc65e0e57c26b244c547fcd40e",
+    "directory": "docs/connectors/index.html",
+    "code_included": false,
+    "installed": false
+  },
+  "local_workbenches": [
+    {
+      "name": "Daily Desk",
+      "specialist": "personal-companion",
+      "demo": "examples/daily_desk.py",
+      "guide": "docs/spaces/DAILY_DESK.md",
+      "storage": "SQLite",
+      "native_muse_deployed": false
+    }
+  ],
+  "first_use": {
+    "muse": "docs/v1/START_HERE.md#1-use-with-muse",
+    "tools": "docs/v1/START_HERE.md#2-run-specialist-tools",
+    "personal_companion": "docs/v1/START_HERE.md#3-open-personal-companion",
+    "connectors": "docs/v1/START_HERE.md#4-explore-connectors"
+  },
+  "download_scope": "sha256_index, complete_toolkit, and executable_offline_kits entries refer to historical v0.4.1-alpha release only; verify V1 assets at GitHub Releases",
+  "product_tagline": "Your Muse. Your Specialists. Your Possibilities."
 }

@@ -46,7 +46,7 @@ class PublicProductSurfaceTests(unittest.TestCase):
  def test_readme_is_short_product_entrypoint(self):
   readme=(ROOT/"README.md").read_text(encoding="utf-8")
   self.assertLess(len(readme.encode("utf-8")),8000)
-  for text in ("# Specialist AI Agent Kits","v0.4.1-alpha","docs/CAPABILITIES.md",
+  for text in ("# Muse Specialist Toolkit","v0.4.1-alpha","docs/CAPABILITIES.md",
                "docs/GITHUB_QUICKSTART.md","MIT","source-only"):
    self.assertIn(text,readme)
   for role in ROLE_SLUGS:
