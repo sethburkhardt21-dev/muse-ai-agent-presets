@@ -48,6 +48,10 @@ Each role offers distinct methods and editable configurations.
 
 [Capability matrix](docs/CAPABILITIES.md) ? [Task starters](collections/muse-starters-v1/CATALOG.md) ? [Handbook](docs/handbook/README.md)
 
+[Specialist quickstart](docs/collection/SPECIALIST_QUICKSTART.md) ? [Detailed capability guide](docs/CAPABILITIES.md)
+
+The source catalog includes 15 specialists, 75 skills, 25 workflows and 100 starters, alongside executable engines and Personal Companion's persistent workspace.
+
 ## Go beyond instructions: run an actual tool
 
 Local demonstrations run with Python 3.12+ and no paid API.

@@ -52,12 +52,7 @@ def product_findings(root:Path)->list[dict[str,str]]:
     body=p.read_text(encoding='utf-8')
    except (OSError,UnicodeError,ValueError):add(rel,'UNREADABLE_PRODUCT_PAGE');continue
    if '\ufffd' in body or '\u00e2\u20ac' in body:add(rel,'CORRUPTED_PRODUCT_TEXT')
-   checked=_prose(body)
-   # Asana is also the legitimate name of a catalogued connector service.
-   # Restrict this exception to the dedicated connector directory, not other docs.
-   if rel.startswith('docs/connectors/'):
-    checked=re.sub(r'\bAsana\b','',checked,flags=re.I)
-   if WORK_ID.search(checked):add(rel,'INTERNAL_WORK_LANGUAGE')
+   if WORK_ID.search(_prose(body)):add(rel,'INTERNAL_WORK_LANGUAGE')
    for match in LINK.finditer(body):
     target=match.group(1).strip().split('#',1)[0].split('?',1)[0]
     if not target or re.match(r'^[a-z][a-z0-9+.-]*:',target,re.I) or target.startswith('//'):continue

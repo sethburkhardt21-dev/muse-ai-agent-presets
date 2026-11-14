@@ -38,3 +38,7 @@ The sample needs Python 3.12+ but not Git. It generates production documents and
 - [Initial source archive — v0.1.0-alpha](https://github.com/sethburkhardt21-dev/muse-ai-agent-presets/releases/tag/v0.1.0-alpha).
 
 Historical assets are not modified by later source commits. To select by task, see [Capabilities](CAPABILITIES.md) and [Get started](GITHUB_QUICKSTART.md). All example tools run under your invoking OS account and are not operating-system sandboxes.
+
+## Release source and native setup
+
+The GitHub public-source archive is built from a clean, reviewed public tree without private engineering files or history. The historical release includes 11 starter-profile ZIPs. A native Muse account is not required for local demonstrations; no native Muse installation is performed by downloading source or a ZIP.
