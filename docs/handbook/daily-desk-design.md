@@ -1,12 +1,12 @@
 # Daily Desk — reusable full-stack design contract
 
-**State: design qualified for the next source slice; new Daily Desk task UI, task persistence and archive restoration are NOT_IMPLEMENTED by this collection promotion.** No native Space is deployed here. This document prevents a second backend from being built while an existing reusable implementation is available.
+**State: the first local Daily Desk slice is implemented** with three tasks/two notes, editing, reopen, stale-revision refusal and create-only export/restore. [Run Daily Desk](../spaces/DAILY_DESK.md). Native Muse deployment, connector effects and the remaining dashboard families are NOT_IMPLEMENTED by this slice. This is a local toolbench on the existing backend, not a new hosted service.
 
 ## Existing baseline to recover, not recreate
 
-The owner-maintained full-stack Space starter already implements `SpaceCompanion`, using the existing `PersonalCompanion` storage helpers. Its source contract is `space-starter/1`: local SQLite notebook persistence, guarded request state, stable operation identity, cancellation, UNKNOWN recovery and an opt-in injected callback boundary. A loopback HTTP adapter and browser assets already exist. These source components were previously qualified separately; this public skill-collection update does not copy them into a new app or relabel their historical tests as fresh runs.
+The owner-maintained full-stack Space starter already implements `SpaceCompanion`, using the existing `PersonalCompanion` storage helpers. Its source contract is `space-starter/1`: local SQLite notebook persistence, guarded request state, stable operation identity, cancellation, UNKNOWN recovery and an opt-in injected callback boundary. A loopback HTTP adapter and browser assets already exist. Daily Desk now reuses these first-party components and their original regression suites, with its own task/note extension and new tests. Historical tests are not substituted for fresh qualification.
 
-The next implementation writer must recover the exact current starter source, tests, runtime policy and ownership before creating a task schema. Preserve its Host/Origin/body/CSP checks, default-disabled effects and prohibition on browser-supplied callback authority. Do not introduce another scheduler, account identity or generic agent service.
+The implementation recovers the original starter source, tests, runtime policy and ownership before extending its schema. Preserve its Host/Origin/body/CSP checks, default-disabled effects and prohibition on browser-supplied callback authority. Do not introduce another scheduler, account identity or generic agent service.
 
 ## First useful result
 
@@ -33,3 +33,7 @@ Never restore over an existing owner's database. Make a new destination, verify 
 ## Scope and evidence
 
 This is a source-bound extension plan for the existing `SpaceCompanion` / `PersonalCompanion` implementation. The first shipping milestone is the narrow persistence journey above with a working UI, not five unfinished dashboards. The broader five-foundation/fifteen-toolbench plan remains separate. Native deployment, client account binding, real connector effects and Watch acceptance are not prerequisites for the local source milestone and are not claimed by it.
+
+## Implemented boundary
+
+The runnable UI and archive API are in the [Daily Desk guide](../spaces/DAILY_DESK.md). A restored store preserves task/note IDs, revisions and receipt history, but intentionally gets a new database-instance identity so pending browser writes cannot target a replacement store. Existing Space request/callback policy stays separate and disabled by default. Future iterations must retain that distinction.

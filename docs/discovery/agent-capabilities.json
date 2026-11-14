@@ -140,5 +140,27 @@
     "setup": "docs/collection/SPECIALIST_QUICKSTART.md",
     "native_installation": false,
     "model_superiority": "NOT_ESTABLISHED"
+  },
+  "daily_desk": {
+    "status": "LOCAL_SOURCE_TOOLBENCH",
+    "guide": "docs/spaces/DAILY_DESK.md",
+    "entrypoint": "examples/daily_desk.py",
+    "existing_backend": [
+      "PersonalCompanion",
+      "SpaceCompanion",
+      "space_server.make_server"
+    ],
+    "features": [
+      "task_and_note_editing",
+      "reopen",
+      "revision_conflicts",
+      "exact_operation_replay",
+      "canonical_archive",
+      "create_only_restore"
+    ],
+    "native_muse_installed": false,
+    "cloud_sync": false,
+    "scheduled_notifications": false,
+    "tagged_release_asset": false
   }
 }
