@@ -1,5 +1,8 @@
 # Get started
 
+
+**New to the toolkit?** Start with [four practical paths](v1/START_HERE.md): use a Muse specialist, run an actual tool, open Personal Companion's Daily Desk, or [browse 151 custom connectors](connectors/CATALOG.md). The older executable downloads below remain available for the corresponding release version.
+
 Choose an executable kit to run a tool, or a starter profile to customize an assistant's instructions. The published v0.4.1-alpha has eight runnable offline Python tools and eleven starter profiles. The current source has 15 profiles and 50 unique instruction procedures; its four newer roles are not included in those historical release ZIPs. External accounts are not connected by default.
 
 ## Run a standalone tool without cloning

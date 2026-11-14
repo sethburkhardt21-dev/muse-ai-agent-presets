@@ -24,7 +24,7 @@ class ReaderDocumentationTests(unittest.TestCase):
  def test_readme_is_a_short_current_entrypoint(self):
   body=(ROOT/'README.md').read_text('utf-8')
   self.assertLess(len(body.encode()),8000)
-  self.assertIn('# Specialist AI Agent Kits',body)
+  self.assertIn('# Muse Specialist Toolkit',body)
   self.assertNotRegex(prose(body),r'(?im)^#{1,6} .*\b(?:R\d{2}|T\d{2})\b|Python 3\.10\+')
  def test_architecture_has_named_components(self):
   body=(ROOT/'docs/ARCHITECTURE.md').read_text('utf-8')

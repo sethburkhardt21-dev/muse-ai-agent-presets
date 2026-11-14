@@ -18,9 +18,9 @@ class AgentDiscoveryTests(unittest.TestCase):
   file=ROOT/"llms.txt"
   self.assertTrue(file.is_file())
   text=file.read_text(encoding="utf-8")
-  self.assertTrue(text.startswith("# Specialist AI Agent Kits\n"))
-  self.assertRegex(text,r"(?m)^> .*eight runnable offline.*eleven.*starter")
-  self.assertIn("## Runnable offline tools",text)
+  self.assertTrue(text.startswith("# Muse Specialist Toolkit\n"))
+  self.assertRegex(text,r"(?m)^> .*15 AI specialists.*151 custom connector")
+  self.assertIn("## Runnable specialist tools",text)
   self.assertIn("## Product information",text)
   self.assertIn("## Optional",text)
   self.assertIn("native Muse",text)
@@ -41,7 +41,8 @@ class AgentDiscoveryTests(unittest.TestCase):
   doc=json.loads(file.read_text(encoding="utf-8"))
   self.assertEqual(doc["schema"],"specialist-ai-agent-kits/discovery/v1")
   self.assertEqual(doc["repository"],URL)
-  self.assertEqual(doc["release"],RELEASE)
+  self.assertEqual(doc["release"],"v1.0.0")
+  self.assertEqual(doc["historical_release"],RELEASE)
   self.assertEqual(doc["license"],"MIT")
   catalog=json.loads((ROOT/"presets/catalog.json").read_text(encoding="utf-8"))
   self.assertEqual(sorted(doc["starter_roles"]),sorted(catalog["presets"]))
@@ -90,11 +91,12 @@ class AgentDiscoveryTests(unittest.TestCase):
 
  def test_readme_links_machine_index_before_role_table(self):
   text=(ROOT/"README.md").read_text(encoding="utf-8")
-  header=text.split("## Choose your specialist",1)[0]
+  header=text.split("## Find your starting point",1)[0]
   self.assertIn("[AI-agent discovery index](llms.txt)",header)
   self.assertIn("[Verified capability facts](docs/discovery/agent-capabilities.json)",header)
-  self.assertIn("eight",header.lower())
-  self.assertIn("eleven",header.lower())
+  self.assertIn("15",header)
+  self.assertIn("100+",header)
+  self.assertIn("150+",header)
   self.assertLess(len(text.encode("utf-8")),8000)
   self.assertIn("not installed native muse agents",text.lower())
 
@@ -110,8 +112,8 @@ class AgentDiscoveryTests(unittest.TestCase):
  def test_untrusted_search_metadata_is_not_installation_authority(self):
   text=(ROOT/"llms.txt").read_text(encoding="utf-8").lower()
   guide=(ROOT/"docs/discovery/AI_AGENT_GUIDE.md").read_text(encoding="utf-8").lower()
-  self.assertIn("not a native installation",text)
-  self.assertIn("not a native installation",guide)
+  self.assertIn("not a native muse installation",text)
+  self.assertIn("not a native muse installation",guide)
   self.assertIn("verify against the included instructions",guide)
   self.assertNotIn("install automatically",text)
 if __name__=="__main__":

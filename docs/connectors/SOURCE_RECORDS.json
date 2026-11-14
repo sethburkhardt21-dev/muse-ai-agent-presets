@@ -1,0 +1,2574 @@
+{
+  "catalog_sha256": "9b5f998d4c696feb59674a6e4808bd710b3ae75a92374c393723922ec524f3ff",
+  "commit": "73f302c2d8569fdc65e0e57c26b244c547fcd40e",
+  "documents": [
+    {
+      "files": [
+        {
+          "git_blob": "a7a61e9e097a5be8a3892402e9c0659d8a5baefc",
+          "path": "connectors/airtable/SKILL.md",
+          "sha256": "6e8b0b3612d9be8732ea1eae9a7ddfe8fbdafa9a2ffb4b4bc7fb4602f5e28f0c"
+        },
+        {
+          "git_blob": "698da74dcb8f56c313e3c706c6e58e056353cac3",
+          "path": "connectors/airtable/bin/airtable.py",
+          "sha256": "07413e5f3444847e6ee3689ac80573d240209919fd8695c2f20d3f14b2e4cf09"
+        }
+      ],
+      "git_blob": "a7a61e9e097a5be8a3892402e9c0659d8a5baefc",
+      "path": "connectors/airtable/SKILL.md",
+      "sha256": "6e8b0b3612d9be8732ea1eae9a7ddfe8fbdafa9a2ffb4b4bc7fb4602f5e28f0c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "2d89d025a0f3d06a90da77ec28c5a6b0f9c4d1bb",
+          "path": "connectors/alphavantage/SKILL.md",
+          "sha256": "af172dd188d29a1cc2345c230e519c7c0ecea82ef224d93229203a9f74e308a0"
+        },
+        {
+          "git_blob": "1ee2e6274e9ad9591ebbb4d4c662c75b220b8b3a",
+          "path": "connectors/alphavantage/bin/alphavantage.py",
+          "sha256": "6f6de75dc01a4409bf3c07abf91598ec697f1ebd7d4246b78dfcb529de90cd9a"
+        }
+      ],
+      "git_blob": "2d89d025a0f3d06a90da77ec28c5a6b0f9c4d1bb",
+      "path": "connectors/alphavantage/SKILL.md",
+      "sha256": "af172dd188d29a1cc2345c230e519c7c0ecea82ef224d93229203a9f74e308a0"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "ccc89e7575e67edb9ae6abd9ea6dfb41e33f2dd6",
+          "path": "connectors/amadeus/SKILL.md",
+          "sha256": "5e13622cf41b9d8baec3e286a8458f814affb343a4ff921ea12cd9448c36f085"
+        },
+        {
+          "git_blob": "db019a32f5fc5e732c0830026d075f54ffc2b822",
+          "path": "connectors/amadeus/bin/amadeus.py",
+          "sha256": "3f3002b7605e3268a1b0524a7224839982d15b399ca60e6fa151e163fb432bb5"
+        }
+      ],
+      "git_blob": "ccc89e7575e67edb9ae6abd9ea6dfb41e33f2dd6",
+      "path": "connectors/amadeus/SKILL.md",
+      "sha256": "5e13622cf41b9d8baec3e286a8458f814affb343a4ff921ea12cd9448c36f085"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "2f367d2e98af65636375e368722890fd24819f20",
+          "path": "connectors/anthropic/SKILL.md",
+          "sha256": "512981bd00f4b9f3a4bcc8727933dda36e703c84c31867d057d1bf5dd11c23b8"
+        },
+        {
+          "git_blob": "407d12c562d3cee9315ee6e746c3b6c3e5e21dfa",
+          "path": "connectors/anthropic/bin/anthropic.py",
+          "sha256": "c68c978556aa0d557f9188f398fa76950dcc592a5aed7120fc87e1f7e6e55f16"
+        }
+      ],
+      "git_blob": "2f367d2e98af65636375e368722890fd24819f20",
+      "path": "connectors/anthropic/SKILL.md",
+      "sha256": "512981bd00f4b9f3a4bcc8727933dda36e703c84c31867d057d1bf5dd11c23b8"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "9388c914c40b124f14743a6c598d77af6b5d42a3",
+          "path": "connectors/apollo/SKILL.md",
+          "sha256": "ad3185f2c1fbc31145a254f8698c854c8a91c38539222cebf5d1c6cac376ff8e"
+        },
+        {
+          "git_blob": "18fc9ccdaca20dc3d379aefb4469571ef4b28bc4",
+          "path": "connectors/apollo/bin/apollo.py",
+          "sha256": "cedd94c4332270899bc119dca90ab4d3c23baa2ec0094f75a36669aec364b8d4"
+        }
+      ],
+      "git_blob": "9388c914c40b124f14743a6c598d77af6b5d42a3",
+      "path": "connectors/apollo/SKILL.md",
+      "sha256": "ad3185f2c1fbc31145a254f8698c854c8a91c38539222cebf5d1c6cac376ff8e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "7a072128f14c089f14b55dfcbc60ba1bcdadb61c",
+          "path": "connectors/aqara/SKILL.md",
+          "sha256": "db55fe69da0c53beac97351b4e1d32a5e301273a31a96002dbdd2672b83f7079"
+        },
+        {
+          "git_blob": "7d20c1176b644ab6b583f96ed482bef916295327",
+          "path": "connectors/aqara/bin/aqara.py",
+          "sha256": "18dcaaa1d5255c3f35309071e456dc9c264700f8dbfd5d5cda6f9303fd1c6345"
+        }
+      ],
+      "git_blob": "7a072128f14c089f14b55dfcbc60ba1bcdadb61c",
+      "path": "connectors/aqara/SKILL.md",
+      "sha256": "db55fe69da0c53beac97351b4e1d32a5e301273a31a96002dbdd2672b83f7079"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "12ddc59875b13cc930c8534cd4868ec52292d6cc",
+          "path": "connectors/asana/SKILL.md",
+          "sha256": "5b28c289f5668848c7dbbc4c2d3a57367d903528b5952759e83fc8ac71c48121"
+        },
+        {
+          "git_blob": "7f13b8cc25caa6116d283c022ec754ab36ec8595",
+          "path": "connectors/asana/bin/asana.py",
+          "sha256": "0569314eeaa7bc9a69f62a77a0a9e4ad701aa1ed45cb7dc18a7a44557e2be006"
+        }
+      ],
+      "git_blob": "12ddc59875b13cc930c8534cd4868ec52292d6cc",
+      "path": "connectors/asana/SKILL.md",
+      "sha256": "5b28c289f5668848c7dbbc4c2d3a57367d903528b5952759e83fc8ac71c48121"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "08bbfe43f148c76bae7485a99d8cb0839912c1ab",
+          "path": "connectors/ashby/SKILL.md",
+          "sha256": "b4cffbed55128126467083bc27400fa3399c3d0f4aee4124afd98e61579baa4f"
+        },
+        {
+          "git_blob": "337a2fb138722a0ea16cfe3c9d782601ec6e9112",
+          "path": "connectors/ashby/bin/ashby.py",
+          "sha256": "298c1c1423943398dc6b8e0ed7a72c1e1531db1d4217d8910f6a47663680a1af"
+        }
+      ],
+      "git_blob": "08bbfe43f148c76bae7485a99d8cb0839912c1ab",
+      "path": "connectors/ashby/SKILL.md",
+      "sha256": "b4cffbed55128126467083bc27400fa3399c3d0f4aee4124afd98e61579baa4f"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "45410c0705e4915c94d935a64a7757e0b03195c5",
+          "path": "connectors/attio/SKILL.md",
+          "sha256": "fd47566def0d02c193d0d05a4b20eb9476a38e4a9152e070671883478d785711"
+        },
+        {
+          "git_blob": "0490e1ce0296256b53b0f8d2c114909db9c55e67",
+          "path": "connectors/attio/bin/attio.py",
+          "sha256": "23d4dcdda87a8b38e9dc7db0835d9f706d79d86e606cbfcb296fc2aebb739fda"
+        }
+      ],
+      "git_blob": "45410c0705e4915c94d935a64a7757e0b03195c5",
+      "path": "connectors/attio/SKILL.md",
+      "sha256": "fd47566def0d02c193d0d05a4b20eb9476a38e4a9152e070671883478d785711"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "115f75a0a1b7234eb5e7ad84f1b352801bc99eb9",
+          "path": "connectors/beatoven/SKILL.md",
+          "sha256": "581c4082736c9c980018f4b2e83a00c7da5eeea1eb02d669338fa19bfe846209"
+        },
+        {
+          "git_blob": "38fdcfd57d7ff18585ff8b8a9c30518712a31542",
+          "path": "connectors/beatoven/bin/beatoven.py",
+          "sha256": "d87f15395b5085b7ca56cac05c90213fcd7861737974dcb87675c97c399a88bb"
+        }
+      ],
+      "git_blob": "115f75a0a1b7234eb5e7ad84f1b352801bc99eb9",
+      "path": "connectors/beatoven/SKILL.md",
+      "sha256": "581c4082736c9c980018f4b2e83a00c7da5eeea1eb02d669338fa19bfe846209"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "af2b41e3a9337b0613b6c563190ed3644f3de84c",
+          "path": "connectors/beehiiv/SKILL.md",
+          "sha256": "7f3c3e0e9cbc8a545fe59467c7ef31d92d1ca6f1da35e0f67d382f80c66ddc7d"
+        },
+        {
+          "git_blob": "d9c5986bf880d381bac1685afa6e16b2758dcf26",
+          "path": "connectors/beehiiv/bin/beehiiv.py",
+          "sha256": "178dca1ac980dc7e245d46dfacd2b35b5bd5ae53ec738851570ddf986cd5e8a5"
+        }
+      ],
+      "git_blob": "af2b41e3a9337b0613b6c563190ed3644f3de84c",
+      "path": "connectors/beehiiv/SKILL.md",
+      "sha256": "7f3c3e0e9cbc8a545fe59467c7ef31d92d1ca6f1da35e0f67d382f80c66ddc7d"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "42e7d352e4eb0277e084c2635af589b2a88ab9c4",
+          "path": "connectors/bluesky/SKILL.md",
+          "sha256": "8c49985b33669c3a17a918c5d7f9109bf1c3dee119302ff9c72b01ce9ad78d86"
+        },
+        {
+          "git_blob": "b322e87b97bd15d6155f8cb313c4e4d42ad186a9",
+          "path": "connectors/bluesky/bin/bluesky.py",
+          "sha256": "d1946836c5469da76d87673dbb3e0c5d1333055d87ff894146a6aa5d0604c03c"
+        }
+      ],
+      "git_blob": "42e7d352e4eb0277e084c2635af589b2a88ab9c4",
+      "path": "connectors/bluesky/SKILL.md",
+      "sha256": "8c49985b33669c3a17a918c5d7f9109bf1c3dee119302ff9c72b01ce9ad78d86"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "6ccbade8ba2539574236ccd66e50f31795b8d879",
+          "path": "connectors/brave-search/SKILL.md",
+          "sha256": "3796de91504463a516cc98b0a2087283ed94d5dd7d467ed62f7fc32f6d01695f"
+        },
+        {
+          "git_blob": "649eddfbeb19f23ed2e97aa2d90a22cfa083ad82",
+          "path": "connectors/brave-search/bin/brave-search.py",
+          "sha256": "d6c8d02edd906d594d4abccb7990f67ca3cb30f92dc4c0bf2fbe37b84f275a44"
+        }
+      ],
+      "git_blob": "6ccbade8ba2539574236ccd66e50f31795b8d879",
+      "path": "connectors/brave-search/SKILL.md",
+      "sha256": "3796de91504463a516cc98b0a2087283ed94d5dd7d467ed62f7fc32f6d01695f"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "60240d74a4fea66f05f739f81e75e27b1ad2ce36",
+          "path": "connectors/buttondown/SKILL.md",
+          "sha256": "03b6fb5d748697e5856f70afdc5c66a0de3feda0982e1bb471064de7f3a4baf5"
+        },
+        {
+          "git_blob": "439529ab907a3c9a52a8923b13e03281bd98d81d",
+          "path": "connectors/buttondown/bin/buttondown.py",
+          "sha256": "13e5b80fdef2705f583d310849c278df3227a404d58b87336077c61913da07f6"
+        }
+      ],
+      "git_blob": "60240d74a4fea66f05f739f81e75e27b1ad2ce36",
+      "path": "connectors/buttondown/SKILL.md",
+      "sha256": "03b6fb5d748697e5856f70afdc5c66a0de3feda0982e1bb471064de7f3a4baf5"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "189a71eecddce120d0f647b8fdbc8685638f4fbe",
+          "path": "connectors/buzzsprout/SKILL.md",
+          "sha256": "52cdd3aeffc1a7b1836079d0d3fbd2b4e81b7fef35717103fb6cb7d1ce9640ce"
+        },
+        {
+          "git_blob": "39bd547de91eb625f7f5e841a7194410598c9baf",
+          "path": "connectors/buzzsprout/bin/buzzsprout.py",
+          "sha256": "6942e1651b7a879165e5ab4ea6ad2a6702cb50338c31802579a5efb9f4c690aa"
+        }
+      ],
+      "git_blob": "189a71eecddce120d0f647b8fdbc8685638f4fbe",
+      "path": "connectors/buzzsprout/SKILL.md",
+      "sha256": "52cdd3aeffc1a7b1836079d0d3fbd2b4e81b7fef35717103fb6cb7d1ce9640ce"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "01f6a54449d00176b6e72230093db2ef1af625f5",
+          "path": "connectors/calcom/SKILL.md",
+          "sha256": "9444c60018cb098cdfeb48b9831743a08c1c8411e9515c60f5d0a30ad99ce9c5"
+        },
+        {
+          "git_blob": "f8f796b7f6bd0b8ebc0b5ee44ecbbf6fa651e6e4",
+          "path": "connectors/calcom/bin/calcom.py",
+          "sha256": "ef76d19d58c712b320e9e85f339c22ac88c9eb2b8c7c4a976690d3d8b3b249f5"
+        }
+      ],
+      "git_blob": "01f6a54449d00176b6e72230093db2ef1af625f5",
+      "path": "connectors/calcom/SKILL.md",
+      "sha256": "9444c60018cb098cdfeb48b9831743a08c1c8411e9515c60f5d0a30ad99ce9c5"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "b8aeed4426b5208cf05817bfb9afa615b662ff67",
+          "path": "connectors/calendly/SKILL.md",
+          "sha256": "4e4136163ceeb0f482fdd6fa4637d1f8f50d8ca35cd71064bd81c546900c6bed"
+        },
+        {
+          "git_blob": "b09ca977e333844e4bd2f70fc73a71f54d439887",
+          "path": "connectors/calendly/bin/calendly.py",
+          "sha256": "e0f075c70bd883023fd251c9fcc637b39dcaa5f51a7792a7483d3178a9355016"
+        }
+      ],
+      "git_blob": "b8aeed4426b5208cf05817bfb9afa615b662ff67",
+      "path": "connectors/calendly/SKILL.md",
+      "sha256": "4e4136163ceeb0f482fdd6fa4637d1f8f50d8ca35cd71064bd81c546900c6bed"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f165f7353abb6b34c6d624fa4f90e571b4f2c938",
+          "path": "connectors/canva/SKILL.md",
+          "sha256": "d94a1d19cb7f04c95491677fdfc9f20993766b186176ea74aa8c1e8142e050ae"
+        },
+        {
+          "git_blob": "eb5e8e4815f9f51e0ba87c2cd357a065a18f4cf6",
+          "path": "connectors/canva/bin/canva.py",
+          "sha256": "2a797c87803ee81133d203457413c0dc60b06114b541f8ddac2cea44e28e082e"
+        }
+      ],
+      "git_blob": "f165f7353abb6b34c6d624fa4f90e571b4f2c938",
+      "path": "connectors/canva/SKILL.md",
+      "sha256": "d94a1d19cb7f04c95491677fdfc9f20993766b186176ea74aa8c1e8142e050ae"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1ce77ca50cc35b4200ba7361067a6cd5fff22b5e",
+          "path": "connectors/cartesia/SKILL.md",
+          "sha256": "212745dc4eafcb3d25c0dccb6a743454708be7cb195ab222546af3454fb42a1b"
+        },
+        {
+          "git_blob": "3dcbab813f43c74789e1529f57c274d8a480888a",
+          "path": "connectors/cartesia/bin/cartesia.py",
+          "sha256": "418526e11da7785b03dbc1ec98080a3942c5a3bc2a65f36b0ae486845c90ec06"
+        }
+      ],
+      "git_blob": "1ce77ca50cc35b4200ba7361067a6cd5fff22b5e",
+      "path": "connectors/cartesia/SKILL.md",
+      "sha256": "212745dc4eafcb3d25c0dccb6a743454708be7cb195ab222546af3454fb42a1b"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f1ca9af89e2b894a4b92c4aa72729737575cc569",
+          "path": "connectors/clerk/SKILL.md",
+          "sha256": "7c93710b9f047d9ac2d54d407e4200d4b2d97f4fc3154c945dc16774d0b6f331"
+        },
+        {
+          "git_blob": "125531bf1443945913fdfbef46cec5bec502e22c",
+          "path": "connectors/clerk/bin/clerk.py",
+          "sha256": "cde3799b544e384c2fef96bde37712e6d52ce008e3b303f5b399a6c705f4a304"
+        }
+      ],
+      "git_blob": "f1ca9af89e2b894a4b92c4aa72729737575cc569",
+      "path": "connectors/clerk/SKILL.md",
+      "sha256": "7c93710b9f047d9ac2d54d407e4200d4b2d97f4fc3154c945dc16774d0b6f331"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1a13660bb31c38a96393c4e741cb92638b4161a4",
+          "path": "connectors/clickup/SKILL.md",
+          "sha256": "992326cca7550e445af18d6f44e95def43bf9d8ce927487c4908140d61862d4b"
+        },
+        {
+          "git_blob": "619cc983ff390d37ed6549c5323e00e75e5a0979",
+          "path": "connectors/clickup/bin/clickup.py",
+          "sha256": "ed5578844d4b23e7fb1a321a116c287e8999ba78fd08f9d47e4f752b927853d8"
+        }
+      ],
+      "git_blob": "1a13660bb31c38a96393c4e741cb92638b4161a4",
+      "path": "connectors/clickup/SKILL.md",
+      "sha256": "992326cca7550e445af18d6f44e95def43bf9d8ce927487c4908140d61862d4b"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "42a3f57766e8071f32fdfaafec51906878fa142f",
+          "path": "connectors/cloudflare/SKILL.md",
+          "sha256": "f94bf7650603cf3b2d6e02fe5601e1eec44b69dbb2f992facbc2ebaae1cff787"
+        },
+        {
+          "git_blob": "3b1dafda7c663f2242bb36bcf15fd2c1bbfac4bc",
+          "path": "connectors/cloudflare/bin/cloudflare.py",
+          "sha256": "325aeb14773e6b774e319beaf4bbff711c93e1e53ee95db8b6f913639ff2d4d0"
+        }
+      ],
+      "git_blob": "42a3f57766e8071f32fdfaafec51906878fa142f",
+      "path": "connectors/cloudflare/SKILL.md",
+      "sha256": "f94bf7650603cf3b2d6e02fe5601e1eec44b69dbb2f992facbc2ebaae1cff787"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "5364a11e84c947b482e174d1a71bddfa313cf1bf",
+          "path": "connectors/cloudinary/SKILL.md",
+          "sha256": "64d420676aa9eb092cbc35ef5539e0137b91362685aa4ff5fbea1ee54807774c"
+        },
+        {
+          "git_blob": "73789e759694cfff0eb965c94820883842f280cf",
+          "path": "connectors/cloudinary/bin/cloudinary.py",
+          "sha256": "8c245bde30152bb7bedec410f0186306d46119ea3e0767a5e408cb981300a1a1"
+        }
+      ],
+      "git_blob": "5364a11e84c947b482e174d1a71bddfa313cf1bf",
+      "path": "connectors/cloudinary/SKILL.md",
+      "sha256": "64d420676aa9eb092cbc35ef5539e0137b91362685aa4ff5fbea1ee54807774c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "bc575c661c9071ca5bc84306fcc93268f7678e84",
+          "path": "connectors/coda/SKILL.md",
+          "sha256": "13fe0e0fc9fb68af5e14619f676c16c949815fcbb0b7b1499da22a81c032a886"
+        },
+        {
+          "git_blob": "b1c1581954302626ebc2a45b7d4ed12a2983409a",
+          "path": "connectors/coda/bin/coda.py",
+          "sha256": "9e0589fec76396e6540fe573f30e5a65b3611ef633b3933721ec9f7c4194ac68"
+        }
+      ],
+      "git_blob": "bc575c661c9071ca5bc84306fcc93268f7678e84",
+      "path": "connectors/coda/SKILL.md",
+      "sha256": "13fe0e0fc9fb68af5e14619f676c16c949815fcbb0b7b1499da22a81c032a886"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "416ad05d3857afc46ba1dde2e847eb2857e00bf5",
+          "path": "connectors/deepgram/SKILL.md",
+          "sha256": "5faad5e6e02cd1f4cbd5e649ef1db7daa56c2c4f9357fcfe9db5a335550e5efc"
+        },
+        {
+          "git_blob": "698a9f98590fe98958153429468ffc139a483795",
+          "path": "connectors/deepgram/bin/deepgram.py",
+          "sha256": "4bd01c927e01617d47e994c309681fd8ea6f5585e07b17f7ddb5f67e960ca6d6"
+        }
+      ],
+      "git_blob": "416ad05d3857afc46ba1dde2e847eb2857e00bf5",
+      "path": "connectors/deepgram/SKILL.md",
+      "sha256": "5faad5e6e02cd1f4cbd5e649ef1db7daa56c2c4f9357fcfe9db5a335550e5efc"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "c27ae4be25d77b791e85607779805d02e89b6516",
+          "path": "connectors/deepl/SKILL.md",
+          "sha256": "f112b41c7ca4781071da2ba32ba8d3ea4f3efdafe22534140aff30264c94a133"
+        },
+        {
+          "git_blob": "f05dc806abaf7239b652d9e53c37745196be2030",
+          "path": "connectors/deepl/bin/deepl.py",
+          "sha256": "6aab1563492ee417c49e801c1a179f28f4db9024efa741b79663734ef91ec344"
+        }
+      ],
+      "git_blob": "c27ae4be25d77b791e85607779805d02e89b6516",
+      "path": "connectors/deepl/SKILL.md",
+      "sha256": "f112b41c7ca4781071da2ba32ba8d3ea4f3efdafe22534140aff30264c94a133"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "269a5ef7f5279429bd999a3bbe7e70cdbea59a6e",
+          "path": "connectors/deepseek/SKILL.md",
+          "sha256": "3c1f69e643586e520978895556addb2308d06c8141b8bf1c6558739bd8f37111"
+        },
+        {
+          "git_blob": "9d352ef87e261529d69d3abe45c31ea5a5f04bb4",
+          "path": "connectors/deepseek/bin/deepseek.py",
+          "sha256": "118408315f0fb89d2504756829039ab8a69607ffc672056aeac13de9686b517c"
+        }
+      ],
+      "git_blob": "269a5ef7f5279429bd999a3bbe7e70cdbea59a6e",
+      "path": "connectors/deepseek/SKILL.md",
+      "sha256": "3c1f69e643586e520978895556addb2308d06c8141b8bf1c6558739bd8f37111"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "bf01cbc533f31ba88db293417870c668af1269fa",
+          "path": "connectors/descript/SKILL.md",
+          "sha256": "f23a5cc666598d7b9d4a6a2f25e59f52dd252bed38ca32e065d59ddad6b3acd8"
+        },
+        {
+          "git_blob": "10d0a3f79dfc40f7b551ef0c4297cedfec922eb1",
+          "path": "connectors/descript/bin/descript.py",
+          "sha256": "52937dac9eaabb39902ab8650800ddf17fe5244af230191bbcbbffd5e522c6b3"
+        }
+      ],
+      "git_blob": "bf01cbc533f31ba88db293417870c668af1269fa",
+      "path": "connectors/descript/SKILL.md",
+      "sha256": "f23a5cc666598d7b9d4a6a2f25e59f52dd252bed38ca32e065d59ddad6b3acd8"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a24d79978103bbd9453a630f52379b0aab78b830",
+          "path": "connectors/devto/SKILL.md",
+          "sha256": "d7b203d557217c1aaa4c17684ac288dd6165f0b1063c19972c0430510af23080"
+        },
+        {
+          "git_blob": "95db99bb3dba8248381a8a261d84426eb881f2a8",
+          "path": "connectors/devto/bin/devto.py",
+          "sha256": "baf7d758dccd7f1bab3fd11d4b945381eae1e143df1bf415441ee42ec03d93c7"
+        }
+      ],
+      "git_blob": "a24d79978103bbd9453a630f52379b0aab78b830",
+      "path": "connectors/devto/SKILL.md",
+      "sha256": "d7b203d557217c1aaa4c17684ac288dd6165f0b1063c19972c0430510af23080"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "4a894ec3766e034db7aab27e7666fcee8b69485e",
+          "path": "connectors/digitalocean/SKILL.md",
+          "sha256": "85100a9196cf1835232f2138dfb508e10a9c1a972b97b63f39651cf1606a7512"
+        },
+        {
+          "git_blob": "25416fabb94c48b03f2ac073633b3d7cebdbcc37",
+          "path": "connectors/digitalocean/bin/digitalocean.py",
+          "sha256": "258690077df4b86486c52b4c3d660b09cf5e111b11ef86a1c1c04ba51f7cae40"
+        }
+      ],
+      "git_blob": "4a894ec3766e034db7aab27e7666fcee8b69485e",
+      "path": "connectors/digitalocean/SKILL.md",
+      "sha256": "85100a9196cf1835232f2138dfb508e10a9c1a972b97b63f39651cf1606a7512"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "2e9fac8f7c7a6806ad3b78599af62b54d290a34c",
+          "path": "connectors/discord/SKILL.md",
+          "sha256": "78440e491255177d770ff2b0851d86a141bc5c0e7c3ae009a4bd79e8692031cc"
+        },
+        {
+          "git_blob": "ac646766624b323e861312a8a921b50fa8a4276f",
+          "path": "connectors/discord/bin/discord.py",
+          "sha256": "9d9add499a732f68b84f225d1ffa175e2373c41456554b67a00721c06c3aca95"
+        }
+      ],
+      "git_blob": "2e9fac8f7c7a6806ad3b78599af62b54d290a34c",
+      "path": "connectors/discord/SKILL.md",
+      "sha256": "78440e491255177d770ff2b0851d86a141bc5c0e7c3ae009a4bd79e8692031cc"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "6e18817055c578ab0139a9ea9a9dde07795b4adb",
+          "path": "connectors/docusign/SKILL.md",
+          "sha256": "a70728fa808fab58ec0ac6d0a57ceaec902ff95b085572fd0ceaab650ef4b708"
+        },
+        {
+          "git_blob": "fbd0726c10272b2f9471d5f7baf5f020a336b324",
+          "path": "connectors/docusign/bin/docusign.py",
+          "sha256": "90b4e3b0d0c13d42a903fcf7b45410273fe45cee3593469a0512e28fa0ffd693"
+        }
+      ],
+      "git_blob": "6e18817055c578ab0139a9ea9a9dde07795b4adb",
+      "path": "connectors/docusign/SKILL.md",
+      "sha256": "a70728fa808fab58ec0ac6d0a57ceaec902ff95b085572fd0ceaab650ef4b708"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "c91e50e848f0754011ef36a038d567130c14739e",
+          "path": "connectors/dub/SKILL.md",
+          "sha256": "93e79958d46925a23450f770660ba3e0dcaf43604172aaef665feda4448530fb"
+        },
+        {
+          "git_blob": "1f9b8e7403807049d9043b4d2f581185a8c05857",
+          "path": "connectors/dub/bin/dub.py",
+          "sha256": "a22f5e3a041ae1d820770a0962cb4f3b570ae89b8f30ec26b6602062190c05b1"
+        }
+      ],
+      "git_blob": "c91e50e848f0754011ef36a038d567130c14739e",
+      "path": "connectors/dub/SKILL.md",
+      "sha256": "93e79958d46925a23450f770660ba3e0dcaf43604172aaef665feda4448530fb"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "dd1401b79377040aca34e1aff35c027302e87b73",
+          "path": "connectors/ecovacs/SKILL.md",
+          "sha256": "e9e983c2222e92fb378c9bb34f7c1b6a5f1011a6dea2b006acc21b1e170a1dfa"
+        },
+        {
+          "git_blob": "c1eea6c4ad19a659e649048e488349da0d8abd16",
+          "path": "connectors/ecovacs/bin/ecovacs.py",
+          "sha256": "cc2d7e851addf8a48560db2d329a8a8b7d24e391a2890313bb1a067d8e059b9e"
+        }
+      ],
+      "git_blob": "dd1401b79377040aca34e1aff35c027302e87b73",
+      "path": "connectors/ecovacs/SKILL.md",
+      "sha256": "e9e983c2222e92fb378c9bb34f7c1b6a5f1011a6dea2b006acc21b1e170a1dfa"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a31ee7454fda74481e9728983c42bad8ad1c1e03",
+          "path": "connectors/elai/SKILL.md",
+          "sha256": "af23ca79d3744d02cf3a8a374b89d5d1ad07d2a86151e7da8c4de57378eb9dc0"
+        },
+        {
+          "git_blob": "ce26876674e7d7901f697b1c0a920f54e37f0ef1",
+          "path": "connectors/elai/bin/elai.py",
+          "sha256": "1ac92915fc579a8209175277262af274025310da6013cc417285bf17246558f3"
+        }
+      ],
+      "git_blob": "a31ee7454fda74481e9728983c42bad8ad1c1e03",
+      "path": "connectors/elai/SKILL.md",
+      "sha256": "af23ca79d3744d02cf3a8a374b89d5d1ad07d2a86151e7da8c4de57378eb9dc0"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f145c3d72e114de07fdf5010fbf269df3bfaa814",
+          "path": "connectors/elevenlabs/SKILL.md",
+          "sha256": "cb9a26d3f747cb75ebb046feec7ea7faa82ba57f64eb26d1b7ac0ee249d0055a"
+        },
+        {
+          "git_blob": "8bee36a35b10523ff2d5285c94a6651530d4e1e0",
+          "path": "connectors/elevenlabs/bin/elevenlabs.py",
+          "sha256": "aabe1c1536809c90c25ba36d90f3c9fd62ccc0946f7024446e29502bf8818f96"
+        }
+      ],
+      "git_blob": "f145c3d72e114de07fdf5010fbf269df3bfaa814",
+      "path": "connectors/elevenlabs/SKILL.md",
+      "sha256": "cb9a26d3f747cb75ebb046feec7ea7faa82ba57f64eb26d1b7ac0ee249d0055a"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "e5c8942911da46a0b8945d52e3186d386a052777",
+          "path": "connectors/etsy/SKILL.md",
+          "sha256": "3dc78cd0f2bf4c11a0d1573720d4760eccb26f7d332452b95047c0e70d9c0e73"
+        },
+        {
+          "git_blob": "ea81485bb71100e109d091d1162e0fb4130306d6",
+          "path": "connectors/etsy/bin/etsy.py",
+          "sha256": "1f1cee3a3962b842f68e2e1fc90c70b3204f67fe3c04ec4a0a99ac82c8ae2fa9"
+        }
+      ],
+      "git_blob": "e5c8942911da46a0b8945d52e3186d386a052777",
+      "path": "connectors/etsy/SKILL.md",
+      "sha256": "3dc78cd0f2bf4c11a0d1573720d4760eccb26f7d332452b95047c0e70d9c0e73"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a4854e390c29677126c68132cbc2df0ed3ce77db",
+          "path": "connectors/exa/SKILL.md",
+          "sha256": "4ebbcab0451c0ef110296759bfdd19e80e1356dbf3591a3205b183edc912a444"
+        },
+        {
+          "git_blob": "97f6dfa2bd43b1cf70ad9c0c8bb4068c381c0482",
+          "path": "connectors/exa/bin/exa.py",
+          "sha256": "60ceb1dc98e32485c8ecf3a5cb901e81c7e81d0ff38b37fe2cc4ca4f4c65dc5f"
+        }
+      ],
+      "git_blob": "a4854e390c29677126c68132cbc2df0ed3ce77db",
+      "path": "connectors/exa/SKILL.md",
+      "sha256": "4ebbcab0451c0ef110296759bfdd19e80e1356dbf3591a3205b183edc912a444"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "4b6b14d199d133e9d2b3b0b7ee487d015a9c05e6",
+          "path": "connectors/fal-ai/SKILL.md",
+          "sha256": "e44756cd102b88dc8c89b44d19eac8ec560100669864803d6cbc7999fee69d06"
+        },
+        {
+          "git_blob": "0b1e1d471cff618ca6da7115f5a0497f1438f376",
+          "path": "connectors/fal-ai/bin/fal-ai.py",
+          "sha256": "efd91c63d8436c9e365e46afd0e4fb1d19886bac94fd85cf5538ff720b5176a2"
+        }
+      ],
+      "git_blob": "4b6b14d199d133e9d2b3b0b7ee487d015a9c05e6",
+      "path": "connectors/fal-ai/SKILL.md",
+      "sha256": "e44756cd102b88dc8c89b44d19eac8ec560100669864803d6cbc7999fee69d06"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "705b86fd3ce54d4a011b71c11d0ece78c59fbc1f",
+          "path": "connectors/figma/SKILL.md",
+          "sha256": "422311d9ea882f6feb98dafbebaf433c14a63a3cebfe30d0a8e504a93517cddc"
+        },
+        {
+          "git_blob": "7e47e0b4799758543ba45c90f1088670285dc183",
+          "path": "connectors/figma/bin/figma.py",
+          "sha256": "20de9f6f22ad6b06f22f3a0f0ad2800c02cc8396e090933cb01845bb9f12a130"
+        }
+      ],
+      "git_blob": "705b86fd3ce54d4a011b71c11d0ece78c59fbc1f",
+      "path": "connectors/figma/SKILL.md",
+      "sha256": "422311d9ea882f6feb98dafbebaf433c14a63a3cebfe30d0a8e504a93517cddc"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "ee585827e34bee57d7dcc7875eebd03e601c33f7",
+          "path": "connectors/firecrawl/SKILL.md",
+          "sha256": "d95802d72069778b824ec4ebc5912c3d0bf304c62c3a6ef23d19069f16003c51"
+        },
+        {
+          "git_blob": "55bc0c7bf8afb51dadb5c7153dfb15f1bda0d504",
+          "path": "connectors/firecrawl/bin/firecrawl.py",
+          "sha256": "61a2901288e234a2712f0b76736a42dc48b82685b3856d298ac1c7705aad8ba1"
+        }
+      ],
+      "git_blob": "ee585827e34bee57d7dcc7875eebd03e601c33f7",
+      "path": "connectors/firecrawl/SKILL.md",
+      "sha256": "d95802d72069778b824ec4ebc5912c3d0bf304c62c3a6ef23d19069f16003c51"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "9d4db60b639f37b162d0eaca53f12bfae64878ec",
+          "path": "connectors/black-forest-labs/SKILL.md",
+          "sha256": "5d23264a3657cce71bb16dcd9b59c5c0a735de07689b60fdf77ad43cbb3c2aaa"
+        },
+        {
+          "git_blob": "739941cec81571b546cf29400b810ee3db3bf37f",
+          "path": "connectors/black-forest-labs/bin/black-forest-labs.py",
+          "sha256": "e40d4514af7d44e6625552c580027a07a94ce28dbd80004bf2e5ca39a5a78230"
+        }
+      ],
+      "git_blob": "9d4db60b639f37b162d0eaca53f12bfae64878ec",
+      "path": "connectors/black-forest-labs/SKILL.md",
+      "sha256": "5d23264a3657cce71bb16dcd9b59c5c0a735de07689b60fdf77ad43cbb3c2aaa"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "66d4faf2c3b9347f946b563adc52da1a18a2044a",
+          "path": "connectors/flyio/SKILL.md",
+          "sha256": "62dcc1988d1d6b3c7d51ab616125df66eafcf82b25203dda1ca51d9a19dfc536"
+        },
+        {
+          "git_blob": "e85d8a29239d9e3241682a411cd82cd6e491df91",
+          "path": "connectors/flyio/bin/flyio.py",
+          "sha256": "1eec3771c081d8033a824eb3184acc07704c59efc1ecaf95cf7484b19b86c524"
+        }
+      ],
+      "git_blob": "66d4faf2c3b9347f946b563adc52da1a18a2044a",
+      "path": "connectors/flyio/SKILL.md",
+      "sha256": "62dcc1988d1d6b3c7d51ab616125df66eafcf82b25203dda1ca51d9a19dfc536"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "ae557c8f88a31a295429ce0947600ba5b748c655",
+          "path": "connectors/framer/SKILL.md",
+          "sha256": "c6c4b14b73303da76a7631db6582c3053d961a04da48b00fdfc6d6376d6d28f4"
+        },
+        {
+          "git_blob": "4167402e85d7391d7ff33c153fcdd89506ec7e6e",
+          "path": "connectors/framer/bin/framer.py",
+          "sha256": "2004650cad1556dfd657a355c7e952185e6b58e5f116d182451ecd2cc81df85f"
+        }
+      ],
+      "git_blob": "ae557c8f88a31a295429ce0947600ba5b748c655",
+      "path": "connectors/framer/SKILL.md",
+      "sha256": "c6c4b14b73303da76a7631db6582c3053d961a04da48b00fdfc6d6376d6d28f4"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f06e1b1c65ea06b674d2af6bb33a30c47c58af27",
+          "path": "connectors/front/SKILL.md",
+          "sha256": "0dada7ea39b6fb17583ff0a6c9b495da15be9131583eba7a3df26e83c1b35e32"
+        },
+        {
+          "git_blob": "dddbc9fb2d9352e2a1ef16faf248d3911c622d6e",
+          "path": "connectors/front/bin/front.py",
+          "sha256": "954acb0a0f03f89246671a0031e99b42b0bcf2474bfc3c6227d7e3de587e02ff"
+        }
+      ],
+      "git_blob": "f06e1b1c65ea06b674d2af6bb33a30c47c58af27",
+      "path": "connectors/front/SKILL.md",
+      "sha256": "0dada7ea39b6fb17583ff0a6c9b495da15be9131583eba7a3df26e83c1b35e32"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1d8a25f6cff84df68c4b746287a332af4791a059",
+          "path": "connectors/gemini/SKILL.md",
+          "sha256": "b08ea7df19ce0229a94d39f1cc33ac7e3c5ac71136e166a74ac2a78e17efa291"
+        },
+        {
+          "git_blob": "7e7cd32f40417fd2d878ae005ca4e955ab5f75db",
+          "path": "connectors/gemini/bin/gemini.py",
+          "sha256": "c565aac9af1b24b1ad756891e050d135e0513657232c22603caff6a79eca2ea5"
+        }
+      ],
+      "git_blob": "1d8a25f6cff84df68c4b746287a332af4791a059",
+      "path": "connectors/gemini/SKILL.md",
+      "sha256": "b08ea7df19ce0229a94d39f1cc33ac7e3c5ac71136e166a74ac2a78e17efa291"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "487c72f629f13df3e7c1d49d640615b91b23c9a8",
+          "path": "connectors/github/SKILL.md",
+          "sha256": "f272ab295658eff563a9e72e023b56c9d1f5886502c5bd9aa6466e6fa61b6f55"
+        },
+        {
+          "git_blob": "c1a1b39c7ec597984e235e6a8f2b4e8227537b4d",
+          "path": "connectors/github/bin/github.py",
+          "sha256": "7a8bb3058d2417537af4f0a8aaae38807643e3355dcd38df954822bf25175b5b"
+        }
+      ],
+      "git_blob": "487c72f629f13df3e7c1d49d640615b91b23c9a8",
+      "path": "connectors/github/SKILL.md",
+      "sha256": "f272ab295658eff563a9e72e023b56c9d1f5886502c5bd9aa6466e6fa61b6f55"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "3dcac42c6712dd9d4d79870089b66cc20b3a758a",
+          "path": "connectors/gitlab/SKILL.md",
+          "sha256": "b7d49f94ebae718fa5727bf22a9c2af5b43cf224d62455b46cebcb9d6f1fe496"
+        },
+        {
+          "git_blob": "f1fbdecf14aaa700e57918e33fa5a890af052b5f",
+          "path": "connectors/gitlab/bin/gitlab.py",
+          "sha256": "633d035b324e28001da11bdbef9cafc3a8033bf115e2acc7ce46c2a7bc5ab54c"
+        }
+      ],
+      "git_blob": "3dcac42c6712dd9d4d79870089b66cc20b3a758a",
+      "path": "connectors/gitlab/SKILL.md",
+      "sha256": "b7d49f94ebae718fa5727bf22a9c2af5b43cf224d62455b46cebcb9d6f1fe496"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "c66e6f21c76144996f4331657d6b3cb04b6e6625",
+          "path": "connectors/google-nest/SKILL.md",
+          "sha256": "a75969a340dd6ce9acfd0a445c4b9c6a22bdd6639c822d0ec7820574ce9675b1"
+        },
+        {
+          "git_blob": "a6284c9ca88a90f42a4189da33b355ecf8536376",
+          "path": "connectors/google-nest/bin/google-nest.py",
+          "sha256": "72d7ed23e5fde9b8795817b5a9b9e593a6a6cea8437d9c68c508d96b15e655e8"
+        }
+      ],
+      "git_blob": "c66e6f21c76144996f4331657d6b3cb04b6e6625",
+      "path": "connectors/google-nest/SKILL.md",
+      "sha256": "a75969a340dd6ce9acfd0a445c4b9c6a22bdd6639c822d0ec7820574ce9675b1"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "5b85ae7393d700ae1c5b2fbb5e48f566a3dbfd24",
+          "path": "connectors/gumroad/SKILL.md",
+          "sha256": "5f7cb160c3bee9b441c56e0379016951454ff3ef176378e2cd07119f50484154"
+        },
+        {
+          "git_blob": "70ab9adea20481383f444dbc2f4fa114fd38a767",
+          "path": "connectors/gumroad/bin/gumroad.py",
+          "sha256": "0f3888ef996495c8b937e941950870904174420806cdb87764c8bfb4b53212b0"
+        }
+      ],
+      "git_blob": "5b85ae7393d700ae1c5b2fbb5e48f566a3dbfd24",
+      "path": "connectors/gumroad/SKILL.md",
+      "sha256": "5f7cb160c3bee9b441c56e0379016951454ff3ef176378e2cd07119f50484154"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "43cc7f3c0258819c299fd0247f992aab128bf7d0",
+          "path": "connectors/heygen/SKILL.md",
+          "sha256": "cd9a2e20201d5f2825067856bd6cd9a9d0589044f4095aed00110b0511aee77d"
+        },
+        {
+          "git_blob": "e5e84614ddf878186c5fcbe829bca1a07a7fc013",
+          "path": "connectors/heygen/bin/heygen.py",
+          "sha256": "730470d6f69b22918793c408fe860d07f6b63f1879be26d53910d4ed3cb02818"
+        }
+      ],
+      "git_blob": "43cc7f3c0258819c299fd0247f992aab128bf7d0",
+      "path": "connectors/heygen/SKILL.md",
+      "sha256": "cd9a2e20201d5f2825067856bd6cd9a9d0589044f4095aed00110b0511aee77d"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "92fbe30a5d0371bdcb51acb1e24fbe982a3e500e",
+          "path": "connectors/home-assistant/SKILL.md",
+          "sha256": "424af8c893e098dc70515021599b969bce1478105d6d4c7f924302fdaebf57bf"
+        },
+        {
+          "git_blob": "3fabed1556e2ac84effde56ef6fd7074f9c13089",
+          "path": "connectors/home-assistant/bin/home-assistant.py",
+          "sha256": "200f7ec1ca78f7a966a09e3b1e44a7b2c085f79e9c128e273e1ceca7439af2bc"
+        }
+      ],
+      "git_blob": "92fbe30a5d0371bdcb51acb1e24fbe982a3e500e",
+      "path": "connectors/home-assistant/SKILL.md",
+      "sha256": "424af8c893e098dc70515021599b969bce1478105d6d4c7f924302fdaebf57bf"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1cd9dfce5dff6701e2b3e9e16aa61f1945f7ccea",
+          "path": "connectors/homey/SKILL.md",
+          "sha256": "bf0dfaad0930fb758a300a88c4f5e4d8288cf36a0c5f34c5aabea85e51ea343d"
+        },
+        {
+          "git_blob": "41137aad885d54895d6a6a70d7721797e49adf0a",
+          "path": "connectors/homey/bin/homey.py",
+          "sha256": "20a97e2f7a8ecc6b92246702abd1b78e8199c34f1ddde4782c05c123cd9715e2"
+        }
+      ],
+      "git_blob": "1cd9dfce5dff6701e2b3e9e16aa61f1945f7ccea",
+      "path": "connectors/homey/SKILL.md",
+      "sha256": "bf0dfaad0930fb758a300a88c4f5e4d8288cf36a0c5f34c5aabea85e51ea343d"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f648f345f3cb3adcebf55b2009f04889425da874",
+          "path": "connectors/hubitat/SKILL.md",
+          "sha256": "f7b8f0d4448c8440ddc4ed6108f813c913066609cba3fa85bd44d176927ee849"
+        },
+        {
+          "git_blob": "eb4082221ae9968739aa1c0b3ce11150c051348d",
+          "path": "connectors/hubitat/bin/hubitat.py",
+          "sha256": "eb1ee881264d56e537ed93997c4ea7b25d9e051aa548d182c4d038f1992b1f92"
+        }
+      ],
+      "git_blob": "f648f345f3cb3adcebf55b2009f04889425da874",
+      "path": "connectors/hubitat/SKILL.md",
+      "sha256": "f7b8f0d4448c8440ddc4ed6108f813c913066609cba3fa85bd44d176927ee849"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "812232899d515247c5f8201c32e0ee46983e7d48",
+          "path": "connectors/hubspot/SKILL.md",
+          "sha256": "c3938c8c53014c432272763425e1d32c2de858c59db754ae734a73874c5e6919"
+        },
+        {
+          "git_blob": "1762de859b9d2a3a265add56b66cfef8e35c8696",
+          "path": "connectors/hubspot/bin/hubspot.py",
+          "sha256": "d4a0eedc5196955eb3e926553a0c4acbdb0e9d83d980a25ba0d8a7898adeae0b"
+        }
+      ],
+      "git_blob": "812232899d515247c5f8201c32e0ee46983e7d48",
+      "path": "connectors/hubspot/SKILL.md",
+      "sha256": "c3938c8c53014c432272763425e1d32c2de858c59db754ae734a73874c5e6919"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "98c9cf344c59819223ac3858fe97881973fdbd06",
+          "path": "connectors/huggingface/SKILL.md",
+          "sha256": "cc0356149b39237a25eb983f47f70de82fcc56534cd0ca776cf68290e7a85b1a"
+        },
+        {
+          "git_blob": "b8e57c57793a3b2658d1c945dbc208e532a2a0fd",
+          "path": "connectors/huggingface/bin/huggingface.py",
+          "sha256": "e6f892f9f7a447d15b83ecbdc8534c2bf7a18a741051771f8b8315596e2e83ad"
+        }
+      ],
+      "git_blob": "98c9cf344c59819223ac3858fe97881973fdbd06",
+      "path": "connectors/huggingface/SKILL.md",
+      "sha256": "cc0356149b39237a25eb983f47f70de82fcc56534cd0ca776cf68290e7a85b1a"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "9eaef642e0e03c7161443d9dbefbe1763f24df00",
+          "path": "connectors/hume-ai/SKILL.md",
+          "sha256": "a7a02585a06cc5e15d7cab122eb99b3dfdee1fa548f9c1ce4e65527edd1280fc"
+        },
+        {
+          "git_blob": "1a412905fa6cdcd6827a2c2c6cd5a4163df3d07d",
+          "path": "connectors/hume-ai/bin/hume-ai.py",
+          "sha256": "af297db963ae1b14f65e4716cd310779cfef62e71f86ad76c084ae82cc0cd133"
+        }
+      ],
+      "git_blob": "9eaef642e0e03c7161443d9dbefbe1763f24df00",
+      "path": "connectors/hume-ai/SKILL.md",
+      "sha256": "a7a02585a06cc5e15d7cab122eb99b3dfdee1fa548f9c1ce4e65527edd1280fc"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "7d1719874bf1ae4c69d5c0ad482601be3b2a7480",
+          "path": "connectors/ideogram/SKILL.md",
+          "sha256": "9b628ffb314ad8ef4ab488230cd39c74bdd5989c10d2d628fb18158dc8b4fd95"
+        },
+        {
+          "git_blob": "1e162c638348fb4395fe78043107688610891622",
+          "path": "connectors/ideogram/bin/ideogram.py",
+          "sha256": "ecc0189fc4f25d716b1cf3320c6651318014f5a53c4ce92b5f353bb1dda59ff7"
+        }
+      ],
+      "git_blob": "7d1719874bf1ae4c69d5c0ad482601be3b2a7480",
+      "path": "connectors/ideogram/SKILL.md",
+      "sha256": "9b628ffb314ad8ef4ab488230cd39c74bdd5989c10d2d628fb18158dc8b4fd95"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "726eedef583d86d10f572f09e341d9d253fb2c98",
+          "path": "connectors/kit/SKILL.md",
+          "sha256": "99d9dfea34ed6433f5a8b5746ecdd0e07c3b57317cef8d48bebf104f0f51204e"
+        },
+        {
+          "git_blob": "820d989e1905152af04b7a943ee1862bee8eb48e",
+          "path": "connectors/kit/bin/kit.py",
+          "sha256": "a22e17c27c886de54a7045f975c1f6ee33c8110ce86dbb1d8deb7760a79ba850"
+        }
+      ],
+      "git_blob": "726eedef583d86d10f572f09e341d9d253fb2c98",
+      "path": "connectors/kit/SKILL.md",
+      "sha256": "99d9dfea34ed6433f5a8b5746ecdd0e07c3b57317cef8d48bebf104f0f51204e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "b0666f200e52d0e626b81aed46445534cfa4fe4a",
+          "path": "connectors/kling/SKILL.md",
+          "sha256": "51e2b6b53468cbc798b87ce29a997dc1fc9d8289fd83e8ce37b3afce464336fa"
+        },
+        {
+          "git_blob": "29fb3bccdd947370c2954bfd8a12d6aaeb8eee25",
+          "path": "connectors/kling/bin/kling.py",
+          "sha256": "a18c879e1d990e7c2826d1834796d6f8fccf1ba5054e535e9aa3a1907d21ec63"
+        }
+      ],
+      "git_blob": "b0666f200e52d0e626b81aed46445534cfa4fe4a",
+      "path": "connectors/kling/SKILL.md",
+      "sha256": "51e2b6b53468cbc798b87ce29a997dc1fc9d8289fd83e8ce37b3afce464336fa"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "6355fbc1da647b7bbd650e04371802f8f5816daf",
+          "path": "connectors/langfuse/SKILL.md",
+          "sha256": "fc1d04fbb5c786bba0a338b90f11abc9abff121e78c0c88ccfcc5fa5897181b3"
+        },
+        {
+          "git_blob": "4b4eae48e7095dede6fa612641a2427762e6c727",
+          "path": "connectors/langfuse/bin/langfuse.py",
+          "sha256": "c4b190ee6baad5f4b506f45cac1e62b7bf36570c60eb84a6b148ba94219ee4bd"
+        }
+      ],
+      "git_blob": "6355fbc1da647b7bbd650e04371802f8f5816daf",
+      "path": "connectors/langfuse/SKILL.md",
+      "sha256": "fc1d04fbb5c786bba0a338b90f11abc9abff121e78c0c88ccfcc5fa5897181b3"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "6844d1f2f55794ee97f117d12a3db816b813d37f",
+          "path": "connectors/leaf-agriculture/SKILL.md",
+          "sha256": "b15184a604636261dcd8e0423287773d16d2f96fcac8c8c72a25be9c4f64fd32"
+        },
+        {
+          "git_blob": "5ce7f4e72853eccdb899139d9cf89cdbe2998520",
+          "path": "connectors/leaf-agriculture/bin/leaf-agriculture.py",
+          "sha256": "fb410dfc96e2948f2a0167e5e6118e776fab6be2318b08c87a47db74005795b9"
+        }
+      ],
+      "git_blob": "6844d1f2f55794ee97f117d12a3db816b813d37f",
+      "path": "connectors/leaf-agriculture/SKILL.md",
+      "sha256": "b15184a604636261dcd8e0423287773d16d2f96fcac8c8c72a25be9c4f64fd32"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "e3c934b2edf9e4c417a7e29d6b87804459e9fece",
+          "path": "connectors/lemon-squeezy/SKILL.md",
+          "sha256": "8d38bc00a484c1c2d83f6c4b505108ea2817bfab44914160d416686f67083f5f"
+        },
+        {
+          "git_blob": "6f4aa710b43ae70fdf0f36c3d4e31854837a5ca9",
+          "path": "connectors/lemon-squeezy/bin/lemon-squeezy.py",
+          "sha256": "5f33d122e5037b31f0e01ea1bac6840a4dbf696c96a5e67878e36f9c18e8de8e"
+        }
+      ],
+      "git_blob": "e3c934b2edf9e4c417a7e29d6b87804459e9fece",
+      "path": "connectors/lemon-squeezy/SKILL.md",
+      "sha256": "8d38bc00a484c1c2d83f6c4b505108ea2817bfab44914160d416686f67083f5f"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "254ac51a5970772c6f5b1e925788b030cf310581",
+          "path": "connectors/letta/SKILL.md",
+          "sha256": "0e6667f5bad67710579307690906901a005cb3c008f4d465403a6906b4ec438e"
+        },
+        {
+          "git_blob": "1bcde455eb01826012e6ac9401d03c6f2f9a3a5e",
+          "path": "connectors/letta/bin/letta.py",
+          "sha256": "0ea4a0f54d627e720bf55dc2f6ec904d36611d29dbc0f24da0cf43314929bc38"
+        }
+      ],
+      "git_blob": "254ac51a5970772c6f5b1e925788b030cf310581",
+      "path": "connectors/letta/SKILL.md",
+      "sha256": "0e6667f5bad67710579307690906901a005cb3c008f4d465403a6906b4ec438e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "225259e05154b1797d69c483e0c15094d70604a1",
+          "path": "connectors/linear/SKILL.md",
+          "sha256": "ab08195318bc2d7538b71287d6ca30715f936fe73c357fe1acfc10ba1a656076"
+        },
+        {
+          "git_blob": "334758d71a99b1688d9dada086f0ff55f4bd1f99",
+          "path": "connectors/linear/bin/linear.py",
+          "sha256": "81bbbc51fe4f3f7430b8f0a8226d2605de45e71e9d6907c73a2b3fb80fd12927"
+        }
+      ],
+      "git_blob": "225259e05154b1797d69c483e0c15094d70604a1",
+      "path": "connectors/linear/SKILL.md",
+      "sha256": "ab08195318bc2d7538b71287d6ca30715f936fe73c357fe1acfc10ba1a656076"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "262f70da4f731bffa65efd050c569ca262f46305",
+          "path": "connectors/lob/SKILL.md",
+          "sha256": "23e1b60a7559939ec4f3a617091b0805f5d2faf0f86b7760acabca75d0395e2e"
+        },
+        {
+          "git_blob": "418b00d05ee1d9f3ef76755c9cfdbc1f176adb48",
+          "path": "connectors/lob/bin/lob.py",
+          "sha256": "c610acd40fda444204187d79b894ea305d30db5f3c967df16ab2c7afc844d670"
+        }
+      ],
+      "git_blob": "262f70da4f731bffa65efd050c569ca262f46305",
+      "path": "connectors/lob/SKILL.md",
+      "sha256": "23e1b60a7559939ec4f3a617091b0805f5d2faf0f86b7760acabca75d0395e2e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "8eb513536e29e262a5bbbbd27604a36e307397d3",
+          "path": "connectors/loops/SKILL.md",
+          "sha256": "6b633879a10ddfbeaad22db1f4dd9a745f1a132b78a1cc71df8a8649c92ab137"
+        },
+        {
+          "git_blob": "8193ebb2ced435c9bb40173c87db77bc9a3fb2ea",
+          "path": "connectors/loops/bin/loops.py",
+          "sha256": "ef3411e09c7f4fb00d808fe572c890da1b717ef804048b755448670721b2a1f8"
+        }
+      ],
+      "git_blob": "8eb513536e29e262a5bbbbd27604a36e307397d3",
+      "path": "connectors/loops/SKILL.md",
+      "sha256": "6b633879a10ddfbeaad22db1f4dd9a745f1a132b78a1cc71df8a8649c92ab137"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1995b828a2c02665f51619acd3285f77084b1d3d",
+          "path": "connectors/luma/SKILL.md",
+          "sha256": "e5261cc381dcf75c80e74045a8c1e9c0d490d335f12282050af226a942a0a3ea"
+        },
+        {
+          "git_blob": "bdb2b37b95861b4e921054e6918f11f0921d3a0b",
+          "path": "connectors/luma/bin/luma.py",
+          "sha256": "f5908e8a343054af47355b19dfcaa2ce17a7a014a3835b696ef5e1424f8200ea"
+        }
+      ],
+      "git_blob": "1995b828a2c02665f51619acd3285f77084b1d3d",
+      "path": "connectors/luma/SKILL.md",
+      "sha256": "e5261cc381dcf75c80e74045a8c1e9c0d490d335f12282050af226a942a0a3ea"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "2085cb8c0e198dabdf26ba3f39b0cd1557b64a96",
+          "path": "connectors/mastodon/SKILL.md",
+          "sha256": "4f2aabd50b86e0a771d572c91b3addd2b337e035712c154e183a74d2741cbe0d"
+        },
+        {
+          "git_blob": "0cb8fbad81de4ec6d4137dd336257ae7c870113a",
+          "path": "connectors/mastodon/bin/mastodon.py",
+          "sha256": "efa0c084259b70f1bb485b7032d01a025abf9673804a46aec66829a4edb917f4"
+        }
+      ],
+      "git_blob": "2085cb8c0e198dabdf26ba3f39b0cd1557b64a96",
+      "path": "connectors/mastodon/SKILL.md",
+      "sha256": "4f2aabd50b86e0a771d572c91b3addd2b337e035712c154e183a74d2741cbe0d"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f3982048242662d90dc2e34c0237b52a276d314a",
+          "path": "connectors/mem0/SKILL.md",
+          "sha256": "f4027bb6aa5ffa2ae33741ca0e4de28298cb22c7c94317a9cdc1f1ce047db766"
+        },
+        {
+          "git_blob": "af103f036048d233a3797af836b6140eb55b9292",
+          "path": "connectors/mem0/bin/mem0.py",
+          "sha256": "05ba23ed1beb5b6cd895585678fee0c23c746f23129ef6049d68d5ba9633aeb5"
+        }
+      ],
+      "git_blob": "f3982048242662d90dc2e34c0237b52a276d314a",
+      "path": "connectors/mem0/SKILL.md",
+      "sha256": "f4027bb6aa5ffa2ae33741ca0e4de28298cb22c7c94317a9cdc1f1ce047db766"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "63fb4a5ff83c6ede48fa96583d07a2a5ef52438b",
+          "path": "connectors/mercury/SKILL.md",
+          "sha256": "1b6ca5022276fa0743a1a4801cf725dc76c238eff123d629e647589382f956c7"
+        },
+        {
+          "git_blob": "e8fb714e1033cac7417c65f058a5d18de5ac6aa3",
+          "path": "connectors/mercury/bin/mercury.py",
+          "sha256": "6c5b53e7d458af8003add7afcb39bd40983ede31c7af636c0a5be72d229c4f57"
+        }
+      ],
+      "git_blob": "63fb4a5ff83c6ede48fa96583d07a2a5ef52438b",
+      "path": "connectors/mercury/SKILL.md",
+      "sha256": "1b6ca5022276fa0743a1a4801cf725dc76c238eff123d629e647589382f956c7"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "3a099133e8334e09fcbaba3b19549387f182b4cb",
+          "path": "connectors/mistral/SKILL.md",
+          "sha256": "07a3422b39df1a370fd9f3ff1a4a1c3b2801dfb885bc2d13413b5320a978104a"
+        },
+        {
+          "git_blob": "508afa2ad24d15baf2befb680b393cd5a0632d5b",
+          "path": "connectors/mistral/bin/mistral.py",
+          "sha256": "c5812ec2555ffeabc2b23825b0afc3f781487851f973dc9ccf7b80d47da90b72"
+        }
+      ],
+      "git_blob": "3a099133e8334e09fcbaba3b19549387f182b4cb",
+      "path": "connectors/mistral/SKILL.md",
+      "sha256": "07a3422b39df1a370fd9f3ff1a4a1c3b2801dfb885bc2d13413b5320a978104a"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1f54ce5da25d35a32f33a845fe898b17524af333",
+          "path": "connectors/monday/SKILL.md",
+          "sha256": "adb8927b84e6e38a6b98048039b2aa51d70377fca09a8428b3b65b2283bd4472"
+        },
+        {
+          "git_blob": "7875a833b65c55043569aef04af83a0b2adf189f",
+          "path": "connectors/monday/bin/monday.py",
+          "sha256": "d48ee35e3b8a3805cd54c6ec8a8f235a39b2da21e659b41481690b8d75654fc6"
+        }
+      ],
+      "git_blob": "1f54ce5da25d35a32f33a845fe898b17524af333",
+      "path": "connectors/monday/SKILL.md",
+      "sha256": "adb8927b84e6e38a6b98048039b2aa51d70377fca09a8428b3b65b2283bd4472"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "3f62b1a39ee15fbad28475a3f140f54b8821c33a",
+          "path": "connectors/moonraker/SKILL.md",
+          "sha256": "3937e780d277aa9acd3f2f4c715aed4b4fdfa5af0cbcdca905b683095be9544e"
+        },
+        {
+          "git_blob": "b1d07c704f5e971c2e7968c5f4545c900cb0b9f9",
+          "path": "connectors/moonraker/bin/moonraker.py",
+          "sha256": "b8554d746c94a2ec6b4cf27a036941f0c8cf6c330aa647eb2be75e8ce27a015f"
+        }
+      ],
+      "git_blob": "3f62b1a39ee15fbad28475a3f140f54b8821c33a",
+      "path": "connectors/moonraker/SKILL.md",
+      "sha256": "3937e780d277aa9acd3f2f4c715aed4b4fdfa5af0cbcdca905b683095be9544e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "43408a54082d0f565d12d62620558ca639f95924",
+          "path": "connectors/n8n/SKILL.md",
+          "sha256": "23b8a0cef3fa63a37bc44e97d0a4d1ad9f73b1d527d2e34e92de8ed2760c7b22"
+        },
+        {
+          "git_blob": "6845212670c4051c6e927f9e0bf27cc7ebdddc41",
+          "path": "connectors/n8n/bin/n8n.py",
+          "sha256": "49a799474b1a36112037671b00b53f7178a1233e791382e769f90a42f70a024d"
+        }
+      ],
+      "git_blob": "43408a54082d0f565d12d62620558ca639f95924",
+      "path": "connectors/n8n/SKILL.md",
+      "sha256": "23b8a0cef3fa63a37bc44e97d0a4d1ad9f73b1d527d2e34e92de8ed2760c7b22"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "8382fe5fac6d66d84c98d4ae381c66cf5f13787a",
+          "path": "connectors/neon/SKILL.md",
+          "sha256": "995543c5333993f4e306311d7d9ff726b4669389a10f0e749322b288d1bee449"
+        },
+        {
+          "git_blob": "918630b51a732d89078ec54b2cb73808914ff19a",
+          "path": "connectors/neon/bin/neon.py",
+          "sha256": "c0c2b948294c29a1f84ee89b196d91383134dc5ba33185eb6229c0d150b6777d"
+        }
+      ],
+      "git_blob": "8382fe5fac6d66d84c98d4ae381c66cf5f13787a",
+      "path": "connectors/neon/SKILL.md",
+      "sha256": "995543c5333993f4e306311d7d9ff726b4669389a10f0e749322b288d1bee449"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "18bc59815d8f116beeb840abdd2f2a39ba851558",
+          "path": "connectors/netlify/SKILL.md",
+          "sha256": "29a9ac193467c0b61ea64b0259586fb7b2e03002e67b436fdb8bce4cd64aebea"
+        },
+        {
+          "git_blob": "2016d956f542c75dbf08d5117f9245f51b1e21d5",
+          "path": "connectors/netlify/bin/netlify.py",
+          "sha256": "77528c5e07b42cd5ceaac0a7469c89048054bc073b9e3a5d3564d04a0c1e6658"
+        }
+      ],
+      "git_blob": "18bc59815d8f116beeb840abdd2f2a39ba851558",
+      "path": "connectors/netlify/SKILL.md",
+      "sha256": "29a9ac193467c0b61ea64b0259586fb7b2e03002e67b436fdb8bce4cd64aebea"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "7baf0b07ab47310aac173e08ee12b77fcb333ec5",
+          "path": "connectors/newsapi/SKILL.md",
+          "sha256": "5a99fe7ef5767e5adf8294740c8ee2023c5ee2243bb37110cbb79cd8893182b3"
+        },
+        {
+          "git_blob": "8fe647460412e6b6fb131a3a0a792a4c6c7e9310",
+          "path": "connectors/newsapi/bin/newsapi.py",
+          "sha256": "20bf5983a996e86138d573ce25c956090ec4027829a040d82924a45901b04668"
+        }
+      ],
+      "git_blob": "7baf0b07ab47310aac173e08ee12b77fcb333ec5",
+      "path": "connectors/newsapi/SKILL.md",
+      "sha256": "5a99fe7ef5767e5adf8294740c8ee2023c5ee2243bb37110cbb79cd8893182b3"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "aa00072cfa5e1ab981d8f0a4de83226693793290",
+          "path": "connectors/notion/SKILL.md",
+          "sha256": "8b02d7ce3a8351640276ff4afa57b498baaed672f202abe02d8f5bb93d98901a"
+        },
+        {
+          "git_blob": "e5235767c12882238bcf60a3b70a0f9741064be2",
+          "path": "connectors/notion/bin/notion.py",
+          "sha256": "8d7416784cb31d2cc440cc7f7f1580a0a71b0805cb7f3bc532a9f421cb6ad7d9"
+        }
+      ],
+      "git_blob": "aa00072cfa5e1ab981d8f0a4de83226693793290",
+      "path": "connectors/notion/SKILL.md",
+      "sha256": "8b02d7ce3a8351640276ff4afa57b498baaed672f202abe02d8f5bb93d98901a"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "ca8de807e00e8b1c7caec747664b0f7ba33124b8",
+          "path": "connectors/octoprint/SKILL.md",
+          "sha256": "2a60dff85f27a942ea9cdf22717375326174ff57733e418e629b664210a8572d"
+        },
+        {
+          "git_blob": "8761f9c58827461303aafae8f84c51564f5728fc",
+          "path": "connectors/octoprint/bin/octoprint.py",
+          "sha256": "beabb1726fe6bf9f1300ae5f10949f704e4c25d35f80fd8902843b7c349887af"
+        }
+      ],
+      "git_blob": "ca8de807e00e8b1c7caec747664b0f7ba33124b8",
+      "path": "connectors/octoprint/SKILL.md",
+      "sha256": "2a60dff85f27a942ea9cdf22717375326174ff57733e418e629b664210a8572d"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "92ac4df57d27f49caf4eb5dffe4dad5282135e80",
+          "path": "connectors/openai/SKILL.md",
+          "sha256": "e495f6f70c19713b10a675484aa2f9e2f9f22350670a2468977b8fcdd999bb88"
+        },
+        {
+          "git_blob": "cfa38d1a3d5f0d66e2c7b11f56461553f4fdc5b1",
+          "path": "connectors/openai/bin/openai.py",
+          "sha256": "eb46f68f5f28010eb78c34c05267ae3d8109296365e68761c745925851c5ff6c"
+        }
+      ],
+      "git_blob": "92ac4df57d27f49caf4eb5dffe4dad5282135e80",
+      "path": "connectors/openai/SKILL.md",
+      "sha256": "e495f6f70c19713b10a675484aa2f9e2f9f22350670a2468977b8fcdd999bb88"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a48e28a18c9aca37729fe39bf858376317370722",
+          "path": "connectors/openrouter/SKILL.md",
+          "sha256": "586b28b674c212bdcc4d1c9e1e0b388bded1cf111d00274e3b14c1ac200c91a4"
+        },
+        {
+          "git_blob": "866820d0ace348ad2275cbe775b30fe8ac0761f0",
+          "path": "connectors/openrouter/bin/openrouter.py",
+          "sha256": "7ee54e4d6e88b0166b16a61a92035da05c2e8aedad9f3ebe7f13049fd4c40a49"
+        }
+      ],
+      "git_blob": "a48e28a18c9aca37729fe39bf858376317370722",
+      "path": "connectors/openrouter/SKILL.md",
+      "sha256": "586b28b674c212bdcc4d1c9e1e0b388bded1cf111d00274e3b14c1ac200c91a4"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "7abdfb966cb4ae293eb377392fae3114e119a8c0",
+          "path": "connectors/openweathermap/SKILL.md",
+          "sha256": "4552b93055ba9bc75067fdb2a2443df57494eedf9adc3b11d9bb4df2069d1752"
+        },
+        {
+          "git_blob": "b162d5ba13b997aff8db81b6618cd0bd0775c485",
+          "path": "connectors/openweathermap/bin/openweathermap.py",
+          "sha256": "73f38f0bdc33ebac67959c620805663b3f84f7bc961163a79973de779753fb25"
+        }
+      ],
+      "git_blob": "7abdfb966cb4ae293eb377392fae3114e119a8c0",
+      "path": "connectors/openweathermap/SKILL.md",
+      "sha256": "4552b93055ba9bc75067fdb2a2443df57494eedf9adc3b11d9bb4df2069d1752"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "635f1926c2a150e2d61a94c89efb6afbe0b432c4",
+          "path": "connectors/opusclip/SKILL.md",
+          "sha256": "0d40e2d93589bfccafa2ea3fa573ffd30e85a21513d04d5e248e292587133849"
+        },
+        {
+          "git_blob": "bf3b6636fe57df7f6bf2a8bc1fdcad5b34f246ea",
+          "path": "connectors/opusclip/bin/opusclip.py",
+          "sha256": "cc9150528ab246aebecbb0b96015660591d6f9796cb597d3121ab31c83500cb8"
+        }
+      ],
+      "git_blob": "635f1926c2a150e2d61a94c89efb6afbe0b432c4",
+      "path": "connectors/opusclip/SKILL.md",
+      "sha256": "0d40e2d93589bfccafa2ea3fa573ffd30e85a21513d04d5e248e292587133849"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "7120e53749abe587bdd82e47f05d3baa59d3bd07",
+          "path": "connectors/oura/SKILL.md",
+          "sha256": "eb6225b5493ad9657ee75a8ccca7fb2869ec70339e326f567116b2d86c2d1cae"
+        },
+        {
+          "git_blob": "0a03cc761a61d718714497927a85bbd4756f1153",
+          "path": "connectors/oura/bin/oura.py",
+          "sha256": "1397c8a0681ab88d4b5569d2c0982544c4a84c065e7212198e3ca7211fc840aa"
+        }
+      ],
+      "git_blob": "7120e53749abe587bdd82e47f05d3baa59d3bd07",
+      "path": "connectors/oura/SKILL.md",
+      "sha256": "eb6225b5493ad9657ee75a8ccca7fb2869ec70339e326f567116b2d86c2d1cae"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "3431b490f06b62445abe0faf30d5966748c92059",
+          "path": "connectors/paddle/SKILL.md",
+          "sha256": "264dd78e42308d7356d29419010929801020efeb181653101b994f56d8474e2e"
+        },
+        {
+          "git_blob": "78fc764002fce2bf249a4643d2dd127308eb9037",
+          "path": "connectors/paddle/bin/paddle.py",
+          "sha256": "d5351dba21470fc8d4d39f54a255ca5bb6087176ac9094593c743b57c0be7dd0"
+        }
+      ],
+      "git_blob": "3431b490f06b62445abe0faf30d5966748c92059",
+      "path": "connectors/paddle/SKILL.md",
+      "sha256": "264dd78e42308d7356d29419010929801020efeb181653101b994f56d8474e2e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "afc1a79eaab3fdabb4bc32582ab739a390338455",
+          "path": "connectors/patreon/SKILL.md",
+          "sha256": "22557068deac2713b143f74877177cd057453b2479597c6f19f0a1d267234dd4"
+        },
+        {
+          "git_blob": "94afe3c9a354bd1482a7e85899337125d8b14527",
+          "path": "connectors/patreon/bin/patreon.py",
+          "sha256": "e6f8e588f51027786e05875144dd9be53f7f28b45807ff0df0f0e1503be62e7f"
+        }
+      ],
+      "git_blob": "afc1a79eaab3fdabb4bc32582ab739a390338455",
+      "path": "connectors/patreon/SKILL.md",
+      "sha256": "22557068deac2713b143f74877177cd057453b2479597c6f19f0a1d267234dd4"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f548f43387aa9babfafd7243c0eb674dc914ff11",
+          "path": "connectors/perplexity/SKILL.md",
+          "sha256": "257e99a5772bb07d6837439f4ef7346af9754e388101eb4b69c86f8adc52ef2c"
+        },
+        {
+          "git_blob": "20603497b251c88bf0bd53e6b0ddcf7224c79b80",
+          "path": "connectors/perplexity/bin/perplexity.py",
+          "sha256": "f0da858ffcda4733855fa17b3fae95daed25507ed743d4a2457ad41b01856331"
+        }
+      ],
+      "git_blob": "f548f43387aa9babfafd7243c0eb674dc914ff11",
+      "path": "connectors/perplexity/SKILL.md",
+      "sha256": "257e99a5772bb07d6837439f4ef7346af9754e388101eb4b69c86f8adc52ef2c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "71abc4ac02394c730d6ca30a7629c2eb7db8df6c",
+          "path": "connectors/pexels/SKILL.md",
+          "sha256": "b731d845c4dbf1ff14ad5badf5cb46873017bf310c118ad5f9f75daa7dbf557c"
+        },
+        {
+          "git_blob": "530f1efcbea7740f4e1dd4bd6c41f5450c2daa8c",
+          "path": "connectors/pexels/bin/pexels.py",
+          "sha256": "70e3b9df85cff14114399c74186e52222b2f7745cb5edc958a7ba2a2b52e1b0f"
+        }
+      ],
+      "git_blob": "71abc4ac02394c730d6ca30a7629c2eb7db8df6c",
+      "path": "connectors/pexels/SKILL.md",
+      "sha256": "b731d845c4dbf1ff14ad5badf5cb46873017bf310c118ad5f9f75daa7dbf557c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "0237b6762f078ccee378e17dec14a7aec4865579",
+          "path": "connectors/philips-hue/SKILL.md",
+          "sha256": "347d76397113a36fa0e1ad8f2e964ac78a4a57002132cb7e2e30620b28fb2e08"
+        },
+        {
+          "git_blob": "9843f2c548e89b8415fff14bf194acacf0ed0bf5",
+          "path": "connectors/philips-hue/bin/philips-hue.py",
+          "sha256": "fc225d82bd29c73aa406aa16db78f9f91c597ac6f5c79368ba893f1b6145311b"
+        }
+      ],
+      "git_blob": "0237b6762f078ccee378e17dec14a7aec4865579",
+      "path": "connectors/philips-hue/SKILL.md",
+      "sha256": "347d76397113a36fa0e1ad8f2e964ac78a4a57002132cb7e2e30620b28fb2e08"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "fc4fa5487c55f40f1b2583e3219a02630e00ecbc",
+          "path": "connectors/pipedrive/SKILL.md",
+          "sha256": "988377f5fa17bb5a65d8e3275604a2860ad553c16b7c5365ba759692963d29bf"
+        },
+        {
+          "git_blob": "4f018fc20cc3741d90089b4501d3cd870134e3d4",
+          "path": "connectors/pipedrive/bin/pipedrive.py",
+          "sha256": "fc9bda40968e1c5b6f96762f1361afc4472dbe2a6c4f21b0df8ca2c0a6e251c2"
+        }
+      ],
+      "git_blob": "fc4fa5487c55f40f1b2583e3219a02630e00ecbc",
+      "path": "connectors/pipedrive/SKILL.md",
+      "sha256": "988377f5fa17bb5a65d8e3275604a2860ad553c16b7c5365ba759692963d29bf"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "feb29b527e09152838052a2365e5ce2d84899a74",
+          "path": "connectors/plain/SKILL.md",
+          "sha256": "05c736d75bd137d8a4ba6b33851159abed169b17bb6925b63020894d059d0ba3"
+        },
+        {
+          "git_blob": "7b30b29b33eb1a877c6b4df53d827abf27a7ad14",
+          "path": "connectors/plain/bin/plain.py",
+          "sha256": "995aca890f9a0982ec0305893e8472b8de81fee09b673320956a943c0e8461f8"
+        }
+      ],
+      "git_blob": "feb29b527e09152838052a2365e5ce2d84899a74",
+      "path": "connectors/plain/SKILL.md",
+      "sha256": "05c736d75bd137d8a4ba6b33851159abed169b17bb6925b63020894d059d0ba3"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "34006c18e9cd44036219fcfb1480e369168b92c8",
+          "path": "connectors/playht/SKILL.md",
+          "sha256": "e760236ee97fae36cf9e306a0dc0f45996d2eb7d3f2909c6af9e7bc5fd5d0242"
+        },
+        {
+          "git_blob": "21b127de1e72d2c1c9695c93d64f32bf8263a049",
+          "path": "connectors/playht/bin/playht.py",
+          "sha256": "f2046d6aed564cd85ea9aaf29a2e2465ce2eb6d4831c9026d7bb38d6e515f6a3"
+        }
+      ],
+      "git_blob": "34006c18e9cd44036219fcfb1480e369168b92c8",
+      "path": "connectors/playht/SKILL.md",
+      "sha256": "e760236ee97fae36cf9e306a0dc0f45996d2eb7d3f2909c6af9e7bc5fd5d0242"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "78059c0741e886658cd199622b3dce6cc4f4aac1",
+          "path": "connectors/podbean/SKILL.md",
+          "sha256": "c8e041d127768fe582a6cab9ff45d78a060dbe80a613d325ca9e3fa68a6d832e"
+        },
+        {
+          "git_blob": "a57b08e95bb1bcb8c686273a42fd29b818cdbae0",
+          "path": "connectors/podbean/bin/podbean.py",
+          "sha256": "70570fd85197a753299a1d79f157c55812ff6cc7391be4145072156206994db4"
+        }
+      ],
+      "git_blob": "78059c0741e886658cd199622b3dce6cc4f4aac1",
+      "path": "connectors/podbean/SKILL.md",
+      "sha256": "c8e041d127768fe582a6cab9ff45d78a060dbe80a613d325ca9e3fa68a6d832e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "03354415f975f06606ed03f54f57345d270e6498",
+          "path": "connectors/polar/SKILL.md",
+          "sha256": "b1af1e28c26fd3bf27801250e778fb21c5ef0edf3aff91f0538f8d184af8f86c"
+        },
+        {
+          "git_blob": "4383b6f1fbe30f256a9204a1640c91cf5a99fbae",
+          "path": "connectors/polar/bin/polar.py",
+          "sha256": "b8640e59904c7dfa9624ce1d8d545db98c7da5584aed69fa382a316f0aa907f4"
+        }
+      ],
+      "git_blob": "03354415f975f06606ed03f54f57345d270e6498",
+      "path": "connectors/polar/SKILL.md",
+      "sha256": "b1af1e28c26fd3bf27801250e778fb21c5ef0edf3aff91f0538f8d184af8f86c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "36ffb584daf3698194b9fd93e78dd3f988b99601",
+          "path": "connectors/polymarket/SKILL.md",
+          "sha256": "f79ab9f5890b22d9aa225e2571992ec32b9182f5369d32810501f05427419f0c"
+        },
+        {
+          "git_blob": "a288dbd70bfe28b844b812104de1867475a51dbf",
+          "path": "connectors/polymarket/bin/polymarket.py",
+          "sha256": "e0a7fdee14c708b4a6fb88353e99a3c5633e04eee370adee943f8ae553a10af1"
+        }
+      ],
+      "git_blob": "36ffb584daf3698194b9fd93e78dd3f988b99601",
+      "path": "connectors/polymarket/SKILL.md",
+      "sha256": "f79ab9f5890b22d9aa225e2571992ec32b9182f5369d32810501f05427419f0c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "879cdadc05c85bbcd98bf8011ba58c3bc06584e2",
+          "path": "connectors/posthog/SKILL.md",
+          "sha256": "2ddd58579d44b64c3a700af2a5ace4db9fc3fcd8c8b4adc7454c3dfb99dc804a"
+        },
+        {
+          "git_blob": "0e243445245280cd0d0e4d1fbac32e7eb81ad676",
+          "path": "connectors/posthog/bin/posthog.py",
+          "sha256": "0f0e9d7c45751870649bfe148dcf9a092e5064a936eefd4cb93f93db3dbffab0"
+        }
+      ],
+      "git_blob": "879cdadc05c85bbcd98bf8011ba58c3bc06584e2",
+      "path": "connectors/posthog/SKILL.md",
+      "sha256": "2ddd58579d44b64c3a700af2a5ace4db9fc3fcd8c8b4adc7454c3dfb99dc804a"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f446a7b0f84527727dfe1660f09f5263a88405bf",
+          "path": "connectors/postmark/SKILL.md",
+          "sha256": "46a360bd3ab4f9c508eef3aecd65f5f081130aca7644599fe23b52dd14b1ce6d"
+        },
+        {
+          "git_blob": "65c67f00be39e435fb97f401e98cc96d74744326",
+          "path": "connectors/postmark/bin/postmark.py",
+          "sha256": "3ff8eeb99eaae0a90c717cc23a016cd049a41712f8ab9b56af8ac554225ddf64"
+        }
+      ],
+      "git_blob": "f446a7b0f84527727dfe1660f09f5263a88405bf",
+      "path": "connectors/postmark/SKILL.md",
+      "sha256": "46a360bd3ab4f9c508eef3aecd65f5f081130aca7644599fe23b52dd14b1ce6d"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1b63420b079657faf44a907b74d91a9074992efb",
+          "path": "connectors/printful/SKILL.md",
+          "sha256": "ac2f73e7a2e0bd9892e080f68d5001ddc290d63ee487b4a3e84b82c7028f6874"
+        },
+        {
+          "git_blob": "b7f4ab0399d3a6d241d72b5bc6990b676a39f829",
+          "path": "connectors/printful/bin/printful.py",
+          "sha256": "c79d21417aacaf230d994c68bcc2fec52569d21c514f5bc5fd27d74ea8ea9e7d"
+        }
+      ],
+      "git_blob": "1b63420b079657faf44a907b74d91a9074992efb",
+      "path": "connectors/printful/SKILL.md",
+      "sha256": "ac2f73e7a2e0bd9892e080f68d5001ddc290d63ee487b4a3e84b82c7028f6874"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1c8ff57b6c602006bbf67ea6d390dfebfc0a7eca",
+          "path": "connectors/prusa-connect/SKILL.md",
+          "sha256": "5ad82376fe66ba32ecb5bfa6668f91fd0ea5e584337f4e6fb2942a4dd40180c4"
+        },
+        {
+          "git_blob": "11584484f14bc9381ceb5626254bcf9aca255c82",
+          "path": "connectors/prusa-connect/bin/prusa-connect.py",
+          "sha256": "c13bbbb824afe757d5756feeee09efcc846ae1c54a2acecdb9a46e3a6efa4df8"
+        }
+      ],
+      "git_blob": "1c8ff57b6c602006bbf67ea6d390dfebfc0a7eca",
+      "path": "connectors/prusa-connect/SKILL.md",
+      "sha256": "5ad82376fe66ba32ecb5bfa6668f91fd0ea5e584337f4e6fb2942a4dd40180c4"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "2db7863dab6945cc34d0ac362ccce09894590c6b",
+          "path": "connectors/rachio/SKILL.md",
+          "sha256": "77bc4383001691746ed317db4439464b0b5d8c86225b6eec1adb3ad5a6a5e348"
+        },
+        {
+          "git_blob": "00973a85959a56ea9d24e8bb28ad9b5060682af6",
+          "path": "connectors/rachio/bin/rachio.py",
+          "sha256": "32dec4aceec7ae0b71025b964244c31a90f0a3b7fe3b85bfdef607885da6d170"
+        }
+      ],
+      "git_blob": "2db7863dab6945cc34d0ac362ccce09894590c6b",
+      "path": "connectors/rachio/SKILL.md",
+      "sha256": "77bc4383001691746ed317db4439464b0b5d8c86225b6eec1adb3ad5a6a5e348"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "588c27d7797f1ca02fa1312ca762916513862a25",
+          "path": "connectors/railway/SKILL.md",
+          "sha256": "d0ee660bb8a498334bffb297084e39dc8099797cc615db284026ddf67c506910"
+        },
+        {
+          "git_blob": "a4b0e799145c5aa4c4cca7804f2feb255d08d585",
+          "path": "connectors/railway/bin/railway.py",
+          "sha256": "9b3d32e80500b2b12d31eca0e6a82a93d4e3fdae46eb5bb796214c025f9a9c4c"
+        }
+      ],
+      "git_blob": "588c27d7797f1ca02fa1312ca762916513862a25",
+      "path": "connectors/railway/SKILL.md",
+      "sha256": "d0ee660bb8a498334bffb297084e39dc8099797cc615db284026ddf67c506910"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "0689ff4d09e31053ded883aa0e32c34db9f9fc23",
+          "path": "connectors/ramp/SKILL.md",
+          "sha256": "aa0e5810a22e93abd028af124ccca4fe2c724565df05bba0b412a9319f7d0c23"
+        },
+        {
+          "git_blob": "04b252a617ecbee88f191e6d34e9f2851887c38c",
+          "path": "connectors/ramp/bin/ramp.py",
+          "sha256": "9d3ddfeb99a261829fc126f16422f95f050e6b979f953e07eb044c96f4514b48"
+        }
+      ],
+      "git_blob": "0689ff4d09e31053ded883aa0e32c34db9f9fc23",
+      "path": "connectors/ramp/SKILL.md",
+      "sha256": "aa0e5810a22e93abd028af124ccca4fe2c724565df05bba0b412a9319f7d0c23"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "95247c06370b76be4950a45360ed8f8c0a135420",
+          "path": "connectors/readwise/SKILL.md",
+          "sha256": "f6c94962026ca42102e43accddb16a4bc626184818c09dc4646076278942d6ee"
+        },
+        {
+          "git_blob": "9d7d6fa8f3e2db8067388582a2bda80e8421f30e",
+          "path": "connectors/readwise/bin/readwise.py",
+          "sha256": "50ff9b6c18d66399a6329169d3ace846e24e32116b1ae6e72c3414be606efb82"
+        }
+      ],
+      "git_blob": "95247c06370b76be4950a45360ed8f8c0a135420",
+      "path": "connectors/readwise/SKILL.md",
+      "sha256": "f6c94962026ca42102e43accddb16a4bc626184818c09dc4646076278942d6ee"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "07cb0e179865a18caf3d79ce3ad9b2114ae2805f",
+          "path": "connectors/remove-bg/SKILL.md",
+          "sha256": "288c9ecdaf854159eb420cb24966764208f46b7f2dbfc4611f6d46cd468c5f63"
+        },
+        {
+          "git_blob": "c223eab693b8d410247501f598a43b7f328152e3",
+          "path": "connectors/remove-bg/bin/remove-bg.py",
+          "sha256": "15841ebe06df20affdc404c40f3800ca8137822c414686c34ee4202e78bdd835"
+        }
+      ],
+      "git_blob": "07cb0e179865a18caf3d79ce3ad9b2114ae2805f",
+      "path": "connectors/remove-bg/SKILL.md",
+      "sha256": "288c9ecdaf854159eb420cb24966764208f46b7f2dbfc4611f6d46cd468c5f63"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "9a727f08c69070c1f8ff956efda27cab4f790360",
+          "path": "connectors/render/SKILL.md",
+          "sha256": "51d2a3cd3af63f18e3f2adce40d16eabf680b42da8df5c4499563a6ab7ad16b8"
+        },
+        {
+          "git_blob": "c381b958199531014ac43c8ccf4e70a51d1e72cf",
+          "path": "connectors/render/bin/render.py",
+          "sha256": "48b64b85bfe56ca51da15715de75845c6c68a2d86957471386c596b7365f267c"
+        }
+      ],
+      "git_blob": "9a727f08c69070c1f8ff956efda27cab4f790360",
+      "path": "connectors/render/SKILL.md",
+      "sha256": "51d2a3cd3af63f18e3f2adce40d16eabf680b42da8df5c4499563a6ab7ad16b8"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "c72549d86efd3a6ceddfce5c95513e9db54788c5",
+          "path": "connectors/replicate/SKILL.md",
+          "sha256": "d15f92d0c89bcaaa42f213466e92b005dadf48c88fc3b4a12634a1b3e93f30bc"
+        },
+        {
+          "git_blob": "ac0028bf1fa0628a98f8c84a291a0600e81a3c37",
+          "path": "connectors/replicate/bin/replicate.py",
+          "sha256": "9d2352a957cf244d29e9373c6d9c1e396d8ab94e76313f5b775e07795988ba7f"
+        }
+      ],
+      "git_blob": "c72549d86efd3a6ceddfce5c95513e9db54788c5",
+      "path": "connectors/replicate/SKILL.md",
+      "sha256": "d15f92d0c89bcaaa42f213466e92b005dadf48c88fc3b4a12634a1b3e93f30bc"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "c6b994923de2dbff1b3c3f3a4b2f81dcb6695409",
+          "path": "connectors/resend/SKILL.md",
+          "sha256": "960d817dc7e393d13aaa0df8718479e35442548065c25e4748b1b80bce1e3440"
+        },
+        {
+          "git_blob": "91f8b7b7a90496a4d7dc09c5b592f57f6f19d2a4",
+          "path": "connectors/resend/bin/resend.py",
+          "sha256": "e7b00468c589856d4880bcaca2eb49ea49735f5e1a7aad35609d8ee21d004eaf"
+        }
+      ],
+      "git_blob": "c6b994923de2dbff1b3c3f3a4b2f81dcb6695409",
+      "path": "connectors/resend/SKILL.md",
+      "sha256": "960d817dc7e393d13aaa0df8718479e35442548065c25e4748b1b80bce1e3440"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "df82712c4e47622cfa04485392d3c56dc3429b7c",
+          "path": "connectors/restream/SKILL.md",
+          "sha256": "c0996ede7538658e14e33db197347e6c3ba267ab2020cc7933eca5181da99df2"
+        },
+        {
+          "git_blob": "909003b1da1f8d7b39d0a088347a1b26b689ef7d",
+          "path": "connectors/restream/bin/restream.py",
+          "sha256": "b2330573ed721fbc0e35fda8bfb876c200debf250fc6cb0b4ef41a34ba37f364"
+        }
+      ],
+      "git_blob": "df82712c4e47622cfa04485392d3c56dc3429b7c",
+      "path": "connectors/restream/SKILL.md",
+      "sha256": "c0996ede7538658e14e33db197347e6c3ba267ab2020cc7933eca5181da99df2"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "1519704df77299e7b9838490e6e64ec04e303615",
+          "path": "connectors/runway/SKILL.md",
+          "sha256": "8c39421fb29ac897bb9edda0abd4fda090229163d7300dfca03c88856a45ee62"
+        },
+        {
+          "git_blob": "1bf413afaa08e3127ba69d0dc893218bdcdf8d8e",
+          "path": "connectors/runway/bin/runway.py",
+          "sha256": "658f3177455d79bb1c7124b648f91dc791fcd9e2a4dec7001975a93197e44aec"
+        }
+      ],
+      "git_blob": "1519704df77299e7b9838490e6e64ec04e303615",
+      "path": "connectors/runway/SKILL.md",
+      "sha256": "8c39421fb29ac897bb9edda0abd4fda090229163d7300dfca03c88856a45ee62"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "d935a447ed56176bf1b3ff40be56bc8e88d1ca40",
+          "path": "connectors/sendgrid/SKILL.md",
+          "sha256": "791d31ad3142665c1a697fe403a49da780bb860fb97989c816a755b0fbb50724"
+        },
+        {
+          "git_blob": "2487b88e9c6741a9f039eb04d5af51097a2d549e",
+          "path": "connectors/sendgrid/bin/sendgrid.py",
+          "sha256": "9082cfe3d155f0293325869c0326c125ae5000c7715d32ef161aa54102e48a73"
+        }
+      ],
+      "git_blob": "d935a447ed56176bf1b3ff40be56bc8e88d1ca40",
+      "path": "connectors/sendgrid/SKILL.md",
+      "sha256": "791d31ad3142665c1a697fe403a49da780bb860fb97989c816a755b0fbb50724"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "897e89f1b92e494a786dc75b8f9250f040a1e3c7",
+          "path": "connectors/sentry/SKILL.md",
+          "sha256": "b6712b5b07481549a7124802c0183e48bdf5aeb71029df7ab494c33f56351aff"
+        },
+        {
+          "git_blob": "89fce35b31644534a205bd210c723dcda084e114",
+          "path": "connectors/sentry/bin/sentry.py",
+          "sha256": "e02851f803fdd2e290a18ed7c9862787b19d8dc04ff38102daf9e2dc584409d6"
+        }
+      ],
+      "git_blob": "897e89f1b92e494a786dc75b8f9250f040a1e3c7",
+      "path": "connectors/sentry/SKILL.md",
+      "sha256": "b6712b5b07481549a7124802c0183e48bdf5aeb71029df7ab494c33f56351aff"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "ac0f6d33ef4a5affb4806693d9aeaf76618ef50d",
+          "path": "connectors/shippo/SKILL.md",
+          "sha256": "76ab813437b92d55678a1b9dfc621d6f6a7c9db9a7f47b4a368c3ccddfddba77"
+        },
+        {
+          "git_blob": "74fcfa2195e825f48fbe3b89f88163199cfbc2c5",
+          "path": "connectors/shippo/bin/shippo.py",
+          "sha256": "fbf053fe4dea359a34f9cc58b4080ce697f71c01aa5b3f532bb6db73245e3e78"
+        }
+      ],
+      "git_blob": "ac0f6d33ef4a5affb4806693d9aeaf76618ef50d",
+      "path": "connectors/shippo/SKILL.md",
+      "sha256": "76ab813437b92d55678a1b9dfc621d6f6a7c9db9a7f47b4a368c3ccddfddba77"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "bf9cb1bff642d52cf9b9ef428a2f60a810569621",
+          "path": "connectors/shopify/SKILL.md",
+          "sha256": "7885982ac3310a6ce2e32426e43728ed5795c64403a6bb066b40866803ccdcbb"
+        },
+        {
+          "git_blob": "0c242fb519e1fe49b2b8024da0934f9a974ea6a4",
+          "path": "connectors/shopify/bin/shopify.py",
+          "sha256": "519b0f9bb71ac221e638f0247052c5bfcc0302fb1a0e9f3770fb700cd92ea6b9"
+        }
+      ],
+      "git_blob": "bf9cb1bff642d52cf9b9ef428a2f60a810569621",
+      "path": "connectors/shopify/SKILL.md",
+      "sha256": "7885982ac3310a6ce2e32426e43728ed5795c64403a6bb066b40866803ccdcbb"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "d0bb728a2bf26b871d0aa44c1d0614de4077b886",
+          "path": "connectors/slack/SKILL.md",
+          "sha256": "ea260cfbfd54a4549d7bdb8883b2a3e7dd92d6fdfbab2d85a07a1ac71cd16bec"
+        },
+        {
+          "git_blob": "7a84c189a01a388c611d9c7509351afd63878968",
+          "path": "connectors/slack/bin/slack.py",
+          "sha256": "53143808626eae455ff68e5e345d52dc6045fb0f178e01e6ed61339acff50114"
+        }
+      ],
+      "git_blob": "d0bb728a2bf26b871d0aa44c1d0614de4077b886",
+      "path": "connectors/slack/SKILL.md",
+      "sha256": "ea260cfbfd54a4549d7bdb8883b2a3e7dd92d6fdfbab2d85a07a1ac71cd16bec"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "fcbac18b0f53fbc9ac4cf79087d71104d52bce60",
+          "path": "connectors/smartcar/SKILL.md",
+          "sha256": "e0b3f6cf75dd0747afe069f876c031adab710f5ed2b0e1066281096ae868d0c3"
+        },
+        {
+          "git_blob": "d41f120fee976a787cbe6bfcd455a3b75ed0122c",
+          "path": "connectors/smartcar/bin/smartcar.py",
+          "sha256": "911c666cc58f58e537b7bb82bdf7d05bb74ebf24dc1fc69cb98b0fcb3a89d410"
+        }
+      ],
+      "git_blob": "fcbac18b0f53fbc9ac4cf79087d71104d52bce60",
+      "path": "connectors/smartcar/SKILL.md",
+      "sha256": "e0b3f6cf75dd0747afe069f876c031adab710f5ed2b0e1066281096ae868d0c3"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "5b6a55d7e4dc035bc1889facecaac9764ba4d13c",
+          "path": "connectors/smartthings/SKILL.md",
+          "sha256": "fd32bb44ed63bb09146446cab4d38b9dc55943b44d7df6d702f278b73a1860bf"
+        },
+        {
+          "git_blob": "42a64c173d4328c696b71372ce8fa1f145261d03",
+          "path": "connectors/smartthings/bin/smartthings.py",
+          "sha256": "90a06fc13a89f00c8e4767952757788db589247916f830ad2cab5486aee70041"
+        }
+      ],
+      "git_blob": "5b6a55d7e4dc035bc1889facecaac9764ba4d13c",
+      "path": "connectors/smartthings/SKILL.md",
+      "sha256": "fd32bb44ed63bb09146446cab4d38b9dc55943b44d7df6d702f278b73a1860bf"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "63a4e40692e2b2326a35948d0d5864188143f3f2",
+          "path": "connectors/spotify/SKILL.md",
+          "sha256": "6538aa0c2d591c8258bdd63d33f49933a188d427e0385942291ac4385550582c"
+        },
+        {
+          "git_blob": "a1be117fe5e817a66a4156a76997b467803a0db0",
+          "path": "connectors/spotify/bin/spotify.py",
+          "sha256": "f1a4076b63bf40665307b5c7ff65b081246ea404fd399cba0bf2c485c9eb6d7b"
+        }
+      ],
+      "git_blob": "63a4e40692e2b2326a35948d0d5864188143f3f2",
+      "path": "connectors/spotify/SKILL.md",
+      "sha256": "6538aa0c2d591c8258bdd63d33f49933a188d427e0385942291ac4385550582c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "d12b494a96bded8bee118cad814996d96e8e1c13",
+          "path": "connectors/square/SKILL.md",
+          "sha256": "343ee17b6aef4090d86127eade241f414c8cdebb45dfb690e9bff6c73c0d1ee8"
+        },
+        {
+          "git_blob": "d04ade0799ecab99001b53ee6faaac4c362d0a4a",
+          "path": "connectors/square/bin/square.py",
+          "sha256": "fa68800bad1ae14c03410075ba277b85dbe66d9bdf37b463579a9f100b1c9753"
+        }
+      ],
+      "git_blob": "d12b494a96bded8bee118cad814996d96e8e1c13",
+      "path": "connectors/square/SKILL.md",
+      "sha256": "343ee17b6aef4090d86127eade241f414c8cdebb45dfb690e9bff6c73c0d1ee8"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "6ed8f19f6da66f340ad7cfd7572e8104ce560cec",
+          "path": "connectors/stripe/SKILL.md",
+          "sha256": "a409879c1a5b1e6c8ac03f53953be84cf464cabcd433bd014c928c3a95a0aad5"
+        },
+        {
+          "git_blob": "ad43d1d630b0133d863b3115d0206e0f25e4c45f",
+          "path": "connectors/stripe/bin/stripe.py",
+          "sha256": "80032e02f622b0d7018fca2fed1708823a3cf7fcbed3496283a582846afda910"
+        }
+      ],
+      "git_blob": "6ed8f19f6da66f340ad7cfd7572e8104ce560cec",
+      "path": "connectors/stripe/SKILL.md",
+      "sha256": "a409879c1a5b1e6c8ac03f53953be84cf464cabcd433bd014c928c3a95a0aad5"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "9826dc80b49a2689fb0f7ff4e6fdd08a5f3230c9",
+          "path": "connectors/supabase/SKILL.md",
+          "sha256": "8f5febb2d53da92a2406f1569f6b4c8d78883fa8e907f21209406440f172627d"
+        },
+        {
+          "git_blob": "8d973036a8d58e12750fc0c40ff32dec559ae271",
+          "path": "connectors/supabase/bin/supabase.py",
+          "sha256": "5afb7d997eb00b4319c1dd3b95a84f7f77044e881a2b7b996d1979634973537c"
+        }
+      ],
+      "git_blob": "9826dc80b49a2689fb0f7ff4e6fdd08a5f3230c9",
+      "path": "connectors/supabase/SKILL.md",
+      "sha256": "8f5febb2d53da92a2406f1569f6b4c8d78883fa8e907f21209406440f172627d"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "d67616ed31fc6251468ba84fe333d0cdf9934420",
+          "path": "connectors/supermemory/SKILL.md",
+          "sha256": "7cba66775cd5cda73dec79d3ead28c1be426a3d141a1c2957cba0660bc845e5c"
+        },
+        {
+          "git_blob": "bcd481ced0f00de3ea2c38776fc4e9645dced194",
+          "path": "connectors/supermemory/bin/supermemory.py",
+          "sha256": "9a74c1da89b97e39152cfdc16d248a1e0ba02b76f28d8d75d98bb417f1ed5951"
+        }
+      ],
+      "git_blob": "d67616ed31fc6251468ba84fe333d0cdf9934420",
+      "path": "connectors/supermemory/SKILL.md",
+      "sha256": "7cba66775cd5cda73dec79d3ead28c1be426a3d141a1c2957cba0660bc845e5c"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "59a8096dd1c2987ccf222ee67b48357e4bbcbe2e",
+          "path": "connectors/switchbot/SKILL.md",
+          "sha256": "25fd6023a503e0f3faa9dfc83b372298820bf0de4b7b909fc76eb9a0ad8d06b9"
+        },
+        {
+          "git_blob": "8298201057e63ba9e87111adc7b8ebcca03f6494",
+          "path": "connectors/switchbot/bin/switchbot.py",
+          "sha256": "def8117edbf2266c5a2245fc37b1003b11cfaf891869ab05f049efdce4bf0462"
+        }
+      ],
+      "git_blob": "59a8096dd1c2987ccf222ee67b48357e4bbcbe2e",
+      "path": "connectors/switchbot/SKILL.md",
+      "sha256": "25fd6023a503e0f3faa9dfc83b372298820bf0de4b7b909fc76eb9a0ad8d06b9"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "0881959dd4be1da0b48c21a2a43eabdc6e4cc26e",
+          "path": "connectors/tally/SKILL.md",
+          "sha256": "a59c18d02caaf2aeaa27039b445534224513d7ef19a7ad65d086efb54bad1f16"
+        },
+        {
+          "git_blob": "ca5a6c1633b25f6835f54842ae00d08ceb33a906",
+          "path": "connectors/tally/bin/tally.py",
+          "sha256": "d3a267d4bfa5c561bf3bab1f30e538ed5235f00657eae462164684113d74a726"
+        }
+      ],
+      "git_blob": "0881959dd4be1da0b48c21a2a43eabdc6e4cc26e",
+      "path": "connectors/tally/SKILL.md",
+      "sha256": "a59c18d02caaf2aeaa27039b445534224513d7ef19a7ad65d086efb54bad1f16"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "09e8084a428114bb004f5032eee63d595f1ac3ea",
+          "path": "connectors/tavily/SKILL.md",
+          "sha256": "b7d077e4730b3fae45419d3d7c6fefcbd6c33794c31ad6188afbc17394da2b92"
+        },
+        {
+          "git_blob": "d09ca41ba235d712e819e39802709bb562734446",
+          "path": "connectors/tavily/bin/tavily.py",
+          "sha256": "c1f7dfbf8f4bad803d19953deaedbe2b19eb84fb6fc8761e4327e1cbab0b1bf2"
+        }
+      ],
+      "git_blob": "09e8084a428114bb004f5032eee63d595f1ac3ea",
+      "path": "connectors/tavily/SKILL.md",
+      "sha256": "b7d077e4730b3fae45419d3d7c6fefcbd6c33794c31ad6188afbc17394da2b92"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "d85106eeec0a0074c5731db78695b5b5ab7571f9",
+          "path": "connectors/telegram/SKILL.md",
+          "sha256": "59b255675aae0f465bf39e5bccd8018d0504fa22622d1ab90e21301e59d140a6"
+        },
+        {
+          "git_blob": "42c3c04fe327dc3b43e4339cc6a410be64543798",
+          "path": "connectors/telegram/bin/telegram.py",
+          "sha256": "46d5ddc79f78107e7aae2f93e4b3cfe8f496be1f99896a66f7bab38dd774413c"
+        }
+      ],
+      "git_blob": "d85106eeec0a0074c5731db78695b5b5ab7571f9",
+      "path": "connectors/telegram/SKILL.md",
+      "sha256": "59b255675aae0f465bf39e5bccd8018d0504fa22622d1ab90e21301e59d140a6"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "89dab5ccdfe5aaba2cfa1bbce1cb65127be15565",
+          "path": "connectors/tesla-fleet-api/SKILL.md",
+          "sha256": "f09c1d2b9c27e77135d4bfc9c3c9525dc9d124603abe07a7c81d954ce6376b62"
+        },
+        {
+          "git_blob": "1cdd975093c102f4a5e1e81cd0c373ee787e51af",
+          "path": "connectors/tesla-fleet-api/bin/tesla-fleet-api.py",
+          "sha256": "692f234af397f0cb584d224420195814c4da0d715fe7da362d8a8b5c7cef2e70"
+        }
+      ],
+      "git_blob": "89dab5ccdfe5aaba2cfa1bbce1cb65127be15565",
+      "path": "connectors/tesla-fleet-api/SKILL.md",
+      "sha256": "f09c1d2b9c27e77135d4bfc9c3c9525dc9d124603abe07a7c81d954ce6376b62"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "c3f8f2e6234594e1978d62a45ef16169e814c697",
+          "path": "connectors/tesla-powerwall/SKILL.md",
+          "sha256": "1eb6fcebd00b4fbf926a504bfc89669658614ea112fbd7aeecbb7e016575c3b4"
+        },
+        {
+          "git_blob": "0c0704753fe04e53fbe2d22157134efd8ddbf98a",
+          "path": "connectors/tesla-powerwall/bin/tesla-powerwall.py",
+          "sha256": "fe5416bd622b5a9ad402a58e876264c0d706fbb8dab1acc406e3417fca4fa892"
+        }
+      ],
+      "git_blob": "c3f8f2e6234594e1978d62a45ef16169e814c697",
+      "path": "connectors/tesla-powerwall/SKILL.md",
+      "sha256": "1eb6fcebd00b4fbf926a504bfc89669658614ea112fbd7aeecbb7e016575c3b4"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "dc3346d19a440fe1fdb6a8f5abcf22aeeb20f380",
+          "path": "connectors/ticktick/SKILL.md",
+          "sha256": "166f3e63e486b940a795b073e6ac273614c80fbd752f06188062b265ac1e9428"
+        },
+        {
+          "git_blob": "2f63bc5575665335f8d2057285347ecfd9c12993",
+          "path": "connectors/ticktick/bin/ticktick.py",
+          "sha256": "4ce138509a36b1825f45cf8c20a8bdabf0aeee34f00362056b3a57328e4ab3b5"
+        }
+      ],
+      "git_blob": "dc3346d19a440fe1fdb6a8f5abcf22aeeb20f380",
+      "path": "connectors/ticktick/SKILL.md",
+      "sha256": "166f3e63e486b940a795b073e6ac273614c80fbd752f06188062b265ac1e9428"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "4e5d30872fad1dbe9c80971d349ac73ca7d3ecb6",
+          "path": "connectors/tiktok/SKILL.md",
+          "sha256": "c2791943b7b2bbaffc80ce9d22c73d9787ed3ab1b83f73c45c443e94844a7fcd"
+        },
+        {
+          "git_blob": "6f8564e283bd4d049dc97170bcbe24fc3c29f91d",
+          "path": "connectors/tiktok/bin/tiktok.py",
+          "sha256": "a5e34eff9698db696aaefd4fc5fc9ce8d810bdc3471d7f1f917f70c5ec799c64"
+        }
+      ],
+      "git_blob": "4e5d30872fad1dbe9c80971d349ac73ca7d3ecb6",
+      "path": "connectors/tiktok/SKILL.md",
+      "sha256": "c2791943b7b2bbaffc80ce9d22c73d9787ed3ab1b83f73c45c443e94844a7fcd"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "707fc26b7737818cb504a1dfc0813d3aa3a2091d",
+          "path": "connectors/todoist/SKILL.md",
+          "sha256": "a46188f139c8bf12fc4f5bbb1187df7c4e8c0a5c799036b324a5a2affd99d928"
+        },
+        {
+          "git_blob": "17562aaf7ac264719812a575618b250b03077eff",
+          "path": "connectors/todoist/bin/todoist.py",
+          "sha256": "077ebb95adad918185b77b68983a04fceb4ba0af4468938a87941d880faaaee0"
+        }
+      ],
+      "git_blob": "707fc26b7737818cb504a1dfc0813d3aa3a2091d",
+      "path": "connectors/todoist/SKILL.md",
+      "sha256": "a46188f139c8bf12fc4f5bbb1187df7c4e8c0a5c799036b324a5a2affd99d928"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a7931df592a33d2b783bcdf4aac3e32ac01a0a21",
+          "path": "connectors/transistor/SKILL.md",
+          "sha256": "cac3a633f1904e950e56310ae6b08409ddea1f3b215802a480d5fba136eda45e"
+        },
+        {
+          "git_blob": "6ced6e5211126d317874354c304d48a1b021f645",
+          "path": "connectors/transistor/bin/transistor.py",
+          "sha256": "1d967a10a1e13c8f93e91729b80421d2184d6c3a1bb8eccb8d0e1e33d46cdab6"
+        }
+      ],
+      "git_blob": "a7931df592a33d2b783bcdf4aac3e32ac01a0a21",
+      "path": "connectors/transistor/SKILL.md",
+      "sha256": "cac3a633f1904e950e56310ae6b08409ddea1f3b215802a480d5fba136eda45e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f51f2d078cdf36d69347029968d7aa5364dc83a0",
+          "path": "connectors/triggerdev/SKILL.md",
+          "sha256": "6fe5de48d148e0064a5d5545705d2fdd74cef9ef50ca33e2f4eca9b38c4fba47"
+        },
+        {
+          "git_blob": "1e4da4d9d7e3f58f2f27371418d0e4391f6a0d0e",
+          "path": "connectors/triggerdev/bin/triggerdev.py",
+          "sha256": "781eeaa13e7816b45ccfe556a4165aa1569aee692136d6b4d73cdeae9caacc7f"
+        }
+      ],
+      "git_blob": "f51f2d078cdf36d69347029968d7aa5364dc83a0",
+      "path": "connectors/triggerdev/SKILL.md",
+      "sha256": "6fe5de48d148e0064a5d5545705d2fdd74cef9ef50ca33e2f4eca9b38c4fba47"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "02026a350c8f6ea488231d5f9b966f49937c39bf",
+          "path": "connectors/tuya/SKILL.md",
+          "sha256": "1719d3e38c1d2cb64a9be67fa047bbb7edb0892a3bd4dde17230d2090c260d22"
+        },
+        {
+          "git_blob": "b2ee5450cf404c0ac19bf0adc6ceb50ae21f2571",
+          "path": "connectors/tuya/bin/tuya.py",
+          "sha256": "14e1ef6adbb13ba7109ccc40068334afb1bb4b01d52830879c36b0b62d7b0fb2"
+        }
+      ],
+      "git_blob": "02026a350c8f6ea488231d5f9b966f49937c39bf",
+      "path": "connectors/tuya/SKILL.md",
+      "sha256": "1719d3e38c1d2cb64a9be67fa047bbb7edb0892a3bd4dde17230d2090c260d22"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "e66cf53fd30edb76d34717f6cd65b427f6fb12ee",
+          "path": "connectors/twitch/SKILL.md",
+          "sha256": "e4530a86c77caca5cf93c00a67b7509f98eee5d761b04347fe4dcc88a618256e"
+        },
+        {
+          "git_blob": "6ddea218881df061769330a9d964b521c28dc4bb",
+          "path": "connectors/twitch/bin/twitch.py",
+          "sha256": "ab9628eedfd987315df1ff31ae2a757324bafda0afea70bbd5bd944564db00c5"
+        }
+      ],
+      "git_blob": "e66cf53fd30edb76d34717f6cd65b427f6fb12ee",
+      "path": "connectors/twitch/SKILL.md",
+      "sha256": "e4530a86c77caca5cf93c00a67b7509f98eee5d761b04347fe4dcc88a618256e"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a30c4119071563eec05a0264110d03f091fe19da",
+          "path": "connectors/typeform/SKILL.md",
+          "sha256": "46c4618b06a6a18f79e4e0eb5175b4ee0fc9057bee424c861628cf47d19059dc"
+        },
+        {
+          "git_blob": "a85ab1c35005c1d7eadd640294bcd32ce7c6c136",
+          "path": "connectors/typeform/bin/typeform.py",
+          "sha256": "53f2ea3a4dd70f3cf1e4e999686f79230a5954c224995faa98bafa0470607874"
+        }
+      ],
+      "git_blob": "a30c4119071563eec05a0264110d03f091fe19da",
+      "path": "connectors/typeform/SKILL.md",
+      "sha256": "46c4618b06a6a18f79e4e0eb5175b4ee0fc9057bee424c861628cf47d19059dc"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "72428be2a74f898bc06d4d5d166013cbd2f9ba19",
+          "path": "connectors/uber-direct/SKILL.md",
+          "sha256": "ec75b8e0b9dca433dfd967fc609d2bd239964f02f77629b2fb4621dbd07bb30b"
+        },
+        {
+          "git_blob": "8752ff6e62fafd2c1bf3af1ee46a32822399718c",
+          "path": "connectors/uber-direct/bin/uber-direct.py",
+          "sha256": "5d34c93ccbb3ed8ec9b950abb56670b2503dec5fef812e8ef32f9b79eed93207"
+        }
+      ],
+      "git_blob": "72428be2a74f898bc06d4d5d166013cbd2f9ba19",
+      "path": "connectors/uber-direct/SKILL.md",
+      "sha256": "ec75b8e0b9dca433dfd967fc609d2bd239964f02f77629b2fb4621dbd07bb30b"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a2626a1dc7c3d8cd840ceb898dcbcf73c9492ad0",
+          "path": "connectors/unifi-protect/SKILL.md",
+          "sha256": "6ddcffc3dbd6af06e01629b999769197fd9bc278a8379c89e7f9947a5743d4d9"
+        },
+        {
+          "git_blob": "d44a5d73abe95cedd60819ae8e9f5db3d0d9da33",
+          "path": "connectors/unifi-protect/bin/unifi-protect.py",
+          "sha256": "eb3b5e5aa976322037da86de0b400530c7d30171e97e939e5044b8038432481b"
+        }
+      ],
+      "git_blob": "a2626a1dc7c3d8cd840ceb898dcbcf73c9492ad0",
+      "path": "connectors/unifi-protect/SKILL.md",
+      "sha256": "6ddcffc3dbd6af06e01629b999769197fd9bc278a8379c89e7f9947a5743d4d9"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "99efc309d74c8b14f98fb907b52f6ef67f490617",
+          "path": "connectors/unsplash/SKILL.md",
+          "sha256": "bef988c8e511d99cda2ec598027e3d76944a289b3c63803d4023ade67a35feaa"
+        },
+        {
+          "git_blob": "06d7f563a207d9f1d1bfe1108830c5cc21b27171",
+          "path": "connectors/unsplash/bin/unsplash.py",
+          "sha256": "83e2418e044dad45423469465c1ee8bf749b6a4dea1a35868db777fbda52c2cd"
+        }
+      ],
+      "git_blob": "99efc309d74c8b14f98fb907b52f6ef67f490617",
+      "path": "connectors/unsplash/SKILL.md",
+      "sha256": "bef988c8e511d99cda2ec598027e3d76944a289b3c63803d4023ade67a35feaa"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "560ca61b0f97f5a2c3eb4a3e6ca37c95c803fa0d",
+          "path": "connectors/upstash/SKILL.md",
+          "sha256": "6a738367890c5c20555179b8a15f47e6753f1f7dd0a5fa0c7f67745c285041c6"
+        },
+        {
+          "git_blob": "994d0e7c1188ef83fff27f574c0f32831c6ae48f",
+          "path": "connectors/upstash/bin/upstash.py",
+          "sha256": "8a2af9f0c25d9aa09448aa92332d46fca4f97ba48abc7067a5919ce3d1b09f00"
+        }
+      ],
+      "git_blob": "560ca61b0f97f5a2c3eb4a3e6ca37c95c803fa0d",
+      "path": "connectors/upstash/SKILL.md",
+      "sha256": "6a738367890c5c20555179b8a15f47e6753f1f7dd0a5fa0c7f67745c285041c6"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "823370e17f47eadca39046b5bbacbb48ee545242",
+          "path": "connectors/vapi/SKILL.md",
+          "sha256": "160f8e28b188dc01fa96a0053f17082e8bc348464905a40f3ba4949ab3eee375"
+        },
+        {
+          "git_blob": "332378f92d376bb54a6fbfdd456dbd14b46dc9fe",
+          "path": "connectors/vapi/bin/vapi.py",
+          "sha256": "c2ef33b6cbea683ea16a3528e2a0220f4b1bcf56735135ad52d027d962f2b9c4"
+        }
+      ],
+      "git_blob": "823370e17f47eadca39046b5bbacbb48ee545242",
+      "path": "connectors/vapi/SKILL.md",
+      "sha256": "160f8e28b188dc01fa96a0053f17082e8bc348464905a40f3ba4949ab3eee375"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "95391ba90dc1e0af45af1b3e98c54b0be8bc544c",
+          "path": "connectors/veed/SKILL.md",
+          "sha256": "7a07eb05cf24134860285de7e144b6a4f50b1344e6a83d6df0234b2e703d95d8"
+        },
+        {
+          "git_blob": "d766b46464bb6d73820d35e232c12ae2701b9bae",
+          "path": "connectors/veed/bin/veed.py",
+          "sha256": "06c505a501e2bf32424ebb9465daf02a6fceedd1a29fac676ba265c5f8e59c88"
+        }
+      ],
+      "git_blob": "95391ba90dc1e0af45af1b3e98c54b0be8bc544c",
+      "path": "connectors/veed/SKILL.md",
+      "sha256": "7a07eb05cf24134860285de7e144b6a4f50b1344e6a83d6df0234b2e703d95d8"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "dcf7f5cf7d3d5dc22186a4bc707c1602c0dfdbe4",
+          "path": "connectors/vercel/SKILL.md",
+          "sha256": "764ad8cdd6d39f89e11c3a2ef805afe5fb449014a20b7f86be42293d4115baac"
+        },
+        {
+          "git_blob": "722ff8d1c95da96f5ca1c10301c7452ce26d7ad0",
+          "path": "connectors/vercel/bin/vercel.py",
+          "sha256": "3aa1bafc6cf0a943be9153bc135e02716a58f81e7f05bf2ec219632384e6d59a"
+        }
+      ],
+      "git_blob": "dcf7f5cf7d3d5dc22186a4bc707c1602c0dfdbe4",
+      "path": "connectors/vercel/SKILL.md",
+      "sha256": "764ad8cdd6d39f89e11c3a2ef805afe5fb449014a20b7f86be42293d4115baac"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "131e8f810cd22b7a1a02587edcb0ffaa1ae78ad2",
+          "path": "connectors/wa2agent/SKILL.md",
+          "sha256": "6021d4bb74c67fbb12dc3dc0379de695149e8a17f071401ef2dca6f777f093e2"
+        },
+        {
+          "git_blob": "5b6aef2ea65b51ff332f56c19ff28e27f5cce040",
+          "path": "connectors/wa2agent/bin/wa2agent.py",
+          "sha256": "282af47472d679f8046401852a759cebb832f7fe58b2a09d4ea3e3caf5fd8cb3"
+        }
+      ],
+      "git_blob": "131e8f810cd22b7a1a02587edcb0ffaa1ae78ad2",
+      "path": "connectors/wa2agent/SKILL.md",
+      "sha256": "6021d4bb74c67fbb12dc3dc0379de695149e8a17f071401ef2dca6f777f093e2"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "eeb9bc72859b9dae82d38e22423f8882a0ad6752",
+          "path": "connectors/webflow/SKILL.md",
+          "sha256": "0ccde645215faccc47605dbb3f0cb0c0b702629783979d9a2b62b2d51ff66acb"
+        },
+        {
+          "git_blob": "76f0a20ad0f19c887f92dd3858368ee76e033241",
+          "path": "connectors/webflow/bin/webflow.py",
+          "sha256": "304da6a84b93f9e1319d9587a2cbf8d89455a0017a7e611416eac801759af0d9"
+        }
+      ],
+      "git_blob": "eeb9bc72859b9dae82d38e22423f8882a0ad6752",
+      "path": "connectors/webflow/SKILL.md",
+      "sha256": "0ccde645215faccc47605dbb3f0cb0c0b702629783979d9a2b62b2d51ff66acb"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "af01e89434510b0da50364b14918335cfdd7ac54",
+          "path": "connectors/wise/SKILL.md",
+          "sha256": "2a825e73689c6e7c2bd4d6e325107e6d2192c0c10cfd829b04a5612f0f7689cc"
+        },
+        {
+          "git_blob": "bdae304b9f4942e7e3c19e9218fb93e3c6fb1a90",
+          "path": "connectors/wise/bin/wise.py",
+          "sha256": "14fc85fb6af1cf3373efbad58b690f785cfc244ae9ad13be4415791b795edeec"
+        }
+      ],
+      "git_blob": "af01e89434510b0da50364b14918335cfdd7ac54",
+      "path": "connectors/wise/SKILL.md",
+      "sha256": "2a825e73689c6e7c2bd4d6e325107e6d2192c0c10cfd829b04a5612f0f7689cc"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "6a1e1d470861ed9a573e683ccf35c63b81c95267",
+          "path": "connectors/x/SKILL.md",
+          "sha256": "0d6d7423c7c50cab30a97f6ad72a3519bf933fe166b2e5c313e38a39b5e48b34"
+        },
+        {
+          "git_blob": "438e903c907a7dab328ff44e9690a58726a46e6c",
+          "path": "connectors/x/bin/x.py",
+          "sha256": "2879a239770d05bc587575be00c160d4d4508ebd3369bcca3c8fada2a8fc8e32"
+        }
+      ],
+      "git_blob": "6a1e1d470861ed9a573e683ccf35c63b81c95267",
+      "path": "connectors/x/SKILL.md",
+      "sha256": "0d6d7423c7c50cab30a97f6ad72a3519bf933fe166b2e5c313e38a39b5e48b34"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "f708d6283162382368424f232f8e0282c5157bce",
+          "path": "connectors/xai/SKILL.md",
+          "sha256": "dd6bc77111221d2e0889b7b8ca3d23b1015a4903db5b8bc028ae58cdc24419b9"
+        },
+        {
+          "git_blob": "c966b2824d95e4ee96eca9117b47d2aa3b6cee7d",
+          "path": "connectors/xai/bin/xai.py",
+          "sha256": "b5c49428ed7fe2f7eb9a1a29cd53c8720b136492b0debd0e664c5544a414ef25"
+        }
+      ],
+      "git_blob": "f708d6283162382368424f232f8e0282c5157bce",
+      "path": "connectors/xai/SKILL.md",
+      "sha256": "dd6bc77111221d2e0889b7b8ca3d23b1015a4903db5b8bc028ae58cdc24419b9"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "ea4eb99955d34238526bf5686f7225c260c58fa0",
+          "path": "connectors/ynab/SKILL.md",
+          "sha256": "5f205d1878f573ef0ba3c3f1859eedf8340c854ffbaadca7ce5cd7b38c9eed2f"
+        },
+        {
+          "git_blob": "70a7ce02d96cbd99f64639608b589a0e9b996b2c",
+          "path": "connectors/ynab/bin/ynab.py",
+          "sha256": "50511752ef310a980af7376286a396bd77512491dbef8d2cc47a821a108a2ec9"
+        }
+      ],
+      "git_blob": "ea4eb99955d34238526bf5686f7225c260c58fa0",
+      "path": "connectors/ynab/SKILL.md",
+      "sha256": "5f205d1878f573ef0ba3c3f1859eedf8340c854ffbaadca7ce5cd7b38c9eed2f"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "a37c1f51fd98c1803bcb3f9b7dbf014695c66be5",
+          "path": "connectors/youtube/SKILL.md",
+          "sha256": "f6d723ba15b230c9eb44208f389c146662db8bfacd0b23320f50ca6ab1a6bac1"
+        },
+        {
+          "git_blob": "94f8cc14f09fbeca55fae9ae118955c29caee097",
+          "path": "connectors/youtube/bin/youtube.py",
+          "sha256": "2cdef4e6e0f52e97503712e4abeec63f953311f85d96d53ae7b87fba168086cb"
+        }
+      ],
+      "git_blob": "a37c1f51fd98c1803bcb3f9b7dbf014695c66be5",
+      "path": "connectors/youtube/SKILL.md",
+      "sha256": "f6d723ba15b230c9eb44208f389c146662db8bfacd0b23320f50ca6ab1a6bac1"
+    },
+    {
+      "files": [
+        {
+          "git_blob": "59ef52cc4a52ed2fb70526d7cb02bc54e4950492",
+          "path": "connectors/zep/SKILL.md",
+          "sha256": "a558e1f85e9373c4ad622188d48821573554ecba63a3df7e5cd70ee085a8fe38"
+        },
+        {
+          "git_blob": "8d998dc3a8c1c1e58da9e1928fe5c76cf4446e17",
+          "path": "connectors/zep/bin/zep.py",
+          "sha256": "31bde0d6931966b518eef256b481eac239e1fb93416c4ecf8612c18cedcc304a"
+        }
+      ],
+      "git_blob": "59ef52cc4a52ed2fb70526d7cb02bc54e4950492",
+      "path": "connectors/zep/SKILL.md",
+      "sha256": "a558e1f85e9373c4ad622188d48821573554ecba63a3df7e5cd70ee085a8fe38"
+    }
+  ],
+  "schema": "connector-source-records/v1"
+}

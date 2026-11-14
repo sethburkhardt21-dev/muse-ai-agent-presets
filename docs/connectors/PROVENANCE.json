@@ -1,0 +1,14 @@
+{
+  "connector_code_vendored": false,
+  "connector_count": 151,
+  "distributed_files": {
+    "docs/connectors/SOURCE_RECORDS.json": "5836d82bb6d9820dee844c3b2180bd7f3a9931fc470c0ee912f4ae1c300578a5",
+    "docs/connectors/UPSTREAM_LICENSE.txt": "d7e4051c04da81a0e239b1f6c0ef9f1a6eab4d249ee7be463cb106bc6a24b0ac",
+    "docs/connectors/catalog.json": "120aa8a258129b011953644c933ca33263b44a29f64f9ed849f405b42faae367",
+    "docs/connectors/upstream-catalog.json": "9b5f998d4c696feb59674a6e4808bd710b3ae75a92374c393723922ec524f3ff"
+  },
+  "schema": "muse-connector-catalog-provenance/v1",
+  "source_commit": "73f302c2d8569fdc65e0e57c26b244c547fcd40e",
+  "source_repository": "bluman1/muse-connectors",
+  "upstream_code_executed": false
+}

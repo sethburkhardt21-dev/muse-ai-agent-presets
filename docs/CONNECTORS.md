@@ -1,5 +1,8 @@
 # Optional connectors and Family Link
 
+
+**Custom connectors:** [Browse all 151](connectors/CATALOG.md), open the [interactive HTML directory](connectors/index.html) locally, or read the [setup guide](connectors/README.md). Each entry names its source, supported operations and service access prerequisites. Meta supports the custom-connector approach; the host still controls credentials and permissions.
+
 The toolkit ships **disabled connection contracts**, not a connected shell, browser or cross-account service. Proposed actions are local data until an actual owner-authorized provider is configured.
 
 ## Supported source categories
